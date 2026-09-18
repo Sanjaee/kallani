@@ -33,11 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add active state to navigation links
-    const currentPath = window.location.pathname;
+    const rawPath = window.location.pathname;
+    const cleanPath = (rawPath.replace('/kallani/public', '').replace(/\/$/, '') || '/');
+
     document.querySelectorAll('.nav-link, .sidebar-item').forEach(link => {
         const href = link.getAttribute('href');
-        if (href && currentPath.includes(href.replace('/kallani/public', ''))) {
-            link.classList.add('active');
+        if (href) {
+            const cleanHref = (href.replace('/kallani/public', '').replace(/\/$/, '') || '/');
+            if (cleanHref === '/') {
+                if (cleanPath === '/') {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            } else {
+                if (cleanPath.startsWith(cleanHref)) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
         }
     });
 

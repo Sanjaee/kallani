@@ -793,9 +793,13 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
     <nav class="bg-white border-b border-[#E5E5E5] sticky top-0 z-50 shadow-sm navbar">
         <div class="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between navbar-container">
             <a href="<?php echo $basePrefix; ?>/" class="text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo">KALLANI</a>
+            <?php
+            $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
+            if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
+            ?>
             <div class="flex gap-4 items-center nav-links">
-                <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo $currentPath === $basePrefix . '/' || $currentPath === $basePrefix || $currentPath === '/' || $currentPath === '' ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Home</a>
-                <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo strpos($currentPath, '/explore') !== false ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Explore</a>
+                <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo $cleanCurrentPath === '/' ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Home</a>
+                <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Explore</a>
                 
                 <!-- Language Switcher -->
                 <div class="flex items-center p-1 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-semibold text-xs text-gray-600 dark:text-gray-300">
