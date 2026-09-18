@@ -284,10 +284,23 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
           letter-spacing: -0.025em !important;
           text-decoration: none !important;
         }
-        .nav-links {
-          display: flex !important;
-          gap: 1.5rem !important;
-          align-items: center !important;
+        @media (max-width: 767px) {
+          .nav-links {
+            display: none !important;
+          }
+          .mobile-menu-btn {
+            display: flex !important;
+          }
+        }
+        @media (min-width: 768px) {
+          .nav-links {
+            display: flex !important;
+            gap: 1.5rem !important;
+            align-items: center !important;
+          }
+          .mobile-menu-btn {
+            display: none !important;
+          }
         }
         .nav-link {
           color: #6B6B6B !important;
@@ -842,8 +855,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
             </div>
 
-            <!-- Mobile Hamburger Button (Right Side, Mobile Only) -->
-            <button @click="mobileMenuOpen = true" class="md:hidden p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
+            <!-- Mobile Hamburger Button (Right Side, Mobile Only < 768px) -->
+            <button @click="mobileMenuOpen = true" class="mobile-menu-btn p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>

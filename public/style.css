@@ -316,10 +316,23 @@ a { text-decoration: none; color: inherit; }
   color: #2D5016 !important;
   letter-spacing: -0.025em;
 }
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+@media (max-width: 767px) {
+  .nav-links {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+  }
+  .mobile-menu-btn {
+    display: none !important;
+  }
 }
 .nav-link {
   color: #6B6B6B !important;
