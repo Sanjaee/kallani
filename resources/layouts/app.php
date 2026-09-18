@@ -67,6 +67,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
             color: #171717 !important;
             line-height: 1.5;
             scroll-behavior: smooth;
+            overflow-x: hidden !important;
         }
 
         /* Anti-FOUC Instant Dark Mode */
@@ -314,7 +315,24 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         }
 
         .card { background-color: #FFFFFF !important; border: 1px solid #E5E5E5 !important; border-radius: 0.75rem !important; padding: 1.5rem !important; }
-        .stat-value { font-size: 2.25rem !important; font-weight: 800 !important; color: #171717 !important; }
+        .stat-card {
+          background-color: #FFFFFF !important;
+          border: 1px solid #E5E5E5 !important;
+          border-radius: 0.75rem !important;
+          padding: 0.875rem !important;
+          overflow: hidden !important;
+        }
+        .stat-value {
+          font-size: 1.35rem !important;
+          font-weight: 800 !important;
+          color: #171717 !important;
+          line-height: 1.2 !important;
+          overflow-wrap: break-word !important;
+        }
+        @media (min-width: 640px) {
+          .stat-value { font-size: 1.85rem !important; }
+          .stat-card { padding: 1.25rem !important; }
+        }
         .stat-label { font-size: 0.875rem !important; color: #6B6B6B !important; }
 
         .sidebar {
@@ -790,14 +808,16 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
 </head>
 <body class="bg-[#F7F7F4] text-[#171717] font-inter min-h-screen">
     <!-- Navbar -->
-    <nav class="bg-white border-b border-[#E5E5E5] sticky top-0 z-50 shadow-sm navbar">
-        <div class="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between navbar-container">
-            <a href="<?php echo $basePrefix; ?>/" class="text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo">KALLANI</a>
+    <nav class="bg-white border-b border-[#E5E5E5] sticky top-0 z-50 shadow-sm navbar" x-data="{ mobileMenuOpen: false }">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between navbar-container">
+            <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo shrink-0">KALLANI</a>
             <?php
             $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
             if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
             ?>
-            <div class="flex gap-4 items-center nav-links">
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex gap-4 items-center nav-links">
                 <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo $cleanCurrentPath === '/' ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Home</a>
                 <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Explore</a>
                 
@@ -812,6 +832,38 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
                     <span id="theme-toggle-icon" class="flex items-center justify-center"></span>
                 </button>
                 
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
+            </div>
+
+            <!-- Mobile Navbar Controls -->
+            <div class="flex md:hidden items-center gap-2">
+                <!-- Language Switcher -->
+                <div class="flex items-center p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-semibold text-[10px] text-gray-600 dark:text-gray-300">
+                    <button onclick="setLanguage('en')" class="px-2 py-0.5 rounded transition-all cursor-pointer">EN</button>
+                    <button onclick="setLanguage('id')" class="px-2 py-0.5 rounded transition-all cursor-pointer">ID</button>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+
+                <!-- Hamburger Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-4 space-y-2">
+            <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="block text-sm font-semibold py-2 px-3 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 <?php echo $cleanCurrentPath === '/' ? 'text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40' : ''; ?>">Home</a>
+            <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="block text-sm font-semibold py-2 px-3 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40' : ''; ?>">Explore</a>
+            <div class="pt-2 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center px-1">
+                <span class="text-xs text-gray-500">Status</span>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
             </div>
         </div>
