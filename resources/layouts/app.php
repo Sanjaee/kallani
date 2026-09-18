@@ -815,24 +815,15 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
     <!-- Navbar -->
     <nav class="bg-white border-b border-[#E5E5E5] sticky top-0 z-50 shadow-sm navbar">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between navbar-container">
-            <div class="flex items-center gap-3">
-                <?php if ($isProjectPage): ?>
-                <!-- Mobile Left Sidebar Toggle Button -->
-                <button @click="sidebarOpen = true" class="lg:hidden p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 flex items-center gap-1 text-xs font-bold" title="Open Project Navigation">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    <span class="hidden sm:inline">Menu</span>
-                </button>
-                <?php endif; ?>
-                
-                <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo shrink-0">KALLANI</a>
-            </div>
+            <!-- Left: Logo -->
+            <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo shrink-0">KALLANI</a>
 
             <?php
             $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
             if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
             ?>
             
-            <!-- Desktop Nav Links -->
+            <!-- Desktop Nav Links (Hidden on Mobile) -->
             <div class="hidden md:flex gap-4 items-center nav-links">
                 <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo $cleanCurrentPath === '/' ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Home</a>
                 <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Explore</a>
@@ -851,39 +842,107 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
             </div>
 
-            <!-- Mobile Navbar Controls -->
-            <div class="flex md:hidden items-center gap-2">
-                <!-- Language Switcher -->
-                <div class="flex items-center p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-semibold text-[10px] text-gray-600 dark:text-gray-300">
-                    <button onclick="setLanguage('en')" class="px-2 py-0.5 rounded transition-all cursor-pointer">EN</button>
-                    <button onclick="setLanguage('id')" class="px-2 py-0.5 rounded transition-all cursor-pointer">ID</button>
-                </div>
-
-                <!-- Theme Toggle -->
-                <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                </button>
-
-                <!-- Hamburger Button -->
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center" title="Toggle Main Navigation">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div x-show="mobileMenuOpen" x-transition class="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-4 space-y-2">
-            <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="block text-sm font-semibold py-2 px-3 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 <?php echo $cleanCurrentPath === '/' ? 'text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40' : ''; ?>">Home</a>
-            <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="block text-sm font-semibold py-2 px-3 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40' : ''; ?>">Explore</a>
-            <div class="pt-2 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center px-1">
-                <span class="text-xs text-gray-500">Status</span>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
-            </div>
+            <!-- Mobile Hamburger Button (Right Side, Mobile Only) -->
+            <button @click="mobileMenuOpen = true" class="md:hidden p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Slide-Out Drawer (Main Nav + Settings + Project Tabs) -->
+    <div x-show="mobileMenuOpen" class="md:hidden fixed inset-0 z-[100] flex justify-end" style="display: none;">
+        <!-- Backdrop -->
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition-opacity ease-linear duration-300" 
+             x-transition:enter-start="opacity-0" 
+             x-transition:enter-end="opacity-100" 
+             x-transition:leave="transition-opacity ease-linear duration-300" 
+             x-transition:leave-start="opacity-100" 
+             x-transition:leave-end="opacity-0" 
+             class="fixed inset-0 bg-black/60 backdrop-blur-sm" 
+             @click="mobileMenuOpen = false"></div>
+
+        <!-- Right Slide Drawer Panel -->
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-in-out duration-300 transform" 
+             x-transition:enter-start="translate-x-full" 
+             x-transition:enter-end="translate-x-0" 
+             x-transition:leave="transition ease-in-out duration-300 transform" 
+             x-transition:leave-start="translate-x-0" 
+             x-transition:leave-end="translate-x-full" 
+             class="relative max-w-xs w-full bg-white dark:bg-[#141C12] h-full shadow-2xl flex flex-col justify-between overflow-y-auto border-l border-gray-200 dark:border-gray-800 py-6 px-4">
+            
+            <div class="space-y-5">
+                <!-- Drawer Header -->
+                <div class="flex items-center justify-between pb-3 border-b border-gray-200 dark:border-gray-800">
+                    <span class="text-xl font-extrabold text-[#2D5016] dark:text-emerald-400 tracking-tight">KALLANI</span>
+                    <button @click="mobileMenuOpen = false" class="p-1.5 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+
+                <!-- Main Navigation -->
+                <div>
+                    <span class="block text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-2 px-1">Navigation</span>
+                    <nav class="space-y-1">
+                        <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="block px-3 py-2 rounded-lg text-sm font-semibold transition-colors <?php echo $cleanCurrentPath === '/' ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-bold' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'; ?>">Home</a>
+                        <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="block px-3 py-2 rounded-lg text-sm font-semibold transition-colors <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 font-bold' : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'; ?>">Explore</a>
+                    </nav>
+                </div>
+
+                <!-- Preferences / Settings -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                    <span class="block text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-3 px-1">Preferences</span>
+                    <div class="flex items-center justify-between px-1 mb-3">
+                        <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Language</span>
+                        <div class="flex items-center p-0.5 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-semibold text-xs text-gray-600 dark:text-gray-300">
+                            <button onclick="setLanguage('en')" class="px-2.5 py-1 rounded transition-all cursor-pointer">EN</button>
+                            <button onclick="setLanguage('id')" class="px-2.5 py-1 rounded transition-all cursor-pointer">ID</button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between px-1">
+                        <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Theme Mode</span>
+                        <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <?php if ($isProjectPage && $project): ?>
+                <!-- Project Tabs Navigation -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                    <div class="flex items-center gap-2 mb-2 px-1">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="block text-[11px] font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Project Navigation</span>
+                    </div>
+                    <nav class="space-y-1">
+                        <?php 
+                        $projectId = $project['id'];
+                        $sections = ['Overview', 'Asset', 'Operations', 'Verification', 'Capital', 'Distribution', 'ESG', 'Documents', 'Audit'];
+                        foreach ($sections as $section):
+                            $url = $section === 'Overview' ? "{$basePrefix}/projects/{$projectId}" : "{$basePrefix}/projects/{$projectId}/" . strtolower($section);
+                            $cleanUrl = $section === 'Overview' ? "/projects/{$projectId}" : "/projects/{$projectId}/" . strtolower($section);
+                            $isActive = ($cleanCurrentPath === $cleanUrl);
+                        ?>
+                        <a href="<?php echo $url; ?>" class="sidebar-item <?php echo $isActive ? 'active' : ''; ?>">
+                            <?php echo $section; ?>
+                        </a>
+                        <?php endforeach; ?>
+                    </nav>
+                </div>
+                <?php endif; ?>
+            </div>
+
+            <!-- Footer Demo Status -->
+            <div class="pt-4 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between text-xs text-gray-500">
+                <span>System Status</span>
+                <span class="px-2.5 py-0.5 rounded-full font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
+            </div>
+        </div>
+    </div>
 
     <?php if ($isProjectPage): ?>
     <!-- Desktop Project Sidebar -->
@@ -906,73 +965,6 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         </nav>
         <?php endif; ?>
     </aside>
-
-    <!-- Mobile Slide-Out Left Drawer -->
-    <div x-show="sidebarOpen" class="lg:hidden fixed inset-0 z-[100] flex" style="display: none;">
-        <!-- Backdrop -->
-        <div x-show="sidebarOpen" 
-             x-transition:enter="transition-opacity ease-linear duration-300" 
-             x-transition:enter-start="opacity-0" 
-             x-transition:enter-end="opacity-100" 
-             x-transition:leave="transition-opacity ease-linear duration-300" 
-             x-transition:leave-start="opacity-100" 
-             x-transition:leave-end="opacity-0" 
-             class="fixed inset-0 bg-black/60 backdrop-blur-sm" 
-             @click="sidebarOpen = false"></div>
-
-        <!-- Left Slide Panel -->
-        <div x-show="sidebarOpen" 
-             x-transition:enter="transition ease-in-out duration-300 transform" 
-             x-transition:enter-start="-translate-x-full" 
-             x-transition:enter-end="translate-x-0" 
-             x-transition:leave="transition ease-in-out duration-300 transform" 
-             x-transition:leave-start="translate-x-0" 
-             x-transition:leave-end="-translate-x-full" 
-             class="relative max-w-xs w-full bg-white dark:bg-[#141C12] h-full p-6 shadow-2xl flex flex-col justify-between overflow-y-auto border-r border-gray-200 dark:border-gray-800">
-            
-            <div>
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-800">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span class="font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400">Project Navigation</span>
-                    </div>
-                    <button @click="sidebarOpen = false" class="p-1.5 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                </div>
-
-                <nav class="mt-2 space-y-1">
-                    <?php 
-                    if ($project):
-                    $projectId = $project['id'];
-                    $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
-                    $sections = ['Overview', 'Asset', 'Operations', 'Verification', 'Capital', 'Distribution', 'ESG', 'Documents', 'Audit'];
-                    foreach ($sections as $section):
-                        $url = $section === 'Overview' ? "{$basePrefix}/projects/{$projectId}" : "{$basePrefix}/projects/{$projectId}/" . strtolower($section);
-                        $cleanUrl = $section === 'Overview' ? "/projects/{$projectId}" : "/projects/{$projectId}/" . strtolower($section);
-                        $isActive = ($cleanCurrentPath === $cleanUrl);
-                    ?>
-                    <a href="<?php echo $url; ?>" class="sidebar-item <?php echo $isActive ? 'active' : ''; ?>">
-                        <?php echo $section; ?>
-                    </a>
-                    <?php endforeach; endif; ?>
-                </nav>
-            </div>
-
-            <?php if ($project): ?>
-            <div class="pt-4 border-t border-gray-200 dark:border-gray-800 text-xs text-gray-500">
-                <p class="font-bold text-gray-800 dark:text-gray-200"><?php echo $project['name']; ?></p>
-                <p class="mt-1"><?php echo $project['location']; ?></p>
-            </div>
-            <?php endif; ?>
-        </div>
-    </div>
-
-    <!-- Floating Mobile Sidebar Trigger -->
-    <button @click="sidebarOpen = true" class="lg:hidden fixed bottom-6 left-6 z-40 bg-emerald-700 hover:bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 font-bold text-xs border border-emerald-500/30 transition-transform active:scale-95" title="Open Project Navigation">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        <span>Project Menu</span>
-    </button>
     <?php endif; ?>
 
     <!-- Main Content -->
