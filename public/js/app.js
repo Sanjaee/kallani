@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Add active state to navigation links
+    // Add active state to navigation links and sidebar items
     const rawPath = window.location.pathname;
     const cleanPath = (rawPath.replace('/kallani/public', '').replace(/\/$/, '') || '/');
 
@@ -40,18 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const href = link.getAttribute('href');
         if (href) {
             const cleanHref = (href.replace('/kallani/public', '').replace(/\/$/, '') || '/');
-            if (cleanHref === '/') {
-                if (cleanPath === '/') {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+            if (cleanHref === cleanPath) {
+                link.classList.add('active');
+            } else if (cleanHref !== '/' && cleanPath.startsWith(cleanHref + '/')) {
+                link.classList.add('active');
             } else {
-                if (cleanPath.startsWith(cleanHref)) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+                link.classList.remove('active');
             }
         }
     });

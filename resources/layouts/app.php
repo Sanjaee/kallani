@@ -824,10 +824,12 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         <nav class="mt-2 space-y-1">
             <?php 
             $projectId = $project['id'];
+            $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
             $sections = ['Overview', 'Asset', 'Operations', 'Verification', 'Capital', 'Distribution', 'ESG', 'Documents', 'Audit'];
             foreach ($sections as $section):
                 $url = $section === 'Overview' ? "{$basePrefix}/projects/{$projectId}" : "{$basePrefix}/projects/{$projectId}/" . strtolower($section);
-                $isActive = strpos($currentPath, strtolower($section)) !== false || ($section === 'Overview' && preg_match("/\/projects\/[^\/]+$/", $currentPath));
+                $cleanUrl = $section === 'Overview' ? "/projects/{$projectId}" : "/projects/{$projectId}/" . strtolower($section);
+                $isActive = ($cleanCurrentPath === $cleanUrl);
             ?>
             <a href="<?php echo $url; ?>" class="sidebar-item <?php echo $isActive ? 'active' : ''; ?>">
                 <?php echo $section; ?>
