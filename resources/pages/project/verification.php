@@ -6,7 +6,7 @@ $title = $project['name'] . ' - Verification - Kallani';
 ob_start();
 ?>
 
-<div class="w-full px-6 pt-2 pb-10" x-data="{ selectedItem: null }">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-10" x-data="{ selectedItem: null }">
     <!-- Header Section -->
     <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-8 pb-6 border-b border-gray-200 dark:border-gray-800 gap-4 text-left">
         <div class="flex flex-col items-start text-left">

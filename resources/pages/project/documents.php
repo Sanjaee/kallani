@@ -6,7 +6,7 @@ $title = $project['name'] . ' - Documents - Kallani';
 ob_start();
 ?>
 
-<div class="w-full px-6 pt-2 pb-10" x-data="{ selectedDoc: null }">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-10" x-data="{ selectedDoc: null }">
     <h1 class="text-4xl font-bold mb-2">Project Documents</h1>
     <p class="text-lg text-kallani-text-secondary mb-12">Access project documentation, reports, and verification records.</p>
 

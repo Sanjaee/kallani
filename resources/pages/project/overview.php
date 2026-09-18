@@ -16,7 +16,7 @@ $title = $project['name'] . ' - Overview - Kallani';
 ob_start();
 ?>
 
-<div class="w-full px-6 pt-2 pb-10">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-10">
     <!-- Project Header Banner -->
     <div class="bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700/70 rounded-2xl p-8 mb-8 shadow-sm">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">

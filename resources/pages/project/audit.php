@@ -6,7 +6,7 @@ $title = $project['name'] . ' - Audit Trail - Kallani';
 ob_start();
 ?>
 
-<div class="w-full px-6 pt-2 pb-10" x-data="{ selectedEvent: null }">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-10" x-data="{ selectedEvent: null }">
     <h1 class="text-4xl font-bold mb-2 text-[#171717]">Audit Trail</h1>
     <p class="text-lg text-[#6B6B6B] mb-12">Traceable record of project data and operational events.</p>
 

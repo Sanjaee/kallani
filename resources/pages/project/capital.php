@@ -8,7 +8,7 @@ ob_start();
 $committedRatio = ($capital['capital_committed'] / $capital['capital_required']) * 100;
 ?>
 
-<div class="w-full px-6 pt-2 pb-8">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-8">
     <!-- Header Section -->
     <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6 pb-4 border-b border-gray-200 dark:border-gray-800 gap-3 text-left">
         <div class="flex flex-col items-start text-left">

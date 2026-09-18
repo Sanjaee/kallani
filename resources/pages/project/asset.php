@@ -7,7 +7,7 @@ $title = $project['name'] . ' - Asset - Kallani';
 ob_start();
 ?>
 
-<div class="w-full px-6 pt-2 pb-10" x-data="{ selectedParcel: null }">
+<div class="w-full px-0 sm:px-6 pt-0 sm:pt-2 pb-4 sm:pb-10" x-data="{ selectedParcel: null }">
     <!-- Header Section -->
     <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6 pb-4 border-b border-gray-200 dark:border-gray-800 gap-4 text-left">
         <div class="flex flex-col items-start text-left">
