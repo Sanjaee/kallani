@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kallani_app
+    restart: unless-stopped
+    working_dir: /app
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_NAME=Kallani
+      - APP_KEY=base64:abc123==
+      - DB_CONNECTION=pgsql
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=kallani
+      - DB_USERNAME=kallani_user
+      - DB_PASSWORD=kallani_pass
+    volumes:
+      - ./:/app
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - kallani-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: kallani_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kallani
+      POSTGRES_USER: kallani_user
+      POSTGRES_PASSWORD: kallani_pass
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - kallani-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: kallani_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/app
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app
+    networks:
+      - kallani-network
+
+volumes:
+  db_data:
+
+networks:
+  kallani-network:
+    driver: bridge
