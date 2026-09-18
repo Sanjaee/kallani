@@ -138,6 +138,7 @@ a { text-decoration: none; color: inherit; }
   .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
   .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
   .lg\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .lg\:hidden { display: none !important; }
 }
 
 .gap-1 { gap: 0.25rem; }

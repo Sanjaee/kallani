@@ -347,7 +347,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         .sidebar-item.active { color: #2D5016 !important; background-color: #F0F0EC !important; border-left-color: #2D5016 !important; font-weight: 700 !important; }
 
         .main-content { margin-left: 16rem !important; padding: 2rem !important; }
-        @media (max-width: 1024px) { .sidebar { display: none !important; } .main-content { margin-left: 0 !important; } }
+        @media (max-width: 1023px) { .sidebar { display: none !important; } .main-content { margin-left: 0 !important; } }
+        @media (min-width: 1024px) { .lg\:hidden { display: none !important; } }
 
         .progress-bar { width: 100% !important; background-color: #F0F0EC !important; border-radius: 9999px !important; height: 0.5rem !important; overflow: hidden !important; }
         .progress-fill { background-color: #059669 !important; height: 100% !important; }
@@ -936,7 +937,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
                     </button>
                 </div>
 
-                <nav class="space-y-1.5">
+                <nav class="mt-2 space-y-1">
                     <?php 
                     if ($project):
                     $projectId = $project['id'];
@@ -947,11 +948,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
                         $cleanUrl = $section === 'Overview' ? "/projects/{$projectId}" : "/projects/{$projectId}/" . strtolower($section);
                         $isActive = ($cleanCurrentPath === $cleanUrl);
                     ?>
-                    <a href="<?php echo $url; ?>" class="flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all <?php echo $isActive ? 'bg-emerald-100/80 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border-l-4 border-emerald-600 font-bold' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'; ?>">
-                        <span><?php echo $section; ?></span>
-                        <?php if ($isActive): ?>
-                            <span class="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-400"></span>
-                        <?php endif; ?>
+                    <a href="<?php echo $url; ?>" class="sidebar-item <?php echo $isActive ? 'active' : ''; ?>">
+                        <?php echo $section; ?>
                     </a>
                     <?php endforeach; endif; ?>
                 </nav>

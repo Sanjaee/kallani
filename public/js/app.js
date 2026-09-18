@@ -40,12 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const href = link.getAttribute('href');
         if (href) {
             const cleanHref = (href.replace('/kallani/public', '').replace(/\/$/, '') || '/');
-            if (cleanHref === cleanPath) {
-                link.classList.add('active');
-            } else if (cleanHref !== '/' && cleanPath.startsWith(cleanHref + '/')) {
-                link.classList.add('active');
+            if (link.classList.contains('sidebar-item')) {
+                if (cleanHref === cleanPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             } else {
-                link.classList.remove('active');
+                if (cleanHref === cleanPath) {
+                    link.classList.add('active');
+                } else if (cleanHref !== '/' && cleanPath.startsWith(cleanHref + '/')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             }
         }
     });
