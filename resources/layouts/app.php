@@ -132,7 +132,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         .h-20 { height: 5rem !important; }
         .min-h-screen { min-height: 100vh !important; }
 
-        .flex { display: flex !important; }
+        .flex { display: flex; }
         .flex-col { flex-direction: column !important; }
         .flex-wrap { flex-wrap: wrap !important; }
         .items-center { align-items: center !important; }
@@ -154,6 +154,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         @media (min-width: 768px) {
           .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
           .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+          .md\:hidden { display: none !important; }
+          .md\:flex { display: flex !important; }
         }
         @media (min-width: 1024px) {
           .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
@@ -161,6 +163,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
           .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
           .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
           .lg\:col-span-2 { grid-column: span 2 / span 2 !important; }
+          .lg\:hidden { display: none !important; }
+          .lg\:flex { display: flex !important; }
         }
 
         .gap-2 { gap: 0.5rem !important; }

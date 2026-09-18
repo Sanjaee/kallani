@@ -131,6 +131,9 @@ a { text-decoration: none; color: inherit; }
 @media (min-width: 768px) {
   .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+  .md\:block { display: block !important; }
 }
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
@@ -139,6 +142,7 @@ a { text-decoration: none; color: inherit; }
   .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
   .lg\:col-span-2 { grid-column: span 2 / span 2 !important; }
   .lg\:hidden { display: none !important; }
+  .lg\:flex { display: flex !important; }
 }
 
 .gap-1 { gap: 0.25rem; }
