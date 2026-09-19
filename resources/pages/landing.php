@@ -118,7 +118,7 @@ ob_start();
             <!-- BESPOKE INSTITUTIONAL CARDS VISUAL WITH COUNTER ANIMATIONS -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
                 <!-- Fragment #01 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-red-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-red-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-rose-400"></div>
                     <div class="w-12 h-12 rounded-2xl bg-red-950/60 text-red-400 flex items-center justify-center font-bold mb-5 border border-red-500/40 shadow-lg shadow-red-950/40">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
@@ -126,14 +126,14 @@ ob_start();
                     <span class="counter-num text-xs font-mono font-bold text-red-400 uppercase tracking-widest block mb-1" data-counter="01 • Fragment">01 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Physical Land Records</h3>
                     <p class="text-xs text-gray-300 leading-relaxed mb-4">Cadastral surveys and GIS maps stored in paper archives or isolated GIS software.</p>
-                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
                         <span>Status: Isolated</span>
                         <span class="counter-num font-bold text-red-400" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
                     </div>
                 </div>
 
                 <!-- Fragment #02 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-amber-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-amber-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-yellow-400"></div>
                     <div class="w-12 h-12 rounded-2xl bg-amber-950/60 text-amber-400 flex items-center justify-center font-bold mb-5 border border-amber-500/40 shadow-lg shadow-amber-950/40">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
@@ -141,14 +141,14 @@ ob_start();
                     <span class="counter-num text-xs font-mono font-bold text-amber-400 uppercase tracking-widest block mb-1" data-counter="02 • Fragment">02 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Field Operations</h3>
                     <p class="text-xs text-gray-300 leading-relaxed mb-4">Harvest logs and fertilizer data manually reported without real-time auditability.</p>
-                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
                         <span>Status: Manual Log</span>
                         <span class="counter-num font-bold text-amber-400" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
                     </div>
                 </div>
 
                 <!-- Fragment #03 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-blue-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-blue-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
                     <div class="w-12 h-12 rounded-2xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-5 border border-blue-500/40 shadow-lg shadow-blue-950/40">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -156,14 +156,14 @@ ob_start();
                     <span class="counter-num text-xs font-mono font-bold text-blue-400 uppercase tracking-widest block mb-1" data-counter="03 • Fragment">03 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Audits & Verification</h3>
                     <p class="text-xs text-gray-300 leading-relaxed mb-4">Third-party compliance assessments conducted as delayed annual PDF reports.</p>
-                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
                         <span>Status: Delayed</span>
                         <span class="counter-num font-bold text-blue-400" data-counter="82% Audited">82% Audited</span>
                     </div>
                 </div>
 
                 <!-- Fragment #04 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-purple-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-purple-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-indigo-400"></div>
                     <div class="w-12 h-12 rounded-2xl bg-purple-950/60 text-purple-400 flex items-center justify-center font-bold mb-5 border border-purple-500/40 shadow-lg shadow-purple-950/40">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -171,7 +171,7 @@ ob_start();
                     <span class="counter-num text-xs font-mono font-bold text-purple-400 uppercase tracking-widest block mb-1" data-counter="04 • Fragment">04 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Capital & Yields</h3>
                     <p class="text-xs text-gray-300 leading-relaxed mb-4">Financial allocation disconnected from physical land performance metrics.</p>
-                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
                         <span>Status: Disconnected</span>
                         <span class="counter-num font-bold text-purple-400" data-counter="$12.5M Target">$12.5M Target</span>
                     </div>
@@ -194,7 +194,7 @@ ob_start();
             </p>
 
             <!-- Interactive Stage Diagram Selector -->
-            <div class="scene-anim-item bg-white/5 rounded-3xl p-6 sm:p-8 border border-white/10 backdrop-blur-md shadow-2xl">
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl">
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 mb-8">
                     <?php 
                     $stages = [
@@ -208,7 +208,7 @@ ob_start();
                     ];
                     foreach ($stages as $key => $info):
                     ?>
-                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-3 rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10'">
+                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-3 rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-black/30 text-gray-300 border-[#1E3A24]/60 hover:bg-black/50'">
                         <div class="flex items-center justify-between mb-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
                             <span class="w-2 h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
@@ -221,7 +221,7 @@ ob_start();
                     <?php endforeach; ?>
                 </div>
 
-                <div class="bg-black/50 rounded-2xl p-6 border border-white/10 text-left flex flex-col md:flex-row items-center gap-6">
+                <div class="bg-black/50 rounded-2xl p-6 border border-[#1E3A24]/60 text-left flex flex-col md:flex-row items-center gap-6">
                     <div class="flex-1">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-3">
                             <span>Stage Focus</span>
@@ -231,7 +231,7 @@ ob_start();
                         <h3 class="text-2xl font-bold text-white mb-2" x-text="activeDiagramStage + ' Governance Layer'"></h3>
                         <p class="text-xs text-gray-300 leading-relaxed" x-text="activeDiagramStage === 'Asset' ? 'Verifiable GIS boundary mapping, topographic elevation models, soil quality indices across 4,000 ha.' : (activeDiagramStage === 'Project' ? 'Concession permits, development schedules, and zoning registries aggregated into a baseline.' : 'Real-time operational tracking, harvesting productivity, and processing mill throughput.')"></p>
                     </div>
-                    <div class="w-full md:w-64 h-36 rounded-xl overflow-hidden relative border border-white/20 shrink-0">
+                    <div class="w-full md:w-64 h-36 rounded-xl overflow-hidden relative border border-[#1E3A24]/60 shrink-0">
                         <img src="<?php echo $basePrefix; ?>/Kebun-Sawit-3.jpg" alt="Stage Visual" class="w-full h-full object-cover filter brightness-90" />
                     </div>
                 </div>
@@ -359,28 +359,28 @@ ob_start();
                     </div>
                 </div>
 
-                <div class="scene-anim-item lg:col-span-7 bg-white/5 p-6 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md">
-                    <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
+                <div class="scene-anim-item lg:col-span-7 bg-[#142314]/70 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md">
+                    <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#1E3A24]/60">
                         <span class="font-bold text-sm text-white">Live Field Activity Feed</span>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Live Stream</span>
                     </div>
                     <div class="space-y-3 text-left">
-                        <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="font-bold text-xs text-white">Zone A Harvest Batch #104</span>
                                 <span class="counter-num text-[10px] text-emerald-400 font-semibold" data-counter="100% Completed">100% Completed</span>
                             </div>
                             <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-emerald-500 h-full w-full"></div>
+                                <div class="progress-bar-anim bg-emerald-500 h-full" data-bar-width="100%" style="width: 0%"></div>
                             </div>
                         </div>
-                        <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="font-bold text-xs text-white">Zone B Irrigation Extension</span>
                                 <span class="counter-num text-[10px] text-amber-400 font-semibold" data-counter="78% In Progress">78% In Progress</span>
                             </div>
                             <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-amber-500 h-full w-[78%]"></div>
+                                <div class="progress-bar-anim bg-amber-500 h-full" data-bar-width="78%" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>
@@ -402,8 +402,8 @@ ob_start();
                 Independent third-party audits, legal concession reviews, and tamper-evident document cryptographic hashing.
             </p>
 
-            <div class="scene-anim-item bg-white/5 rounded-3xl p-6 border border-white/10 backdrop-blur-md shadow-2xl text-left">
-                <div class="flex flex-wrap gap-2 mb-6 pb-4 border-b border-white/10">
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left">
+                <div class="flex flex-wrap gap-2 mb-6 pb-4 border-b border-[#1E3A24]/60">
                     <button @click="verTab = 'land'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'land' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Land & GIS</button>
                     <button @click="verTab = 'legal'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'legal' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Legal Rights</button>
                     <button @click="verTab = 'docs'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'docs' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Audited Vault</button>
@@ -414,12 +414,12 @@ ob_start();
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
                         <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
                         <p class="text-xs text-gray-300 mb-4"><span class="counter-num text-emerald-400 font-bold" data-counter="4,000 hectares">4,000 hectares</span> mapped via high-resolution drone photogrammetry and SAR radar imagery.</p>
-                        <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs">
+                        <div class="p-3 bg-black/40 rounded-xl border border-[#1E3A24]/60 text-xs">
                             <span class="text-gray-400 block">Cryptographic Hash</span>
                             <span class="font-mono text-emerald-400 font-bold">0x8f4b7a1c90e322d8a39a1</span>
                         </div>
                     </div>
-                    <div class="p-5 bg-black/50 rounded-2xl border border-white/10 flex flex-col justify-between">
+                    <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Assurance Certificate</span>
                             <p class="text-xs text-gray-300">Verified by AgriGIS Spatial Audit Ltd. & Institutional Assurance Group.</p>
@@ -447,26 +447,26 @@ ob_start();
                     </p>
 
                     <div class="scene-anim-item grid grid-cols-2 gap-3 text-left">
-                        <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
+                        <div class="p-3.5 bg-[#142314]/70 rounded-2xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors">
                             <span class="text-[10px] text-gray-400 block">Total Project Value</span>
                             <span class="counter-num text-xl font-extrabold text-emerald-400" data-counter="$12.5M USD">$12.5M USD</span>
                         </div>
-                        <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
+                        <div class="p-3.5 bg-[#142314]/70 rounded-2xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors">
                             <span class="text-[10px] text-gray-400 block">Capital Committed</span>
                             <span class="counter-num text-xl font-extrabold text-white" data-counter="$6.8M USD">$6.8M USD</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="scene-anim-item lg:col-span-7 bg-white/5 p-6 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md text-left space-y-4">
+                <div class="scene-anim-item lg:col-span-7 bg-[#142314]/70 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
                     <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown ($8.2M Target)</h4>
                     <div>
                         <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
                             <span>Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
                             <span class="counter-num text-emerald-400" data-counter="$3.20M USD">$3.20M USD</span>
                         </div>
-                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-emerald-500 h-full w-[39%]"></div>
+                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-emerald-950">
+                            <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="39%" style="width: 0%"></div>
                         </div>
                     </div>
                     <div>
@@ -474,8 +474,8 @@ ob_start();
                             <span>Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
                             <span class="counter-num text-blue-400" data-counter="$2.10M USD">$2.10M USD</span>
                         </div>
-                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-blue-500 h-full w-[25.6%]"></div>
+                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-blue-950">
+                            <div class="progress-bar-anim bg-blue-500 h-full rounded-full" data-bar-width="25.6%" style="width: 0%"></div>
                         </div>
                     </div>
                     <div>
@@ -483,8 +483,8 @@ ob_start();
                             <span>Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
                             <span class="counter-num text-amber-400" data-counter="$1.80M USD">$1.80M USD</span>
                         </div>
-                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-amber-500 h-full w-[22%]"></div>
+                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-amber-950">
+                            <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="22%" style="width: 0%"></div>
                         </div>
                     </div>
                 </div>
@@ -773,14 +773,33 @@ ob_start();
                     let obj = { val: 0 };
                     gsap.to(obj, {
                         val: targetVal,
-                        duration: 1.3,
-                        ease: "power2.out",
+                        duration: 2.4,
+                        ease: "power3.out",
                         onUpdate: () => {
                             let formatted = isFloat ? obj.val.toFixed(decimals) : Math.floor(obj.val).toLocaleString();
                             el.textContent = prefix + formatted + suffix;
                         }
                     });
                 }
+            });
+        }
+
+        function animateSceneBars(container) {
+            if (!container) return;
+            const barEls = container.querySelectorAll('.progress-bar-anim, [data-bar-width]');
+            barEls.forEach(bar => {
+                let targetWidth = bar.getAttribute('data-bar-width');
+                if (!targetWidth) {
+                    targetWidth = bar.style.width || '100%';
+                    bar.setAttribute('data-bar-width', targetWidth);
+                }
+                gsap.set(bar, { width: '0%' });
+                gsap.to(bar, {
+                    width: targetWidth,
+                    duration: 2.4,
+                    ease: "power3.out",
+                    delay: 0.15
+                });
             });
         }
 
@@ -861,8 +880,9 @@ ob_start();
                 );
             }
 
-            // Animate numbers continuously from 0 to target value
+            // Animate numbers and progress bars smoothly when entering scene
             animateSceneCounters(nextEl);
+            animateSceneBars(nextEl);
 
             updateSceneIndicators(window.currentScene);
 
