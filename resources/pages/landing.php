@@ -11,7 +11,29 @@ ob_start();
 ?>
 
 <!-- FULL-SCREEN SCENE-BASED PRESENTATION CONTAINER -->
-<div id="presentation-container" class="relative w-screen h-screen overflow-hidden bg-[#0F1C0E] text-white font-inter select-none" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A', verTab: 'land' }">
+<div id="presentation-container" class="relative w-screen h-screen overflow-hidden bg-[#0F1C0E] text-white font-inter select-none" x-data="{ 
+    activeDiagramStage: 'Asset', 
+    activeParcel: 'A', 
+    verTab: 'land',
+    stageImages: { 
+        'Asset': '<?php echo $basePrefix; ?>/1.jpg', 
+        'Project': '<?php echo $basePrefix; ?>/2.jpg', 
+        'Operations': '<?php echo $basePrefix; ?>/3.jpg', 
+        'Verification': '<?php echo $basePrefix; ?>/4.jpg', 
+        'Capital': '<?php echo $basePrefix; ?>/5.jpg', 
+        'Revenue': '<?php echo $basePrefix; ?>/6.jpg', 
+        'Distribution': '<?php echo $basePrefix; ?>/7.jpg' 
+    },
+    stageDescriptions: {
+        'Asset': 'Verifiable GIS boundary mapping, topographic elevation models, and soil quality indices across 4,000 ha.',
+        'Project': 'Concession permits, master development schedules, and zoning registries aggregated into a baseline.',
+        'Operations': 'Real-time operational tracking, harvesting productivity, and processing mill throughput.',
+        'Verification': 'Independent RSPO & ISPO compliance audits, legal reviews, and document cryptographic hashing.',
+        'Capital': 'Transparent capital tracking, mapping every dollar directly to plantation development and reserves.',
+        'Revenue': 'Itemized waterfall flow from gross crude palm oil sales to net distributable investor cash flow.',
+        'Distribution': 'Automated investor distributions, yield schedule execution, and compliance reporting.'
+    }
+}">
 
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
     <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
@@ -235,18 +257,18 @@ ob_start();
                     <?php endforeach; ?>
                 </div>
 
-                <div class="bg-black/50 rounded-2xl p-6 border border-[#1E3A24]/60 text-left flex flex-col md:flex-row items-center gap-6">
-                    <div class="flex-1">
+                <div class="bg-black/50 rounded-2xl p-5 sm:p-6 border border-[#1E3A24]/60 text-left flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-1 w-full text-left">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-3">
                             <span>Stage Focus</span>
                             <span>•</span>
                             <span x-text="activeDiagramStage"></span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2" x-text="activeDiagramStage + ' Governance Layer'"></h3>
-                        <p class="text-xs text-gray-300 leading-relaxed" x-text="activeDiagramStage === 'Asset' ? 'Verifiable GIS boundary mapping, topographic elevation models, soil quality indices across 4,000 ha.' : (activeDiagramStage === 'Project' ? 'Concession permits, development schedules, and zoning registries aggregated into a baseline.' : 'Real-time operational tracking, harvesting productivity, and processing mill throughput.')"></p>
+                        <h3 class="text-2xl font-bold text-white mb-2 leading-tight" x-text="activeDiagramStage + ' Governance Layer'"></h3>
+                        <p class="text-xs text-gray-300 leading-relaxed" x-text="stageDescriptions[activeDiagramStage] || stageDescriptions['Asset']"></p>
                     </div>
-                    <div class="w-full md:w-64 h-36 rounded-xl overflow-hidden relative border border-[#1E3A24]/60 shrink-0">
-                        <img src="<?php echo $basePrefix; ?>/Kebun-Sawit-3.jpg" alt="Stage Visual" class="w-full h-full object-cover filter brightness-90" />
+                    <div class="w-full md:w-64 h-40 rounded-xl overflow-hidden relative border border-[#1E3A24]/60 shrink-0 shadow-lg">
+                        <img :src="stageImages[activeDiagramStage] || '<?php echo $basePrefix; ?>/1.jpg'" :alt="activeDiagramStage + ' Visual'" class="w-full h-full object-cover filter brightness-95 transition-all duration-500" />
                     </div>
                 </div>
             </div>
