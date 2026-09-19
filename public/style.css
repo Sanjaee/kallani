@@ -643,6 +643,11 @@ a { text-decoration: none; color: inherit; }
   }
 
   /* Headings & Typography */
+  .scene h1 {
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+  }
   .scene h2 {
     font-size: clamp(1.15rem, 4.5vw, 1.4rem) !important;
     line-height: 1.2 !important;
@@ -658,9 +663,12 @@ a { text-decoration: none; color: inherit; }
     font-size: 9px !important;
   }
 
-  /* 2-Column Side-by-Side Grid Blocks on Mobile */
+  /* Grid Layouts on Mobile */
   .scene .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .scene .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
   /* Compact Grids & Spacing */

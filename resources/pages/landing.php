@@ -87,12 +87,12 @@ ob_start();
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-            <h1 class="scene-anim-item text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1] text-balance">
-                Operating Systems for <br />
-                <span class="bg-gradient-to-r from-emerald-300 via-emerald-100 to-amber-200 bg-clip-text text-transparent">Productive Natural Assets</span>
+            <h1 class="scene-anim-item text-2xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight">
+                <span>Operating Systems for</span> <br class="hidden sm:inline" />
+                <span class="block sm:inline bg-gradient-to-r from-emerald-300 via-emerald-100 to-amber-200 bg-clip-text text-transparent">Productive Natural Assets</span>
             </h1>
 
-            <p class="scene-anim-item text-lg sm:text-2xl text-gray-300 font-normal max-w-3xl mb-10 leading-relaxed text-balance">
+            <p class="scene-anim-item text-base sm:text-2xl text-gray-300 font-normal max-w-3xl mb-8 sm:mb-10 leading-relaxed text-balance">
                 Connecting physical assets, operations, verification, capital, and revenue into one integrated operating system.
             </p>
 
@@ -103,7 +103,7 @@ ob_start();
                 </div>
                 <div class="flex items-center gap-2 text-[11px] font-mono tracking-[0.25em] uppercase text-emerald-300/80 group-hover:text-emerald-300 transition-colors">
                     <span>Scroll to Explore</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-3 h-3 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </div>
             </div>
         </div>
@@ -215,8 +215,8 @@ ob_start();
             </p>
 
             <!-- Interactive Stage Diagram Selector -->
-            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl">
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 mb-8">
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-4 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl">
+                <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-1.5 sm:gap-2 mb-4 sm:mb-8">
                     <?php 
                     $stages = [
                         'Asset' => ['icon' => 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z', 'sub' => 'Physical Asset'],
@@ -229,14 +229,14 @@ ob_start();
                     ];
                     foreach ($stages as $key => $info):
                     ?>
-                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-3 rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-black/30 text-gray-300 border-[#1E3A24]/60 hover:bg-black/50'">
-                        <div class="flex items-center justify-between mb-2">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
-                            <span class="w-2 h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
+                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-2 sm:p-3 rounded-xl sm:rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-black/30 text-gray-300 border-[#1E3A24]/60 hover:bg-black/50'">
+                        <div class="flex items-center justify-between mb-1 sm:mb-2">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
+                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
                         </div>
                         <div>
-                            <span class="block text-xs font-bold"><?php echo $key; ?></span>
-                            <span class="block text-[10px] opacity-80 font-medium"><?php echo $info['sub']; ?></span>
+                            <span class="block text-[11px] sm:text-xs font-bold leading-tight truncate"><?php echo $key; ?></span>
+                            <span class="block text-[9px] sm:text-[10px] opacity-80 font-medium leading-tight truncate"><?php echo $info['sub']; ?></span>
                         </div>
                     </button>
                     <?php endforeach; ?>
