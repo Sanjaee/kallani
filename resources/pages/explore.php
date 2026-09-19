@@ -38,7 +38,7 @@ ob_start();
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <?php foreach ($projects as $index => $project): 
             $catsJson = htmlspecialchars(json_encode($project['categories'] ?? ['All']), ENT_QUOTES, 'UTF-8');
-            $imgFile = !empty($project['image']) ? $project['image'] : 'Kebun-Sawit-3.jpg';
+            $imgFile = !empty($project['image']) ? $project['image'] : '1.jpg';
         ?>
         <div class="card hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between overflow-hidden group" 
              x-show="<?php echo $catsJson; ?>.includes(activeFilter)" 

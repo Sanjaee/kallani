@@ -267,7 +267,7 @@ ob_start();
                         <h3 class="text-2xl font-bold text-white mb-2 leading-tight" x-text="activeDiagramStage + ' Governance Layer'"></h3>
                         <p class="text-xs text-gray-300 leading-relaxed" x-text="stageDescriptions[activeDiagramStage] || stageDescriptions['Asset']"></p>
                     </div>
-                    <div class="w-full md:w-64 h-40 rounded-xl overflow-hidden relative border border-[#1E3A24]/60 shrink-0 shadow-lg">
+                    <div class="w-full md:w-80 h-56 sm:h-64 rounded-2xl overflow-hidden relative border border-[#1E3A24]/60 shrink-0 shadow-2xl">
                         <img :src="stageImages[activeDiagramStage] || '<?php echo $basePrefix; ?>/1.jpg'" :alt="activeDiagramStage + ' Visual'" class="w-full h-full object-cover filter brightness-95 transition-all duration-500" />
                     </div>
                 </div>
@@ -314,7 +314,7 @@ ob_start();
                 </div>
 
                 <div class="scene-anim-item relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
-                    <img src="<?php echo $basePrefix; ?>/Kebun-Sawit-3.jpg" alt="Concession GIS Map" class="w-full h-[380px] object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700" />
+                    <img :src="activeParcel === 'B' ? '<?php echo $basePrefix; ?>/8.jpg' : '<?php echo $basePrefix; ?>/4.jpg'" alt="Concession GIS Map" class="w-full h-[400px] sm:h-[440px] object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-between">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-black/70 text-emerald-300 border border-emerald-500/40">GIS Parcel Map Overlay</span>

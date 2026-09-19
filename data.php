@@ -15,7 +15,7 @@ return [
             'capital_required' => 24000000,
             'capital_committed' => 16500000,
             'projected_output' => 12500,
-            'image' => 'Kebun-Sawit-3.jpg',
+            'image' => '4.jpg',
         ],
         [
             'id' => 'east-sumatra-estate',
@@ -30,7 +30,7 @@ return [
             'capital_required' => 35000000,
             'capital_committed' => 31000000,
             'projected_output' => 21000,
-            'image' => 'lanskap-sawi_Miftahurrohman.jpg',
+            'image' => '2.jpg',
         ],
         [
             'id' => 'central-kalimantan-forest',
@@ -45,7 +45,7 @@ return [
             'capital_required' => 18000000,
             'capital_committed' => 11200000,
             'projected_output' => 8500,
-            'image' => 'Kebun-Sawit-3.jpg',
+            'image' => '3.jpg',
         ],
         [
             'id' => 'mahakam-hydro-infra',
@@ -60,7 +60,7 @@ return [
             'capital_required' => 42000000,
             'capital_committed' => 29500000,
             'projected_output' => 18000,
-            'image' => 'lanskap-sawi_Miftahurrohman.jpg',
+            'image' => '5.jpg',
         ],
         [
             'id' => 'papua-timber-reserve',
@@ -75,7 +75,7 @@ return [
             'capital_required' => 28500000,
             'capital_committed' => 25000000,
             'projected_output' => 32000,
-            'image' => 'Kebun-Sawit-3.jpg',
+            'image' => '6.jpg',
         ],
         [
             'id' => 'sulawesi-agri-park',
@@ -90,7 +90,7 @@ return [
             'capital_required' => 15000000,
             'capital_committed' => 9800000,
             'projected_output' => 9400,
-            'image' => 'lanskap-sawi_Miftahurrohman.jpg',
+            'image' => '7.jpg',
         ],
         [
             'id' => 'kaltim-green-port',
