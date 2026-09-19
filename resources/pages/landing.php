@@ -390,9 +390,12 @@ ob_start();
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-4">
                     <div class="p-3.5 sm:p-5 rounded-2xl border transition-all flex flex-col justify-between" :class="projMilestone >= 2 ? 'bg-black/40 border-emerald-500/40 text-gray-200' : 'bg-white/5 border-white/10 opacity-60'">
                         <div>
-                            <span class="counter-num text-xs font-mono text-emerald-400 font-bold block mb-1" data-counter="Step 01 & 02">Step 01 & 02</span>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="counter-num text-xs font-mono text-emerald-400 font-bold" data-counter="Step 01 & 02">Step 01 & 02</span>
+                                <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 hidden sm:inline-block whitespace-nowrap">LEGAL ASSURANCE ✓</span>
+                            </div>
                             <h4 class="text-xs sm:text-base font-bold text-white mb-1.5 leading-snug">35-Year Plantation HGU License</h4>
-                            <div class="mb-2">
+                            <div class="mb-2 sm:hidden">
                                 <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 inline-block whitespace-nowrap">LEGAL ASSURANCE ✓</span>
                             </div>
                             <p class="text-[10px] sm:text-xs text-gray-300 leading-relaxed mb-3">Certified Decree HGU-042/KALTARA granted by Ministry of Land Affairs for 35-year operational term.</p>
@@ -402,9 +405,12 @@ ob_start();
 
                     <div class="p-3.5 sm:p-5 rounded-2xl border transition-all flex flex-col justify-between" :class="projMilestone >= 3 ? 'bg-black/40 border-amber-500/40 text-gray-200' : 'bg-white/5 border-white/10 opacity-60'">
                         <div>
-                            <span class="counter-num text-xs font-mono text-amber-400 font-bold block mb-1" data-counter="Step 03">Step 03</span>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="counter-num text-xs font-mono text-amber-400 font-bold" data-counter="Step 03">Step 03</span>
+                                <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-950 text-amber-300 border border-amber-800 hidden sm:inline-block whitespace-nowrap">MASTER PLAN ✓</span>
+                            </div>
                             <h4 class="text-xs sm:text-base font-bold text-white mb-1.5 leading-snug">Infrastructure Zoning</h4>
-                            <div class="mb-2">
+                            <div class="mb-2 sm:hidden">
                                 <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-950 text-amber-300 border border-amber-800 inline-block whitespace-nowrap">MASTER PLAN ✓</span>
                             </div>
                             <p class="text-[10px] sm:text-xs text-gray-300 leading-relaxed mb-3"><span class="counter-num text-amber-300 font-bold" data-counter="3,120 ha">3,120 ha</span> planted area, 45 MT/hr central CPO extraction mill & 2.4 km secondary channels.</p>
@@ -414,9 +420,12 @@ ob_start();
 
                     <div class="p-3.5 sm:p-5 rounded-2xl border transition-all flex flex-col justify-between col-span-2 md:col-span-1" :class="projMilestone >= 4 ? 'bg-emerald-950/70 border-emerald-400 text-white shadow-lg' : 'bg-white/5 border-white/10 opacity-60'">
                         <div>
-                            <span class="counter-num text-xs font-mono text-emerald-300 font-bold block mb-1" data-counter="Step 04">Step 04</span>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <span class="counter-num text-xs font-mono text-emerald-300 font-bold" data-counter="Step 04">Step 04</span>
+                                <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-500 text-white hidden sm:inline-block whitespace-nowrap">PROJECT ACTIVATED</span>
+                            </div>
                             <h4 class="text-xs sm:text-base font-bold text-white mb-1.5 leading-snug">Operational Baseline Ready</h4>
-                            <div class="mb-2">
+                            <div class="mb-2 sm:hidden">
                                 <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-500 text-white inline-block whitespace-nowrap">PROJECT ACTIVATED</span>
                             </div>
                             <p class="text-[10px] sm:text-xs text-emerald-100 leading-relaxed mb-3">Environmental baseline established with <span class="counter-num text-white font-bold" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span> carbon offset potential.</p>
