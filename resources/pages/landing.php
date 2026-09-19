@@ -229,15 +229,15 @@ ob_start();
                     ];
                     foreach ($stages as $key => $info):
                     ?>
-                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-2 sm:p-3 rounded-xl sm:rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-black/30 text-gray-300 border-[#1E3A24]/60 hover:bg-black/50'">
-                        <div class="flex items-center justify-between mb-1 sm:mb-2">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
-                            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
+                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-2 sm:p-3 rounded-xl sm:rounded-2xl text-left transition-all border flex items-center justify-between gap-1.5 sm:gap-2 cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-black/30 text-gray-300 border-[#1E3A24]/60 hover:bg-black/50'">
+                        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
+                            <div class="min-w-0 flex-1">
+                                <span class="block text-[11px] sm:text-xs font-bold leading-tight truncate"><?php echo $key; ?></span>
+                                <span class="block text-[9px] sm:text-[10px] opacity-80 font-medium leading-tight truncate"><?php echo $info['sub']; ?></span>
+                            </div>
                         </div>
-                        <div>
-                            <span class="block text-[11px] sm:text-xs font-bold leading-tight truncate"><?php echo $key; ?></span>
-                            <span class="block text-[9px] sm:text-[10px] opacity-80 font-medium leading-tight truncate"><?php echo $info['sub']; ?></span>
-                        </div>
+                        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shrink-0" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
                     </button>
                     <?php endforeach; ?>
                 </div>
@@ -720,24 +720,24 @@ ob_start();
             <img src="<?php echo $basePrefix; ?>/2.jpg" alt="Final Reveal" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2 sm:mb-4">
+        <div class="relative z-10 max-w-2xl mx-auto text-center w-full">
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2 sm:mb-3">
                 <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 <span>12 • Interactive Project Dashboard</span>
             </div>
             
-            <h2 class="scene-anim-item text-2xl sm:text-5xl font-extrabold text-white mb-2 sm:mb-4 tracking-tight">Explore Kallani in Action.</h2>
-            <p class="scene-anim-item text-xs sm:text-base text-emerald-200 max-w-2xl mx-auto mb-4 sm:mb-8">
+            <h2 class="scene-anim-item text-xl sm:text-4xl font-extrabold text-white mb-2 sm:mb-3 tracking-tight max-w-2xl mx-auto">Explore Kallani in Action.</h2>
+            <p class="scene-anim-item text-xs sm:text-sm text-emerald-200 max-w-2xl mx-auto mb-3 sm:mb-6 leading-relaxed">
                 Discover how productive natural assets are represented through a connected operating system.
             </p>
 
-            <div class="scene-anim-item bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/20 text-left max-w-2xl mx-auto mb-4 sm:mb-8 shadow-2xl">
-                <div class="flex flex-row items-center justify-between gap-2 pb-3 sm:pb-6 border-b border-white/10 mb-3 sm:mb-6">
-                    <div>
-                        <h3 class="text-base sm:text-2xl font-bold text-white">North Kalimantan Palm Project</h3>
-                        <span class="text-[10px] sm:text-xs text-emerald-300">Concession Ref: NKP-2026-04 • 4,000 Hectares</span>
+            <div class="scene-anim-item bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-white/20 text-left max-w-2xl mx-auto mb-3 sm:mb-5 shadow-2xl w-full">
+                <div class="pb-3 sm:pb-4 border-b border-white/10 mb-3 sm:mb-4">
+                    <h3 class="text-base sm:text-xl font-bold text-white mb-1">North Kalimantan Palm Project</h3>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="text-[10px] sm:text-xs text-emerald-300 font-mono">Concession Ref: NKP-2026-04 • 4,000 Hectares</span>
+                        <span class="px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-emerald-500 text-white">Developing</span>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-500 text-white shrink-0">Developing</span>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-xs">
@@ -760,12 +760,12 @@ ob_start();
                 </div>
             </div>
 
-            <div class="scene-anim-item flex flex-row items-center justify-center gap-2.5 sm:gap-4">
-                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="flex-1 sm:flex-initial px-4 py-2.5 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs sm:text-base shadow-xl transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+            <div class="scene-anim-item max-w-2xl mx-auto flex flex-row items-center justify-center gap-2.5 sm:gap-4 w-full">
+                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="flex-1 px-3 py-2.5 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs sm:text-sm shadow-xl transition-all hover:scale-105 inline-flex items-center justify-center gap-1.5 sm:gap-2 truncate">
                     <span>Enter Dashboard</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
-                <a href="<?php echo $basePrefix; ?>/explore" class="flex-1 sm:flex-initial px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-base border border-white/20 transition-all hover:scale-105 text-center">
+                <a href="<?php echo $basePrefix; ?>/explore" class="flex-1 px-3 py-2.5 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/20 transition-all hover:scale-105 text-center truncate">
                     <span>Concession Catalog</span>
                 </a>
             </div>
