@@ -57,7 +57,7 @@ ob_start();
     <!-- PRESENTATION TOP BRAND CHROME (PRESENTATION MODE ONLY) -->
     <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center transition-all duration-500">
         <a href="<?php echo $basePrefix; ?>/" class="group">
-            <span class="text-xl sm:text-2xl font-serif font-light tracking-[0.3em] text-white uppercase block leading-none hover:text-emerald-300 transition-colors pl-[0.3em]">KALLANI</span>
+            <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white uppercase block leading-none hover:text-emerald-400 transition-colors">KALLANI</span>
         </a>
     </div>
 
@@ -139,9 +139,9 @@ ob_start();
                             <span class="block text-sm font-bold text-white mb-1">Physical Land Records</span>
                             <span class="block text-xs text-gray-400 leading-relaxed mb-4">Cadastral surveys and GIS maps stored in paper archives or isolated software.</span>
                         </div>
-                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                            <span>01 • Fragment</span>
-                            <span class="counter-num font-bold text-red-400" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[10px] sm:text-[11px] font-mono text-gray-400 gap-1 sm:gap-0">
+                            <span class="whitespace-nowrap">01 • Fragment</span>
+                            <span class="counter-num font-bold text-red-400 whitespace-nowrap" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
                         </div>
                     </div>
 
@@ -155,9 +155,9 @@ ob_start();
                             <span class="block text-sm font-bold text-white mb-1">Field Operations</span>
                             <span class="block text-xs text-gray-400 leading-relaxed mb-4">Harvest logs and fertilizer data manually reported without real-time auditability.</span>
                         </div>
-                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                            <span>02 • Fragment</span>
-                            <span class="counter-num font-bold text-amber-400" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[10px] sm:text-[11px] font-mono text-gray-400 gap-1 sm:gap-0">
+                            <span class="whitespace-nowrap">02 • Fragment</span>
+                            <span class="counter-num font-bold text-amber-400 whitespace-nowrap" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
                         </div>
                     </div>
 
@@ -171,9 +171,9 @@ ob_start();
                             <span class="block text-sm font-bold text-white mb-1">Audits & Verification</span>
                             <span class="block text-xs text-gray-400 leading-relaxed mb-4">Third-party compliance assessments conducted as delayed annual PDF reports.</span>
                         </div>
-                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                            <span>03 • Fragment</span>
-                            <span class="counter-num font-bold text-blue-400" data-counter="82% Audited">82% Audited</span>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[10px] sm:text-[11px] font-mono text-gray-400 gap-1 sm:gap-0">
+                            <span class="whitespace-nowrap">03 • Fragment</span>
+                            <span class="counter-num font-bold text-blue-400 whitespace-nowrap" data-counter="82% Audited">82% Audited</span>
                         </div>
                     </div>
 
@@ -187,9 +187,9 @@ ob_start();
                             <span class="block text-sm font-bold text-white mb-1">Capital & Yields</span>
                             <span class="block text-xs text-emerald-100 leading-relaxed mb-4">Financial allocation disconnected from physical land performance metrics.</span>
                         </div>
-                        <div class="pt-2.5 border-t border-emerald-500/50 flex items-center justify-between text-[11px] font-mono text-emerald-100">
-                            <span>04 • Fragment</span>
-                            <span class="counter-num font-bold text-white" data-counter="$12.5M Target">$12.5M Target</span>
+                        <div class="pt-2.5 border-t border-emerald-500/50 flex flex-col sm:flex-row sm:items-center sm:justify-between text-[10px] sm:text-[11px] font-mono text-emerald-100 gap-1 sm:gap-0">
+                            <span class="whitespace-nowrap">04 • Fragment</span>
+                            <span class="counter-num font-bold text-white whitespace-nowrap" data-counter="$12.5M Target">$12.5M Target</span>
                         </div>
                     </div>
                 </div>
