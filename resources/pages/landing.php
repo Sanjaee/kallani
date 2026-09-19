@@ -121,14 +121,14 @@ ob_start();
                 <span>02 • Structural Challenge</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Natural Assets. Disconnected Systems.</h2>
-            <p class="scene-anim-item text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-12">
+            <h2 class="scene-anim-item text-2xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">Natural Assets. Disconnected Systems.</h2>
+            <p class="scene-anim-item text-xs sm:text-lg text-gray-300 max-w-2xl mx-auto mb-4 sm:mb-12 leading-relaxed">
                 Traditional natural asset management fragments physical land, operational tracking, third-party verification, and investor distribution into isolated silos.
             </p>
 
             <!-- CARDS VISUAL MATCHING SCENE 03 & DASHBOARD CARD STYLE -->
-            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-4 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
                     <!-- Fragment #01 -->
                     <div class="p-4 rounded-2xl bg-black/30 text-gray-300 border border-[#1E3A24]/60 hover:border-red-500/50 hover:bg-black/50 transition-all flex flex-col justify-between cursor-pointer group">
                         <div class="flex items-center justify-between mb-3">
@@ -550,7 +550,7 @@ ob_start();
                 Itemized waterfall flow from gross crude palm oil sales to net distributable investor cash flow.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 text-left">
                 <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-emerald-500/30 backdrop-blur-md">
                     <span class="text-[10px] font-mono font-bold uppercase text-emerald-400 block mb-1">Step 1 — Gross Revenue</span>
                     <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$4,850,000">$4,850,000</h4>
