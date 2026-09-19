@@ -447,7 +447,7 @@ ob_start();
                 </div>
 
                 <!-- Tab 1: Land & GIS -->
-                <div x-show="verTab === 'land'" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div :class="verTab === 'land' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'hidden'">
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
                         <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
@@ -467,7 +467,7 @@ ob_start();
                 </div>
 
                 <!-- Tab 2: Legal Rights -->
-                <div x-show="verTab === 'legal'" class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: none;">
+                <div :class="verTab === 'legal' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'hidden'">
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Fully Compliant</span>
                         <h4 class="text-lg font-bold text-white mb-2">Concession & HGU Ownership Rights</h4>
@@ -487,7 +487,7 @@ ob_start();
                 </div>
 
                 <!-- Tab 3: Audited Vault -->
-                <div x-show="verTab === 'docs'" class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: none;">
+                <div :class="verTab === 'docs' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'hidden'">
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Cryptographically Signed</span>
                         <h4 class="text-lg font-bold text-white mb-2">Tamper-Evident Document Vault</h4>
