@@ -12,8 +12,36 @@ ob_start();
 
 <div class="landing-presentation text-[#171717] dark:text-gray-100 overflow-hidden" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A' }">
     
+    <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
+    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#070D06] text-white flex flex-col items-center justify-center p-6 select-none">
+        <div class="max-w-md w-full text-center space-y-6">
+            <!-- Animated Brand Mark -->
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-950/80 border border-emerald-500/40 shadow-2xl shadow-emerald-500/20 mb-2 transform hover:scale-105 transition-transform duration-500">
+                <svg class="w-10 h-10 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            
+            <div class="space-y-2">
+                <span class="text-xs font-mono uppercase tracking-[0.3em] text-emerald-400/80 block">KALLANI INFRASTRUCTURE OS</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Productive Natural Assets</h2>
+            </div>
+
+            <!-- Loader Progress Bar & Counter -->
+            <div class="space-y-3 pt-4">
+                <div class="w-full bg-emerald-950/60 border border-emerald-800/40 h-2.5 rounded-full overflow-hidden p-0.5 shadow-inner">
+                    <div id="loader-bar" class="bg-gradient-to-r from-emerald-500 via-emerald-400 to-amber-300 h-full w-0 rounded-full transition-all duration-75"></div>
+                </div>
+                <div class="flex items-center justify-between text-xs font-mono text-emerald-300/80">
+                    <span id="loader-status">INITIALIZING SYSTEM MODULES...</span>
+                    <span id="loader-percent" class="font-bold text-emerald-400 text-sm">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SECTION 01 — CINEMATIC HERO -->
-    <section class="relative min-h-[calc(100vh-73px)] flex items-center justify-center overflow-hidden bg-emerald-950 text-white py-20 px-4">
+    <section id="hero-section" class="relative min-h-[calc(100vh-73px)] flex items-center justify-center overflow-hidden bg-emerald-950 text-white py-20 px-4">
         <!-- Parallax Hero Background Imagery -->
         <div class="absolute inset-0 z-0 opacity-45 scale-105 transition-transform duration-1000 transform hover:scale-100" id="hero-bg">
             <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Aerial Landscape" class="w-full h-full object-cover object-center filter brightness-90 contrast-105" />
@@ -256,7 +284,7 @@ ob_start();
     </section>
 
     <!-- SECTION 03 — FROM LAND TO OPERATING ASSET -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800">
+    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="land-asset">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-left">
@@ -363,7 +391,7 @@ ob_start();
     </section>
 
     <!-- SECTION 05 — OPERATIONS -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800">
+    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="operations-section">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 text-left">
@@ -452,7 +480,7 @@ ob_start();
     </section>
 
     <!-- SECTION 06 — VERIFICATION -->
-    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" x-data="{ verTab: 'land' }">
+    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" id="verification-section" x-data="{ verTab: 'land' }">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Third-Party Assurance</span>
@@ -563,7 +591,7 @@ ob_start();
     </section>
 
     <!-- SECTION 07 — CAPITAL & ALLOCATION -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800">
+    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="capital-section">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5 text-left">
@@ -642,7 +670,7 @@ ob_start();
     </section>
 
     <!-- SECTION 08 — REVENUE & DISTRIBUTION -->
-    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800">
+    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" id="revenue-waterfall">
         <div class="max-w-6xl mx-auto text-center">
             <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Financial Waterfall</span>
             <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Follow the Flow from Revenue to Distribution.</h2>
@@ -685,7 +713,7 @@ ob_start();
     </section>
 
     <!-- SECTION 09 — ESG, RISK & AUDIT -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800">
+    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="esg-section">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Sustainability & Risk</span>
@@ -727,7 +755,7 @@ ob_start();
     </section>
 
     <!-- SECTION 10 — PROJECT REVEAL / INTERACTIVE DEMO -->
-    <section class="py-24 px-4 bg-emerald-950 text-white relative overflow-hidden">
+    <section class="py-24 px-4 bg-emerald-950 text-white relative overflow-hidden" id="project-reveal">
         <div class="max-w-5xl mx-auto relative z-10 text-center">
             <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-800 text-emerald-300 border border-emerald-600/40 mb-6 inline-block">Interactive Demo Spotlight</span>
             <h2 class="text-3xl sm:text-6xl font-extrabold tracking-tight mb-6">Explore a Connected Natural Asset.</h2>
@@ -772,7 +800,7 @@ ob_start();
     </section>
 
     <!-- SECTION 11 — FINAL CTA & FOOTER -->
-    <section class="py-20 px-4 bg-[#0A1008] text-gray-300 border-t border-emerald-900/40 text-center">
+    <section class="py-20 px-4 bg-[#0A1008] text-gray-300 border-t border-emerald-900/40 text-center" id="final-cta">
         <div class="max-w-4xl mx-auto">
             <h3 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">See How Natural Assets Become Operating Systems.</h3>
             <p class="text-sm sm:text-base text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -793,25 +821,136 @@ ob_start();
 
 </div>
 
-<!-- GSAP ScrollTrigger Animations Initialization -->
+<!-- GSAP ScrollTrigger & Intro Loader Animations Initialization -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
 
-            // 1. Hero background parallax
+            const loader = document.getElementById('intro-loader');
+            const loaderBar = document.getElementById('loader-bar');
+            const loaderPercent = document.getElementById('loader-percent');
+            const loaderStatus = document.getElementById('loader-status');
+
+            // --- 0. HIGGSFIELD / AWWWARDS INTRO LOADER TIMELINE ---
+            if (loader && loaderBar && loaderPercent) {
+                let progressObj = { value: 0 };
+                const statusMsgs = [
+                    "LOADING GIS SPATIAL LAYERS...",
+                    "SYNCING CONCESSION LEDGERS...",
+                    "VERIFYING RSPO AUDIT TRAILS...",
+                    "COMPLEX FINANCIAL WATERFALL READY."
+                ];
+
+                const introTL = gsap.timeline();
+
+                introTL.to(progressObj, {
+                    value: 100,
+                    duration: 1.6,
+                    ease: "power2.inOut",
+                    onUpdate: () => {
+                        const currentVal = Math.floor(progressObj.value);
+                        loaderBar.style.width = currentVal + '%';
+                        loaderPercent.textContent = currentVal + '%';
+
+                        if (currentVal > 75) loaderStatus.textContent = statusMsgs[3];
+                        else if (currentVal > 50) loaderStatus.textContent = statusMsgs[2];
+                        else if (currentVal > 25) loaderStatus.textContent = statusMsgs[1];
+                    }
+                })
+                .to("#intro-loader > div", {
+                    opacity: 0,
+                    y: -30,
+                    duration: 0.4,
+                    ease: "power2.in"
+                })
+                .to("#intro-loader", {
+                    yPercent: -100,
+                    duration: 0.9,
+                    ease: "power4.inOut"
+                })
+                // Hero Entrance Animation Stagger
+                .from("#hero-section .inline-flex", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, "-=0.3")
+                .from("#hero-section h1", { opacity: 0, y: 40, duration: 0.7, ease: "power3.out" }, "-=0.3")
+                .from("#hero-section p", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, "-=0.4")
+                .from("#hero-section .flex.flex-col.sm\\:flex-row", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, "-=0.3")
+                .from("#hero-section .grid > div", { opacity: 0, y: 20, duration: 0.4, stagger: 0.08, ease: "power3.out" }, "-=0.3");
+            }
+
+            // --- 1. HERO BACKGROUND PARALLAX ---
             gsap.to("#hero-bg", {
                 scrollTrigger: {
-                    trigger: "#hero-bg",
+                    trigger: "#hero-section",
                     start: "top top",
                     end: "bottom top",
                     scrub: true
                 },
-                y: 100,
+                y: 120,
                 scale: 1.15
             });
 
-            // 2. Lifecycle Horizontal Scroll (Desktop)
+            // --- 2. CORE IDEA SECTION ---
+            gsap.from("#core-idea h2, #core-idea p", {
+                scrollTrigger: {
+                    trigger: "#core-idea",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#core-idea button", {
+                scrollTrigger: {
+                    trigger: "#core-idea",
+                    start: "top 70%"
+                },
+                opacity: 0,
+                y: 20,
+                duration: 0.4,
+                stagger: 0.06,
+                ease: "power2.out"
+            });
+
+            // --- 3. LAND ASSET SECTION ---
+            gsap.from("#land-asset h2, #land-asset p", {
+                scrollTrigger: {
+                    trigger: "#land-asset",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#land-asset .space-y-3 button", {
+                scrollTrigger: {
+                    trigger: "#land-asset",
+                    start: "top 70%"
+                },
+                opacity: 0,
+                x: -30,
+                duration: 0.5,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
+
+            gsap.from("#land-asset .group", {
+                scrollTrigger: {
+                    trigger: "#land-asset",
+                    start: "top 70%"
+                },
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+
+            // --- 4. LIFECYCLE HORIZONTAL SCROLL (DESKTOP) ---
             if (window.innerWidth >= 768) {
                 const wrapper = document.querySelector('.horizontal-scroll-wrapper');
                 if (wrapper) {
@@ -828,6 +967,146 @@ ob_start();
                     });
                 }
             }
+
+            // --- 5. OPERATIONS SECTION ---
+            gsap.from("#operations-section h2, #operations-section p", {
+                scrollTrigger: {
+                    trigger: "#operations-section",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#operations-section .space-y-4 > div", {
+                scrollTrigger: {
+                    trigger: "#operations-section",
+                    start: "top 75%"
+                },
+                opacity: 0,
+                y: 20,
+                duration: 0.5,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
+
+            // --- 6. VERIFICATION SECTION ---
+            gsap.from("#verification-section h2, #verification-section p", {
+                scrollTrigger: {
+                    trigger: "#verification-section",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            // --- 7. CAPITAL ALLOCATION SECTION ---
+            gsap.from("#capital-section h2, #capital-section p", {
+                scrollTrigger: {
+                    trigger: "#capital-section",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#capital-section .progress-fill", {
+                scrollTrigger: {
+                    trigger: "#capital-section",
+                    start: "top 70%"
+                },
+                scaleX: 0,
+                transformOrigin: "left center",
+                duration: 1.0,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            // --- 8. REVENUE WATERFALL SECTION ---
+            gsap.from("#revenue-waterfall h2, #revenue-waterfall p", {
+                scrollTrigger: {
+                    trigger: "#revenue-waterfall",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#revenue-waterfall .grid > div", {
+                scrollTrigger: {
+                    trigger: "#revenue-waterfall",
+                    start: "top 75%"
+                },
+                opacity: 0,
+                y: 30,
+                scale: 0.95,
+                duration: 0.5,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
+
+            // --- 9. ESG & AUDIT SECTION ---
+            gsap.from("#esg-section h2, #esg-section p", {
+                scrollTrigger: {
+                    trigger: "#esg-section",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 35,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            gsap.from("#esg-section .grid > div", {
+                scrollTrigger: {
+                    trigger: "#esg-section",
+                    start: "top 75%"
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.5,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
+
+            // --- 10. PROJECT REVEAL SPOTLIGHT SECTION ---
+            gsap.from("#project-reveal h2, #project-reveal p, #project-reveal .shadow-2xl", {
+                scrollTrigger: {
+                    trigger: "#project-reveal",
+                    start: "top 80%"
+                },
+                opacity: 0,
+                y: 40,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+
+            // --- 11. FINAL CTA SECTION ---
+            gsap.from("#final-cta h3, #final-cta p, #final-cta a", {
+                scrollTrigger: {
+                    trigger: "#final-cta",
+                    start: "top 85%"
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.6,
+                stagger: 0.12,
+                ease: "power3.out"
+            });
         }
     });
 </script>
