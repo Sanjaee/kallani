@@ -15,6 +15,9 @@ ob_start();
     activeDiagramStage: 'Asset', 
     activeParcel: 'A', 
     verTab: 'land',
+    projMilestone: 4,
+    esgTab: 'carbon',
+    activeOSLayer: 'all',
     stageImages: { 
         'Asset': '<?php echo $basePrefix; ?>/1.jpg', 
         'Project': '<?php echo $basePrefix; ?>/2.jpg', 
@@ -276,38 +279,68 @@ ob_start();
 
                     <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Every Project Starts with the Land.</h2>
                     <p class="scene-anim-item text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
-                        The flagship demonstration asset is the <strong class="text-white">North Kalimantan Palm Project</strong>. Spanning 4,000 hectares of productive agricultural land in East Kalimantan, Indonesia.
+                        The flagship demonstration asset is the <strong class="text-white">North Kalimantan Palm Project</strong>. Spanning 4,000 hectares of productive agricultural land in North Kalimantan, Indonesia.
                     </p>
 
-                    <div class="scene-anim-item space-y-3 mb-6">
-                        <button @click="activeParcel = 'A'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'A' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
+                    <div class="scene-anim-item space-y-2.5 mb-6">
+                        <button @click="activeParcel = 'A'" class="w-full p-3 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'A' ? 'bg-emerald-950/80 border-emerald-400 font-bold shadow-lg shadow-emerald-900/30' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
                                 <span class="block text-xs text-white font-bold">Zone A — Mature Plantation (<span class="counter-num" data-counter="1,800 ha">1,800 ha</span>)</span>
-                                <span class="text-[10px] text-gray-400">Peak harvesting • High FFB yield</span>
+                                <span class="text-[10px] text-gray-400">Peak harvesting • 21.3 MT/ha FFB yield</span>
                             </div>
                             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Operational</span>
                         </button>
 
-                        <button @click="activeParcel = 'B'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'B' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
+                        <button @click="activeParcel = 'B'" class="w-full p-3 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'B' ? 'bg-emerald-950/80 border-emerald-400 font-bold shadow-lg shadow-emerald-900/30' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
                                 <span class="block text-xs text-white font-bold">Zone B — Developing Plantation (<span class="counter-num" data-counter="1,400 ha">1,400 ha</span>)</span>
-                                <span class="text-[10px] text-gray-400">Young palm stands • Irrigation extensions</span>
+                                <span class="text-[10px] text-gray-400">Young palm stands • 17.5 MT/ha yield target</span>
                             </div>
                             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">Developing</span>
+                        </button>
+
+                        <button @click="activeParcel = 'C'" class="w-full p-3 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'C' ? 'bg-emerald-950/80 border-emerald-400 font-bold shadow-lg shadow-emerald-900/30' : 'bg-white/5 border-white/10 hover:bg-white/10'">
+                            <div>
+                                <span class="block text-xs text-white font-bold">Zone C — Forest & Riparian Buffer (<span class="counter-num" data-counter="800 ha">800 ha</span>)</span>
+                                <span class="text-[10px] text-gray-400">High conservation value • 14,200 tCO2e/yr offset</span>
+                            </div>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40">Protected</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="scene-anim-item relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
-                    <img :src="activeParcel === 'B' ? '<?php echo $basePrefix; ?>/8.jpg' : '<?php echo $basePrefix; ?>/4.jpg'" alt="Concession GIS Map" class="w-full h-[220px] sm:h-[440px] object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-between">
-                        <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-black/70 text-emerald-300 border border-emerald-500/40">GIS Parcel Map Overlay</span>
-                            <span class="counter-num px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white" data-counter="4,000 Hectares">4,000 Hectares</span>
+                    <img :src="activeParcel === 'B' ? '<?php echo $basePrefix; ?>/8.jpg' : (activeParcel === 'C' ? '<?php echo $basePrefix; ?>/3.jpg' : '<?php echo $basePrefix; ?>/4.jpg')" alt="Concession GIS Map" class="w-full h-[240px] sm:h-[440px] object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700" />
+                    
+                    <!-- HUD OVERLAY WITH INTERACTIVE PARCEL SPECS -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent p-4 sm:p-6 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono font-bold bg-black/80 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                                GIS Parcel HUD • Live Inspection
+                            </span>
+                            <span class="counter-num px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-600 text-white" data-counter="4,000 Hectares">4,000 Hectares</span>
                         </div>
-                        <div class="bg-black/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-xs text-left">
-                            <span class="text-emerald-400 font-bold block mb-1">Active Selection: North Kalimantan Concession</span>
-                            <span class="text-gray-300 block">High-density mature palm trees producing average <span class="counter-num text-emerald-300 font-bold" data-counter="19.4 MT/ha">19.4 MT/ha</span> FFB.</span>
+
+                        <div class="bg-black/85 backdrop-blur-md p-4 rounded-2xl border border-white/15 text-xs text-left space-y-2">
+                            <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                                <span class="font-bold text-white text-sm" x-text="activeParcel === 'A' ? 'Parcel A-104 (Mature)' : (activeParcel === 'B' ? 'Parcel B-201 (Developing)' : 'Parcel C-305 (Forest Reserve)')"></span>
+                                <span class="font-mono text-[10px] text-emerald-400 font-bold" x-text="activeParcel === 'A' ? 'LAT: 2°55\'N 117°22\'E' : (activeParcel === 'B' ? 'LAT: 2°57\'N 117°25\'E' : 'LAT: 3°01\'N 117°29\'E')"></span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-[10px] font-mono">
+                                <div class="bg-white/5 p-2 rounded-lg border border-white/5">
+                                    <span class="text-gray-400 block">Area</span>
+                                    <span class="font-bold text-emerald-300" x-text="activeParcel === 'A' ? '1,800 ha' : (activeParcel === 'B' ? '1,400 ha' : '800 ha')"></span>
+                                </div>
+                                <div class="bg-white/5 p-2 rounded-lg border border-white/5">
+                                    <span class="text-gray-400 block">Yield Rate</span>
+                                    <span class="font-bold text-white" x-text="activeParcel === 'A' ? '21.3 MT/ha' : (activeParcel === 'B' ? '17.5 MT/ha' : 'Carbon Buffer')"></span>
+                                </div>
+                                <div class="bg-white/5 p-2 rounded-lg border border-white/5">
+                                    <span class="text-gray-400 block">Status</span>
+                                    <span class="font-bold text-emerald-400" x-text="activeParcel === 'A' ? 'Verified' : (activeParcel === 'B' ? 'Active' : 'Protected')"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,37 +354,69 @@ ob_start();
             <img src="<?php echo $basePrefix; ?>/5.jpg" alt="Project Baseline" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"></path></svg>
                 <span>05 • Project Baseline</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Turn Physical Assets into Structured Projects.</h2>
-            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
-                Kallani structures raw land concessions into auditable project baselines with defined milestones, legal decrees, and operational bounds.
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">Turn Raw Assets into Activated Projects.</h2>
+            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Kallani structures raw land concessions into auditable project baselines through a 4-stage project activation pipeline.
             </p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="counter-num text-xs font-mono text-emerald-400 block mb-2 font-bold" data-counter="Milestone 01">Milestone 01</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Concession License HGU</h3>
-                    <p class="text-xs text-gray-400 mb-4">Decree HGU-541 granted by Ministry of Land Affairs for <span class="counter-num text-emerald-300 font-bold" data-counter="30-year">30-year</span> operational term.</p>
-                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Verified Legal</span>
+            <!-- INTERACTIVE PROJECT ACTIVATION PIPELINE STEPPER -->
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left space-y-6">
+                <!-- Stepper Progress Header -->
+                <div class="pb-4 border-b border-[#1E3A24]/60">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            PROJECT ACTIVATION PROGRESS: <span x-text="projMilestone === 1 ? '25% (RAW)' : (projMilestone === 2 ? '50% (LEGAL)' : (projMilestone === 3 ? '75% (MASTER PLAN)' : '100% (PROJECT ACTIVATED)'))"></span>
+                        </span>
+                        <span class="px-3 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">STATUS: ACTIVATED</span>
+                    </div>
+                    
+                    <!-- Interactive Step Bar -->
+                    <div class="grid grid-cols-4 gap-2 text-center text-[10px] font-mono">
+                        <button @click="projMilestone = 1" class="py-2 rounded-xl border transition-all cursor-pointer" :class="projMilestone >= 1 ? 'bg-emerald-600 text-white font-bold border-emerald-400' : 'bg-white/5 text-gray-400 border-white/10'">01. RAW ASSET ✓</button>
+                        <button @click="projMilestone = 2" class="py-2 rounded-xl border transition-all cursor-pointer" :class="projMilestone >= 2 ? 'bg-emerald-600 text-white font-bold border-emerald-400' : 'bg-white/5 text-gray-400 border-white/10'">02. LEGAL HGU ✓</button>
+                        <button @click="projMilestone = 3" class="py-2 rounded-xl border transition-all cursor-pointer" :class="projMilestone >= 3 ? 'bg-emerald-600 text-white font-bold border-emerald-400' : 'bg-white/5 text-gray-400 border-white/10'">03. MASTER PLAN ✓</button>
+                        <button @click="projMilestone = 4" class="py-2 rounded-xl border transition-all cursor-pointer" :class="projMilestone >= 4 ? 'bg-emerald-600 text-white font-bold border-emerald-400' : 'bg-white/5 text-gray-400 border-white/10'">04. ACTIVATED ✓</button>
+                    </div>
                 </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="counter-num text-xs font-mono text-amber-400 block mb-2 font-bold" data-counter="Milestone 02">Milestone 02</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Master Development Plan</h3>
-                    <p class="text-xs text-gray-400 mb-4"><span class="counter-num text-amber-300 font-bold" data-counter="3,120 ha">3,120 ha</span> planted, central CPO extraction mill & <span class="counter-num text-amber-300 font-bold" data-counter="2.4 km">2.4 km</span> secondary channels.</p>
-                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-950 text-amber-300 border border-amber-800">Operational</span>
-                </div>
+                <!-- Active Step Detail Content -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-5 rounded-2xl border transition-all" :class="projMilestone >= 2 ? 'bg-black/40 border-emerald-500/40 text-gray-200' : 'bg-white/5 border-white/10 opacity-60'">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="counter-num text-xs font-mono text-emerald-400 font-bold" data-counter="Step 01 & 02">Step 01 & 02</span>
+                            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">LEGAL ASSURANCE ✓</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">35-Year Plantation HGU License</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-3">Certified Decree HGU-042/KALTARA granted by Ministry of Land Affairs for 35-year operational term.</p>
+                        <span class="text-[10px] font-mono text-emerald-400 block">✓ AMDAL Environmental Clearance Granted</span>
+                    </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="counter-num text-xs font-mono text-blue-400 block mb-2 font-bold" data-counter="Milestone 03">Milestone 03</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Environmental Baseline</h3>
-                    <p class="text-xs text-gray-400 mb-4">RSPO & ISPO compliance ratings with <span class="counter-num text-blue-300 font-bold" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span> carbon absorption potential.</p>
-                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-800">Audited Rating</span>
+                    <div class="p-5 rounded-2xl border transition-all" :class="projMilestone >= 3 ? 'bg-black/40 border-amber-500/40 text-gray-200' : 'bg-white/5 border-white/10 opacity-60'">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="counter-num text-xs font-mono text-amber-400 font-bold" data-counter="Step 03">Step 03</span>
+                            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-amber-950 text-amber-300 border border-amber-800">MASTER PLAN ✓</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Infrastructure Zoning</h4>
+                        <p class="text-xs text-gray-300 leading-relaxed mb-3"><span class="counter-num text-amber-300 font-bold" data-counter="3,120 ha">3,120 ha</span> planted area, 45 MT/hr central CPO extraction mill & 2.4 km secondary channels.</p>
+                        <span class="text-[10px] font-mono text-amber-400 block">✓ GIS Zoning Registry Complete</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl border transition-all" :class="projMilestone >= 4 ? 'bg-emerald-950/70 border-emerald-400 text-white shadow-lg' : 'bg-white/5 border-white/10 opacity-60'">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="counter-num text-xs font-mono text-emerald-300 font-bold" data-counter="Step 04">Step 04</span>
+                            <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-emerald-500 text-white">PROJECT ACTIVATED</span>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">Operational Baseline Ready</h4>
+                        <p class="text-xs text-emerald-100 leading-relaxed mb-3">Environmental baseline established with <span class="counter-num text-white font-bold" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span> carbon offset potential.</p>
+                        <span class="text-[10px] font-mono text-emerald-200 block">✓ Live Data Streaming Active</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,20 +438,20 @@ ob_start();
 
                     <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Make Operations Visible.</h2>
                     <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
-                        Monitor field activity, harvesting productivity, and processing mill throughput with real-time operational tracking.
+                        Monitor field activity, harvesting productivity, and processing mill throughput through a live operational data stream.
                     </p>
 
                     <div class="scene-anim-item space-y-3 text-xs font-semibold">
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span>Planting Progress: <strong class="counter-num text-emerald-400 font-bold" data-counter="78%">78%</strong> (3,120 of 4,000 ha)</span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span>Average Harvest Yield: <strong class="counter-num text-emerald-400 font-bold" data-counter="19.4 MT / hectare">19.4 MT / hectare</strong></span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span>Mill Processing Capacity: <strong class="counter-num text-emerald-400 font-bold" data-counter="45 MT FFB / hour">45 MT FFB / hour</strong></span>
                         </div>
                     </div>
@@ -394,27 +459,48 @@ ob_start();
 
                 <div class="scene-anim-item lg:col-span-7 bg-[#142314]/70 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md">
                     <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#1E3A24]/60">
-                        <span class="font-bold text-sm text-white">Live Field Activity Feed</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Live Stream</span>
+                        <span class="font-bold text-sm text-white flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            Live Field Activity & Milling Stream
+                        </span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">SIMULATED STREAM</span>
                     </div>
-                    <div class="space-y-3 text-left">
-                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="font-bold text-xs text-white">Zone A Harvest Batch #104</span>
-                                <span class="counter-num text-[10px] text-emerald-400 font-semibold" data-counter="100% Completed">100% Completed</span>
+
+                    <!-- VISUAL OPERATIONAL DATA PIPELINE FLOW -->
+                    <div class="space-y-4 text-left">
+                        <!-- Step 1: Harvest -->
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60 relative">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-bold text-xs text-white">01. Field Harvest — Zone A Batch #104</span>
+                                <span class="counter-num text-[10px] text-emerald-400 font-mono font-bold" data-counter="100% Completed">100% Completed</span>
                             </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="progress-bar-anim bg-emerald-500 h-full" data-bar-width="100%" style="width: 0%"></div>
+                            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mb-1">
+                                <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="100%" style="width: 0%"></div>
                             </div>
+                            <span class="text-[10px] text-gray-400 font-mono">Yield: +21.3 MT/ha • Transported to Mill</span>
                         </div>
-                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="font-bold text-xs text-white">Zone B Irrigation Extension</span>
-                                <span class="counter-num text-[10px] text-amber-400 font-semibold" data-counter="78% In Progress">78% In Progress</span>
+
+                        <!-- Connector Flow Arrow -->
+                        <div class="flex justify-center -my-2 z-10 relative">
+                            <span class="px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[9px] font-mono">↓ DATA FLOW (FFB TO MILL)</span>
+                        </div>
+
+                        <!-- Step 2: Mill -->
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-[#1E3A24]/60 relative">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-bold text-xs text-white">02. Extraction Mill — Processing Line 1</span>
+                                <span class="counter-num text-[10px] text-amber-400 font-mono font-bold" data-counter="78% Processing Capacity">78% Processing Capacity</span>
                             </div>
-                            <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="progress-bar-anim bg-amber-500 h-full" data-bar-width="78%" style="width: 0%"></div>
+                            <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden mb-1">
+                                <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="78%" style="width: 0%"></div>
                             </div>
+                            <span class="text-[10px] text-gray-400 font-mono">Rate: 45 MT FFB/hour • Extraction Efficiency: 21.8%</span>
+                        </div>
+
+                        <!-- Step 3: Output -->
+                        <div class="p-3 bg-emerald-950/60 rounded-xl border border-emerald-500/40 flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-300">03. Daily CPO Production Output:</span>
+                            <span class="counter-num text-xs font-mono font-bold text-white bg-emerald-600 px-3 py-1 rounded-lg" data-counter="+184 MT CPO Output">+184 MT CPO Output</span>
                         </div>
                     </div>
                 </div>
@@ -436,7 +522,7 @@ ob_start();
 
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Understand What Has Been Verified.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
-                Independent third-party audits, legal concession reviews, and tamper-evident document cryptographic hashing.
+                Independent spatial verification, legal concession audits, and tamper-evident document cryptographic hashing.
             </p>
 
             <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left">
@@ -449,18 +535,18 @@ ob_start();
                 <!-- Tab 1: Land & GIS -->
                 <div :class="verTab === 'land' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'hidden'">
                     <div>
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: GIS Verified</span>
                         <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
                         <p class="text-xs text-gray-300 mb-4"><span class="counter-num text-emerald-400 font-bold" data-counter="4,000 hectares">4,000 hectares</span> mapped via high-resolution drone photogrammetry and SAR radar imagery.</p>
                         <div class="p-3 bg-black/40 rounded-xl border border-[#1E3A24]/60 text-xs">
-                            <span class="text-gray-400 block">Cryptographic Hash</span>
+                            <span class="text-gray-400 block">Cryptographic Spatial Hash</span>
                             <span class="font-mono text-emerald-400 font-bold">0x8f4b7a1c90e322d8a39a1</span>
                         </div>
                     </div>
                     <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Assurance Certificate</span>
-                            <p class="text-xs text-gray-300">Verified by AgriGIS Spatial Audit Ltd. & Institutional Assurance Group.</p>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Spatial Assurance Record</span>
+                            <p class="text-xs text-gray-300">Verified via GIS Spatial Boundary Audit & Drone Photogrammetry (Simulated Assurance).</p>
                         </div>
                         <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: DOC-2026-NKP-V8</span>
                     </div>
@@ -480,7 +566,7 @@ ob_start();
                     <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Legal Concession Title</span>
-                            <p class="text-xs text-gray-300">Verified by Kaltara Legal Audit Commission & Ministry of Agrarian Affairs.</p>
+                            <p class="text-xs text-gray-300">Verified by Kaltara Land Office & Legal Audit Commission (Simulated Record).</p>
                         </div>
                         <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: LGL-2026-NKP-HGU</span>
                     </div>
@@ -491,7 +577,7 @@ ob_start();
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Cryptographically Signed</span>
                         <h4 class="text-lg font-bold text-white mb-2">Tamper-Evident Document Vault</h4>
-                        <p class="text-xs text-gray-300 mb-4">Annual RSPO/ISPO ESG Audit reports, Financial Ledger Statements, and Operational Yield Logs timestamped on-chain.</p>
+                        <p class="text-xs text-gray-300 mb-4">Annual RSPO/ISPO ESG Audit reports, Financial Ledger Statements, and Operational Yield Logs locked in Immutable Cryptographic Integrity Record.</p>
                         <div class="p-3 bg-black/40 rounded-xl border border-[#1E3A24]/60 text-xs">
                             <span class="text-gray-400 block">Audit Vault Root Hash</span>
                             <span class="font-mono text-emerald-400 font-bold">0x9e2fa8110b42d76c11d09</span>
@@ -500,7 +586,7 @@ ob_start();
                     <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
                         <div>
                             <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Audit Vault Ledger</span>
-                            <p class="text-xs text-gray-300">Audited by Big4 Institutional Advisory & Carbon Verification Vault.</p>
+                            <p class="text-xs text-gray-300">Audited via Cryptographic Document Vault & Institutional Advisory (Simulated Ledger).</p>
                         </div>
                         <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: AUD-2026-NKP-FINAL</span>
                     </div>
@@ -548,7 +634,7 @@ ob_start();
                         <span class="truncate min-w-0 flex-1">Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
                         <span class="counter-num text-emerald-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$3,200,000 USD">$3,200,000 USD</span>
                     </div>
-                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-emerald-950">
+                    <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden p-0.5 border border-emerald-950">
                         <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="39%" style="width: 0%"></div>
                     </div>
                 </div>
@@ -557,7 +643,7 @@ ob_start();
                         <span class="truncate min-w-0 flex-1">Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
                         <span class="counter-num text-blue-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$2,100,000 USD">$2,100,000 USD</span>
                     </div>
-                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-blue-950">
+                    <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden p-0.5 border border-blue-950">
                         <div class="progress-bar-anim bg-blue-500 h-full rounded-full" data-bar-width="25.6%" style="width: 0%"></div>
                     </div>
                 </div>
@@ -566,8 +652,17 @@ ob_start();
                         <span class="truncate min-w-0 flex-1">Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
                         <span class="counter-num text-amber-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$1,800,000 USD">$1,800,000 USD</span>
                     </div>
-                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-amber-950">
+                    <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden p-0.5 border border-amber-950">
                         <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="22%" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-300 mb-1 gap-2">
+                        <span class="truncate min-w-0 flex-1">Reserve & Contingency (<span class="counter-num" data-counter="13.4%">13.4%</span>)</span>
+                        <span class="counter-num text-purple-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$1,100,000 USD">$1,100,000 USD</span>
+                    </div>
+                    <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden p-0.5 border border-purple-950">
+                        <div class="progress-bar-anim bg-purple-500 h-full rounded-full" data-bar-width="13.4%" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -580,40 +675,53 @@ ob_start();
             <img src="<?php echo $basePrefix; ?>/9.jpg" alt="Financial Waterfall" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 <span>09 • Financial Waterfall</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Follow the Flow of Value.</h2>
-            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
-                Itemized waterfall flow from gross crude palm oil sales to net distributable investor cash flow.
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">Follow the Flow of Value.</h2>
+            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Itemized waterfall flow mapping gross crude palm oil sales directly to net distributable investor cash flow.
             </p>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 text-left">
-                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-emerald-500/30 backdrop-blur-md">
-                    <span class="text-[10px] font-mono font-bold uppercase text-emerald-400 block mb-1">Step 1 — Gross Revenue</span>
-                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$4,850,000">$4,850,000</h4>
-                    <p class="text-[10px] text-gray-400">Total annual sales from CPO & kernel extraction.</p>
+            <!-- INTERACTIVE ANIMATED VALUE FLOW PIPELINE -->
+            <div class="scene-anim-item grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
+                <div class="p-5 bg-black/50 rounded-2xl border border-emerald-500/40 backdrop-blur-md relative flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono font-bold uppercase text-emerald-400 block mb-1">Step 1 — Gross CPO Revenue</span>
+                        <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$4,850,000">$4,850,000</h4>
+                        <p class="text-[10px] text-gray-400 leading-relaxed">Total annual sales from CPO & kernel extraction.</p>
+                    </div>
+                    <span class="mt-4 text-[9px] font-mono text-emerald-400 block pt-2 border-t border-emerald-500/20">↓ 100% REVENUE INFLOW</span>
                 </div>
 
-                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-amber-500/30 backdrop-blur-md">
-                    <span class="text-[10px] font-mono font-bold uppercase text-amber-400 block mb-1">Step 2 — Operating Cost</span>
-                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$1,420,000">-$1,420,000</h4>
-                    <p class="text-[10px] text-gray-400">Field labor, fertilizer & milling opex expenses.</p>
+                <div class="p-5 bg-black/50 rounded-2xl border border-amber-500/40 backdrop-blur-md relative flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono font-bold uppercase text-amber-400 block mb-1">Step 2 — Operating Cost</span>
+                        <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$1,420,000">-$1,420,000</h4>
+                        <p class="text-[10px] text-gray-400 leading-relaxed">Field labor, fertilizer & milling opex expenses (29.3%).</p>
+                    </div>
+                    <span class="mt-4 text-[9px] font-mono text-amber-400 block pt-2 border-t border-amber-500/20">↓ DEDUCT OPEX (29.3%)</span>
                 </div>
 
-                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-purple-500/30 backdrop-blur-md">
-                    <span class="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">Step 3 — Reserve Buffer</span>
-                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$510,000">-$510,000</h4>
-                    <p class="text-[10px] text-gray-400">Maintenance reserve & compliance buffer.</p>
+                <div class="p-5 bg-black/50 rounded-2xl border border-purple-500/40 backdrop-blur-md relative flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">Step 3 — Reserve Buffer</span>
+                        <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$510,000">-$510,000</h4>
+                        <p class="text-[10px] text-gray-400 leading-relaxed">Maintenance reserve & ESG compliance buffer (10.5%).</p>
+                    </div>
+                    <span class="mt-4 text-[9px] font-mono text-purple-400 block pt-2 border-t border-purple-500/20">↓ DEDUCT RESERVE (10.5%)</span>
                 </div>
 
-                <div class="scene-anim-item p-5 bg-emerald-900/90 rounded-2xl border border-emerald-500 shadow-xl">
-                    <span class="text-[10px] font-mono font-bold uppercase text-emerald-300 block mb-1">Step 4 — Net Distribution</span>
-                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$2,920,000">$2,920,000</h4>
-                    <p class="text-[10px] text-emerald-100">Net distributable cash flow for quarterly payouts.</p>
+                <div class="p-5 bg-emerald-950/90 rounded-2xl border border-emerald-400 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-mono font-bold uppercase text-emerald-300 block mb-1">Step 4 — Net Distribution</span>
+                        <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$2,920,000">$2,920,000</h4>
+                        <p class="text-[10px] text-emerald-100 leading-relaxed">Net distributable cash flow for quarterly investor payouts (60.2%).</p>
+                    </div>
+                    <span class="mt-4 text-[9px] font-mono text-emerald-300 font-bold block pt-2 border-t border-emerald-500/50">✓ DISTRIBUTABLE CASH FLOW</span>
                 </div>
             </div>
         </div>
@@ -625,34 +733,63 @@ ob_start();
             <img src="<?php echo $basePrefix; ?>/10.jpg" alt="ESG & Sustainability" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"></path></svg>
                 <span>10 • ESG & Sustainability</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Visibility Beyond Financial Metrics.</h2>
-            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">Visibility Beyond Financial Metrics.</h2>
+            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
                 Track carbon absorption potential, environmental compliance, and immutable audit logs.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <h4 class="font-bold text-lg text-white mb-1">Carbon Sequestration</h4>
-                    <span class="counter-num text-2xl font-extrabold text-emerald-400 block mb-2" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span>
-                    <p class="text-xs text-gray-400">Estimated annual carbon absorption across palm stands & forest buffers.</p>
+            <!-- INTERACTIVE ESG METRICS & LIVE AUDIT TRAIL TIMELINE -->
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left space-y-6">
+                <!-- Top 3 Metric Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/10">
+                        <h4 class="font-bold text-sm text-white mb-1">Carbon Sequestration</h4>
+                        <span class="counter-num text-2xl font-extrabold text-emerald-400 block mb-1" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span>
+                        <p class="text-[10px] text-gray-400">Estimated annual carbon absorption across palm stands & forest buffers.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/10">
+                        <h4 class="font-bold text-sm text-white mb-1">RSPO / ISPO Rating</h4>
+                        <span class="counter-num text-2xl font-extrabold text-blue-400 block mb-1" data-counter="94% Compliant">94% Compliant</span>
+                        <p class="text-[10px] text-gray-400">Adherence to zero-deforestation & soil conservation standards.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/10">
+                        <h4 class="font-bold text-sm text-white mb-1">Audit Trail Activity</h4>
+                        <span class="counter-num text-2xl font-extrabold text-purple-400 block mb-1" data-counter="1,240 Events">1,240 Events</span>
+                        <p class="text-[10px] text-gray-400">Chronological activity logs recording parcel updates & attestations.</p>
+                    </div>
                 </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <h4 class="font-bold text-lg text-white mb-1">RSPO / ISPO Rating</h4>
-                    <span class="counter-num text-2xl font-extrabold text-blue-400 block mb-2" data-counter="94% Compliant">94% Compliant</span>
-                    <p class="text-xs text-gray-400">Adherence to zero-deforestation & soil conservation standards.</p>
-                </div>
-
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <h4 class="font-bold text-lg text-white mb-1">Immutable Audit Trail</h4>
-                    <span class="counter-num text-2xl font-extrabold text-purple-400 block mb-2" data-counter="1,240 Events">1,240 Events</span>
-                    <p class="text-xs text-gray-400">Chronological activity logs recording parcel updates & attestations.</p>
+                <!-- Live Timestamped Audit Event Feed -->
+                <div class="pt-4 border-t border-[#1E3A24]/60">
+                    <span class="text-xs font-mono font-bold text-emerald-400 block mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        LIVE AUDIT STREAM (SIMULATED LEDGER TIMELINE):
+                    </span>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-[10px] font-mono">
+                        <div class="p-2.5 bg-black/50 rounded-xl border border-emerald-500/30">
+                            <span class="text-emerald-400 block font-bold">2026-09-18 14:22 UTC</span>
+                            <span class="text-gray-300 block">Parcel A-104 GIS boundary verified</span>
+                            <span class="text-gray-500 text-[9px] block">HASH: 0x8f4b...39a1</span>
+                        </div>
+                        <div class="p-2.5 bg-black/50 rounded-xl border border-amber-500/30">
+                            <span class="text-amber-400 block font-bold">2026-09-17 09:15 UTC</span>
+                            <span class="text-gray-300 block">Harvest Batch #104 yield log logged</span>
+                            <span class="text-gray-500 text-[9px] block">HASH: 0x3c91...82e1</span>
+                        </div>
+                        <div class="p-2.5 bg-black/50 rounded-xl border border-purple-500/30">
+                            <span class="text-purple-400 block font-bold">2026-09-16 11:00 UTC</span>
+                            <span class="text-gray-300 block">Legal HGU decree #042 hash locked</span>
+                            <span class="text-gray-500 text-[9px] block">HASH: 0x9e2f...1d09</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -664,51 +801,80 @@ ob_start();
             <img src="<?php echo $basePrefix; ?>/1.jpg" alt="Integrated OS" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <span>11 • Integrated Operating System</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">One Project. Multiple Connected Layers.</h2>
-            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
-                Bringing physical land, project governance, operations, verification, capital, revenue, and ESG into one auditable system.
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">One Project. Multiple Connected Layers.</h2>
+            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Bringing physical land, project governance, operations, verification, capital, revenue, and ESG into one auditable operating system.
             </p>
 
-            <div class="scene-anim-item bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-md shadow-2xl">
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 01">Layer 01</span>
-                        <span class="font-bold text-sm text-white">Physical Land</span>
+            <!-- INTEGRATED KALLANI OS COMMAND DECK (THE ULTIMATE PAYOFF) -->
+            <div class="scene-anim-item bg-[#142314]/85 rounded-3xl p-6 sm:p-8 border border-emerald-500/50 backdrop-blur-md shadow-2xl text-left space-y-6">
+                <!-- Control Deck Header -->
+                <div class="flex flex-wrap items-center justify-between pb-4 border-b border-[#1E3A24]/60 gap-2">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-emerald-400 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            KALLANI OS CONTROL DECK — NORTH KALIMANTAN PROJECT
+                        </span>
+                        <p class="text-[11px] text-gray-300">All 8 Lifecycle Layers Merged into One Operating Environment</p>
                     </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 02">Layer 02</span>
-                        <span class="font-bold text-sm text-white">Project Structure</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 03">Layer 03</span>
-                        <span class="font-bold text-sm text-white">Field Operations</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 04">Layer 04</span>
-                        <span class="font-bold text-sm text-white">Verification</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 05">Layer 05</span>
-                        <span class="font-bold text-sm text-white">Capital Allocation</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 06">Layer 06</span>
-                        <span class="font-bold text-sm text-white">Revenue Flow</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 07">Layer 07</span>
-                        <span class="font-bold text-sm text-white">Distributions</span>
-                    </div>
-                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 08">Layer 08</span>
-                        <span class="font-bold text-sm text-white">ESG & Audit</span>
-                    </div>
+                    <span class="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-500 text-white shadow-lg">SYSTEM LIVE</span>
+                </div>
+
+                <!-- Interactive Layer Grid Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                    <button @click="activeOSLayer = 'land'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'land' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'land' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 01">Layer 01</span>
+                        <span class="font-bold block text-sm">Physical Land</span>
+                        <span class="text-[10px] opacity-80 block mt-1">4,000 ha GIS Mapped</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'project'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'project' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'project' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 02">Layer 02</span>
+                        <span class="font-bold block text-sm">Project Baseline</span>
+                        <span class="text-[10px] opacity-80 block mt-1">35-Yr HGU Decree #042</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'ops'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'ops' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'ops' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 03">Layer 03</span>
+                        <span class="font-bold block text-sm">Field Operations</span>
+                        <span class="text-[10px] opacity-80 block mt-1">19.4 MT/ha • 78% Ops</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'verify'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'verify' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'verify' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 04">Layer 04</span>
+                        <span class="font-bold block text-sm">Verification</span>
+                        <span class="text-[10px] opacity-80 block mt-1">82% Verified Hash</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'capital'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'capital' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'capital' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 05">Layer 05</span>
+                        <span class="font-bold block text-sm">Capital Ledger</span>
+                        <span class="text-[10px] opacity-80 block mt-1">$6.8M / $12.5M Value</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'revenue'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'revenue' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'revenue' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 06">Layer 06</span>
+                        <span class="font-bold block text-sm">Revenue Flow</span>
+                        <span class="text-[10px] opacity-80 block mt-1">$4.85M Annual Sales</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'dist'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'dist' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'dist' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 07">Layer 07</span>
+                        <span class="font-bold block text-sm">Distribution</span>
+                        <span class="text-[10px] opacity-80 block mt-1">$2.92M Investor Cash</span>
+                    </button>
+
+                    <button @click="activeOSLayer = 'esg'" class="p-3.5 rounded-2xl border text-left transition-all cursor-pointer" :class="activeOSLayer === 'esg' ? 'bg-emerald-600 text-white font-bold border-emerald-300 shadow-lg' : 'bg-black/40 text-gray-300 border-white/10 hover:bg-black/60'">
+                        <span class="counter-num text-[10px] font-mono uppercase block" :class="activeOSLayer === 'esg' ? 'text-emerald-200' : 'text-emerald-400'" data-counter="Layer 08">Layer 08</span>
+                        <span class="font-bold block text-sm">ESG & Audit</span>
+                        <span class="text-[10px] opacity-80 block mt-1">14,200 tCO2e • 94% RSPO</span>
+                    </button>
                 </div>
             </div>
         </div>
