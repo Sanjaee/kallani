@@ -825,12 +825,12 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
     <link rel="stylesheet" href="<?php echo $basePrefix; ?>/css/style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-</head>
-<body class="bg-[#F7F7F4] text-[#171717] font-inter min-h-screen" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">    <?php
-    $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
-    if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
-    $isHomePage = ($cleanCurrentPath === '/');
-    ?>
+<?php
+$cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
+if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
+$isHomePage = ($cleanCurrentPath === '/');
+?>
+<body class="bg-[#F7F7F4] text-[#171717] font-inter <?php echo $isHomePage ? 'h-screen w-screen overflow-hidden' : 'min-h-screen'; ?>" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">
 
     <!-- Navbar (Hidden during Presentation Scenes 1-11, Revealed on Scene 12) -->
     <nav id="main-navbar" class="bg-white border-b border-[#E5E5E5] fixed top-0 left-0 right-0 z-[100] shadow-sm navbar transition-all duration-700 transform <?php echo $isHomePage ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'; ?>">
@@ -987,6 +987,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         <?php echo $content ?? ''; ?>
     </main>
 
+    <?php if (!$isHomePage): ?>
     <!-- Footer -->
     <footer class="bg-white border-t border-[#E5E5E5] py-8 mt-12">
         <div class="max-w-7xl mx-auto px-6">
@@ -1021,6 +1022,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
             </div>
         </div>
     </footer>
+    <?php endif; ?>
 
     <script src="<?php echo $basePrefix; ?>/js/app.js"></script>
 </body>
