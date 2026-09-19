@@ -834,9 +834,9 @@ $isHomePage = ($cleanCurrentPath === '/');
 
     <!-- Navbar (Hidden during Presentation Scenes 1-11, Revealed on Scene 12) -->
     <nav id="main-navbar" class="bg-white border-b border-[#E5E5E5] fixed top-0 left-0 right-0 z-[100] shadow-sm navbar transition-all duration-700 transform <?php echo $isHomePage ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'; ?>">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between navbar-container">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between navbar-container">
             <!-- Left: Logo -->
-            <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo shrink-0">KALLANI</a>
+            <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-serif font-light text-[#2D5016] dark:text-emerald-400 tracking-[0.3em] uppercase hover:opacity-90 navbar-logo shrink-0 pl-[0.3em]">KALLANI</a>
             
             <!-- Desktop Nav Links (Hidden on Mobile) -->
             <div class="hidden md:flex gap-4 items-center nav-links">
@@ -858,7 +858,7 @@ $isHomePage = ($cleanCurrentPath === '/');
             </div>
 
             <!-- Mobile Hamburger Button (Right Side, Mobile Only < 768px) -->
-            <button @click="mobileMenuOpen = true" class="mobile-menu-btn p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
+            <button @click="mobileMenuOpen = true" class="mobile-menu-btn p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -892,7 +892,7 @@ $isHomePage = ($cleanCurrentPath === '/');
             <div class="space-y-5">
                 <!-- Drawer Header -->
                 <div class="flex items-center justify-between pb-3 border-b border-gray-200 dark:border-gray-800">
-                    <span class="text-xl font-extrabold text-[#2D5016] dark:text-emerald-400 tracking-tight">KALLANI</span>
+                    <span class="text-xl font-serif font-light text-[#2D5016] dark:text-emerald-400 tracking-[0.3em] uppercase pl-[0.3em]">KALLANI</span>
                     <button @click="mobileMenuOpen = false" class="p-1.5 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
