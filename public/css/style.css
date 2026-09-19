@@ -707,11 +707,11 @@ a { text-decoration: none; color: inherit; }
     font-size: 0.7rem !important;
   }
 
-  /* Image Containers */
+  /* Image Containers (Increased height on mobile for clear photo visibility) */
   .scene img.h-\[220px\], .scene img.h-\[400px\] {
-    height: 140px !important;
+    height: 240px !important;
   }
   .scene .h-56, .scene .h-64 {
-    height: 120px !important;
+    height: 190px !important;
   }
 }
