@@ -85,13 +85,19 @@ ob_start();
                 <span class="bg-gradient-to-r from-emerald-300 via-emerald-100 to-amber-200 bg-clip-text text-transparent">Productive Natural Assets</span>
             </h1>
 
-            <p class="scene-anim-item text-lg sm:text-2xl text-gray-300 font-normal max-w-3xl mb-12 leading-relaxed text-balance">
+            <p class="scene-anim-item text-lg sm:text-2xl text-gray-300 font-normal max-w-3xl mb-10 leading-relaxed text-balance">
                 Connecting physical assets, operations, verification, capital, and revenue into one integrated operating system.
             </p>
 
-            <div class="scene-anim-item flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-950/60 px-5 py-3 rounded-full border border-emerald-500/30">
-                <span>SCROLL DOWN TO ADVANCE STORY</span>
-                <svg class="w-4 h-4 animate-bounce text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <!-- SLEEK INTERACTIVE SCROLL PROMPT -->
+            <div class="scene-anim-item flex flex-col items-center gap-3 mt-4 group cursor-pointer" onclick="window.goToScene(1)">
+                <div class="w-6 h-10 rounded-full border-2 border-emerald-400/50 flex justify-center pt-2 backdrop-blur-md group-hover:border-emerald-400 transition-colors shadow-lg shadow-emerald-950">
+                    <div class="w-1.5 h-3 rounded-full bg-emerald-400 animate-bounce"></div>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] font-mono tracking-[0.25em] uppercase text-emerald-300/80 group-hover:text-emerald-300 transition-colors">
+                    <span>Scroll to Explore</span>
+                    <svg class="w-3.5 h-3.5 text-emerald-400 transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
             </div>
         </div>
     </section>
@@ -99,7 +105,11 @@ ob_start();
     <!-- SCENE 02 — THE PROBLEM -->
     <section id="scene-02" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">The Structural Challenge</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                <span>02 • Structural Challenge</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Natural Assets. Disconnected Systems.</h2>
             <p class="scene-anim-item text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-12">
                 Traditional natural asset management fragments physical land, operational tracking, third-party verification, and investor distribution into isolated silos.
@@ -149,7 +159,11 @@ ob_start();
     <!-- SCENE 03 — THE KALLANI CONCEPT -->
     <section id="scene-03" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">System Architecture</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <span>03 • System Architecture</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">One Connected Operating System.</h2>
             <p class="scene-anim-item text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-10">
                 Kallani unifies every stage of natural asset management into one integrated, auditable digital operating model.
@@ -206,7 +220,11 @@ ob_start();
         <div class="max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="text-left">
-                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Physical Asset Spotlight</span>
+                    <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        <span>04 • Physical Concession</span>
+                    </div>
+
                     <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Every Project Starts with the Land.</h2>
                     <p class="scene-anim-item text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
                         The flagship demonstration asset is the <strong class="text-white">North Kalimantan Palm Project</strong>. Spanning 4,000 hectares of productive agricultural land in East Kalimantan, Indonesia.
@@ -251,7 +269,11 @@ ob_start();
     <!-- SCENE 05 — PROJECT STRUCTURE -->
     <section id="scene-05" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Project Governance</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"></path></svg>
+                <span>05 • Project Baseline</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Turn Physical Assets into Structured Projects.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
                 Kallani structures raw land concessions into auditable project baselines with defined milestones, legal decrees, and operational bounds.
@@ -287,7 +309,11 @@ ob_start();
         <div class="max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
-                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Operational Intelligence</span>
+                    <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <span>06 • Real-Time Operations</span>
+                    </div>
+
                     <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Make Operations Visible.</h2>
                     <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
                         Monitor field activity, harvesting productivity, and processing mill throughput with real-time operational tracking.
@@ -342,7 +368,11 @@ ob_start();
     <!-- SCENE 07 — VERIFICATION -->
     <section id="scene-07" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Third-Party Assurance</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>07 • Assurance & Audit Vault</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Understand What Has Been Verified.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
                 Independent third-party audits, legal concession reviews, and tamper-evident document cryptographic hashing.
@@ -382,7 +412,11 @@ ob_start();
         <div class="max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
-                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Capital Allocation</span>
+                    <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"></path></svg>
+                        <span>08 • Capital Ledger</span>
+                    </div>
+
                     <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Understand Where Capital Is Allocated.</h2>
                     <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
                         Kallani provides transparent capital tracking, mapping every dollar directly to plantation development, infrastructure, and reserves.
@@ -437,7 +471,11 @@ ob_start();
     <!-- SCENE 09 — REVENUE & DISTRIBUTION -->
     <section id="scene-09" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Financial Waterfall</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <span>09 • Financial Waterfall</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Follow the Flow of Value.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
                 Itemized waterfall flow from gross crude palm oil sales to net distributable investor cash flow.
@@ -474,7 +512,11 @@ ob_start();
     <!-- SCENE 10 — ESG, RISK & AUDIT -->
     <section id="scene-10" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Sustainability & Risk</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"></path></svg>
+                <span>10 • ESG & Sustainability</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Visibility Beyond Financial Metrics.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
                 Track carbon absorption potential, environmental compliance, and immutable audit logs.
@@ -505,7 +547,11 @@ ob_start();
     <!-- SCENE 11 — CONNECTED SYSTEM RECAP -->
     <section id="scene-11" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Complete Operating Model</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>11 • Integrated Operating System</span>
+            </div>
+
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">One Project. Multiple Connected Layers.</h2>
             <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
                 Bringing physical land, project governance, operations, verification, capital, revenue, and ESG into one auditable system.
@@ -553,7 +599,10 @@ ob_start();
     <!-- SCENE 12 — FINAL REVEAL & CTA -->
     <section id="scene-12" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
         <div class="max-w-4xl mx-auto text-center">
-            <span class="scene-anim-item px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-widest bg-emerald-950 text-emerald-300 border border-emerald-500/40 mb-6 inline-block">Interactive Demo Spotlight</span>
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-4">
+                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <span>12 • Interactive Project Dashboard</span>
+            </div>
             
             <h2 class="scene-anim-item text-4xl sm:text-6xl font-extrabold text-white mb-6 tracking-tight">Explore Kallani in Action.</h2>
             <p class="scene-anim-item text-base sm:text-lg text-emerald-200 max-w-2xl mx-auto mb-10">
@@ -682,10 +731,6 @@ ob_start();
             const counter = document.getElementById('scene-counter');
             if (counter) {
                 counter.textContent = String(index + 1).padStart(2, '0') + ' / 12';
-            }
-            const titleEl = document.getElementById('current-scene-title');
-            if (titleEl) {
-                titleEl.textContent = sceneTitles[index] || '';
             }
 
             // Dots UI update
