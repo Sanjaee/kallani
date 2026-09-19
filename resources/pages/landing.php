@@ -38,16 +38,9 @@ ob_start();
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
     <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
         <div class="max-w-md w-full text-center space-y-6">
-            <!-- Animated Brand Mark -->
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-950/80 border border-emerald-500/40 shadow-2xl shadow-emerald-500/20 mb-2 transform hover:scale-105 transition-transform duration-500">
-                <svg class="w-10 h-10 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-            </div>
-            
             <div class="space-y-2">
-                <span class="text-xs font-mono uppercase tracking-[0.3em] text-emerald-400/80 block">KALLANI INFRASTRUCTURE OS</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Productive Natural Assets</h2>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white uppercase">KALLANI</h1>
+                <p class="text-sm sm:text-base font-medium text-emerald-400/90 tracking-wide">Productive Natural Assets</p>
             </div>
 
             <!-- Loader Progress Bar & Counter -->
