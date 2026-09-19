@@ -390,7 +390,7 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
 
         html.dark p, html.dark .text-muted, html.dark .text-\[\#6B6B6B\], html.dark .text-kallani-text-secondary,
         body.dark p, body.dark .text-muted, body.dark .text-\[\#6B6B6B\], body.dark .text-kallani-text-secondary {
-            color: #9CA3AF !important;
+            color: #D1D5DB !important;
         }
 
         html.dark .bg-white, html.dark .bg-\[\#FFFFFF\], html.dark .bg-kallani-surface,

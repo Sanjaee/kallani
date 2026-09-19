@@ -724,3 +724,26 @@ a { text-decoration: none; color: inherit; }
     height: 190px !important;
   }
 }
+
+/* Global Dark Mode Style Engine Overrides */
+html.dark .text-kallani-text, html.dark .text-\[\#171717\],
+body.dark .text-kallani-text, body.dark .text-\[\#171717\] {
+  color: #F3F4F1 !important;
+}
+
+html.dark .text-kallani-text-secondary, html.dark .text-\[\#6B6B6B\], html.dark .text-muted,
+body.dark .text-kallani-text-secondary, body.dark .text-\[\#6B6B6B\], body.dark .text-muted {
+  color: #D1D5DB !important;
+}
+
+html.dark .bg-kallani-muted, html.dark .bg-\[\#F0F0EC\],
+body.dark .bg-kallani-muted, body.dark .bg-\[\#F0F0EC\] {
+  background-color: #1E281B !important;
+  color: #F3F4F1 !important;
+}
+
+html.dark .bg-kallani-surface, html.dark .bg-white, html.dark .bg-\[\#FFFFFF\],
+body.dark .bg-kallani-surface, body.dark .bg-white, body.dark .bg-\[\#FFFFFF\] {
+  background-color: #141C12 !important;
+}
+
