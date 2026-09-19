@@ -826,17 +826,17 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 </head>
-<body class="bg-[#F7F7F4] text-[#171717] font-inter min-h-screen" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">
-    <!-- Navbar -->
-    <nav class="bg-white border-b border-[#E5E5E5] sticky top-0 z-50 shadow-sm navbar">
+<body class="bg-[#F7F7F4] text-[#171717] font-inter min-h-screen" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">    <?php
+    $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
+    if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
+    $isHomePage = ($cleanCurrentPath === '/');
+    ?>
+
+    <!-- Navbar (Hidden during Presentation Scenes 1-11, Revealed on Scene 12) -->
+    <nav id="main-navbar" class="bg-white border-b border-[#E5E5E5] fixed top-0 left-0 right-0 z-[100] shadow-sm navbar transition-all duration-700 transform <?php echo $isHomePage ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'; ?>">
         <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between navbar-container">
             <!-- Left: Logo -->
             <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-extrabold text-[#2D5016] tracking-tight hover:opacity-90 navbar-logo shrink-0">KALLANI</a>
-
-            <?php
-            $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/');
-            if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
-            ?>
             
             <!-- Desktop Nav Links (Hidden on Mobile) -->
             <div class="hidden md:flex gap-4 items-center nav-links">

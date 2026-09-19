@@ -10,8 +10,9 @@ $basePrefix = (strpos($_SERVER['REQUEST_URI'] ?? '', '/kallani/public') === 0) ?
 ob_start();
 ?>
 
-<div class="landing-presentation text-[#171717] dark:text-gray-100 overflow-hidden" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A' }">
-    
+<!-- FULL-SCREEN SCENE-BASED PRESENTATION CONTAINER -->
+<div id="presentation-container" class="relative w-screen h-screen overflow-hidden bg-[#070D06] text-white font-inter select-none" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A', verTab: 'land' }">
+
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
     <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#070D06] text-white flex flex-col items-center justify-center p-6 select-none">
         <div class="max-w-md w-full text-center space-y-6">
@@ -40,95 +41,138 @@ ob_start();
         </div>
     </div>
 
-    <!-- SECTION 01 — CINEMATIC HERO -->
-    <section id="hero-section" class="relative min-h-[calc(100vh-73px)] flex items-center justify-center overflow-hidden bg-emerald-950 text-white py-20 px-4">
-        <!-- Parallax Hero Background Imagery -->
-        <div class="absolute inset-0 z-0 opacity-45 scale-105 transition-transform duration-1000 transform hover:scale-100" id="hero-bg">
-            <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Aerial Landscape" class="w-full h-full object-cover object-center filter brightness-90 contrast-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B1508] via-[#0B1508]/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#0B1508]/40 to-[#0B1508]"></div>
+    <!-- PRESENTATION TOP BRAND CHROME (PRESENTATION MODE ONLY) -->
+    <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center gap-3 transition-all duration-500">
+        <a href="<?php echo $basePrefix; ?>/" class="flex items-center gap-2.5 group">
+            <div class="w-9 h-9 rounded-xl bg-emerald-900/80 border border-emerald-500/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <div>
+                <span class="text-base font-extrabold tracking-tight text-white block leading-none">KALLANI</span>
+                <span class="text-[10px] font-mono tracking-widest text-emerald-400 uppercase">Operating System</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- PRESENTATION RIGHT SCENE DOTS NAVIGATION -->
+    <div id="scene-nav-dots" class="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 items-center">
+        <div id="scene-counter" class="text-[11px] font-mono text-emerald-400 font-bold mb-2 tracking-widest">01 / 12</div>
+        <template x-for="i in 12" :key="i">
+            <button @click="window.goToScene(i - 1)" 
+                    :id="'dot-' + (i - 1)" 
+                    class="group relative flex items-center justify-center p-1.5 focus:outline-none cursor-pointer">
+                <div class="w-2.5 h-2.5 rounded-full bg-white/20 border border-white/30 transition-all duration-300 group-hover:bg-emerald-400 group-hover:scale-125 dot-inner"></div>
+                <span class="absolute right-7 px-2.5 py-1 rounded-md bg-black/80 text-[10px] font-mono text-emerald-300 whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity border border-emerald-500/30 shadow-lg"
+                      x-text="['01 Opening', '02 Problem', '03 Concept', '04 Physical Asset', '05 Structure', '06 Operations', '07 Verification', '08 Capital', '09 Revenue', '10 ESG & Risk', '11 Connected OS', '12 Final Reveal'][i - 1]"></span>
+            </button>
+        </template>
+    </div>
+
+    <!-- PRESENTATION BOTTOM CONTROL BAR -->
+    <div id="scene-controls" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 bg-black/70 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/15 shadow-2xl">
+        <button onclick="window.goToScene(window.currentScene - 1)" class="p-2 rounded-full hover:bg-white/10 text-gray-300 hover:text-white transition-colors cursor-pointer" title="Previous Scene">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <span id="current-scene-title" class="text-xs font-mono tracking-wider text-emerald-300 px-3 uppercase font-semibold">01 — OPENING</span>
+        <button onclick="window.goToScene(window.currentScene + 1)" class="p-2 rounded-full hover:bg-white/10 text-gray-300 hover:text-white transition-colors cursor-pointer" title="Next Scene">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 12 FULL-SCREEN SCENES (SCENE 01 TO SCENE 12)                              -->
+    <!-- ========================================================================= -->
+
+    <!-- SCENE 01 — OPENING -->
+    <section id="scene-01" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 z-20 transition-opacity">
+        <div class="absolute inset-0 z-0 opacity-40 scale-105" id="hero-bg">
+            <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Landscape" class="w-full h-full object-cover filter brightness-90 contrast-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070D06] via-[#070D06]/70 to-[#070D06]/50"></div>
         </div>
 
-        <!-- Animated Topographic Overlay Pattern -->
-        <div class="absolute inset-0 z-0 opacity-15 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-
-        <div class="relative z-10 max-w-5xl mx-auto text-center px-4 flex flex-col items-center">
-            <!-- Floating Institutional Badge -->
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-8 shadow-2xl animate-pulse">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Institutional Operating Model Demo</span>
+        <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+            <div class="scene-anim-item inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-8 shadow-2xl">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Institutional Operating System Presentation</span>
             </div>
 
-            <!-- Main Editorial Headline -->
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1] text-balance">
-                Operating Systems for <br class="hidden sm:inline" />
+            <h1 class="scene-anim-item text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1] text-balance">
+                Operating Systems for <br />
                 <span class="bg-gradient-to-r from-emerald-300 via-emerald-100 to-amber-200 bg-clip-text text-transparent">Productive Natural Assets</span>
             </h1>
 
-            <!-- Supporting Statement -->
-            <p class="text-lg sm:text-2xl text-gray-300 font-normal max-w-3xl mb-10 leading-relaxed font-sans text-balance">
-                Connecting physical assets, operations, verification, capital, and revenue into one integrated, auditable operating system.
+            <p class="scene-anim-item text-lg sm:text-2xl text-gray-300 font-normal max-w-3xl mb-12 leading-relaxed text-balance">
+                Connecting physical assets, operations, verification, capital, and revenue into one integrated operating system.
             </p>
 
-            <!-- Primary CTAs -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16">
-                <a href="#core-idea" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-xl shadow-emerald-950/50 transition-all hover:scale-105 flex items-center justify-center gap-2 border border-emerald-400/30">
-                    <span>Explore Kallani System</span>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base backdrop-blur-md border border-white/20 transition-all hover:scale-105 flex items-center justify-center gap-2">
-                    <span>View North Kalimantan Project</span>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
+            <div class="scene-anim-item flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-950/60 px-5 py-3 rounded-full border border-emerald-500/30">
+                <span>SCROLL DOWN TO ADVANCE STORY</span>
+                <svg class="w-4 h-4 animate-bounce text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </div>
+        </div>
+    </section>
 
-            <!-- Key Asset Quick Summary Cards -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-4xl text-left border-t border-white/10 pt-8">
-                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                    <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">Demo Concession</span>
-                    <span class="text-base sm:text-lg font-bold text-white mt-0.5 block">North Kalimantan</span>
+    <!-- SCENE 02 — THE PROBLEM -->
+    <section id="scene-02" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">The Structural Challenge</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Natural Assets. Disconnected Systems.</h2>
+            <p class="scene-anim-item text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-12">
+                Traditional natural asset management fragments physical land, operational tracking, third-party verification, and investor distribution into isolated silos.
+            </p>
+
+            <!-- Disconnected Cards Visual -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-red-500/30 backdrop-blur-md relative group hover:border-red-500/60 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-red-950/60 text-red-400 flex items-center justify-center font-bold mb-4 border border-red-500/40">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-red-400 uppercase tracking-wider block mb-1">Fragment #1</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Physical Land Records</h3>
+                    <p class="text-xs text-gray-400">Cadastral surveys and GIS maps stored in paper archives or isolated GIS software.</p>
                 </div>
-                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                    <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">Total Area</span>
-                    <span class="text-base sm:text-lg font-bold text-emerald-300 mt-0.5 block">4,000 Hectares</span>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-amber-500/30 backdrop-blur-md relative group hover:border-amber-500/60 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-amber-950/60 text-amber-400 flex items-center justify-center font-bold mb-4 border border-amber-500/40">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-wider block mb-1">Fragment #2</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Field Operations</h3>
+                    <p class="text-xs text-gray-400">Harvest logs and fertilizer data manually reported without real-time auditability.</p>
                 </div>
-                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                    <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">Asset Class</span>
-                    <span class="text-base sm:text-lg font-bold text-white mt-0.5 block">Palm Plantation</span>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-blue-500/30 backdrop-blur-md relative group hover:border-blue-500/60 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-4 border border-blue-500/40">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block mb-1">Fragment #3</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Audits & Verification</h3>
+                    <p class="text-xs text-gray-400">Third-party compliance assessments conducted as delayed annual PDF reports.</p>
                 </div>
-                <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                    <span class="block text-xs text-gray-400 uppercase tracking-wider font-semibold">Audit Status</span>
-                    <span class="text-base sm:text-lg font-bold text-emerald-400 mt-0.5 block flex items-center gap-1.5">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span>Verified</span>
-                    </span>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-purple-500/30 backdrop-blur-md relative group hover:border-purple-500/60 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-purple-950/60 text-purple-400 flex items-center justify-center font-bold mb-4 border border-purple-500/40">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1">Fragment #4</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Capital & Yields</h3>
+                    <p class="text-xs text-gray-400">Financial allocation disconnected from physical land performance metrics.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll Down Indicator -->
-        <a href="#core-idea" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-300/80 hover:text-white transition-colors">
-            <span>Scroll To Discover</span>
-            <div class="w-5 h-8 rounded-full border-2 border-emerald-400/50 flex justify-center pt-1">
-                <div class="w-1 h-2 rounded-full bg-emerald-300 animate-bounce"></div>
-            </div>
-        </a>
     </section>
 
-    <!-- SECTION 02 — THE CORE IDEA -->
-    <section id="core-idea" class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">System Architecture</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Natural Assets. One Connected System.</h2>
-                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400">
-                    Traditional natural asset investments fragment land, physical operations, third-party verification, and capital allocation. Kallani unifies every stage into one auditable operating model.
-                </p>
-            </div>
+    <!-- SCENE 03 — THE KALLANI CONCEPT -->
+    <section id="scene-03" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">System Architecture</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">One Connected Operating System.</h2>
+            <p class="scene-anim-item text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-10">
+                Kallani unifies every stage of natural asset management into one integrated, auditable digital operating model.
+            </p>
 
-            <!-- Interactive Operating Lifecycle Diagram -->
-            <div class="bg-white dark:bg-[#162014] rounded-3xl p-6 sm:p-10 border border-gray-200 dark:border-gray-800 shadow-xl">
-                <!-- Lifecycle Stage Selector Bar -->
+            <!-- Interactive Stage Diagram Selector -->
+            <div class="scene-anim-item bg-white/5 rounded-3xl p-6 sm:p-8 border border-white/10 backdrop-blur-md shadow-2xl">
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 mb-8">
                     <?php 
                     $stages = [
@@ -142,10 +186,10 @@ ob_start();
                     ];
                     foreach ($stages as $key => $info):
                     ?>
-                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-3 rounded-2xl text-left transition-all border flex flex-col justify-between" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-700 text-white border-emerald-600 shadow-md scale-105' : 'bg-gray-50 dark:bg-gray-900/60 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800'">
+                    <button @click="activeDiagramStage = '<?php echo $key; ?>'" class="p-3 rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-emerald-600 text-white border-emerald-400 shadow-lg scale-105' : 'bg-white/5 text-gray-300 border-white/10 hover:bg-white/10'">
                         <div class="flex items-center justify-between mb-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="<?php echo $info['icon']; ?>"></path></svg>
-                            <span class="w-2 h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-300 dark:bg-gray-700'"></span>
+                            <span class="w-2 h-2 rounded-full" :class="activeDiagramStage === '<?php echo $key; ?>' ? 'bg-amber-300 animate-pulse' : 'bg-gray-600'"></span>
                         </div>
                         <div>
                             <span class="block text-xs font-bold"><?php echo $key; ?></span>
@@ -155,191 +199,64 @@ ob_start();
                     <?php endforeach; ?>
                 </div>
 
-                <!-- Stage Detail Display Card -->
-                <div class="bg-gray-50 dark:bg-[#0D140B] rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-800 flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-1 text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-4">
+                <div class="bg-black/50 rounded-2xl p-6 border border-white/10 text-left flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-1">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-3">
                             <span>Stage Focus</span>
                             <span>•</span>
                             <span x-text="activeDiagramStage"></span>
                         </div>
-                        
-                        <div x-show="activeDiagramStage === 'Asset'" x-transition>
-                            <h3 class="text-2xl font-bold mb-3">Physical Asset Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Establishes verifiable GIS boundary mappings, topographic elevation models, soil quality indices, and satellite tracking across 4,000 hectares of palm concession in North Kalimantan.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Boundary Area</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">4,000 Hectares</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Elevation Range</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">15m - 85m ASL</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Project'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Project Management Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Aggregates concession permits, master development schedules, zoning registries, and infrastructure blueprints into an operational project baseline.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Concession ID</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">NKP-2026-04</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Project Status</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">Developing / Operational</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Operations'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Operations Tracking Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Real-time recording of planting density, harvest cycles, fertilizer applications, road maintenance, and Fresh Fruit Bunch (FFB) extraction yields.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Planting Progress</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">78% Complete</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Current Yield</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">19.4 MT / ha</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Verification'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Verification & Attestation Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Independent third-party audits, legal concession reviews, environmental compliance ratings (RSPO/ISPO), and tamper-evident document hashing.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Overall Verification</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">82% Verified</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Compliance</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">RSPO & ISPO Certified</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Capital'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Capital Allocation Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Tracks institutional capital deployment across land development, processing infrastructure, operational reserves, and working capital funds.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Required Capital</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">$8.2M USD</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Committed Ratio</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">82.9% Funded</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Revenue'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Revenue Generation Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Monitors gross revenues from crude palm oil (CPO) sales, palm kernel sales, byproduct extraction, and certified carbon potential credits.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Gross Revenue (Est)</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">$4.85M USD</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Net Margin</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">60.2% Net</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div x-show="activeDiagramStage === 'Distribution'" x-transition style="display:none;">
-                            <h3 class="text-2xl font-bold mb-3">Distribution & Payout Layer</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Calculates net distributable cash flow after operational costs, maintenance reserves, and institutional payout distributions.</p>
-                            <div class="grid grid-cols-2 gap-4 text-xs">
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Net Distributable</span>
-                                    <span class="font-bold text-base text-emerald-700 dark:text-emerald-400">$2.92M USD</span>
-                                </div>
-                                <div class="p-3 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
-                                    <span class="text-gray-500 block">Payout Frequency</span>
-                                    <span class="font-bold text-base text-gray-900 dark:text-white">Quarterly Audited</span>
-                                </div>
-                            </div>
-                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2" x-text="activeDiagramStage + ' Governance Layer'"></h3>
+                        <p class="text-xs text-gray-300 leading-relaxed" x-text="activeDiagramStage === 'Asset' ? 'Verifiable GIS boundary mapping, topographic elevation models, soil quality indices across 4,000 ha.' : (activeDiagramStage === 'Project' ? 'Concession permits, development schedules, and zoning registries aggregated into a baseline.' : 'Real-time operational tracking, harvesting productivity, and processing mill throughput.')"></p>
                     </div>
-
-                    <!-- Stage Diagram Image / Preview Canvas -->
-                    <div class="w-full md:w-80 h-56 rounded-xl overflow-hidden relative border border-gray-200 dark:border-gray-800 shadow-md shrink-0">
-                        <img src="<?php echo $basePrefix; ?>/Kebun-Sawit-3.jpg" alt="Operating System Stage Visual" class="w-full h-full object-cover filter brightness-95" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-4">
-                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Kallani OS Engine</span>
-                            <span class="text-xs text-gray-200">Interactive Pipeline Demonstration</span>
-                        </div>
+                    <div class="w-full md:w-64 h-36 rounded-xl overflow-hidden relative border border-white/20 shrink-0">
+                        <img src="<?php echo $basePrefix; ?>/Kebun-Sawit-3.jpg" alt="Stage Visual" class="w-full h-full object-cover filter brightness-90" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 03 — FROM LAND TO OPERATING ASSET -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="land-asset">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <!-- SCENE 04 — PHYSICAL ASSET -->
+    <section id="scene-04" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="text-left">
-                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Physical Asset Spotlight</span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">Every Project Starts with a Physical Asset.</h2>
-                    <p class="text-base text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                        The flagship demonstration asset is the <strong class="text-gray-900 dark:text-white">North Kalimantan Palm Project</strong>. Spanning 4,000 hectares of productive agricultural land in East Kalimantan, Indonesia, the concession combines mature palm production with active infrastructure development.
+                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Physical Asset Spotlight</span>
+                    <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Every Project Starts with the Land.</h2>
+                    <p class="scene-anim-item text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
+                        The flagship demonstration asset is the <strong class="text-white">North Kalimantan Palm Project</strong>. Spanning 4,000 hectares of productive agricultural land in East Kalimantan, Indonesia.
                     </p>
 
-                    <!-- Interactive Parcel Selector Tabs -->
-                    <div class="space-y-3 mb-8">
-                        <button @click="activeParcel = 'A'" class="w-full p-4 rounded-xl text-left border transition-all flex items-center justify-between" :class="activeParcel === 'A' ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 font-bold' : 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800 hover:bg-gray-100'">
+                    <div class="scene-anim-item space-y-3 mb-6">
+                        <button @click="activeParcel = 'A'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'A' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
-                                <span class="block text-sm text-gray-900 dark:text-white font-bold">Zone A — Mature Plantation (1,800 ha)</span>
-                                <span class="text-xs text-gray-500 font-normal">Active harvesting • Peak FFB production yield</span>
+                                <span class="block text-xs text-white font-bold">Zone A — Mature Plantation (1,800 ha)</span>
+                                <span class="text-[10px] text-gray-400">Peak harvesting • High FFB yield</span>
                             </div>
-                            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">Operational</span>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Operational</span>
                         </button>
 
-                        <button @click="activeParcel = 'B'" class="w-full p-4 rounded-xl text-left border transition-all flex items-center justify-between" :class="activeParcel === 'B' ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 font-bold' : 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800 hover:bg-gray-100'">
+                        <button @click="activeParcel = 'B'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'B' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
-                                <span class="block text-sm text-gray-900 dark:text-white font-bold">Zone B — Developing Plantation (1,400 ha)</span>
-                                <span class="text-xs text-gray-500 font-normal">Young palm stands • Irrigation channel development</span>
+                                <span class="block text-xs text-white font-bold">Zone B — Developing Plantation (1,400 ha)</span>
+                                <span class="text-[10px] text-gray-400">Young palm stands • Irrigation extensions</span>
                             </div>
-                            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300">Developing</span>
-                        </button>
-
-                        <button @click="activeParcel = 'C'" class="w-full p-4 rounded-xl text-left border transition-all flex items-center justify-between" :class="activeParcel === 'C' ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 font-bold' : 'bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800 hover:bg-gray-100'">
-                            <div>
-                                <span class="block text-sm text-gray-900 dark:text-white font-bold">Zone C — Processing & Hub (800 ha)</span>
-                                <span class="text-xs text-gray-500 font-normal">CPO extraction mill • Logistics loading dock</span>
-                            </div>
-                            <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">Infrastructure</span>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">Developing</span>
                         </button>
                     </div>
-
-                    <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/asset" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-600 transition-colors">
-                        <span>Inspect Interactive Parcel Map</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
                 </div>
 
-                <!-- Parcel Aerial Imagery Map Preview -->
-                <div class="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl group">
-                    <img src="<?php echo $basePrefix; ?>/4WY8vDotTPOafEjbvq7Bgg9RCYYyYkDo1TOl2Olx1JH2gxw3JIOVMjwGnr7v6Bi5nWZ2fjC8UgASwpnqo7YSQOBlxgzBafCB8qnKjgTASGa_6fvQuTB_gCgcLtzcpwlHEmm-HAiP3-JfSuVH-g__Mq-XzfpXjocajpV4sgGRZLM.jpg" alt="Concession Parcel Map" class="w-full h-[450px] object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700" />
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-between">
+                <div class="scene-anim-item relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
+                    <img src="<?php echo $basePrefix; ?>/4WY8vDotTPOafEjbvq7Bgg9RCYYyYkDo1TOl2Olx1JH2gxw3JIOVMjwGnr7v6Bi5nWZ2fjC8UgASwpnqo7YSQOBlxgzBafCB8qnKjgTASGa_6fvQuTB_gCgcLtzcpwlHEmm-HAiP3-JfSuVH-g__Mq-XzfpXjocajpV4sgGRZLM.jpg" alt="Concession GIS Map" class="w-full h-[380px] object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-between">
                         <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-black/60 text-white backdrop-blur-md border border-white/20">GIS Parcel Map Overlay</span>
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white">4,000 Hectares</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-black/70 text-emerald-300 border border-emerald-500/40">GIS Parcel Map Overlay</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white">4,000 Hectares</span>
                         </div>
-
-                        <div class="bg-black/70 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-white text-left">
-                            <span class="text-xs text-emerald-400 font-bold uppercase tracking-wider block" x-text="activeParcel === 'A' ? 'Active Selection: Zone A' : (activeParcel === 'B' ? 'Active Selection: Zone B' : 'Active Selection: Zone C')"></span>
-                            <p class="text-xs text-gray-300 mt-1" x-text="activeParcel === 'A' ? 'High-density mature palm trees producing average 19.4 MT/ha FFB.' : (activeParcel === 'B' ? 'Young palm stands under scheduled fertilization and moisture monitoring.' : 'Central crude palm oil extraction mill & weighbridge facility.')"></p>
+                        <div class="bg-black/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-xs text-left">
+                            <span class="text-emerald-400 font-bold block mb-1">Active Selection: North Kalimantan Concession</span>
+                            <span class="text-gray-300 block">High-density mature palm trees producing average 19.4 MT/ha FFB.</span>
                         </div>
                     </div>
                 </div>
@@ -347,130 +264,89 @@ ob_start();
         </div>
     </section>
 
-    <!-- SECTION 04 — THE OPERATING LIFECYCLE (GSAP Pinned Scroll) -->
-    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" id="lifecycle-section">
-        <div class="max-w-6xl mx-auto text-center mb-12">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">End-to-End Governance</span>
-            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">The Operating Lifecycle</h2>
-            <p class="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Discover how physical natural assets move seamlessly from land mapping to verified investor distributions.
+    <!-- SCENE 05 — PROJECT STRUCTURE -->
+    <section id="scene-05" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Project Governance</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Turn Physical Assets into Structured Projects.</h2>
+            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+                Kallani structures raw land concessions into auditable project baselines with defined milestones, legal decrees, and operational bounds.
             </p>
-        </div>
 
-        <div class="horizontal-scroll-container py-6">
-            <div class="horizontal-scroll-wrapper gap-6 px-4">
-                <?php 
-                $lifecycleCards = [
-                    ['num' => '01', 'title' => 'Physical Asset', 'desc' => 'Satellite boundary demarcation, GIS topographic mapping, soil indexing, and land ownership records.', 'tag' => 'Land Base', 'metric' => '4,000 ha Mapped'],
-                    ['num' => '02', 'title' => 'Project', 'desc' => 'Concession permitting, environmental impact baselines, master development schedules, and budgeting.', 'tag' => 'Development', 'metric' => 'NKP-2026 Concession'],
-                    ['num' => '03', 'title' => 'Operations', 'desc' => 'Field labor logs, harvest weight tracking, fertilizer applications, and processing mill extraction rates.', 'tag' => 'Real-Time Data', 'metric' => '19.4 MT/ha Yield'],
-                    ['num' => '04', 'title' => 'Verification', 'desc' => 'Third-party auditor review, RSPO/ISPO sustainability validation, and document hashing.', 'tag' => 'Traceability', 'metric' => '82% Audited'],
-                    ['num' => '05', 'title' => 'Capital', 'desc' => 'Institutional capital deployment, development fund allocation, and operational reserve management.', 'tag' => 'Ledger', 'metric' => '$8.2M Required'],
-                    ['num' => '06', 'title' => 'Revenue', 'desc' => 'Gross income tracking from Crude Palm Oil (CPO) sales, byproduct extraction, and carbon potential.', 'tag' => 'Cash Flow', 'metric' => '$4.85M Gross'],
-                    ['num' => '07', 'title' => 'Distribution', 'desc' => 'Audited net revenue calculation, maintenance reserve deduction, and investor payouts.', 'tag' => 'Payouts', 'metric' => '$2.92M Net Flow']
-                ];
-                foreach ($lifecycleCards as $card):
-                ?>
-                <div class="lifecycle-card bg-white dark:bg-[#162014] p-8 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-xl flex flex-col justify-between text-left">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 font-mono"><?php echo $card['num']; ?></span>
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"><?php echo $card['tag']; ?></span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white"><?php echo $card['title']; ?></h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6"><?php echo $card['desc']; ?></p>
-                    </div>
-                    <div class="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs">
-                        <span class="text-gray-500">Key Indicator</span>
-                        <span class="font-bold text-emerald-700 dark:text-emerald-300"><?php echo $card['metric']; ?></span>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <span class="text-xs font-mono text-emerald-400 block mb-2 font-bold">Milestone 01</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Concession License HGU</h3>
+                    <p class="text-xs text-gray-400 mb-4">Decree HGU-541 granted by Ministry of Land Affairs for 30-year operational term.</p>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Verified Legal</span>
                 </div>
-                <?php endforeach; ?>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <span class="text-xs font-mono text-amber-400 block mb-2 font-bold">Milestone 02</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Master Development Plan</h3>
+                    <p class="text-xs text-gray-400 mb-4">3,120 ha planted, central CPO extraction mill & 2.4 km secondary drainage channels.</p>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-950 text-amber-300 border border-amber-800">Operational</span>
+                </div>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <span class="text-xs font-mono text-blue-400 block mb-2 font-bold">Milestone 03</span>
+                    <h3 class="text-xl font-bold text-white mb-2">Environmental Baseline</h3>
+                    <p class="text-xs text-gray-400 mb-4">RSPO & ISPO compliance ratings with 14,200 tCO2e/yr carbon absorption potential.</p>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-800">Audited Rating</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 05 — OPERATIONS -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="operations-section">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- SCENE 06 — OPERATIONS -->
+    <section id="scene-06" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
-                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Operational Intelligence</span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">Make Operations Visible.</h2>
-                    <p class="text-base text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                        Monitor field activity, harvesting productivity, and processing mill throughput with real-time operational tracking. Eliminate blind spots across remote plantation sites.
+                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Operational Intelligence</span>
+                    <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Make Operations Visible.</h2>
+                    <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
+                        Monitor field activity, harvesting productivity, and processing mill throughput with real-time operational tracking.
                     </p>
 
-                    <div class="space-y-4 text-sm font-semibold">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
+                    <div class="scene-anim-item space-y-3 text-xs font-semibold">
+                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                             <span>Planting Progress: 78% (3,120 of 4,000 ha)</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
+                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                             <span>Average Harvest Yield: 19.4 MT / hectare</span>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
+                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                             <span>Mill Processing Capacity: 45 MT FFB / hour</span>
                         </div>
                     </div>
-
-                    <div class="mt-8">
-                        <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/operations" class="px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-sm inline-flex items-center gap-2 shadow-lg">
-                            <span>Open Operations Dashboard</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
-                    </div>
                 </div>
 
-                <!-- Operations Preview Panel -->
-                <div class="lg:col-span-7 bg-gray-50 dark:bg-[#121A10] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl">
-                    <div class="flex items-center justify-between pb-4 mb-6 border-b border-gray-200 dark:border-gray-800">
-                        <div class="text-left">
-                            <h4 class="font-bold text-base text-gray-900 dark:text-white">Field Operations Feed</h4>
-                            <span class="text-xs text-gray-500">Live Concession Activity Stream</span>
-                        </div>
-                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">Live Stream</span>
+                <div class="scene-anim-item lg:col-span-7 bg-white/5 p-6 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md">
+                    <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
+                        <span class="font-bold text-sm text-white">Live Field Activity Feed</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Live Stream</span>
                     </div>
-
-                    <div class="space-y-4">
-                        <div class="p-4 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 text-left">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-bold text-sm">Zone A Harvest Batch #104</span>
-                                <span class="text-xs text-emerald-600 font-semibold">Completed</span>
+                    <div class="space-y-3 text-left">
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-xs text-white">Zone A Harvest Batch #104</span>
+                                <span class="text-[10px] text-emerald-400 font-semibold">100% Completed</span>
                             </div>
-                            <p class="text-xs text-gray-500 mb-3">142 MT Fresh Fruit Bunches extracted and transported to central mill weighbridge.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%;"></div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full w-full"></div>
                             </div>
                         </div>
-
-                        <div class="p-4 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 text-left">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-bold text-sm">Zone B Irrigation Extension</span>
-                                <span class="text-xs text-amber-600 font-semibold">78% In Progress</span>
+                        <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-xs text-white">Zone B Irrigation Extension</span>
+                                <span class="text-[10px] text-amber-400 font-semibold">78% In Progress</span>
                             </div>
-                            <p class="text-xs text-gray-500 mb-3">2.4 km secondary drainage channels excavated for young palm blocks.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 78%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 text-left">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-bold text-sm">Soil Organic Enrichment</span>
-                                <span class="text-xs text-blue-600 font-semibold">Scheduled</span>
-                            </div>
-                            <p class="text-xs text-gray-500 mb-3">Application of composted empty fruit bunches across 600 ha parcel.</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 45%;"></div>
+                            <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-amber-500 h-full w-[78%]"></div>
                             </div>
                         </div>
                     </div>
@@ -479,189 +355,94 @@ ob_start();
         </div>
     </section>
 
-    <!-- SECTION 06 — VERIFICATION -->
-    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" id="verification-section" x-data="{ verTab: 'land' }">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Third-Party Assurance</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Build Confidence Through Traceability.</h2>
-                <p class="text-base text-gray-600 dark:text-gray-400">
-                    Every project document, land boundary survey, legal right, and sustainability assessment is independently verified and cryptographic hashes stored.
-                </p>
-            </div>
+    <!-- SCENE 07 — VERIFICATION -->
+    <section id="scene-07" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Third-Party Assurance</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Understand What Has Been Verified.</h2>
+            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+                Independent third-party audits, legal concession reviews, and tamper-evident document cryptographic hashing.
+            </p>
 
-            <!-- Verification Workspace Container -->
-            <div class="bg-white dark:bg-[#162014] rounded-3xl p-6 sm:p-10 border border-gray-200 dark:border-gray-800 shadow-xl">
-                <!-- Filter Tabs -->
-                <div class="flex flex-wrap gap-2 mb-8 pb-4 border-b border-gray-200 dark:border-gray-800">
-                    <button @click="verTab = 'land'" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all" :class="verTab === 'land' ? 'bg-emerald-700 text-white shadow-md' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'">Land & GIS</button>
-                    <button @click="verTab = 'legal'" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all" :class="verTab === 'legal' ? 'bg-emerald-700 text-white shadow-md' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'">Legal Rights</button>
-                    <button @click="verTab = 'survey'" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all" :class="verTab === 'survey' ? 'bg-emerald-700 text-white shadow-md' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'">Topographic Survey</button>
-                    <button @click="verTab = 'docs'" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all" :class="verTab === 'docs' ? 'bg-emerald-700 text-white shadow-md' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200'">Audited Documents</button>
+            <div class="scene-anim-item bg-white/5 rounded-3xl p-6 border border-white/10 backdrop-blur-md shadow-2xl text-left">
+                <div class="flex flex-wrap gap-2 mb-6 pb-4 border-b border-white/10">
+                    <button @click="verTab = 'land'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'land' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Land & GIS</button>
+                    <button @click="verTab = 'legal'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'legal' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Legal Rights</button>
+                    <button @click="verTab = 'docs'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'docs' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Audited Vault</button>
                 </div>
 
-                <!-- Tab Content -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                    <div x-show="verTab === 'land'" x-transition>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 mb-3 inline-block">Status: Verified</span>
-                        <h4 class="text-xl font-bold mb-2">GIS Boundary & Spatial Verification</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-6">4,000 hectares mapped via high-resolution drone photogrammetry and satellite SAR radar imagery.</p>
-                        <div class="space-y-3 text-xs">
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Reviewer Agency</span>
-                                <span class="font-bold">AgriGIS Spatial Audit Ltd.</span>
-                            </div>
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Hash Verification</span>
-                                <span class="font-mono font-bold text-emerald-600">0x8f4b...39a1</span>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
+                        <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
+                        <p class="text-xs text-gray-300 mb-4">4,000 hectares mapped via high-resolution drone photogrammetry and SAR radar imagery.</p>
+                        <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs">
+                            <span class="text-gray-400 block">Cryptographic Hash</span>
+                            <span class="font-mono text-emerald-400 font-bold">0x8f4b7a1c90e322d8a39a1</span>
                         </div>
                     </div>
-
-                    <div x-show="verTab === 'legal'" x-transition style="display:none;">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 mb-3 inline-block">Status: Verified</span>
-                        <h4 class="text-xl font-bold mb-2">Concession License & Cultivation Right (HGU)</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-6">Full legal concession decree granted for 30-year operational term with extension option.</p>
-                        <div class="space-y-3 text-xs">
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Issuing Authority</span>
-                                <span class="font-bold">Ministry of Land Affairs (BPN)</span>
-                            </div>
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Decree Number</span>
-                                <span class="font-mono font-bold text-emerald-600">HGU-541/KAL-UT/2024</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div x-show="verTab === 'survey'" x-transition style="display:none;">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 mb-3 inline-block">Status: In Review</span>
-                        <h4 class="text-xl font-bold mb-2">Soil Health & Hydrology Survey</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-6">Periodic soil nutrient testing and water table monitoring across 40 sampling stations.</p>
-                        <div class="space-y-3 text-xs">
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Testing Station</span>
-                                <span class="font-bold">North Kalimantan Soil Lab</span>
-                            </div>
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Completion</span>
-                                <span class="font-mono font-bold text-amber-600">85% Sampled</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div x-show="verTab === 'docs'" x-transition style="display:none;">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 mb-3 inline-block">Status: Verified</span>
-                        <h4 class="text-xl font-bold mb-2">Audited Financial & ESG Vault</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-400 mb-6">Cryptographically signed annual financial audit reports and RSPO compliance certificates.</p>
-                        <div class="space-y-3 text-xs">
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Auditor Firm</span>
-                                <span class="font-bold">Institutional Assurance Group</span>
-                            </div>
-                            <div class="flex justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                                <span class="text-gray-500">Vault Reference</span>
-                                <span class="font-mono font-bold text-emerald-600">DOC-2026-NKP-V8</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column Interactive Certificate Preview -->
-                    <div class="bg-gray-50 dark:bg-[#0E160D] p-6 rounded-2xl border border-gray-200 dark:border-gray-800 flex flex-col justify-between">
+                    <div class="p-5 bg-black/50 rounded-2xl border border-white/10 flex flex-col justify-between">
                         <div>
-                            <div class="flex items-center gap-3 mb-4">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold text-sm">Verification Summary Card</h5>
-                                    <span class="text-xs text-gray-500">Simulated Institutional Attestation</span>
-                                </div>
-                            </div>
-                            <p class="text-xs text-gray-600 dark:text-gray-400 mb-4">All verification badges represent simulated demonstration data for the North Kalimantan Palm Project.</p>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Assurance Certificate</span>
+                            <p class="text-xs text-gray-300">Verified by AgriGIS Spatial Audit Ltd. & Institutional Assurance Group.</p>
                         </div>
-                        <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/verification" class="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:underline flex items-center gap-1">
-                            <span>Open Verification Module</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </a>
+                        <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: DOC-2026-NKP-V8</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 07 — CAPITAL & ALLOCATION -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="capital-section">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- SCENE 08 — CAPITAL -->
+    <section id="scene-08" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
-                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Capital Allocation</span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">Understand Where Capital Is Allocated.</h2>
-                    <p class="text-base text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                        Kallani provides transparent capital tracking, ensuring every dollar committed is mapped directly to land acquisition, infrastructure buildout, or operational reserves.
+                    <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">Capital Allocation</span>
+                    <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Understand Where Capital Is Allocated.</h2>
+                    <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
+                        Kallani provides transparent capital tracking, mapping every dollar directly to plantation development, infrastructure, and reserves.
                     </p>
 
-                    <div class="grid grid-cols-2 gap-4 text-left mb-8">
-                        <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800">
-                            <span class="text-xs text-gray-500 block">Total Project Value</span>
-                            <span class="text-2xl font-extrabold text-emerald-700 dark:text-emerald-400">$12.5M USD</span>
+                    <div class="scene-anim-item grid grid-cols-2 gap-3 text-left">
+                        <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
+                            <span class="text-[10px] text-gray-400 block">Total Project Value</span>
+                            <span class="text-xl font-extrabold text-emerald-400">$12.5M USD</span>
                         </div>
-                        <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800">
-                            <span class="text-xs text-gray-500 block">Capital Committed</span>
-                            <span class="text-2xl font-extrabold text-gray-900 dark:text-white">$6.8M USD</span>
+                        <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
+                            <span class="text-[10px] text-gray-400 block">Capital Committed</span>
+                            <span class="text-xl font-extrabold text-white">$6.8M USD</span>
                         </div>
                     </div>
-
-                    <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/capital" class="px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-sm inline-flex items-center gap-2 shadow-lg">
-                        <span>Inspect Capital Ledger</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
                 </div>
 
-                <!-- Capital Allocation Breakdown Visualization -->
-                <div class="lg:col-span-7 bg-gray-50 dark:bg-[#121A10] p-6 sm:p-8 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl">
-                    <h4 class="font-bold text-base text-gray-900 dark:text-white mb-2 text-left">Capital Allocation Breakdown ($8.2M Required)</h4>
-                    <p class="text-xs text-gray-500 mb-6 text-left">Simulated capital deployment breakdown across concession activities.</p>
-
-                    <div class="space-y-4 text-left">
-                        <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
-                                <span>Plantation Development & Planting (39.0%)</span>
-                                <span class="text-emerald-700 dark:text-emerald-400">$3.20M USD</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 39%;"></div>
-                            </div>
+                <div class="scene-anim-item lg:col-span-7 bg-white/5 p-6 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md text-left space-y-4">
+                    <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown ($8.2M Target)</h4>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                            <span>Plantation Development (39.0%)</span>
+                            <span class="text-emerald-400">$3.20M USD</span>
                         </div>
-
-                        <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
-                                <span>Operations & Labor Working Capital (25.6%)</span>
-                                <span class="text-emerald-700 dark:text-emerald-400">$2.10M USD</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-blue-600" style="width: 25.6%;"></div>
-                            </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-emerald-500 h-full w-[39%]"></div>
                         </div>
-
-                        <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
-                                <span>Mill Processing & Road Infrastructure (22.0%)</span>
-                                <span class="text-emerald-700 dark:text-emerald-400">$1.80M USD</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-amber-600" style="width: 22%;"></div>
-                            </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                            <span>Operations Working Capital (25.6%)</span>
+                            <span class="text-blue-400">$2.10M USD</span>
                         </div>
-
-                        <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
-                                <span>Risk & Maintenance Reserve (13.4%)</span>
-                                <span class="text-emerald-700 dark:text-emerald-400">$1.10M USD</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill bg-purple-600" style="width: 13.4%;"></div>
-                            </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue-500 h-full w-[25.6%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                            <span>Mill & Infrastructure (22.0%)</span>
+                            <span class="text-amber-400">$1.80M USD</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-amber-500 h-full w-[22%]"></div>
                         </div>
                     </div>
                 </div>
@@ -669,101 +450,133 @@ ob_start();
         </div>
     </section>
 
-    <!-- SECTION 08 — REVENUE & DISTRIBUTION -->
-    <section class="py-24 px-4 bg-[#F7F7F4] dark:bg-[#10170F] border-b border-gray-200 dark:border-gray-800" id="revenue-waterfall">
-        <div class="max-w-6xl mx-auto text-center">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Financial Waterfall</span>
-            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Follow the Flow from Revenue to Distribution.</h2>
-            <p class="text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-16">
-                Understand the itemized flow from gross CPO sales to net investor distributions.
+    <!-- SCENE 09 — REVENUE & DISTRIBUTION -->
+    <section id="scene-09" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Financial Waterfall</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Follow the Flow of Value.</h2>
+            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+                Itemized waterfall flow from gross crude palm oil sales to net distributable investor cash flow.
             </p>
 
-            <!-- Waterfall Flow Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-12">
-                <div class="p-6 bg-white dark:bg-[#162014] rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md">
-                    <span class="text-xs font-bold uppercase text-emerald-600 block mb-1">Step 1 — Gross Revenue</span>
-                    <h4 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">$4,850,000</h4>
-                    <p class="text-xs text-gray-500">Total annual sales from crude palm oil (CPO) & kernel extraction.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-emerald-500/30 backdrop-blur-md">
+                    <span class="text-[10px] font-mono font-bold uppercase text-emerald-400 block mb-1">Step 1 — Gross Revenue</span>
+                    <h4 class="text-2xl font-extrabold text-white mb-1">$4,850,000</h4>
+                    <p class="text-[10px] text-gray-400">Total annual sales from CPO & kernel extraction.</p>
                 </div>
 
-                <div class="p-6 bg-white dark:bg-[#162014] rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md">
-                    <span class="text-xs font-bold uppercase text-amber-600 block mb-1">Step 2 — Operating Cost</span>
-                    <h4 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">-$1,420,000</h4>
-                    <p class="text-xs text-gray-500">Field labor, fertilizer, harvesting logistics, and milling costs.</p>
+                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-amber-500/30 backdrop-blur-md">
+                    <span class="text-[10px] font-mono font-bold uppercase text-amber-400 block mb-1">Step 2 — Operating Cost</span>
+                    <h4 class="text-2xl font-extrabold text-white mb-1">-$1,420,000</h4>
+                    <p class="text-[10px] text-gray-400">Field labor, fertilizer & milling opex expenses.</p>
                 </div>
 
-                <div class="p-6 bg-white dark:bg-[#162014] rounded-2xl border border-gray-200 dark:border-gray-800 shadow-md">
-                    <span class="text-xs font-bold uppercase text-purple-600 block mb-1">Step 3 — Reserve Allocation</span>
-                    <h4 class="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">-$510,000</h4>
-                    <p class="text-xs text-gray-500">Equipment maintenance reserve & environmental compliance buffer.</p>
+                <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-purple-500/30 backdrop-blur-md">
+                    <span class="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">Step 3 — Reserve Buffer</span>
+                    <h4 class="text-2xl font-extrabold text-white mb-1">-$510,000</h4>
+                    <p class="text-[10px] text-gray-400">Maintenance reserve & compliance buffer.</p>
                 </div>
 
-                <div class="p-6 bg-emerald-900 text-white rounded-2xl border border-emerald-700 shadow-xl">
-                    <span class="text-xs font-bold uppercase text-emerald-300 block mb-1">Step 4 — Net Distribution</span>
-                    <h4 class="text-2xl font-extrabold text-white mb-2">$2,920,000</h4>
-                    <p class="text-xs text-emerald-100">Net distributable cash flow for quarterly investor allocation.</p>
-                </div>
-            </div>
-
-            <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/distribution" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-600">
-                <span>View Complete Distribution Flow</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- SECTION 09 — ESG, RISK & AUDIT -->
-    <section class="py-24 px-4 bg-white dark:bg-[#0B1209] border-b border-gray-200 dark:border-gray-800" id="esg-section">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 mb-2 block">Sustainability & Risk</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">Operational Visibility Beyond Financial Metrics.</h2>
-                <p class="text-base text-gray-600 dark:text-gray-400">
-                    Track environmental compliance, carbon absorption potential, biodiversity protection, and immutable audit logs.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mb-12">
-                <div class="p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V14.39m-1.921-9.155A9 9 0 003.055 11"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-1">Carbon Potential</h4>
-                    <span class="text-2xl font-extrabold text-emerald-700 dark:text-emerald-400 block mb-2">14,200 tCO2e/yr</span>
-                    <p class="text-xs text-gray-500">Estimated annual carbon sequestration across high-density palm stands and forest buffer zones.</p>
-                </div>
-
-                <div class="p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800">
-                    <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 flex items-center justify-center font-bold mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-1">RSPO / ISPO Compliance</h4>
-                    <span class="text-2xl font-extrabold text-blue-700 dark:text-blue-400 block mb-2">94% Compliant</span>
-                    <p class="text-xs text-gray-500">Adherence to zero-deforestation, soil conservation, and community partnership standards.</p>
-                </div>
-
-                <div class="p-6 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800">
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 flex items-center justify-center font-bold mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    </div>
-                    <h4 class="font-bold text-lg mb-1">Immutable Audit Trail</h4>
-                    <span class="text-2xl font-extrabold text-purple-700 dark:text-purple-400 block mb-2">1,240 Events</span>
-                    <p class="text-xs text-gray-500">Chronological activity logs recording parcel edits, harvest logs, and third-party attestations.</p>
+                <div class="scene-anim-item p-5 bg-emerald-900/90 rounded-2xl border border-emerald-500 shadow-xl">
+                    <span class="text-[10px] font-mono font-bold uppercase text-emerald-300 block mb-1">Step 4 — Net Distribution</span>
+                    <h4 class="text-2xl font-extrabold text-white mb-1">$2,920,000</h4>
+                    <p class="text-[10px] text-emerald-100">Net distributable cash flow for quarterly payouts.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 10 — PROJECT REVEAL / INTERACTIVE DEMO -->
-    <section class="py-24 px-4 bg-emerald-950 text-white relative overflow-hidden" id="project-reveal">
-        <div class="max-w-5xl mx-auto relative z-10 text-center">
-            <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-emerald-800 text-emerald-300 border border-emerald-600/40 mb-6 inline-block">Interactive Demo Spotlight</span>
-            <h2 class="text-3xl sm:text-6xl font-extrabold tracking-tight mb-6">Explore a Connected Natural Asset.</h2>
-            <p class="text-base sm:text-lg text-emerald-200 max-w-2xl mx-auto mb-10">
-                Launch the North Kalimantan Palm Project dashboard to test all 9 operational modules in action.
+    <!-- SCENE 10 — ESG, RISK & AUDIT -->
+    <section id="scene-10" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Sustainability & Risk</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Visibility Beyond Financial Metrics.</h2>
+            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+                Track carbon absorption potential, environmental compliance, and immutable audit logs.
             </p>
 
-            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-left max-w-3xl mx-auto mb-10 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <h4 class="font-bold text-lg text-white mb-1">Carbon Sequestration</h4>
+                    <span class="text-2xl font-extrabold text-emerald-400 block mb-2">14,200 tCO2e/yr</span>
+                    <p class="text-xs text-gray-400">Estimated annual carbon absorption across palm stands & forest buffers.</p>
+                </div>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <h4 class="font-bold text-lg text-white mb-1">RSPO / ISPO Rating</h4>
+                    <span class="text-2xl font-extrabold text-blue-400 block mb-2">94% Compliant</span>
+                    <p class="text-xs text-gray-400">Adherence to zero-deforestation & soil conservation standards.</p>
+                </div>
+
+                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <h4 class="font-bold text-lg text-white mb-1">Immutable Audit Trail</h4>
+                    <span class="text-2xl font-extrabold text-purple-400 block mb-2">1,240 Events</span>
+                    <p class="text-xs text-gray-400">Chronological activity logs recording parcel updates & attestations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 11 — CONNECTED SYSTEM RECAP -->
+    <section id="scene-11" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="scene-anim-item text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3 block">Complete Operating Model</span>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">One Project. Multiple Connected Layers.</h2>
+            <p class="scene-anim-item text-base text-gray-300 max-w-2xl mx-auto mb-10">
+                Bringing physical land, project governance, operations, verification, capital, revenue, and ESG into one auditable system.
+            </p>
+
+            <div class="scene-anim-item bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-md shadow-2xl">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 01</span>
+                        <span class="font-bold text-sm text-white">Physical Land</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 02</span>
+                        <span class="font-bold text-sm text-white">Project Structure</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 03</span>
+                        <span class="font-bold text-sm text-white">Field Operations</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 04</span>
+                        <span class="font-bold text-sm text-white">Verification</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 05</span>
+                        <span class="font-bold text-sm text-white">Capital Allocation</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 06</span>
+                        <span class="font-bold text-sm text-white">Revenue Flow</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 07</span>
+                        <span class="font-bold text-sm text-white">Distributions</span>
+                    </div>
+                    <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 08</span>
+                        <span class="font-bold text-sm text-white">ESG & Audit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 12 — FINAL REVEAL & CTA -->
+    <section id="scene-12" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="scene-anim-item px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-widest bg-emerald-950 text-emerald-300 border border-emerald-500/40 mb-6 inline-block">Interactive Demo Spotlight</span>
+            
+            <h2 class="scene-anim-item text-4xl sm:text-6xl font-extrabold text-white mb-6 tracking-tight">Explore Kallani in Action.</h2>
+            <p class="scene-anim-item text-base sm:text-lg text-emerald-200 max-w-2xl mx-auto mb-10">
+                Discover how productive natural assets are represented through a connected operating system.
+            </p>
+
+            <div class="scene-anim-item bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-left max-w-2xl mx-auto mb-10 shadow-2xl">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-6">
                     <div>
                         <h3 class="text-2xl font-bold text-white">North Kalimantan Palm Project</h3>
@@ -792,322 +605,239 @@ ob_start();
                 </div>
             </div>
 
-            <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="px-10 py-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-lg shadow-2xl transition-all hover:scale-105 inline-flex items-center gap-3">
-                <span>Enter Interactive Project Dashboard</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- SECTION 11 — FINAL CTA & FOOTER -->
-    <section class="py-20 px-4 bg-[#0A1008] text-gray-300 border-t border-emerald-900/40 text-center" id="final-cta">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-2xl sm:text-4xl font-extrabold text-white mb-4">See How Natural Assets Become Operating Systems.</h3>
-            <p class="text-sm sm:text-base text-gray-400 mb-8 max-w-2xl mx-auto">
-                Kallani bridges the gap between physical land management and institutional investor transparency.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-4 mb-16">
-                <a href="<?php echo $basePrefix; ?>/explore" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20">Explore Concession Catalog</a>
-                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm/asset" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm">View Parcel Maps</a>
-            </div>
-
-            <div class="pt-8 border-t border-gray-800 text-xs text-gray-500 space-y-4">
-                <p><strong>Institutional Demo Disclaimer:</strong> Kallani is an illustrative conceptual operating system demonstration. All metrics, land boundaries, carbon estimates, financial flows, and verification records presented are simulated data for demonstration purposes only.</p>
-                <p>© <?php echo date('Y'); ?> Kallani Operating System for Natural Assets. All rights reserved.</p>
+            <div class="scene-anim-item flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="w-full sm:w-auto px-10 py-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-lg shadow-2xl transition-all hover:scale-105 inline-flex items-center justify-center gap-3">
+                    <span>Enter Interactive Project Dashboard</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/explore" class="w-full sm:w-auto px-8 py-5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all hover:scale-105">
+                    <span>Explore Concession Catalog</span>
+                </a>
             </div>
         </div>
     </section>
 
 </div>
 
-<!-- GSAP ScrollTrigger & Intro Loader Animations Initialization -->
+<!-- GSAP FULL-SCREEN SCENE TRANSITION ENGINE -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
+        if (typeof gsap === 'undefined') return;
 
-            const loader = document.getElementById('intro-loader');
-            const loaderBar = document.getElementById('loader-bar');
-            const loaderPercent = document.getElementById('loader-percent');
-            const loaderStatus = document.getElementById('loader-status');
+        // Intro Loader timeline
+        const loader = document.getElementById('intro-loader');
+        const loaderBar = document.getElementById('loader-bar');
+        const loaderPercent = document.getElementById('loader-percent');
+        const loaderStatus = document.getElementById('loader-status');
 
-            // --- 0. HIGGSFIELD / AWWWARDS INTRO LOADER TIMELINE ---
-            if (loader && loaderBar && loaderPercent) {
-                let progressObj = { value: 0 };
-                const statusMsgs = [
-                    "LOADING GIS SPATIAL LAYERS...",
-                    "SYNCING CONCESSION LEDGERS...",
-                    "VERIFYING RSPO AUDIT TRAILS...",
-                    "COMPLEX FINANCIAL WATERFALL READY."
-                ];
+        if (loader && loaderBar && loaderPercent) {
+            let progressObj = { value: 0 };
+            const statusMsgs = [
+                "LOADING GIS SPATIAL LAYERS...",
+                "SYNCING CONCESSION LEDGERS...",
+                "VERIFYING RSPO AUDIT TRAILS...",
+                "COMPLEX FINANCIAL WATERFALL READY."
+            ];
 
-                const introTL = gsap.timeline();
+            const introTL = gsap.timeline();
+            introTL.to(progressObj, {
+                value: 100,
+                duration: 1.5,
+                ease: "power2.inOut",
+                onUpdate: () => {
+                    const currentVal = Math.floor(progressObj.value);
+                    loaderBar.style.width = currentVal + '%';
+                    loaderPercent.textContent = currentVal + '%';
 
-                introTL.to(progressObj, {
-                    value: 100,
-                    duration: 1.6,
-                    ease: "power2.inOut",
-                    onUpdate: () => {
-                        const currentVal = Math.floor(progressObj.value);
-                        loaderBar.style.width = currentVal + '%';
-                        loaderPercent.textContent = currentVal + '%';
-
-                        if (currentVal > 75) loaderStatus.textContent = statusMsgs[3];
-                        else if (currentVal > 50) loaderStatus.textContent = statusMsgs[2];
-                        else if (currentVal > 25) loaderStatus.textContent = statusMsgs[1];
-                    }
-                })
-                .to("#intro-loader > div", {
-                    opacity: 0,
-                    y: -30,
-                    duration: 0.4,
-                    ease: "power2.in"
-                })
-                .to("#intro-loader", {
-                    yPercent: -100,
-                    duration: 0.9,
-                    ease: "power4.inOut"
-                })
-                // Hero Entrance Animation Stagger
-                .from("#hero-section .inline-flex", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, "-=0.3")
-                .from("#hero-section h1", { opacity: 0, y: 40, duration: 0.7, ease: "power3.out" }, "-=0.3")
-                .from("#hero-section p", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, "-=0.4")
-                .from("#hero-section .flex.flex-col.sm\\:flex-row", { opacity: 0, y: 20, duration: 0.5, ease: "power3.out" }, "-=0.3")
-                .from("#hero-section .grid > div", { opacity: 0, y: 20, duration: 0.4, stagger: 0.08, ease: "power3.out" }, "-=0.3");
-            }
-
-            // --- 1. HERO BACKGROUND PARALLAX ---
-            gsap.to("#hero-bg", {
-                scrollTrigger: {
-                    trigger: "#hero-section",
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                },
-                y: 120,
-                scale: 1.15
-            });
-
-            // --- 2. CORE IDEA SECTION ---
-            gsap.from("#core-idea h2, #core-idea p", {
-                scrollTrigger: {
-                    trigger: "#core-idea",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#core-idea button", {
-                scrollTrigger: {
-                    trigger: "#core-idea",
-                    start: "top 70%"
-                },
-                opacity: 0,
-                y: 20,
-                duration: 0.4,
-                stagger: 0.06,
-                ease: "power2.out"
-            });
-
-            // --- 3. LAND ASSET SECTION ---
-            gsap.from("#land-asset h2, #land-asset p", {
-                scrollTrigger: {
-                    trigger: "#land-asset",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#land-asset .space-y-3 button", {
-                scrollTrigger: {
-                    trigger: "#land-asset",
-                    start: "top 70%"
-                },
-                opacity: 0,
-                x: -30,
-                duration: 0.5,
-                stagger: 0.12,
-                ease: "power3.out"
-            });
-
-            gsap.from("#land-asset .group", {
-                scrollTrigger: {
-                    trigger: "#land-asset",
-                    start: "top 70%"
-                },
-                opacity: 0,
-                scale: 0.95,
-                duration: 0.7,
-                ease: "power3.out"
-            });
-
-            // --- 4. LIFECYCLE HORIZONTAL SCROLL (DESKTOP) ---
-            if (window.innerWidth >= 768) {
-                const wrapper = document.querySelector('.horizontal-scroll-wrapper');
-                if (wrapper) {
-                    const scrollAmount = wrapper.scrollWidth - window.innerWidth + 120;
-                    gsap.to(wrapper, {
-                        x: -scrollAmount,
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: "#lifecycle-section",
-                            pin: true,
-                            scrub: 1,
-                            end: () => "+=" + scrollAmount
-                        }
-                    });
+                    if (currentVal > 75) loaderStatus.textContent = statusMsgs[3];
+                    else if (currentVal > 50) loaderStatus.textContent = statusMsgs[2];
+                    else if (currentVal > 25) loaderStatus.textContent = statusMsgs[1];
                 }
-            }
-
-            // --- 5. OPERATIONS SECTION ---
-            gsap.from("#operations-section h2, #operations-section p", {
-                scrollTrigger: {
-                    trigger: "#operations-section",
-                    start: "top 80%"
-                },
+            })
+            .to("#intro-loader > div", {
                 opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#operations-section .space-y-4 > div", {
-                scrollTrigger: {
-                    trigger: "#operations-section",
-                    start: "top 75%"
-                },
-                opacity: 0,
-                y: 20,
-                duration: 0.5,
-                stagger: 0.12,
-                ease: "power3.out"
-            });
-
-            // --- 6. VERIFICATION SECTION ---
-            gsap.from("#verification-section h2, #verification-section p", {
-                scrollTrigger: {
-                    trigger: "#verification-section",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            // --- 7. CAPITAL ALLOCATION SECTION ---
-            gsap.from("#capital-section h2, #capital-section p", {
-                scrollTrigger: {
-                    trigger: "#capital-section",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#capital-section .progress-fill", {
-                scrollTrigger: {
-                    trigger: "#capital-section",
-                    start: "top 70%"
-                },
-                scaleX: 0,
-                transformOrigin: "left center",
-                duration: 1.0,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            // --- 8. REVENUE WATERFALL SECTION ---
-            gsap.from("#revenue-waterfall h2, #revenue-waterfall p", {
-                scrollTrigger: {
-                    trigger: "#revenue-waterfall",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#revenue-waterfall .grid > div", {
-                scrollTrigger: {
-                    trigger: "#revenue-waterfall",
-                    start: "top 75%"
-                },
-                opacity: 0,
-                y: 30,
-                scale: 0.95,
-                duration: 0.5,
-                stagger: 0.12,
-                ease: "power3.out"
-            });
-
-            // --- 9. ESG & AUDIT SECTION ---
-            gsap.from("#esg-section h2, #esg-section p", {
-                scrollTrigger: {
-                    trigger: "#esg-section",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 35,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            gsap.from("#esg-section .grid > div", {
-                scrollTrigger: {
-                    trigger: "#esg-section",
-                    start: "top 75%"
-                },
-                opacity: 0,
-                y: 30,
-                duration: 0.5,
-                stagger: 0.12,
-                ease: "power3.out"
-            });
-
-            // --- 10. PROJECT REVEAL SPOTLIGHT SECTION ---
-            gsap.from("#project-reveal h2, #project-reveal p, #project-reveal .shadow-2xl", {
-                scrollTrigger: {
-                    trigger: "#project-reveal",
-                    start: "top 80%"
-                },
-                opacity: 0,
-                y: 40,
-                duration: 0.7,
-                stagger: 0.15,
-                ease: "power3.out"
-            });
-
-            // --- 11. FINAL CTA SECTION ---
-            gsap.from("#final-cta h3, #final-cta p, #final-cta a", {
-                scrollTrigger: {
-                    trigger: "#final-cta",
-                    start: "top 85%"
-                },
+                y: -30,
+                duration: 0.4,
+                ease: "power2.in"
+            })
+            .to("#intro-loader", {
+                yPercent: -100,
+                duration: 0.8,
+                ease: "power4.inOut"
+            })
+            .from("#scene-01 .scene-anim-item", {
                 opacity: 0,
                 y: 30,
                 duration: 0.6,
                 stagger: 0.12,
                 ease: "power3.out"
-            });
+            }, "-=0.3");
         }
+
+        // Full-screen Scene Navigation Engine State
+        window.currentScene = 0;
+        window.totalScenes = 12;
+        window.isAnimating = false;
+
+        const sceneTitles = [
+            '01 — OPENING',
+            '02 — THE PROBLEM',
+            '03 — SYSTEM ARCHITECTURE',
+            '04 — PHYSICAL ASSET SPOTLIGHT',
+            '05 — PROJECT STRUCTURE',
+            '06 — OPERATIONAL INTELLIGENCE',
+            '07 — THIRD-PARTY ASSURANCE',
+            '08 — CAPITAL ALLOCATION',
+            '09 — FINANCIAL WATERFALL',
+            '10 — SUSTAINABILITY & AUDIT',
+            '11 — CONNECTED MODEL',
+            '12 — FINAL REVEAL'
+        ];
+
+        function updateSceneIndicators(index) {
+            const counter = document.getElementById('scene-counter');
+            if (counter) {
+                counter.textContent = String(index + 1).padStart(2, '0') + ' / 12';
+            }
+            const titleEl = document.getElementById('current-scene-title');
+            if (titleEl) {
+                titleEl.textContent = sceneTitles[index] || '';
+            }
+
+            // Dots UI update
+            for (let i = 0; i < 12; i++) {
+                const dot = document.getElementById('dot-' + i);
+                if (dot) {
+                    const inner = dot.querySelector('.dot-inner');
+                    if (inner) {
+                        if (i === index) {
+                            inner.className = "w-3 h-3 rounded-full bg-emerald-400 border-2 border-white scale-125 dot-inner shadow-lg shadow-emerald-500/50";
+                        } else {
+                            inner.className = "w-2.5 h-2.5 rounded-full bg-white/20 border border-white/30 transition-all duration-300 group-hover:bg-emerald-400 group-hover:scale-125 dot-inner";
+                        }
+                    }
+                }
+            }
+        }
+
+        window.goToScene = function(index) {
+            if (index < 0 || index >= window.totalScenes || index === window.currentScene || window.isAnimating) return;
+            window.isAnimating = true;
+
+            const prevScene = window.currentScene;
+            window.currentScene = index;
+
+            const prevId = 'scene-' + String(prevScene + 1).padStart(2, '0');
+            const nextId = 'scene-' + String(window.currentScene + 1).padStart(2, '0');
+
+            const prevEl = document.getElementById(prevId);
+            const nextEl = document.getElementById(nextId);
+
+            const direction = window.currentScene > prevScene ? 1 : -1;
+
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    window.isAnimating = false;
+                }
+            });
+
+            // Animate out previous scene
+            tl.to(prevEl, {
+                opacity: 0,
+                yPercent: direction * -25,
+                duration: 0.5,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    prevEl.classList.add('pointer-events-none');
+                    prevEl.style.zIndex = 10;
+                }
+            });
+
+            // Prepare next scene
+            gsap.set(nextEl, { opacity: 0, yPercent: direction * 35, zIndex: 20 });
+            nextEl.classList.remove('pointer-events-none');
+
+            // Animate in next scene
+            tl.to(nextEl, {
+                opacity: 1,
+                yPercent: 0,
+                duration: 0.7,
+                ease: "power3.out"
+            }, "-=0.3");
+
+            // Stagger inner scene elements
+            const animItems = nextEl.querySelectorAll('.scene-anim-item');
+            if (animItems.length > 0) {
+                tl.fromTo(animItems,
+                    { opacity: 0, y: 25 },
+                    { opacity: 1, y: 0, duration: 0.45, stagger: 0.08, ease: "power2.out" },
+                    "-=0.4"
+                );
+            }
+
+            updateSceneIndicators(window.currentScene);
+
+            // Control Navbar reveal on Scene 12 (index 11)
+            const navbar = document.getElementById('main-navbar');
+            if (navbar) {
+                if (window.currentScene === 11) {
+                    navbar.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-full');
+                    navbar.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                } else {
+                    navbar.classList.add('opacity-0', 'pointer-events-none', '-translate-y-full');
+                    navbar.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                }
+            }
+        };
+
+        // Initialize dot indicators
+        updateSceneIndicators(0);
+
+        // Wheel Event listener
+        let lastWheelTime = 0;
+        window.addEventListener('wheel', (e) => {
+            const now = Date.now();
+            if (now - lastWheelTime < 400 || window.isAnimating) return;
+            if (Math.abs(e.deltaY) > 20) {
+                lastWheelTime = now;
+                if (e.deltaY > 0) {
+                    window.goToScene(window.currentScene + 1);
+                } else {
+                    window.goToScene(window.currentScene - 1);
+                }
+            }
+        }, { passive: true });
+
+        // Touch Swipe Event listener
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            if (window.isAnimating) return;
+            const touchEndY = e.changedTouches[0].clientY;
+            const diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) {
+                    window.goToScene(window.currentScene + 1);
+                } else {
+                    window.goToScene(window.currentScene - 1);
+                }
+            }
+        }, { passive: true });
+
+        // Keyboard Navigation listener
+        window.addEventListener('keydown', (e) => {
+            if (window.isAnimating) return;
+            if (['ArrowDown', 'PageDown', 'Space'].includes(e.code)) {
+                e.preventDefault();
+                window.goToScene(window.currentScene + 1);
+            } else if (['ArrowUp', 'PageUp'].includes(e.code)) {
+                e.preventDefault();
+                window.goToScene(window.currentScene - 1);
+            }
+        });
     });
 </script>
 
