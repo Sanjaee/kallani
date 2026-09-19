@@ -512,3 +512,30 @@ a { text-decoration: none; color: inherit; }
 }
 
 .divider { border-top: 1px solid #E5E5E5; }
+
+/* Interactive Presentation & GSAP Lifecycle Scroll Helper Styles */
+.horizontal-scroll-container {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+.horizontal-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+.lifecycle-card {
+  width: 28rem;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .horizontal-scroll-wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+    transform: none !important;
+  }
+  .lifecycle-card {
+    width: 100%;
+  }
+}
