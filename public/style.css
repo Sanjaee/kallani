@@ -584,3 +584,12 @@ a { text-decoration: none; color: inherit; }
     font-size: 1.5rem !important;
   }
 }
+
+/* Card Border Radius Rules — Subtle 10px - 12px corners across all landing page cards */
+#presentation-container .rounded-3xl,
+#presentation-container .rounded-2xl {
+  border-radius: 12px !important;
+}
+#presentation-container .rounded-xl {
+  border-radius: 10px !important;
+}

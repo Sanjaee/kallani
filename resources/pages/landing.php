@@ -36,21 +36,21 @@ ob_start();
 }">
 
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
-    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
-        <div class="max-w-md w-full text-center space-y-6">
-            <div class="space-y-2">
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white uppercase">KALLANI</h1>
-                <p class="text-sm sm:text-base font-medium text-emerald-400/90 tracking-wide">Productive Natural Assets</p>
+    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#070D07] text-white flex flex-col items-center justify-center p-6 select-none">
+        <div class="max-w-xl w-full text-center space-y-8">
+            <div class="space-y-4">
+                <h1 class="text-4xl sm:text-6xl font-serif tracking-[0.45em] text-white uppercase pl-[0.45em]">K A L L A N I</h1>
+                <p class="text-xs sm:text-sm font-mono tracking-[0.35em] text-amber-400 uppercase pl-[0.35em]">N A T U R E . C A P I T A L . I N F I N I T Y .</p>
             </div>
 
             <!-- Loader Progress Bar & Counter -->
-            <div class="space-y-3 pt-4">
-                <div class="w-full bg-emerald-950/60 border border-emerald-800/40 h-2.5 rounded-full overflow-hidden p-0.5 shadow-inner">
-                    <div id="loader-bar" class="bg-gradient-to-r from-emerald-500 via-emerald-400 to-amber-300 h-full w-0 rounded-full transition-all duration-75"></div>
+            <div class="space-y-3 pt-6 max-w-md mx-auto">
+                <div class="w-full bg-emerald-950/60 border border-emerald-800/40 h-2 rounded-full overflow-hidden p-0.5 shadow-inner">
+                    <div id="loader-bar" class="bg-gradient-to-r from-emerald-500 via-amber-400 to-amber-300 h-full w-0 rounded-full transition-all duration-75"></div>
                 </div>
                 <div class="flex items-center justify-between text-xs font-mono text-emerald-300/80">
                     <span id="loader-status">INITIALIZING SYSTEM MODULES...</span>
-                    <span id="loader-percent" class="font-bold text-emerald-400 text-sm">0%</span>
+                    <span id="loader-percent" class="font-bold text-amber-400 text-sm">0%</span>
                 </div>
             </div>
         </div>
@@ -483,58 +483,58 @@ ob_start();
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
         <div class="relative z-10 max-w-5xl mx-auto w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 text-left">
-                    <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"></path></svg>
-                        <span>08 • Capital Ledger</span>
-                    </div>
-
-                    <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">Understand Where Capital Is Allocated.</h2>
-                    <p class="scene-anim-item text-sm text-gray-300 mb-6 leading-relaxed">
-                        Kallani provides transparent capital tracking, mapping every dollar directly to plantation development, infrastructure, and reserves.
-                    </p>
-
-                    <div class="scene-anim-item grid grid-cols-2 gap-3 text-left">
-                        <div class="p-3.5 bg-[#142314]/70 rounded-2xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors">
-                            <span class="text-[10px] text-gray-400 block">Total Project Value</span>
-                            <span class="counter-num text-xl font-extrabold text-emerald-400" data-counter="$12.5M USD">$12.5M USD</span>
-                        </div>
-                        <div class="p-3.5 bg-[#142314]/70 rounded-2xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors">
-                            <span class="text-[10px] text-gray-400 block">Capital Committed</span>
-                            <span class="counter-num text-xl font-extrabold text-white" data-counter="$6.8M USD">$6.8M USD</span>
-                        </div>
-                    </div>
+            <div class="text-left max-w-3xl mb-6">
+                <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"></path></svg>
+                    <span>08 • Capital Ledger</span>
                 </div>
 
-                <div class="scene-anim-item lg:col-span-7 bg-[#142314]/70 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
-                    <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown ($8.2M Target)</h4>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
-                            <span class="counter-num text-emerald-400" data-counter="$3.20M USD">$3.20M USD</span>
-                        </div>
-                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-emerald-950">
-                            <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="39%" style="width: 0%"></div>
-                        </div>
+                <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight leading-tight">Understand Where Capital Is Allocated.</h2>
+                <p class="scene-anim-item text-sm sm:text-base text-gray-300 leading-relaxed">
+                    Kallani provides transparent capital tracking, mapping every dollar directly to plantation development, infrastructure, and reserves.
+                </p>
+            </div>
+
+            <!-- Full Width Aligned Metric Cards -->
+            <div class="scene-anim-item grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-6 text-left">
+                <div class="p-5 bg-[#142314]/70 rounded-xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors shadow-lg">
+                    <span class="text-xs text-gray-400 block mb-1">Total Project Value</span>
+                    <span class="counter-num text-2xl sm:text-3xl font-extrabold text-emerald-400 block" data-counter="$12,500,000 USD">$12,500,000 USD</span>
+                </div>
+                <div class="p-5 bg-[#142314]/70 rounded-xl border border-[#1E3A24]/80 hover:border-emerald-500/40 transition-colors shadow-lg">
+                    <span class="text-xs text-gray-400 block mb-1">Capital Committed</span>
+                    <span class="counter-num text-2xl sm:text-3xl font-extrabold text-white block" data-counter="$6,800,000 USD">$6,800,000 USD</span>
+                </div>
+            </div>
+
+            <!-- Full Width Breakdown Card -->
+            <div class="scene-anim-item w-full bg-[#142314]/70 p-6 rounded-xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
+                <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown (<span class="counter-num text-emerald-300" data-counter="$8,200,000 USD">$8,200,000 USD</span> Target)</h4>
+                <div>
+                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                        <span>Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
+                        <span class="counter-num text-emerald-400" data-counter="$3,200,000 USD">$3,200,000 USD</span>
                     </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
-                            <span class="counter-num text-blue-400" data-counter="$2.10M USD">$2.10M USD</span>
-                        </div>
-                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-blue-950">
-                            <div class="progress-bar-anim bg-blue-500 h-full rounded-full" data-bar-width="25.6%" style="width: 0%"></div>
-                        </div>
+                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-emerald-950">
+                        <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="39%" style="width: 0%"></div>
                     </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
-                            <span class="counter-num text-amber-400" data-counter="$1.80M USD">$1.80M USD</span>
-                        </div>
-                        <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-amber-950">
-                            <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="22%" style="width: 0%"></div>
-                        </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                        <span>Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
+                        <span class="counter-num text-blue-400" data-counter="$2,100,000 USD">$2,100,000 USD</span>
+                    </div>
+                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-blue-950">
+                        <div class="progress-bar-anim bg-blue-500 h-full rounded-full" data-bar-width="25.6%" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
+                        <span>Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
+                        <span class="counter-num text-amber-400" data-counter="$1,800,000 USD">$1,800,000 USD</span>
+                    </div>
+                    <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-amber-950">
+                        <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="22%" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
