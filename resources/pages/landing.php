@@ -721,52 +721,52 @@ ob_start();
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
         <div class="relative z-10 max-w-4xl mx-auto text-center">
-            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-4">
+            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2 sm:mb-4">
                 <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 <span>12 • Interactive Project Dashboard</span>
             </div>
             
-            <h2 class="scene-anim-item text-4xl sm:text-6xl font-extrabold text-white mb-6 tracking-tight">Explore Kallani in Action.</h2>
-            <p class="scene-anim-item text-base sm:text-lg text-emerald-200 max-w-2xl mx-auto mb-10">
+            <h2 class="scene-anim-item text-2xl sm:text-5xl font-extrabold text-white mb-2 sm:mb-4 tracking-tight">Explore Kallani in Action.</h2>
+            <p class="scene-anim-item text-xs sm:text-base text-emerald-200 max-w-2xl mx-auto mb-4 sm:mb-8">
                 Discover how productive natural assets are represented through a connected operating system.
             </p>
 
-            <div class="scene-anim-item bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-left max-w-2xl mx-auto mb-10 shadow-2xl">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-6">
+            <div class="scene-anim-item bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/20 text-left max-w-2xl mx-auto mb-4 sm:mb-8 shadow-2xl">
+                <div class="flex flex-row items-center justify-between gap-2 pb-3 sm:pb-6 border-b border-white/10 mb-3 sm:mb-6">
                     <div>
-                        <h3 class="text-2xl font-bold text-white">North Kalimantan Palm Project</h3>
-                        <span class="text-xs text-emerald-300">Concession Ref: NKP-2026-04 • 4,000 Hectares</span>
+                        <h3 class="text-base sm:text-2xl font-bold text-white">North Kalimantan Palm Project</h3>
+                        <span class="text-[10px] sm:text-xs text-emerald-300">Concession Ref: NKP-2026-04 • 4,000 Hectares</span>
                     </div>
-                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white self-start sm:self-auto">Developing / Operational</span>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-500 text-white shrink-0">Developing</span>
                 </div>
 
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 text-xs">
                     <div>
-                        <span class="text-gray-400 block">Total Area</span>
-                        <span class="counter-num font-bold text-base text-white" data-counter="4,000 ha">4,000 ha</span>
+                        <span class="text-gray-400 block text-[10px] sm:text-xs">Total Area</span>
+                        <span class="counter-num font-bold text-sm sm:text-base text-white" data-counter="4,000 ha">4,000 ha</span>
                     </div>
                     <div>
-                        <span class="text-gray-400 block">Current Yield</span>
-                        <span class="counter-num font-bold text-base text-emerald-300" data-counter="19.4 MT/ha">19.4 MT/ha</span>
+                        <span class="text-gray-400 block text-[10px] sm:text-xs">Current Yield</span>
+                        <span class="counter-num font-bold text-sm sm:text-base text-emerald-300" data-counter="19.4 MT/ha">19.4 MT/ha</span>
                     </div>
                     <div>
-                        <span class="text-gray-400 block">Funded Ratio</span>
-                        <span class="counter-num font-bold text-base text-white" data-counter="82.9%">82.9%</span>
+                        <span class="text-gray-400 block text-[10px] sm:text-xs">Funded Ratio</span>
+                        <span class="counter-num font-bold text-sm sm:text-base text-white" data-counter="82.9%">82.9%</span>
                     </div>
                     <div>
-                        <span class="text-gray-400 block">Verification</span>
-                        <span class="counter-num font-bold text-base text-emerald-300" data-counter="82% Verified">82% Verified</span>
+                        <span class="text-gray-400 block text-[10px] sm:text-xs">Verification</span>
+                        <span class="counter-num font-bold text-sm sm:text-base text-emerald-300" data-counter="82% Verified">82% Verified</span>
                     </div>
                 </div>
             </div>
 
-            <div class="scene-anim-item flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="w-full sm:w-auto px-10 py-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-lg shadow-2xl transition-all hover:scale-105 inline-flex items-center justify-center gap-3">
-                    <span>Enter Interactive Project Dashboard</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <div class="scene-anim-item flex flex-row items-center justify-center gap-2.5 sm:gap-4">
+                <a href="<?php echo $basePrefix; ?>/projects/north-kalimantan-palm" class="flex-1 sm:flex-initial px-4 py-2.5 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs sm:text-base shadow-xl transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+                    <span>Enter Dashboard</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
-                <a href="<?php echo $basePrefix; ?>/explore" class="w-full sm:w-auto px-8 py-5 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-base border border-white/20 transition-all hover:scale-105">
-                    <span>Explore Concession Catalog</span>
+                <a href="<?php echo $basePrefix; ?>/explore" class="flex-1 sm:flex-initial px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-base border border-white/20 transition-all hover:scale-105 text-center">
+                    <span>Concession Catalog</span>
                 </a>
             </div>
         </div>
