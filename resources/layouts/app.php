@@ -365,8 +365,8 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
         .sidebar-item:hover { color: #171717 !important; background-color: #F0F0EC !important; }
         .sidebar-item.active { color: #2D5016 !important; background-color: #F0F0EC !important; border-left-color: #2D5016 !important; font-weight: 700 !important; }
 
-        .main-content { margin-left: 16rem !important; padding: 2rem !important; }
-        @media (max-width: 1023px) { .sidebar { display: none !important; } .main-content { margin-left: 0 !important; } }
+        .main-content { margin-left: 16rem !important; padding: 5.5rem 2rem 2rem 2rem !important; }
+        @media (max-width: 1023px) { .sidebar { display: none !important; } .main-content { margin-left: 0 !important; padding: 5.5rem 1.25rem 2rem 1.25rem !important; } }
         @media (min-width: 1024px) { .lg\:hidden { display: none !important; } }
 
         .progress-bar { width: 100% !important; background-color: #F0F0EC !important; border-radius: 9999px !important; height: 0.5rem !important; overflow: hidden !important; }
@@ -983,7 +983,7 @@ $isHomePage = ($cleanCurrentPath === '/');
     <?php endif; ?>
 
     <!-- Main Content -->
-    <main class="<?php echo $isProjectPage ? 'main-content' : ''; ?>">
+    <main class="<?php echo $isProjectPage ? 'main-content' : ($isHomePage ? '' : 'pt-24 pb-12 px-4 sm:px-6 max-w-7xl mx-auto'); ?>">
         <?php echo $content ?? ''; ?>
     </main>
 
