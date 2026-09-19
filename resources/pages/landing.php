@@ -68,16 +68,7 @@ ob_start();
         </template>
     </div>
 
-    <!-- PRESENTATION BOTTOM CONTROL BAR -->
-    <div id="scene-controls" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 bg-black/70 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/15 shadow-2xl">
-        <button onclick="window.goToScene(window.currentScene - 1)" class="p-2 rounded-full hover:bg-white/10 text-gray-300 hover:text-white transition-colors cursor-pointer" title="Previous Scene">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <span id="current-scene-title" class="text-xs font-mono tracking-wider text-emerald-300 px-3 uppercase font-semibold">01 — OPENING</span>
-        <button onclick="window.goToScene(window.currentScene + 1)" class="p-2 rounded-full hover:bg-white/10 text-gray-300 hover:text-white transition-colors cursor-pointer" title="Next Scene">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
-    </div>
+
 
     <!-- ========================================================================= -->
     <!-- 12 FULL-SCREEN SCENES (SCENE 01 TO SCENE 12)                              -->
