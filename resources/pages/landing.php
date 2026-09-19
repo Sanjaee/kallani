@@ -446,7 +446,8 @@ ob_start();
                     <button @click="verTab = 'docs'" class="px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer" :class="verTab === 'docs' ? 'bg-emerald-600 text-white' : 'bg-white/5 text-gray-400 hover:bg-white/10'">Audited Vault</button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tab 1: Land & GIS -->
+                <div x-show="verTab === 'land'" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
                         <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
@@ -462,6 +463,46 @@ ob_start();
                             <p class="text-xs text-gray-300">Verified by AgriGIS Spatial Audit Ltd. & Institutional Assurance Group.</p>
                         </div>
                         <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: DOC-2026-NKP-V8</span>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Legal Rights -->
+                <div x-show="verTab === 'legal'" class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: none;">
+                    <div>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Fully Compliant</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Concession & HGU Ownership Rights</h4>
+                        <p class="text-xs text-gray-300 mb-4">Certified 35-Year Plantation HGU License (No. 042/HGU/KALTARA/2024), AMDAL environmental clearance & customary land agreements.</p>
+                        <div class="p-3 bg-black/40 rounded-xl border border-[#1E3A24]/60 text-xs">
+                            <span class="text-gray-400 block">Land Deed Registration Hash</span>
+                            <span class="font-mono text-emerald-400 font-bold">0x3c91e04a77b19df582e14</span>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Legal Concession Title</span>
+                            <p class="text-xs text-gray-300">Verified by Kaltara Legal Audit Commission & Ministry of Agrarian Affairs.</p>
+                        </div>
+                        <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: LGL-2026-NKP-HGU</span>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Audited Vault -->
+                <div x-show="verTab === 'docs'" class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: none;">
+                    <div>
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Cryptographically Signed</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Tamper-Evident Document Vault</h4>
+                        <p class="text-xs text-gray-300 mb-4">Annual RSPO/ISPO ESG Audit reports, Financial Ledger Statements, and Operational Yield Logs timestamped on-chain.</p>
+                        <div class="p-3 bg-black/40 rounded-xl border border-[#1E3A24]/60 text-xs">
+                            <span class="text-gray-400 block">Audit Vault Root Hash</span>
+                            <span class="font-mono text-emerald-400 font-bold">0x9e2fa8110b42d76c11d09</span>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-black/50 rounded-2xl border border-[#1E3A24]/60 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">Audit Vault Ledger</span>
+                            <p class="text-xs text-gray-300">Audited by Big4 Institutional Advisory & Carbon Verification Vault.</p>
+                        </div>
+                        <span class="text-[10px] font-mono text-gray-400 mt-4 block">REF: AUD-2026-NKP-FINAL</span>
                     </div>
                 </div>
             </div>
