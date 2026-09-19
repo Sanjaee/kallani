@@ -115,42 +115,66 @@ ob_start();
                 Traditional natural asset management fragments physical land, operational tracking, third-party verification, and investor distribution into isolated silos.
             </p>
 
-            <!-- Disconnected Cards Visual -->
+            <!-- BESPOKE INSTITUTIONAL CARDS VISUAL WITH COUNTER ANIMATIONS -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-red-500/30 backdrop-blur-md relative group hover:border-red-500/60 transition-all">
-                    <div class="w-10 h-10 rounded-xl bg-red-950/60 text-red-400 flex items-center justify-center font-bold mb-4 border border-red-500/40">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                <!-- Fragment #01 -->
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-red-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-rose-400"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-red-950/60 text-red-400 flex items-center justify-center font-bold mb-5 border border-red-500/40 shadow-lg shadow-red-950/40">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                     </div>
-                    <span class="text-xs font-mono text-red-400 uppercase tracking-wider block mb-1">Fragment #1</span>
+                    <span class="counter-num text-xs font-mono font-bold text-red-400 uppercase tracking-widest block mb-1" data-counter="01 • Fragment">01 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Physical Land Records</h3>
-                    <p class="text-xs text-gray-400">Cadastral surveys and GIS maps stored in paper archives or isolated GIS software.</p>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Cadastral surveys and GIS maps stored in paper archives or isolated GIS software.</p>
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span>Status: Isolated</span>
+                        <span class="counter-num font-bold text-red-400" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
+                    </div>
                 </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-amber-500/30 backdrop-blur-md relative group hover:border-amber-500/60 transition-all">
-                    <div class="w-10 h-10 rounded-xl bg-amber-950/60 text-amber-400 flex items-center justify-center font-bold mb-4 border border-amber-500/40">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                <!-- Fragment #02 -->
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-amber-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-yellow-400"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-950/60 text-amber-400 flex items-center justify-center font-bold mb-5 border border-amber-500/40 shadow-lg shadow-amber-950/40">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
                     </div>
-                    <span class="text-xs font-mono text-amber-400 uppercase tracking-wider block mb-1">Fragment #2</span>
+                    <span class="counter-num text-xs font-mono font-bold text-amber-400 uppercase tracking-widest block mb-1" data-counter="02 • Fragment">02 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Field Operations</h3>
-                    <p class="text-xs text-gray-400">Harvest logs and fertilizer data manually reported without real-time auditability.</p>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Harvest logs and fertilizer data manually reported without real-time auditability.</p>
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span>Status: Manual Log</span>
+                        <span class="counter-num font-bold text-amber-400" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
+                    </div>
                 </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-blue-500/30 backdrop-blur-md relative group hover:border-blue-500/60 transition-all">
-                    <div class="w-10 h-10 rounded-xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-4 border border-blue-500/40">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <!-- Fragment #03 -->
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-blue-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-5 border border-blue-500/40 shadow-lg shadow-blue-950/40">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <span class="text-xs font-mono text-blue-400 uppercase tracking-wider block mb-1">Fragment #3</span>
+                    <span class="counter-num text-xs font-mono font-bold text-blue-400 uppercase tracking-widest block mb-1" data-counter="03 • Fragment">03 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Audits & Verification</h3>
-                    <p class="text-xs text-gray-400">Third-party compliance assessments conducted as delayed annual PDF reports.</p>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Third-party compliance assessments conducted as delayed annual PDF reports.</p>
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span>Status: Delayed</span>
+                        <span class="counter-num font-bold text-blue-400" data-counter="82% Audited">82% Audited</span>
+                    </div>
                 </div>
 
-                <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-purple-500/30 backdrop-blur-md relative group hover:border-purple-500/60 transition-all">
-                    <div class="w-10 h-10 rounded-xl bg-purple-950/60 text-purple-400 flex items-center justify-center font-bold mb-4 border border-purple-500/40">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <!-- Fragment #04 -->
+                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-white/10 backdrop-blur-xl p-6 overflow-hidden group hover:border-purple-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-indigo-400"></div>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-950/60 text-purple-400 flex items-center justify-center font-bold mb-5 border border-purple-500/40 shadow-lg shadow-purple-950/40">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <span class="text-xs font-mono text-purple-400 uppercase tracking-wider block mb-1">Fragment #4</span>
+                    <span class="counter-num text-xs font-mono font-bold text-purple-400 uppercase tracking-widest block mb-1" data-counter="04 • Fragment">04 • Fragment</span>
                     <h3 class="text-xl font-bold text-white mb-2">Capital & Yields</h3>
-                    <p class="text-xs text-gray-400">Financial allocation disconnected from physical land performance metrics.</p>
+                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Financial allocation disconnected from physical land performance metrics.</p>
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span>Status: Disconnected</span>
+                        <span class="counter-num font-bold text-purple-400" data-counter="$12.5M Target">$12.5M Target</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,7 +257,7 @@ ob_start();
                     <div class="scene-anim-item space-y-3 mb-6">
                         <button @click="activeParcel = 'A'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'A' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
-                                <span class="block text-xs text-white font-bold">Zone A — Mature Plantation (1,800 ha)</span>
+                                <span class="block text-xs text-white font-bold">Zone A — Mature Plantation (<span class="counter-num" data-counter="1,800 ha">1,800 ha</span>)</span>
                                 <span class="text-[10px] text-gray-400">Peak harvesting • High FFB yield</span>
                             </div>
                             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">Operational</span>
@@ -241,7 +265,7 @@ ob_start();
 
                         <button @click="activeParcel = 'B'" class="w-full p-3.5 rounded-xl text-left border transition-all flex items-center justify-between cursor-pointer" :class="activeParcel === 'B' ? 'bg-emerald-950/80 border-emerald-400 font-bold' : 'bg-white/5 border-white/10 hover:bg-white/10'">
                             <div>
-                                <span class="block text-xs text-white font-bold">Zone B — Developing Plantation (1,400 ha)</span>
+                                <span class="block text-xs text-white font-bold">Zone B — Developing Plantation (<span class="counter-num" data-counter="1,400 ha">1,400 ha</span>)</span>
                                 <span class="text-[10px] text-gray-400">Young palm stands • Irrigation extensions</span>
                             </div>
                             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">Developing</span>
@@ -254,11 +278,11 @@ ob_start();
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-between">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-black/70 text-emerald-300 border border-emerald-500/40">GIS Parcel Map Overlay</span>
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white">4,000 Hectares</span>
+                            <span class="counter-num px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white" data-counter="4,000 Hectares">4,000 Hectares</span>
                         </div>
                         <div class="bg-black/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-xs text-left">
                             <span class="text-emerald-400 font-bold block mb-1">Active Selection: North Kalimantan Concession</span>
-                            <span class="text-gray-300 block">High-density mature palm trees producing average 19.4 MT/ha FFB.</span>
+                            <span class="text-gray-300 block">High-density mature palm trees producing average <span class="counter-num text-emerald-300 font-bold" data-counter="19.4 MT/ha">19.4 MT/ha</span> FFB.</span>
                         </div>
                     </div>
                 </div>
@@ -281,23 +305,23 @@ ob_start();
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="text-xs font-mono text-emerald-400 block mb-2 font-bold">Milestone 01</span>
+                    <span class="counter-num text-xs font-mono text-emerald-400 block mb-2 font-bold" data-counter="Milestone 01">Milestone 01</span>
                     <h3 class="text-xl font-bold text-white mb-2">Concession License HGU</h3>
-                    <p class="text-xs text-gray-400 mb-4">Decree HGU-541 granted by Ministry of Land Affairs for 30-year operational term.</p>
+                    <p class="text-xs text-gray-400 mb-4">Decree HGU-541 granted by Ministry of Land Affairs for <span class="counter-num text-emerald-300 font-bold" data-counter="30-year">30-year</span> operational term.</p>
                     <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">Verified Legal</span>
                 </div>
 
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="text-xs font-mono text-amber-400 block mb-2 font-bold">Milestone 02</span>
+                    <span class="counter-num text-xs font-mono text-amber-400 block mb-2 font-bold" data-counter="Milestone 02">Milestone 02</span>
                     <h3 class="text-xl font-bold text-white mb-2">Master Development Plan</h3>
-                    <p class="text-xs text-gray-400 mb-4">3,120 ha planted, central CPO extraction mill & 2.4 km secondary drainage channels.</p>
+                    <p class="text-xs text-gray-400 mb-4"><span class="counter-num text-amber-300 font-bold" data-counter="3,120 ha">3,120 ha</span> planted, central CPO extraction mill & <span class="counter-num text-amber-300 font-bold" data-counter="2.4 km">2.4 km</span> secondary channels.</p>
                     <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-950 text-amber-300 border border-amber-800">Operational</span>
                 </div>
 
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
-                    <span class="text-xs font-mono text-blue-400 block mb-2 font-bold">Milestone 03</span>
+                    <span class="counter-num text-xs font-mono text-blue-400 block mb-2 font-bold" data-counter="Milestone 03">Milestone 03</span>
                     <h3 class="text-xl font-bold text-white mb-2">Environmental Baseline</h3>
-                    <p class="text-xs text-gray-400 mb-4">RSPO & ISPO compliance ratings with 14,200 tCO2e/yr carbon absorption potential.</p>
+                    <p class="text-xs text-gray-400 mb-4">RSPO & ISPO compliance ratings with <span class="counter-num text-blue-300 font-bold" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span> carbon absorption potential.</p>
                     <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-950 text-blue-300 border border-blue-800">Audited Rating</span>
                 </div>
             </div>
@@ -322,15 +346,15 @@ ob_start();
                     <div class="scene-anim-item space-y-3 text-xs font-semibold">
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
                             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                            <span>Planting Progress: 78% (3,120 of 4,000 ha)</span>
+                            <span>Planting Progress: <strong class="counter-num text-emerald-400 font-bold" data-counter="78%">78%</strong> (3,120 of 4,000 ha)</span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
                             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                            <span>Average Harvest Yield: 19.4 MT / hectare</span>
+                            <span>Average Harvest Yield: <strong class="counter-num text-emerald-400 font-bold" data-counter="19.4 MT / hectare">19.4 MT / hectare</strong></span>
                         </div>
                         <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
                             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                            <span>Mill Processing Capacity: 45 MT FFB / hour</span>
+                            <span>Mill Processing Capacity: <strong class="counter-num text-emerald-400 font-bold" data-counter="45 MT FFB / hour">45 MT FFB / hour</strong></span>
                         </div>
                     </div>
                 </div>
@@ -344,7 +368,7 @@ ob_start();
                         <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="font-bold text-xs text-white">Zone A Harvest Batch #104</span>
-                                <span class="text-[10px] text-emerald-400 font-semibold">100% Completed</span>
+                                <span class="counter-num text-[10px] text-emerald-400 font-semibold" data-counter="100% Completed">100% Completed</span>
                             </div>
                             <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
                                 <div class="bg-emerald-500 h-full w-full"></div>
@@ -353,7 +377,7 @@ ob_start();
                         <div class="p-3.5 bg-black/40 rounded-xl border border-white/10">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="font-bold text-xs text-white">Zone B Irrigation Extension</span>
-                                <span class="text-[10px] text-amber-400 font-semibold">78% In Progress</span>
+                                <span class="counter-num text-[10px] text-amber-400 font-semibold" data-counter="78% In Progress">78% In Progress</span>
                             </div>
                             <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
                                 <div class="bg-amber-500 h-full w-[78%]"></div>
@@ -389,7 +413,7 @@ ob_start();
                     <div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-950 text-emerald-300 border border-emerald-800 mb-2 inline-block">Status: Verified</span>
                         <h4 class="text-lg font-bold text-white mb-2">GIS Spatial Boundary & Topography</h4>
-                        <p class="text-xs text-gray-300 mb-4">4,000 hectares mapped via high-resolution drone photogrammetry and SAR radar imagery.</p>
+                        <p class="text-xs text-gray-300 mb-4"><span class="counter-num text-emerald-400 font-bold" data-counter="4,000 hectares">4,000 hectares</span> mapped via high-resolution drone photogrammetry and SAR radar imagery.</p>
                         <div class="p-3 bg-black/40 rounded-xl border border-white/10 text-xs">
                             <span class="text-gray-400 block">Cryptographic Hash</span>
                             <span class="font-mono text-emerald-400 font-bold">0x8f4b7a1c90e322d8a39a1</span>
@@ -425,11 +449,11 @@ ob_start();
                     <div class="scene-anim-item grid grid-cols-2 gap-3 text-left">
                         <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
                             <span class="text-[10px] text-gray-400 block">Total Project Value</span>
-                            <span class="text-xl font-extrabold text-emerald-400">$12.5M USD</span>
+                            <span class="counter-num text-xl font-extrabold text-emerald-400" data-counter="$12.5M USD">$12.5M USD</span>
                         </div>
                         <div class="p-3.5 bg-white/5 rounded-2xl border border-white/10">
                             <span class="text-[10px] text-gray-400 block">Capital Committed</span>
-                            <span class="text-xl font-extrabold text-white">$6.8M USD</span>
+                            <span class="counter-num text-xl font-extrabold text-white" data-counter="$6.8M USD">$6.8M USD</span>
                         </div>
                     </div>
                 </div>
@@ -438,8 +462,8 @@ ob_start();
                     <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown ($8.2M Target)</h4>
                     <div>
                         <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Plantation Development (39.0%)</span>
-                            <span class="text-emerald-400">$3.20M USD</span>
+                            <span>Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
+                            <span class="counter-num text-emerald-400" data-counter="$3.20M USD">$3.20M USD</span>
                         </div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
                             <div class="bg-emerald-500 h-full w-[39%]"></div>
@@ -447,8 +471,8 @@ ob_start();
                     </div>
                     <div>
                         <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Operations Working Capital (25.6%)</span>
-                            <span class="text-blue-400">$2.10M USD</span>
+                            <span>Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
+                            <span class="counter-num text-blue-400" data-counter="$2.10M USD">$2.10M USD</span>
                         </div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
                             <div class="bg-blue-500 h-full w-[25.6%]"></div>
@@ -456,8 +480,8 @@ ob_start();
                     </div>
                     <div>
                         <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                            <span>Mill & Infrastructure (22.0%)</span>
-                            <span class="text-amber-400">$1.80M USD</span>
+                            <span>Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
+                            <span class="counter-num text-amber-400" data-counter="$1.80M USD">$1.80M USD</span>
                         </div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
                             <div class="bg-amber-500 h-full w-[22%]"></div>
@@ -484,25 +508,25 @@ ob_start();
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
                 <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-emerald-500/30 backdrop-blur-md">
                     <span class="text-[10px] font-mono font-bold uppercase text-emerald-400 block mb-1">Step 1 — Gross Revenue</span>
-                    <h4 class="text-2xl font-extrabold text-white mb-1">$4,850,000</h4>
+                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$4,850,000">$4,850,000</h4>
                     <p class="text-[10px] text-gray-400">Total annual sales from CPO & kernel extraction.</p>
                 </div>
 
                 <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-amber-500/30 backdrop-blur-md">
                     <span class="text-[10px] font-mono font-bold uppercase text-amber-400 block mb-1">Step 2 — Operating Cost</span>
-                    <h4 class="text-2xl font-extrabold text-white mb-1">-$1,420,000</h4>
+                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$1,420,000">-$1,420,000</h4>
                     <p class="text-[10px] text-gray-400">Field labor, fertilizer & milling opex expenses.</p>
                 </div>
 
                 <div class="scene-anim-item p-5 bg-white/5 rounded-2xl border border-purple-500/30 backdrop-blur-md">
                     <span class="text-[10px] font-mono font-bold uppercase text-purple-400 block mb-1">Step 3 — Reserve Buffer</span>
-                    <h4 class="text-2xl font-extrabold text-white mb-1">-$510,000</h4>
+                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="-$510,000">-$510,000</h4>
                     <p class="text-[10px] text-gray-400">Maintenance reserve & compliance buffer.</p>
                 </div>
 
                 <div class="scene-anim-item p-5 bg-emerald-900/90 rounded-2xl border border-emerald-500 shadow-xl">
                     <span class="text-[10px] font-mono font-bold uppercase text-emerald-300 block mb-1">Step 4 — Net Distribution</span>
-                    <h4 class="text-2xl font-extrabold text-white mb-1">$2,920,000</h4>
+                    <h4 class="counter-num text-2xl font-extrabold text-white mb-1" data-counter="$2,920,000">$2,920,000</h4>
                     <p class="text-[10px] text-emerald-100">Net distributable cash flow for quarterly payouts.</p>
                 </div>
             </div>
@@ -525,19 +549,19 @@ ob_start();
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
                     <h4 class="font-bold text-lg text-white mb-1">Carbon Sequestration</h4>
-                    <span class="text-2xl font-extrabold text-emerald-400 block mb-2">14,200 tCO2e/yr</span>
+                    <span class="counter-num text-2xl font-extrabold text-emerald-400 block mb-2" data-counter="14,200 tCO2e/yr">14,200 tCO2e/yr</span>
                     <p class="text-xs text-gray-400">Estimated annual carbon absorption across palm stands & forest buffers.</p>
                 </div>
 
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
                     <h4 class="font-bold text-lg text-white mb-1">RSPO / ISPO Rating</h4>
-                    <span class="text-2xl font-extrabold text-blue-400 block mb-2">94% Compliant</span>
+                    <span class="counter-num text-2xl font-extrabold text-blue-400 block mb-2" data-counter="94% Compliant">94% Compliant</span>
                     <p class="text-xs text-gray-400">Adherence to zero-deforestation & soil conservation standards.</p>
                 </div>
 
                 <div class="scene-anim-item p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md">
                     <h4 class="font-bold text-lg text-white mb-1">Immutable Audit Trail</h4>
-                    <span class="text-2xl font-extrabold text-purple-400 block mb-2">1,240 Events</span>
+                    <span class="counter-num text-2xl font-extrabold text-purple-400 block mb-2" data-counter="1,240 Events">1,240 Events</span>
                     <p class="text-xs text-gray-400">Chronological activity logs recording parcel updates & attestations.</p>
                 </div>
             </div>
@@ -560,35 +584,35 @@ ob_start();
             <div class="scene-anim-item bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-md shadow-2xl">
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 01</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 01">Layer 01</span>
                         <span class="font-bold text-sm text-white">Physical Land</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 02</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 02">Layer 02</span>
                         <span class="font-bold text-sm text-white">Project Structure</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 03</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 03">Layer 03</span>
                         <span class="font-bold text-sm text-white">Field Operations</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 04</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 04">Layer 04</span>
                         <span class="font-bold text-sm text-white">Verification</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 05</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 05">Layer 05</span>
                         <span class="font-bold text-sm text-white">Capital Allocation</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 06</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 06">Layer 06</span>
                         <span class="font-bold text-sm text-white">Revenue Flow</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 07</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 07">Layer 07</span>
                         <span class="font-bold text-sm text-white">Distributions</span>
                     </div>
                     <div class="p-4 bg-black/40 rounded-2xl border border-white/10">
-                        <span class="text-[10px] font-mono text-emerald-400 uppercase block">Layer 08</span>
+                        <span class="counter-num text-[10px] font-mono text-emerald-400 uppercase block" data-counter="Layer 08">Layer 08</span>
                         <span class="font-bold text-sm text-white">ESG & Audit</span>
                     </div>
                 </div>
@@ -621,19 +645,19 @@ ob_start();
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
                     <div>
                         <span class="text-gray-400 block">Total Area</span>
-                        <span class="font-bold text-base text-white">4,000 ha</span>
+                        <span class="counter-num font-bold text-base text-white" data-counter="4,000 ha">4,000 ha</span>
                     </div>
                     <div>
                         <span class="text-gray-400 block">Current Yield</span>
-                        <span class="font-bold text-base text-emerald-300">19.4 MT/ha</span>
+                        <span class="counter-num font-bold text-base text-emerald-300" data-counter="19.4 MT/ha">19.4 MT/ha</span>
                     </div>
                     <div>
                         <span class="text-gray-400 block">Funded Ratio</span>
-                        <span class="font-bold text-base text-white">82.9%</span>
+                        <span class="counter-num font-bold text-base text-white" data-counter="82.9%">82.9%</span>
                     </div>
                     <div>
                         <span class="text-gray-400 block">Verification</span>
-                        <span class="font-bold text-base text-emerald-300">82% Verified</span>
+                        <span class="counter-num font-bold text-base text-emerald-300" data-counter="82% Verified">82% Verified</span>
                     </div>
                 </div>
             </div>
@@ -727,6 +751,39 @@ ob_start();
             '12 — FINAL REVEAL'
         ];
 
+        function animateSceneCounters(container) {
+            if (!container) return;
+            const counterEls = container.querySelectorAll('.counter-num, [data-counter]');
+            counterEls.forEach(el => {
+                let targetText = el.getAttribute('data-counter');
+                if (!targetText) {
+                    targetText = el.textContent.trim();
+                    el.setAttribute('data-counter', targetText);
+                }
+
+                const match = targetText.match(/^([^\d-]*)(-?\d[\d,.]*)(.*)$/);
+                if (match) {
+                    const prefix = match[1];
+                    const rawNum = match[2].replace(/,/g, '');
+                    const suffix = match[3];
+                    const targetVal = parseFloat(rawNum);
+                    const isFloat = rawNum.includes('.');
+                    const decimals = isFloat ? (rawNum.split('.')[1] || '').length : 0;
+
+                    let obj = { val: 0 };
+                    gsap.to(obj, {
+                        val: targetVal,
+                        duration: 1.3,
+                        ease: "power2.out",
+                        onUpdate: () => {
+                            let formatted = isFloat ? obj.val.toFixed(decimals) : Math.floor(obj.val).toLocaleString();
+                            el.textContent = prefix + formatted + suffix;
+                        }
+                    });
+                }
+            });
+        }
+
         function updateSceneIndicators(index) {
             const counter = document.getElementById('scene-counter');
             if (counter) {
@@ -803,6 +860,9 @@ ob_start();
                     "-=0.4"
                 );
             }
+
+            // Animate numbers continuously from 0 to target value
+            animateSceneCounters(nextEl);
 
             updateSceneIndicators(window.currentScene);
 
