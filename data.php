@@ -105,7 +105,7 @@ return [
             'capital_required' => 50000000,
             'capital_committed' => 48000000,
             'projected_output' => 45000,
-            'image' => 'Kebun-Sawit-3.jpg',
+            'image' => '8.jpg',
         ],
     ],
 
