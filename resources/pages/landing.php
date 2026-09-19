@@ -55,15 +55,9 @@ ob_start();
     </div>
 
     <!-- PRESENTATION TOP BRAND CHROME (PRESENTATION MODE ONLY) -->
-    <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center gap-3 transition-all duration-500">
-        <a href="<?php echo $basePrefix; ?>/" class="flex items-center gap-2.5 group">
-            <div class="w-9 h-9 rounded-xl bg-emerald-900/80 border border-emerald-500/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-            </div>
-            <div>
-                <span class="text-base font-extrabold tracking-tight text-white block leading-none">KALLANI</span>
-                <span class="text-[10px] font-mono tracking-widest text-emerald-400 uppercase">Operating System</span>
-            </div>
+    <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center transition-all duration-500">
+        <a href="<?php echo $basePrefix; ?>/" class="group">
+            <span class="text-xl sm:text-2xl font-serif font-light tracking-[0.3em] text-white uppercase block leading-none hover:text-emerald-300 transition-colors pl-[0.3em]">KALLANI</span>
         </a>
     </div>
 
