@@ -11,10 +11,10 @@ ob_start();
 ?>
 
 <!-- FULL-SCREEN SCENE-BASED PRESENTATION CONTAINER -->
-<div id="presentation-container" class="relative w-screen h-screen overflow-hidden bg-[#070D06] text-white font-inter select-none" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A', verTab: 'land' }">
+<div id="presentation-container" class="relative w-screen h-screen overflow-hidden bg-[#0F1C0E] text-white font-inter select-none" x-data="{ activeDiagramStage: 'Asset', activeParcel: 'A', verTab: 'land' }">
 
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
-    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#070D06] text-white flex flex-col items-center justify-center p-6 select-none">
+    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
         <div class="max-w-md w-full text-center space-y-6">
             <!-- Animated Brand Mark -->
             <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-950/80 border border-emerald-500/40 shadow-2xl shadow-emerald-500/20 mb-2 transform hover:scale-105 transition-transform duration-500">
@@ -68,25 +68,18 @@ ob_start();
         </template>
     </div>
 
-
-
     <!-- ========================================================================= -->
     <!-- 12 FULL-SCREEN SCENES (SCENE 01 TO SCENE 12)                              -->
     <!-- ========================================================================= -->
 
     <!-- SCENE 01 — OPENING -->
     <section id="scene-01" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 z-20 transition-opacity">
-        <div class="absolute inset-0 z-0 opacity-40 scale-105" id="hero-bg">
-            <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Landscape" class="w-full h-full object-cover filter brightness-90 contrast-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#070D06] via-[#070D06]/70 to-[#070D06]/50"></div>
+        <div class="absolute inset-0 z-0 opacity-60 scale-105" id="hero-bg">
+            <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Landscape" class="w-full h-full object-cover filter brightness-95 contrast-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/50 to-[#0F1C0E]/30"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-            <div class="scene-anim-item inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-8 shadow-2xl">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Institutional Operating System Presentation</span>
-            </div>
-
             <h1 class="scene-anim-item text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1] text-balance">
                 Operating Systems for <br />
                 <span class="bg-gradient-to-r from-emerald-300 via-emerald-100 to-amber-200 bg-clip-text text-transparent">Productive Natural Assets</span>
