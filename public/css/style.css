@@ -639,7 +639,7 @@ a { text-decoration: none; color: inherit; }
 
   /* Presentation Scenes Container on Mobile */
   .scene {
-    padding: 3rem 0.65rem 0.75rem 0.65rem !important;
+    padding: 3.5rem 0.65rem 0.75rem 0.65rem !important;
     justify-content: center !important;
     overflow-y: auto !important;
   }
@@ -651,25 +651,25 @@ a { text-decoration: none; color: inherit; }
     justify-content: center !important;
   }
 
-  /* Headings & Typography (+2px scaled for enhanced mobile legibility) */
+  /* Headings & Typography (Scaled -2px for compact mobile presentation) */
   .scene h1 {
-    font-size: 25px !important;
+    font-size: 23px !important;
     line-height: 1.25 !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.65rem !important;
   }
   .scene h2 {
-    font-size: clamp(1.25rem, 5vw, 1.55rem) !important;
+    font-size: clamp(1.1rem, 4.2vw, 1.4rem) !important;
     line-height: 1.2 !important;
-    margin-bottom: 0.35rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .scene p {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 1.15rem !important;
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.95rem !important;
   }
   .scene .scene-anim-item.inline-flex {
     margin-bottom: 0.25rem !important;
-    font-size: 11px !important;
+    font-size: 10.5px !important;
   }
 
   /* Grid Layouts on Mobile */
@@ -693,27 +693,27 @@ a { text-decoration: none; color: inherit; }
     padding: 0.45rem 0.55rem !important;
   }
 
-  /* Specific Card Title & Text Sizes (+2px scaled) */
+  /* Specific Card Title & Text Sizes (Scaled -2px) */
   .scene .text-xl {
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     margin-bottom: 0.15rem !important;
   }
   .scene .text-2xl {
-    font-size: 1.18rem !important;
+    font-size: 1.08rem !important;
     margin-bottom: 0.15rem !important;
   }
   .scene .text-3xl {
-    font-size: 1.32rem !important;
+    font-size: 1.2rem !important;
   }
   .scene .text-sm {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
   }
   .scene .text-xs {
-    font-size: 0.78rem !important;
+    font-size: 0.72rem !important;
     line-height: 1.3 !important;
   }
   .scene .text-\[10px\], .scene .text-\[11px\] {
-    font-size: 0.7rem !important;
+    font-size: 0.65rem !important;
   }
 
   /* Image Containers (Increased height on mobile for clear photo visibility) */
