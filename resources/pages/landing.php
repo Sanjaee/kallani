@@ -74,9 +74,9 @@ ob_start();
 
     <!-- SCENE 01 — OPENING -->
     <section id="scene-01" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 z-20 transition-opacity">
-        <div class="absolute inset-0 z-0 opacity-60 scale-105" id="hero-bg">
-            <img src="<?php echo $basePrefix; ?>/lanskap-sawi_Miftahurrohman.jpg" alt="Natural Asset Landscape" class="w-full h-full object-cover filter brightness-95 contrast-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/50 to-[#0F1C0E]/30"></div>
+        <div class="absolute inset-0 z-0 opacity-40 scale-105" id="hero-bg">
+            <img src="<?php echo $basePrefix; ?>/1.jpg" alt="Natural Asset Landscape" class="w-full h-full object-cover filter brightness-90 contrast-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/60 to-[#0F1C0E]/40"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -104,7 +104,11 @@ ob_start();
 
     <!-- SCENE 02 — THE PROBLEM -->
     <section id="scene-02" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/2.jpg" alt="Structural Challenge" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                 <span>02 • Structural Challenge</span>
@@ -188,7 +192,11 @@ ob_start();
 
     <!-- SCENE 03 — THE KALLANI CONCEPT -->
     <section id="scene-03" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/3.jpg" alt="System Architecture" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <span>03 • System Architecture</span>
@@ -247,7 +255,11 @@ ob_start();
 
     <!-- SCENE 04 — PHYSICAL ASSET -->
     <section id="scene-04" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto w-full">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/4.jpg" alt="Physical Concession" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="text-left">
                     <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
@@ -298,7 +310,11 @@ ob_start();
 
     <!-- SCENE 05 — PROJECT STRUCTURE -->
     <section id="scene-05" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/5.jpg" alt="Project Baseline" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"></path></svg>
                 <span>05 • Project Baseline</span>
@@ -336,7 +352,11 @@ ob_start();
 
     <!-- SCENE 06 — OPERATIONS -->
     <section id="scene-06" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto w-full">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/6.jpg" alt="Real-Time Operations" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
                     <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
@@ -397,7 +417,11 @@ ob_start();
 
     <!-- SCENE 07 — VERIFICATION -->
     <section id="scene-07" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/7.jpg" alt="Assurance Vault" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <span>07 • Assurance & Audit Vault</span>
@@ -439,7 +463,11 @@ ob_start();
 
     <!-- SCENE 08 — CAPITAL -->
     <section id="scene-08" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto w-full">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/8.jpg" alt="Capital Ledger" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-5 text-left">
                     <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-2">
@@ -500,7 +528,11 @@ ob_start();
 
     <!-- SCENE 09 — REVENUE & DISTRIBUTION -->
     <section id="scene-09" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/9.jpg" alt="Financial Waterfall" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 <span>09 • Financial Waterfall</span>
@@ -541,7 +573,11 @@ ob_start();
 
     <!-- SCENE 10 — ESG, RISK & AUDIT -->
     <section id="scene-10" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/10.jpg" alt="ESG & Sustainability" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945"></path></svg>
                 <span>10 • ESG & Sustainability</span>
@@ -576,7 +612,11 @@ ob_start();
 
     <!-- SCENE 11 — CONNECTED SYSTEM RECAP -->
     <section id="scene-11" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-5xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-20 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/1.jpg" alt="Integrated OS" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <span>11 • Integrated Operating System</span>
@@ -628,7 +668,11 @@ ob_start();
 
     <!-- SCENE 12 — FINAL REVEAL & CTA -->
     <section id="scene-12" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="absolute inset-0 z-0 opacity-25 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/2.jpg" alt="Final Reveal" class="w-full h-full object-cover filter brightness-75 contrast-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/80 to-[#0F1C0E]/50"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
             <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-4">
                 <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 <span>12 • Interactive Project Dashboard</span>
