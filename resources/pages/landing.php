@@ -544,27 +544,27 @@ ob_start();
             <div class="scene-anim-item w-full bg-[#142314]/70 p-6 rounded-xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
                 <h4 class="font-bold text-sm text-white">Capital Allocation Breakdown (<span class="counter-num text-emerald-300" data-counter="$8,200,000 USD">$8,200,000 USD</span> Target)</h4>
                 <div>
-                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                        <span>Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
-                        <span class="counter-num text-emerald-400" data-counter="$3,200,000 USD">$3,200,000 USD</span>
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-300 mb-1 gap-2">
+                        <span class="truncate min-w-0 flex-1">Plantation Development (<span class="counter-num" data-counter="39.0%">39.0%</span>)</span>
+                        <span class="counter-num text-emerald-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$3,200,000 USD">$3,200,000 USD</span>
                     </div>
                     <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-emerald-950">
                         <div class="progress-bar-anim bg-emerald-500 h-full rounded-full" data-bar-width="39%" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                        <span>Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
-                        <span class="counter-num text-blue-400" data-counter="$2,100,000 USD">$2,100,000 USD</span>
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-300 mb-1 gap-2">
+                        <span class="truncate min-w-0 flex-1">Operations Working Capital (<span class="counter-num" data-counter="25.6%">25.6%</span>)</span>
+                        <span class="counter-num text-blue-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$2,100,000 USD">$2,100,000 USD</span>
                     </div>
                     <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-blue-950">
                         <div class="progress-bar-anim bg-blue-500 h-full rounded-full" data-bar-width="25.6%" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <div class="flex justify-between text-xs font-bold text-gray-300 mb-1">
-                        <span>Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
-                        <span class="counter-num text-amber-400" data-counter="$1,800,000 USD">$1,800,000 USD</span>
+                    <div class="flex items-center justify-between text-xs font-bold text-gray-300 mb-1 gap-2">
+                        <span class="truncate min-w-0 flex-1">Mill & Infrastructure (<span class="counter-num" data-counter="22.0%">22.0%</span>)</span>
+                        <span class="counter-num text-amber-400 shrink-0 text-right min-w-[125px] font-mono" data-counter="$1,800,000 USD">$1,800,000 USD</span>
                     </div>
                     <div class="w-full bg-gray-900 h-2.5 rounded-full overflow-hidden p-0.5 border border-amber-950">
                         <div class="progress-bar-anim bg-amber-500 h-full rounded-full" data-bar-width="22%" style="width: 0%"></div>
@@ -1018,14 +1018,34 @@ ob_start();
         // Touch Swipe Event listener
         let touchStartY = 0;
         window.addEventListener('touchstart', (e) => {
-            touchStartY = e.touches[0].clientY;
+            if (e.touches && e.touches.length > 0) {
+                touchStartY = e.touches[0].clientY;
+            }
         }, { passive: true });
 
         window.addEventListener('touchend', (e) => {
-            if (window.isAnimating) return;
+            if (window.isAnimating || !e.changedTouches || e.changedTouches.length === 0) return;
+            
+            const scenes = document.querySelectorAll('.scene');
+            const activeScene = scenes[window.currentScene];
+            
+            if (activeScene) {
+                const isScrollable = activeScene.scrollHeight > activeScene.clientHeight;
+                if (isScrollable) {
+                    const diffY = touchStartY - e.changedTouches[0].clientY;
+                    // Allow inner scrolling if not at top/bottom scroll boundary
+                    if (diffY > 0 && activeScene.scrollTop + activeScene.clientHeight < activeScene.scrollHeight - 15) {
+                        return;
+                    }
+                    if (diffY < 0 && activeScene.scrollTop > 15) {
+                        return;
+                    }
+                }
+            }
+
             const touchEndY = e.changedTouches[0].clientY;
             const diff = touchStartY - touchEndY;
-            if (Math.abs(diff) > 40) {
+            if (Math.abs(diff) > 80) { // Increased threshold to 80px to prevent accidental scene jumps while scrolling
                 if (diff > 0) {
                     window.goToScene(window.currentScene + 1);
                 } else {

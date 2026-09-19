@@ -594,6 +594,15 @@ a { text-decoration: none; color: inherit; }
   border-radius: 10px !important;
 }
 
+/* Tabular Numbers & Fixed Width Counter Formatting (Prevents Animation Jittering) */
+.counter-num,
+[data-counter] {
+  font-variant-numeric: tabular-nums !important;
+  font-feature-settings: "tnum" 1, "lnum" 1 !important;
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* Mobile Optimization & Responsive Scaling (< 768px) */
 @media (max-width: 768px) {
   /* Intro Loader Mobile Fix */
