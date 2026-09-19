@@ -539,3 +539,48 @@ a { text-decoration: none; color: inherit; }
     width: 100%;
   }
 }
+
+/* Responsive Laptop Scaling Rules (Height & Width Optimization) */
+@media (max-height: 900px) and (min-width: 768px) {
+  .scene {
+    padding: 1.25rem 1.5rem !important;
+  }
+  .scene h2 {
+    font-size: clamp(1.75rem, 3.8vh, 2.75rem) !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.15 !important;
+  }
+  .scene p {
+    font-size: clamp(0.75rem, 1.8vh, 1rem) !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .scene .grid {
+    gap: 0.75rem !important;
+  }
+  .scene .p-5, .scene .p-6, .scene .p-8 {
+    padding: 1rem 1.25rem !important;
+  }
+}
+
+@media (max-height: 750px) and (min-width: 768px) {
+  .scene {
+    padding: 0.75rem 1rem !important;
+  }
+  .scene h2 {
+    font-size: clamp(1.4rem, 3.2vh, 2.1rem) !important;
+    margin-bottom: 0.35rem !important;
+  }
+  .scene p {
+    font-size: clamp(0.7rem, 1.5vh, 0.85rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .scene .p-5, .scene .p-6, .scene .p-8 {
+    padding: 0.75rem 0.875rem !important;
+  }
+  .scene .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  .scene .text-3xl {
+    font-size: 1.5rem !important;
+  }
+}

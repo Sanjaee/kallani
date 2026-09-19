@@ -833,7 +833,7 @@ ob_start();
                     el.setAttribute('data-counter', targetText);
                 }
 
-                const match = targetText.match(/^([^\d-]*)(-?\d[\d,.]*)(.*)$/);
+                const match = targetText.match(/^([^0-9]*)([0-9][0-9,.]*)(.*)$/);
                 if (match) {
                     const prefix = match[1];
                     const rawNum = match[2].replace(/,/g, '');
