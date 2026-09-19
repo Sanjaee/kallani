@@ -36,21 +36,19 @@ ob_start();
 }">
 
     <!-- HIGGSFIELD / AWWWARDS OPENING INTRO LOADER -->
-    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#070D07] text-white flex flex-col items-center justify-center p-6 select-none">
-        <div class="max-w-xl w-full text-center space-y-8">
-            <div class="space-y-4">
-                <h1 class="text-4xl sm:text-6xl font-serif tracking-[0.45em] text-white uppercase pl-[0.45em]">K A L L A N I</h1>
-                <p class="text-xs sm:text-sm font-mono tracking-[0.35em] text-amber-400 uppercase pl-[0.35em]">N A T U R E . C A P I T A L . I N F I N I T Y .</p>
-            </div>
+    <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
+        <div class="max-w-4xl w-full text-center">
+            <h1 style="font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.28em; color: #FFFFFF; text-transform: uppercase; font-weight: 300; margin-bottom: 0.75rem; text-align: center; text-shadow: 0 0 50px rgba(197, 160, 89, 0.15); padding-left: 0.28em;">KALLANI</h1>
+            <p class="tagline" style="font-size: clamp(0.85rem, 1.2vw, 1.1rem); letter-spacing: 0.45em; color: #C5A059; text-transform: uppercase; font-weight: 400; opacity: 0.95; padding-left: 0.45em; margin-bottom: 2.5rem;">NATURE. CAPITAL. INFINITY.</p>
 
             <!-- Loader Progress Bar & Counter -->
-            <div class="space-y-3 pt-6 max-w-md mx-auto">
+            <div class="space-y-3 max-w-md mx-auto">
                 <div class="w-full bg-emerald-950/60 border border-emerald-800/40 h-2 rounded-full overflow-hidden p-0.5 shadow-inner">
-                    <div id="loader-bar" class="bg-gradient-to-r from-emerald-500 via-amber-400 to-amber-300 h-full w-0 rounded-full transition-all duration-75"></div>
+                    <div id="loader-bar" class="bg-gradient-to-r from-emerald-500 via-[#C5A059] to-amber-300 h-full w-0 rounded-full transition-all duration-75"></div>
                 </div>
                 <div class="flex items-center justify-between text-xs font-mono text-emerald-300/80">
                     <span id="loader-status">INITIALIZING SYSTEM MODULES...</span>
-                    <span id="loader-percent" class="font-bold text-amber-400 text-sm">0%</span>
+                    <span id="loader-percent" class="font-bold text-[#C5A059] text-sm">0%</span>
                 </div>
             </div>
         </div>
