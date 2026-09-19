@@ -299,7 +299,7 @@ ob_start();
                 </div>
 
                 <div class="scene-anim-item relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
-                    <img :src="activeParcel === 'B' ? '<?php echo $basePrefix; ?>/8.jpg' : '<?php echo $basePrefix; ?>/4.jpg'" alt="Concession GIS Map" class="w-full h-[400px] sm:h-[440px] object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700" />
+                    <img :src="activeParcel === 'B' ? '<?php echo $basePrefix; ?>/8.jpg' : '<?php echo $basePrefix; ?>/4.jpg'" alt="Concession GIS Map" class="w-full h-[220px] sm:h-[440px] object-cover filter contrast-105 group-hover:scale-105 transition-all duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-6 flex flex-col justify-between">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-black/70 text-emerald-300 border border-emerald-500/40">GIS Parcel Map Overlay</span>
