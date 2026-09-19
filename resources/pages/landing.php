@@ -57,7 +57,7 @@ ob_start();
     <!-- PRESENTATION TOP BRAND CHROME (PRESENTATION MODE ONLY) -->
     <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center transition-all duration-500">
         <a href="<?php echo $basePrefix; ?>/" class="group">
-            <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-white uppercase block leading-none hover:text-emerald-400 transition-colors">KALLANI</span>
+            <span class="text-xl sm:text-2xl font-serif font-light tracking-[0.3em] text-white uppercase block leading-none hover:text-emerald-300 transition-colors pl-[0.3em]">KALLANI</span>
         </a>
     </div>
 
@@ -986,13 +986,20 @@ ob_start();
 
             // Control Navbar reveal on Scene 12 (index 11)
             const navbar = document.getElementById('main-navbar');
+            const presHeader = document.getElementById('presentation-header');
             if (navbar) {
                 if (window.currentScene === 11) {
                     navbar.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-full');
                     navbar.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    if (presHeader) {
+                        presHeader.classList.add('opacity-0', 'pointer-events-none');
+                    }
                 } else {
                     navbar.classList.add('opacity-0', 'pointer-events-none', '-translate-y-full');
                     navbar.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    if (presHeader) {
+                        presHeader.classList.remove('opacity-0', 'pointer-events-none');
+                    }
                 }
             }
         };
