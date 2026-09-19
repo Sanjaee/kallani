@@ -115,65 +115,71 @@ ob_start();
                 Traditional natural asset management fragments physical land, operational tracking, third-party verification, and investor distribution into isolated silos.
             </p>
 
-            <!-- BESPOKE INSTITUTIONAL CARDS VISUAL WITH COUNTER ANIMATIONS -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                <!-- Fragment #01 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-red-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 to-rose-400"></div>
-                    <div class="w-12 h-12 rounded-2xl bg-red-950/60 text-red-400 flex items-center justify-center font-bold mb-5 border border-red-500/40 shadow-lg shadow-red-950/40">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+            <!-- CARDS VISUAL MATCHING SCENE 03 & DASHBOARD CARD STYLE -->
+            <div class="scene-anim-item bg-[#142314]/70 rounded-3xl p-6 sm:p-8 border border-[#1E3A24]/80 backdrop-blur-md shadow-2xl text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Fragment #01 -->
+                    <div class="p-4 rounded-2xl bg-black/30 text-gray-300 border border-[#1E3A24]/60 hover:border-red-500/50 hover:bg-black/50 transition-all flex flex-col justify-between cursor-pointer group">
+                        <div class="flex items-center justify-between mb-3">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-white mb-1">Physical Land Records</span>
+                            <span class="block text-xs text-gray-400 leading-relaxed mb-4">Cadastral surveys and GIS maps stored in paper archives or isolated software.</span>
+                        </div>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                            <span>01 • Fragment</span>
+                            <span class="counter-num font-bold text-red-400" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
+                        </div>
                     </div>
-                    <span class="counter-num text-xs font-mono font-bold text-red-400 uppercase tracking-widest block mb-1" data-counter="01 • Fragment">01 • Fragment</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Physical Land Records</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Cadastral surveys and GIS maps stored in paper archives or isolated GIS software.</p>
-                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                        <span>Status: Isolated</span>
-                        <span class="counter-num font-bold text-red-400" data-counter="4,000 ha Mapped">4,000 ha Mapped</span>
-                    </div>
-                </div>
 
-                <!-- Fragment #02 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-amber-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-yellow-400"></div>
-                    <div class="w-12 h-12 rounded-2xl bg-amber-950/60 text-amber-400 flex items-center justify-center font-bold mb-5 border border-amber-500/40 shadow-lg shadow-amber-950/40">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                    <!-- Fragment #02 -->
+                    <div class="p-4 rounded-2xl bg-black/30 text-gray-300 border border-[#1E3A24]/60 hover:border-amber-500/50 hover:bg-black/50 transition-all flex flex-col justify-between cursor-pointer group">
+                        <div class="flex items-center justify-between mb-3">
+                            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-white mb-1">Field Operations</span>
+                            <span class="block text-xs text-gray-400 leading-relaxed mb-4">Harvest logs and fertilizer data manually reported without real-time auditability.</span>
+                        </div>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                            <span>02 • Fragment</span>
+                            <span class="counter-num font-bold text-amber-400" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
+                        </div>
                     </div>
-                    <span class="counter-num text-xs font-mono font-bold text-amber-400 uppercase tracking-widest block mb-1" data-counter="02 • Fragment">02 • Fragment</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Field Operations</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Harvest logs and fertilizer data manually reported without real-time auditability.</p>
-                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                        <span>Status: Manual Log</span>
-                        <span class="counter-num font-bold text-amber-400" data-counter="19.4 MT/ha Yield">19.4 MT/ha Yield</span>
-                    </div>
-                </div>
 
-                <!-- Fragment #03 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-blue-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
-                    <div class="w-12 h-12 rounded-2xl bg-blue-950/60 text-blue-400 flex items-center justify-center font-bold mb-5 border border-blue-500/40 shadow-lg shadow-blue-950/40">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <!-- Fragment #03 -->
+                    <div class="p-4 rounded-2xl bg-black/30 text-gray-300 border border-[#1E3A24]/60 hover:border-blue-500/50 hover:bg-black/50 transition-all flex flex-col justify-between cursor-pointer group">
+                        <div class="flex items-center justify-between mb-3">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-white mb-1">Audits & Verification</span>
+                            <span class="block text-xs text-gray-400 leading-relaxed mb-4">Third-party compliance assessments conducted as delayed annual PDF reports.</span>
+                        </div>
+                        <div class="pt-2.5 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                            <span>03 • Fragment</span>
+                            <span class="counter-num font-bold text-blue-400" data-counter="82% Audited">82% Audited</span>
+                        </div>
                     </div>
-                    <span class="counter-num text-xs font-mono font-bold text-blue-400 uppercase tracking-widest block mb-1" data-counter="03 • Fragment">03 • Fragment</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Audits & Verification</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Third-party compliance assessments conducted as delayed annual PDF reports.</p>
-                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                        <span>Status: Delayed</span>
-                        <span class="counter-num font-bold text-blue-400" data-counter="82% Audited">82% Audited</span>
-                    </div>
-                </div>
 
-                <!-- Fragment #04 -->
-                <div class="scene-anim-item relative rounded-3xl bg-gradient-to-b from-[#182B18]/90 to-[#0F1C0E]/90 border border-[#1E3A24]/70 backdrop-blur-xl p-6 overflow-hidden group hover:border-purple-500/60 hover:-translate-y-1.5 transition-all duration-300 shadow-2xl">
-                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-indigo-400"></div>
-                    <div class="w-12 h-12 rounded-2xl bg-purple-950/60 text-purple-400 flex items-center justify-center font-bold mb-5 border border-purple-500/40 shadow-lg shadow-purple-950/40">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <span class="counter-num text-xs font-mono font-bold text-purple-400 uppercase tracking-widest block mb-1" data-counter="04 • Fragment">04 • Fragment</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Capital & Yields</h3>
-                    <p class="text-xs text-gray-300 leading-relaxed mb-4">Financial allocation disconnected from physical land performance metrics.</p>
-                    <div class="pt-3 border-t border-[#1E3A24]/60 flex items-center justify-between text-[11px] font-mono text-gray-400">
-                        <span>Status: Disconnected</span>
-                        <span class="counter-num font-bold text-purple-400" data-counter="$12.5M Target">$12.5M Target</span>
+                    <!-- Fragment #04 (Highlighted Card Style matching Scene 03 Active State) -->
+                    <div class="p-4 rounded-2xl bg-emerald-600 text-white border border-emerald-400 shadow-lg shadow-emerald-600/30 flex flex-col justify-between cursor-pointer">
+                        <div class="flex items-center justify-between mb-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="w-2 h-2 rounded-full bg-amber-300 animate-pulse"></span>
+                        </div>
+                        <div>
+                            <span class="block text-sm font-bold text-white mb-1">Capital & Yields</span>
+                            <span class="block text-xs text-emerald-100 leading-relaxed mb-4">Financial allocation disconnected from physical land performance metrics.</span>
+                        </div>
+                        <div class="pt-2.5 border-t border-emerald-500/50 flex items-center justify-between text-[11px] font-mono text-emerald-100">
+                            <span>04 • Fragment</span>
+                            <span class="counter-num font-bold text-white" data-counter="$12.5M Target">$12.5M Target</span>
+                        </div>
                     </div>
                 </div>
             </div>
