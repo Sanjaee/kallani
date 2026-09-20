@@ -76,19 +76,11 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
 
     <!-- FULL WIDTH TOP NAVBAR (SPANS FULL WIDTH ACROSS SCREEN ABOVE SIDEBAR AND MAIN CONTENT) -->
     <header class="h-16 bg-[#060D07]/95 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-40 shrink-0 w-full" style="border-bottom: none !important;">
-        <div class="flex items-center gap-3">
-            <!-- Mobile/Tablet Hamburger Toggle Button -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-lg bg-[#08150D] border border-emerald-500/30 text-emerald-400 hover:text-white focus:outline-none transition-colors" aria-label="Toggle Navigation">
-                <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                <svg x-show="mobileMenuOpen" x-cloak class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-
-            <!-- Left: Logo & Subtext -->
-            <a href="<?php echo $basePrefix; ?>/" class="flex flex-col group text-left py-1 w-44 sm:w-56 shrink-0">
-                <span class="text-sm sm:text-base font-serif font-extrabold tracking-[0.25em] uppercase leading-none transition-colors" style="color: #FFFFFF !important;">KALLANI</span>
-                <span class="text-[8px] sm:text-[9px] font-mono tracking-[0.18em] uppercase leading-none mt-1" style="color: #FFFFFF !important;">NINA / OPERATING SYSTEM</span>
-            </a>
-        </div>
+        <!-- Left: Logo & Subtext -->
+        <a href="<?php echo $basePrefix; ?>/" class="flex flex-col group text-left py-1 w-44 sm:w-56 shrink-0">
+            <span class="text-sm sm:text-base font-serif font-extrabold tracking-[0.25em] uppercase leading-none transition-colors" style="color: #FFFFFF !important;">KALLANI</span>
+            <span class="text-[8px] sm:text-[9px] font-mono tracking-[0.18em] uppercase leading-none mt-1" style="color: #FFFFFF !important;">NINA / OPERATING SYSTEM</span>
+        </a>
 
         <!-- Desktop Nav Links with Active Underline -->
         <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-xs font-mono tracking-wider">
@@ -124,18 +116,26 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
             </a>
         </nav>
 
-        <!-- Right Controls: Language & Status -->
-        <div class="flex items-center gap-3 sm:gap-5 text-xs font-mono">
+        <!-- Right Controls: Language, Status & Hamburger Toggle Button -->
+        <div class="flex items-center gap-3 sm:gap-4 text-xs font-mono">
             <div class="text-gray-400 select-none hidden sm:block">
                 <strong class="text-white cursor-pointer hover:text-emerald-400">EN</strong> 
                 <span class="text-gray-600 mx-1">|</span> 
                 <span class="cursor-pointer hover:text-white">ID</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#08150D] border border-emerald-500/30 text-[10px] sm:text-[11px] text-gray-300 shadow-sm">
-                <span class="hidden sm:inline">SYSTEM STATUS</span>
+
+            <!-- Demo Badge (Hidden on Mobile) -->
+            <div class="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#08150D] border border-emerald-500/30 text-[10px] sm:text-[11px] text-gray-300 shadow-sm">
+                <span>SYSTEM STATUS</span>
                 <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 <strong class="text-white font-bold">DEMO</strong>
             </div>
+
+            <!-- Mobile/Tablet Hamburger Toggle Button (Positioned on the Far Right) -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-lg bg-[#08150D] border border-emerald-500/30 text-emerald-400 hover:text-white focus:outline-none transition-colors" aria-label="Toggle Navigation">
+                <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg x-show="mobileMenuOpen" x-cloak class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
         </div>
     </header>
 
