@@ -29,7 +29,7 @@ ob_start();
     stageDescriptions: {
         'Demand': 'Defined buyer product requirements and specifications mapped into production targets.',
         'Capacity': 'Regional land & partner capacity aggregation across North & South Kalimantan clusters.',
-        'Batch': 'Standardized 100 HA production units with modeled Rp15B budget and 20-year horizon.',
+        'Batch': 'Standardized 100 HA production units with modeled 880,000 USDT budget and 20-year horizon.',
         'PO': 'Mitra PO allocations collected for verified production batch requirements.',
         'RAB': '9-category cost structure linking requirement directly to vendor work orders.',
         'Execution': 'Field work orders, GIS mapping, evidence upload, and multi-tier verification.',
@@ -108,13 +108,13 @@ ob_start();
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</div>
-                    <div class="text-sm font-black text-emerald-300 mt-0.5">Rp15B</div>
-                    <div class="text-[8px] text-gray-400">Rp150M / HA Modeled</div>
+                    <div class="text-sm font-black text-emerald-300 mt-0.5">880,000 USDT</div>
+                    <div class="text-[8px] text-gray-400">8,800 USDT / HA Modeled</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">MIN PO ALLOCATION</div>
-                    <div class="text-sm font-black text-white mt-0.5">Rp100M</div>
-                    <div class="text-[8px] text-gray-400">Rp100 Juta Minimum Unit</div>
+                    <div class="text-sm font-black text-white mt-0.5">8,000 USDT</div>
+                    <div class="text-[8px] text-gray-400">8,000 USDT / Seat (110 Seats)</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</div>
@@ -448,11 +448,11 @@ ob_start();
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</span>
-                            <div class="text-base font-extrabold text-white">Rp15,000,000,000</div>
+                            <div class="text-base font-extrabold text-white">880,000 USDT</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">MINIMUM PO ALLOCATION</span>
-                            <div class="text-base font-extrabold text-emerald-300">Rp100,000,000</div>
+                            <div class="text-base font-extrabold text-emerald-300">8,000 USDT</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</span>
@@ -540,8 +540,8 @@ ob_start();
                             <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; ALLOCATION UNIT</h3>
                         </div>
                         <div class="text-right">
-                            <span class="font-bold text-emerald-300 text-sm block">Rp100,000,000</span>
-                            <span class="text-[9px] text-gray-400">1 Unit Minimum PO (Max 150 Units / Batch)</span>
+                            <span class="font-bold text-emerald-300 text-sm block">8,000 USDT</span>
+                            <span class="text-[9px] text-gray-400">1 Seat Minimum PO (Max 110 Seats / Batch)</span>
                         </div>
                     </div>
 
@@ -561,7 +561,7 @@ ob_start();
                     </div>
 
                     <p class="text-[10px] italic text-emerald-300/80">
-                        Minimum allocation set to Rp100M / unit so members can diversify capital across multiple batches instead of locking into a single project.
+                        Minimum allocation set to 8,000 USDT / seat so members can diversify capital across multiple batches instead of locking into a single project.
                     </p>
                 </div>
             </div>
@@ -588,7 +588,7 @@ ob_start();
             <div class="scene-anim-item bg-[#142314]/80 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-center text-[10px] font-mono">
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
-                        <span class="text-gray-400 font-bold block">Rp15B REQUIREMENT</span>
+                        <span class="text-gray-400 font-bold block">880,000 USDT REQUIREMENT</span>
                         <span class="text-emerald-300 block">Modeled RAB</span>
                     </div>
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
@@ -735,11 +735,11 @@ ob_start();
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED VALUE</span>
-                    <div class="text-xl font-extrabold text-white">Rp1.5T</div>
+                    <div class="text-xl font-extrabold text-white">88,000,000 USDT</div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED 3% FEE</span>
-                    <div class="text-xl font-extrabold text-amber-300">Rp45B</div>
+                    <div class="text-xl font-extrabold text-amber-300">2,640,000 USDT</div>
                 </div>
             </div>
 

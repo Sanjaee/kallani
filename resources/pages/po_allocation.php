@@ -129,7 +129,7 @@ ob_start();
                                 <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-300">
                                     <div><span class="text-gray-400">Region:</span> <strong class="text-white">North Kalimantan, Indonesia</strong></div>
                                     <div><span class="text-gray-400">Batch Size:</span> <strong class="text-white">100 HA</strong></div>
-                                    <div><span class="text-gray-400">Requirement:</span> <strong class="text-emerald-300 font-bold">Rp15B</strong></div>
+                                    <div><span class="text-gray-400">Requirement:</span> <strong class="text-emerald-300 font-bold">880,000 USDT</strong></div>
                                     <div><span class="text-gray-400">Project Status:</span> <span class="text-amber-300 font-bold">DEMO / PENDING</span></div>
                                 </div>
 
@@ -149,44 +149,44 @@ ob_start();
 
                         <!-- Quick Selection Pills -->
                         <div class="flex flex-wrap items-center gap-2">
-                            <button type="button" class="rounded-lg bg-emerald-950 px-4 py-2 text-xs font-bold text-emerald-300 border border-emerald-400 shadow">Rp100M (1 Unit)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">Rp300M (3 Units)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">Rp500M (5 Units)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">Rp1B (10 Units)</button>
+                            <button type="button" class="rounded-lg bg-emerald-950 px-4 py-2 text-xs font-bold text-emerald-300 border border-emerald-400 shadow">8,000 USDT (1 Seat)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">24,000 USDT (3 Seats)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">40,000 USDT (5 Seats)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">80,000 USDT (10 Seats)</button>
                             <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">Custom</button>
                         </div>
 
                         <!-- Input Box -->
                         <div class="space-y-1">
-                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">MINIMUM Rp100M (1 UNIT)</label>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">MINIMUM 8,000 USDT (1 SEAT)</label>
                             <div class="relative">
-                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">Rp</span>
-                                <input type="text" value="100,000,000" readonly class="w-full rounded-xl border border-emerald-400/50 bg-[#07110E] py-3 pl-12 pr-4 text-lg font-black text-white focus:outline-none" />
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">USDT</span>
+                                <input type="text" value="8,000" readonly class="w-full rounded-xl border border-emerald-400/50 bg-[#07110E] py-3 pl-16 pr-4 text-lg font-black text-white focus:outline-none" />
                             </div>
-                            <span class="text-[9px] font-mono text-emerald-300 block pt-0.5">1 &times; Rp100M PO allocation unit</span>
+                            <span class="text-[9px] font-mono text-emerald-300 block pt-0.5">1 &times; 8,000 USDT PO allocation seat</span>
                         </div>
 
                         <!-- Allocation Breakdown Grid -->
                         <div class="grid grid-cols-3 gap-3 text-center text-xs">
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">BATCH REQUIREMENT</div>
-                                <div class="text-sm font-black text-white mt-0.5">Rp15B</div>
+                                <div class="text-sm font-black text-white mt-0.5">880,000 USDT</div>
                             </div>
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">YOUR ALLOCATION</div>
-                                <div class="text-sm font-black text-emerald-300 mt-0.5">Rp100M</div>
+                                <div class="text-sm font-black text-emerald-300 mt-0.5">8,000 USDT</div>
                             </div>
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">REMAINING REQUIREMENT</div>
-                                <div class="text-sm font-black text-white mt-0.5">Rp14.9B</div>
+                                <div class="text-sm font-black text-white mt-0.5">872,000 USDT</div>
                             </div>
                         </div>
 
                         <!-- Allocation Units Dot Progress Tracker -->
                         <div class="space-y-2 border-t border-white/10 pt-3">
                             <div class="flex justify-between text-xs font-bold">
-                                <span class="text-gray-300">1 / 150 allocation units</span>
-                                <span class="text-emerald-300">0.67%</span>
+                                <span class="text-gray-300">1 / 110 seats</span>
+                                <span class="text-emerald-300">0.91%</span>
                             </div>
 
                             <div class="flex items-center gap-1.5 flex-wrap">
@@ -194,11 +194,11 @@ ob_start();
                                 <?php for ($i = 0; $i < 14; $i++): ?>
                                     <span class="h-3 w-3 rounded-full bg-white/10 border border-white/20"></span>
                                 <?php endfor; ?>
-                                <span class="text-[9px] font-mono text-gray-400">+135 more units</span>
+                                <span class="text-[9px] font-mono text-gray-400">+95 more seats</span>
                             </div>
 
                             <p class="text-[9px] text-gray-400">
-                                A standard Rp15B batch is represented by 150 minimum Rp100M allocation units, allowing members to diversify capital across multiple production batches.
+                                A standard 880,000 USDT batch is represented by 110 minimum 8,000 USDT allocation seats, allowing members to diversify capital across multiple production batches.
                             </p>
                         </div>
                     </section>
@@ -282,8 +282,8 @@ ob_start();
 
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[9px] text-gray-300">
                             <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Batch Size:</span> <strong class="text-white block font-mono text-[10px]">100 HA</strong></div>
-                            <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Requirement:</span> <strong class="text-emerald-300 block font-mono text-[10px]">Rp15B</strong></div>
-                            <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Min PO:</span> <strong class="text-white block font-mono text-[10px]">Rp100M</strong></div>
+                            <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Requirement:</span> <strong class="text-emerald-300 block font-mono text-[10px]">880,000 USDT</strong></div>
+                            <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Min PO:</span> <strong class="text-white block font-mono text-[10px]">8,000 USDT</strong></div>
                             <div class="p-2 rounded bg-[#07110E] border border-white/5"><span>Contract Horizon:</span> <strong class="text-white block font-mono text-[10px]">20 years</strong></div>
                         </div>
 
@@ -325,20 +325,20 @@ ob_start();
                         <div class="space-y-2 text-xs">
                             <div class="flex justify-between"><span class="text-gray-400">BATCH</span><span class="font-bold font-mono text-white">NK-001</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">PROJECT</span><span class="font-bold text-white">North Kalimantan Palm</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION</span><span class="font-bold text-emerald-300 text-sm">Rp100,000,000</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">MINIMUM</span><span class="font-bold text-white">Rp100M</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">BATCH REQUIREMENT</span><span class="font-bold text-white">Rp15B</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION UNITS</span><span class="font-bold font-mono text-emerald-300">1 / 150</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION</span><span class="font-bold text-emerald-300 text-sm">8,000 USDT</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">MINIMUM</span><span class="font-bold text-white">8,000 USDT</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">BATCH REQUIREMENT</span><span class="font-bold text-white">880,000 USDT</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION SEATS</span><span class="font-bold font-mono text-emerald-300">1 / 110</span></div>
                         </div>
 
                         <div class="space-y-1.5 border-t border-white/10 pt-3 text-[10px]">
                             <div class="flex justify-between font-bold">
                                 <span class="text-gray-300">PO COLLECTION</span>
-                                <span class="text-emerald-300">6.67%</span>
+                                <span class="text-emerald-300">0.91%</span>
                             </div>
-                            <div class="text-xs font-black text-white">Rp100M / Rp15B</div>
+                            <div class="text-xs font-black text-white">8,000 USDT / 880,000 USDT</div>
                             <div class="h-2 w-full rounded-full bg-white/10 overflow-hidden">
-                                <div class="h-full bg-emerald-400 w-[6.67%]"></div>
+                                <div class="h-full bg-emerald-400 w-[0.91%]"></div>
                             </div>
                         </div>
 
@@ -346,7 +346,7 @@ ob_start();
                         <div class="p-3 rounded-lg border border-amber-500/30 bg-amber-950/20 space-y-1 text-[9px]">
                             <div class="flex justify-between font-bold text-amber-300">
                                 <span>Allocation Share</span>
-                                <span>6.67%</span>
+                                <span>0.91%</span>
                             </div>
                             <p class="text-gray-400 leading-tight">
                                 Proportion within the modeled batch requirement; not legal ownership of land or operating company.

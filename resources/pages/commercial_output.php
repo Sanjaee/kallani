@@ -193,7 +193,7 @@ ob_start();
                             <div class="flex items-center justify-between"><span class="text-gray-400">Project</span><span class="font-bold text-white">North Kalimantan Palm</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Batch ID</span><span class="font-mono font-bold text-emerald-300">NK-001</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Area</span><span class="font-bold text-white">100 HA</span></div>
-                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">Rp15,000,000,000</span></div>
+                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
                             <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Development / Ramp-Up</span><span class="font-bold text-white">5 YEARS</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Commercial Delivery Horizon</span><span class="font-bold text-white">15 YEARS</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Contract Horizon</span><span class="font-bold text-white">20 YEARS</span></div>

@@ -148,7 +148,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">BATCH REQUIREMENT</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">Rp15B</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">880,000 USDT</div>
                     </div>
                 </div>
 
@@ -275,7 +275,7 @@ ob_start();
                                 <div class="grid grid-cols-3 gap-2 text-center text-xs">
                                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-2">
                                         <div class="text-[8px] uppercase text-gray-400">BATCH REQUIREMENT</div>
-                                        <div class="text-xs font-extrabold text-white mt-0.5">Rp15B</div>
+                                        <div class="text-xs font-extrabold text-white mt-0.5">880,000 USDT</div>
                                     </div>
                                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-2">
                                         <div class="text-[8px] uppercase text-gray-400">PLANNED EXECUTION</div>
@@ -284,7 +284,7 @@ ob_start();
                                     </div>
                                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-2">
                                         <div class="text-[8px] uppercase text-gray-400">Illustrative Allocation</div>
-                                        <div class="text-xs font-extrabold text-gray-200 mt-0.5">Rp3.75B</div>
+                                        <div class="text-xs font-extrabold text-gray-200 mt-0.5">220,000 USDT</div>
                                     </div>
                                 </div>
 
@@ -756,7 +756,7 @@ ob_start();
 
                         <div class="grid grid-cols-2 gap-2 text-xs border-t border-white/10 pt-2">
                             <div><div class="text-[8px] text-gray-400 uppercase">Target</div><div class="font-bold text-emerald-300">25%</div></div>
-                            <div><div class="text-[8px] text-gray-400 uppercase">Allocation</div><div class="font-bold text-white">Rp100M</div></div>
+                            <div><div class="text-[8px] text-gray-400 uppercase">Allocation</div><div class="font-bold text-white">8,000 USDT</div></div>
                         </div>
 
                         <div class="text-[9px] text-gray-400">Next Milestone: <strong class="text-gray-300">M02 &mdash; Locked</strong></div>

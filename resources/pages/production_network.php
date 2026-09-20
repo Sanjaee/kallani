@@ -210,7 +210,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['dollar']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">PRODUCTION VALUE</div>
-                            <div class="text-lg font-extrabold text-emerald-300">Rp1.5T</div>
+                            <div class="text-lg font-extrabold text-emerald-300">88,000,000 USDT</div>
                             <div class="text-[8px] text-gray-400 font-mono">Modeled requirement</div>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['target']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">MINIMUM PO ALLOCATION</div>
-                            <div class="text-lg font-extrabold text-white">Rp100M</div>
+                            <div class="text-lg font-extrabold text-white">8,000 USDT</div>
                             <div class="text-[8px] text-gray-400 font-mono">Per participant allocation</div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['dollar']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">SERVICE FEE OPPORTUNITY</div>
-                            <div class="text-lg font-extrabold text-emerald-300">Rp45B</div>
+                            <div class="text-lg font-extrabold text-emerald-300">2,640,000 USDT</div>
                             <div class="text-[8px] text-gray-400 font-mono">Modeled 3% gross fee</div>
                         </div>
                     </div>
@@ -397,29 +397,29 @@ ob_start();
                     
                     <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">NK-001</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 font-bold">DEMO / PENDING VERIF</span></div>
-                        <div class="text-gray-300 text-[11px]">100 HA • North Kalimantan</div>
-                        <div class="text-emerald-300 font-bold">Rp15B Modeled Requirement</div>
-                        <a href="<?= $basePrefix ?>/batches" class="text-[9px] font-bold text-emerald-300 hover:underline block pt-1">VIEW BATCH DETAILS →</a>
+                        <div class="text-gray-300 text-[11px]">100 HA &bull; North Kalimantan</div>
+                        <div class="text-emerald-300 font-bold">880,000 USDT Modeled Requirement</div>
+                        <a href="<?= $basePrefix ?>/batches" class="text-[9px] font-bold text-emerald-300 hover:underline block pt-1">VIEW BATCH DETAILS &rarr;</a>
                     </div>
 
                     <div class="rounded-lg border border-white/10 bg-white/5 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">NK-002</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-gray-400">PIPELINE</span></div>
-                        <div class="text-gray-300 text-[11px]">100 HA • North Kalimantan</div>
-                        <div class="text-gray-400">Rp15B Modeled Requirement</div>
+                        <div class="text-gray-300 text-[11px]">100 HA &bull; North Kalimantan</div>
+                        <div class="text-gray-400">880,000 USDT Modeled Requirement</div>
                         <span class="text-[9px] text-gray-500 block pt-1">PIPELINE BATCH</span>
                     </div>
 
                     <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">SK-001</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 font-bold">MAPPED / DEMO</span></div>
-                        <div class="text-gray-300 text-[11px]">100 HA • South Kalimantan</div>
-                        <div class="text-emerald-300 font-bold">Rp15B Modeled Requirement</div>
+                        <div class="text-gray-300 text-[11px]">100 HA &bull; South Kalimantan</div>
+                        <div class="text-emerald-300 font-bold">880,000 USDT Modeled Requirement</div>
                         <span class="text-[9px] text-emerald-300 block pt-1">MAPPED CAPACITY</span>
                     </div>
 
                     <div class="rounded-lg border border-white/10 bg-white/5 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">SK-002</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-gray-400">PIPELINE</span></div>
-                        <div class="text-gray-300 text-[11px]">100 HA • South Kalimantan</div>
-                        <div class="text-gray-400">Rp15B Modeled Requirement</div>
+                        <div class="text-gray-300 text-[11px]">100 HA &bull; South Kalimantan</div>
+                        <div class="text-gray-400">880,000 USDT Modeled Requirement</div>
                         <span class="text-[9px] text-gray-500 block pt-1">PIPELINE BATCH</span>
                     </div>
 
@@ -656,16 +656,16 @@ ob_start();
                         </div>
                         <div class="p-3 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-gray-400 block">PRODUCTION VALUE</span>
-                            <strong class="text-xl font-extrabold text-emerald-300">Rp1.5T</strong>
+                            <strong class="text-xl font-extrabold text-emerald-300">88,000,000 USDT</strong>
                         </div>
                         <div class="p-3 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-gray-400 block">SERVICE FEE OPPORTUNITY</span>
-                            <strong class="text-xl font-extrabold text-emerald-300">Rp45B</strong>
+                            <strong class="text-xl font-extrabold text-emerald-300">2,640,000 USDT</strong>
                         </div>
                     </div>
 
                     <div class="text-[8px] font-mono text-gray-400 italic">
-                        Footnote: Modelled target based on 100 HA standard batches at Rp15B modeled production requirement per batch. Target scenario, not achieved production, committed capacity or guaranteed revenue.
+                        Footnote: Modelled target based on 100 HA standard batches at 880,000 USDT modeled production requirement per batch. Target scenario, not achieved production, committed capacity or guaranteed revenue.
                     </div>
                 </div>
 

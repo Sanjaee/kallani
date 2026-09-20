@@ -124,11 +124,11 @@ ob_start();
                             <div class="grid grid-cols-2 gap-2 text-xs bg-black/40 p-2 rounded border border-white/5">
                                 <div>
                                     <div class="text-[9px] text-gray-400">MODELED VALUE</div>
-                                    <div class="font-bold text-white text-sm">Rp1.5 Trillion</div>
+                                    <div class="font-bold text-white text-sm">88,000,000 USDT</div>
                                 </div>
                                 <div>
                                     <div class="text-[9px] text-gray-400">GROSS FEE (3%)</div>
-                                    <div class="font-bold text-emerald-300 text-sm">Rp45 Billion</div>
+                                    <div class="font-bold text-emerald-300 text-sm">2,640,000 USDT</div>
                                 </div>
                             </div>
 
@@ -180,8 +180,8 @@ ob_start();
                         <span class="<?= $metricLbl ?>">MAPPED VALUE</span>
                         <span class="text-emerald-400"><?= $svg($ic['coin'], 'w-4 h-4') ?></span>
                     </div>
-                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">Rp150B</div>
-                    <div class="text-[9px] text-gray-400">10 × Rp15B Modeled</div>
+                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">8,800,000 USDT</div>
+                    <div class="text-[9px] text-gray-400">10 &times; 880,000 USDT Modeled</div>
                 </div>
 
                 <div class="<?= $card ?> px-4 py-3">
@@ -253,9 +253,9 @@ ob_start();
                             </tr>
                             <tr>
                                 <td class="p-2.5 font-bold text-white">Modeled Production Value</td>
-                                <td class="p-2.5 text-white">Rp1.5 Trillion</td>
-                                <td class="p-2.5 text-emerald-300 font-bold">Rp150 Billion</td>
-                                <td class="p-2.5 text-amber-300">Rp150B Mapped Model</td>
+                                <td class="p-2.5 text-white">88,000,000 USDT</td>
+                                <td class="p-2.5 text-emerald-300 font-bold">8,800,000 USDT</td>
+                                <td class="p-2.5 text-amber-300">8,800,000 USDT Mapped Model</td>
                             </tr>
                             <tr>
                                 <td class="p-2.5 font-bold text-white">Verified Production Capacity</td>
@@ -447,7 +447,7 @@ ob_start();
                     <div class="space-y-2 font-mono text-xs">
                         <div class="flex justify-between">
                             <span class="text-gray-400">Modeled Requirement:</span>
-                            <span class="text-emerald-300 font-bold">Rp150,000,000,000 (10 × Rp15B)</span>
+                            <span class="text-emerald-300 font-bold">8,800,000 USDT (10 &times; 880,000 USDT)</span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Planned Budget:</span>
@@ -455,11 +455,11 @@ ob_start();
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Allocated / Committed:</span>
-                            <span class="text-gray-400">Rp0 / Rp0</span>
+                            <span class="text-gray-400">0 USDT / 0 USDT</span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Executed / Verified:</span>
-                            <span class="text-gray-400">Rp0 / Rp0</span>
+                            <span class="text-gray-400">0 USDT / 0 USDT</span>
                         </div>
                     </div>
 
@@ -620,7 +620,7 @@ ob_start();
                         </a>
                         <a href="<?= $basePrefix ?>/allocations" class="block p-2 rounded bg-white/5 hover:bg-white/10 border border-white/5 flex justify-between pl-10">
                             <span class="text-gray-300">ALLOCATION: <strong class="text-white">ALC-2026-NK001-0001</strong></span>
-                            <span class="text-emerald-400">Rp100M PO Unit</span>
+                            <span class="text-emerald-400">8,000 USDT PO Seat</span>
                         </a>
                     </div>
                 </div>
@@ -650,7 +650,7 @@ ob_start();
                         <div class="flex justify-between items-start bg-white/5 p-2 rounded">
                             <div>
                                 <span class="text-[9px] text-amber-400 font-bold">RAB-2026-NK001-V01</span>
-                                <div class="text-white font-bold text-[11px]">Production RAB created (Rp15B)</div>
+                                <div class="text-white font-bold text-[11px]">Production RAB created (880,000 USDT)</div>
                             </div>
                             <span class="text-[8px] text-amber-300 bg-amber-950 px-1.5 py-0.5 rounded">PENDING</span>
                         </div>

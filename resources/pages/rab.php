@@ -129,7 +129,7 @@ ob_start();
                             <span class="text-xs font-bold uppercase tracking-wider text-gray-400">TOTAL BATCH REQUIREMENT</span>
                             <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">MODELED REQUIREMENT</span>
                         </div>
-                        <div class="text-3xl font-black tracking-tight text-white sm:text-4xl">Rp15,000,000,000</div>
+                        <div class="text-3xl font-black tracking-tight text-white sm:text-4xl">880,000 USDT</div>
                     </div>
                     <div class="flex flex-wrap items-center gap-4 text-xs">
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-3 text-center">
@@ -138,7 +138,7 @@ ob_start();
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-3 text-center">
                             <div class="text-[9px] text-gray-400 uppercase font-bold">INDICATIVE AVERAGE</div>
-                            <div class="text-sm font-extrabold text-emerald-300 mt-0.5">Rp150,000,000 / HA</div>
+                            <div class="text-sm font-extrabold text-emerald-300 mt-0.5">8,800 USDT / HA</div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">TOTAL RAB</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">Rp15B</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">880,000 USDT</div>
                         <div class="text-[9px] text-gray-400">Model Requirement</div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['grid']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">ALLOCATED</div>
-                        <div class="text-lg font-extrabold leading-tight text-emerald-300">Rp0</div>
+                        <div class="text-lg font-extrabold leading-tight text-emerald-300">0 USDT</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['clock']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">COMMITTED</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">Rp0</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">0 USDT</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">EXECUTED</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">Rp0</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">0 USDT</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['shield']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">VERIFIED</div>
-                        <div class="text-lg font-extrabold leading-tight text-amber-300">Rp0</div>
+                        <div class="text-lg font-extrabold leading-tight text-amber-300">0 USDT</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -412,7 +412,7 @@ ob_start();
                                     <?php endforeach; ?>
                                     <tr class="border-t border-white/20 font-bold text-white bg-white/5">
                                         <td class="py-2.5 px-3">TOTAL</td>
-                                        <td class="py-2.5 px-3 text-emerald-300">Rp15B</td>
+                                        <td class="py-2.5 px-3 text-emerald-300">880,000 USDT</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
@@ -440,35 +440,35 @@ ob_start();
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-emerald-400 w-full animate-bar-full"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-400 font-semibold mt-0.5">Rp15B</div>
+                                        <div class="text-[8px] text-gray-400 font-semibold mt-0.5">880,000 USDT</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>ALLOCATED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-blue-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">Rp0</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>COMMITTED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-amber-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">Rp0</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>EXECUTED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-rose-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">Rp0</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>VERIFIED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-gray-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">Rp0</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
                                     </div>
                                 </div>
                             </div>
@@ -574,7 +574,7 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-xs">
-                            <div class="flex justify-between"><span class="text-gray-400">Total Requirement</span><span class="font-bold text-emerald-300">Rp15B</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Total Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">RAB Version</span><span class="font-bold text-white">V01</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Categories</span><span class="font-bold text-white">09</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Execution Progress</span><span class="font-bold text-amber-300">0%</span></div>
@@ -639,7 +639,7 @@ ob_start();
                         <div class="flex items-start justify-between border-b border-white/10 pb-2">
                             <div>
                                 <div class="text-[8px] font-bold uppercase tracking-wider text-gray-400">TOTAL REQUIREMENT</div>
-                                <div class="text-base font-extrabold text-white">Rp15B</div>
+                                <div class="text-base font-extrabold text-white">880,000 USDT</div>
                                 <div class="text-[9px] text-gray-400 font-medium">Model / Indicative</div>
                             </div>
                             <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">MODELED</span>

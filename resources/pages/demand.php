@@ -180,8 +180,8 @@ ob_start();
                         <span class="<?= $metricLbl ?>">MODELED VALUE</span>
                         <span class="text-emerald-400"><?= $svg($ic['coin'], 'w-4 h-4') ?></span>
                     </div>
-                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">Rp150B</div>
-                    <div class="text-[9px] text-gray-400">10 × Rp15B batch model</div>
+                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">8,800,000 USDT</div>
+                    <div class="text-[9px] text-gray-400">10 &times; 880,000 USDT batch model</div>
                 </div>
 
                 <div class="<?= $card ?> px-4 py-3">
@@ -434,16 +434,16 @@ ob_start();
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white/5 p-4 rounded-xl border border-white/5 text-xs font-mono">
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MODELED PRODUCTION VALUE</div>
-                        <div class="text-xl font-extrabold text-emerald-300 mt-0.5">Rp150,000,000,000</div>
+                        <div class="text-xl font-extrabold text-emerald-300 mt-0.5">8,800,000 USDT</div>
                         <div class="text-[9px] text-gray-400 mt-1">
-                            Calculated as 10 batches × Rp15B modeled requirement per 100 HA batch. This is a modeled requirement parameter, not cash held.
+                            Calculated as 10 batches &times; 880,000 USDT modeled requirement per 100 HA batch. This is a modeled requirement parameter, not cash held.
                         </div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MINIMUM PRODUCTION ALLOCATION UNIT</div>
-                        <div class="text-xl font-extrabold text-white mt-0.5">Rp100,000,000</div>
+                        <div class="text-xl font-extrabold text-white mt-0.5">8,000 USDT</div>
                         <div class="text-[9px] text-gray-400 mt-1">
-                            150 minimum allocation units per 100 HA production batch.
+                            110 seats (minimum allocation units) per 100 HA production batch.
                         </div>
                     </div>
                 </div>
@@ -464,20 +464,21 @@ ob_start();
                             <span class="text-gray-300">BUYER REQUIREMENT</span>
                             <span class="font-bold text-white">1,000 HA</span>
                         </div>
-                        <div class="text-center text-gray-500 font-bold text-xs">↓</div>
+                        <div class="text-center text-gray-500 font-bold text-xs">&darr;</div>
                         <div class="p-2.5 rounded bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-between">
                             <span class="text-emerald-300 font-bold">CAPACITY MAPPING</span>
                             <span class="font-bold text-emerald-300">1,000 HA (100%)</span>
                         </div>
-                        <div class="text-center text-gray-500 font-bold text-xs">↓</div>
+                        <div class="text-center text-gray-500 font-bold text-xs">&darr;</div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
                             <span class="text-gray-300">10 PRODUCTION BATCHES</span>
                             <span class="font-bold text-white">100 HA Each</span>
                         </div>
-                        <div class="text-center text-gray-500 font-bold text-xs">↓</div>
+                        <div class="text-center text-gray-500 font-bold text-xs">&darr;</div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
                             <span class="text-gray-300">PRODUCTION ALLOCATIONS</span>
-                            <span class="font-bold text-emerald-300">Rp100M Min Unit</span>
+                            <span class="font-bold text-emerald-300">8,000 USDT / Seat</span>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -729,10 +730,10 @@ ob_start();
                     </div>
                     <div class="grid grid-cols-2 gap-2 text-[10px] pt-1">
                         <div class="bg-white/5 p-2 rounded">
-                            <span class="text-gray-400">Modeled Value:</span> <strong class="text-white">Rp1.5T</strong>
+                            <span class="text-gray-400">Modeled Value:</span> <strong class="text-white">88,000,000 USDT</strong>
                         </div>
                         <div class="bg-white/5 p-2 rounded">
-                            <span class="text-gray-400">Gross Fee (3%):</span> <strong class="text-emerald-300">Rp45B</strong>
+                            <span class="text-gray-400">Gross Fee (3%):</span> <strong class="text-emerald-300">2,640,000 USDT</strong>
                         </div>
                     </div>
                     <p class="text-[9px] text-gray-500 italic">Target model scenario only.</p>

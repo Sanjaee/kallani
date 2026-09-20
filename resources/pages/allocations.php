@@ -115,14 +115,14 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="text-[9px] font-mono text-gray-400">ALLOCATION / BATCH</div>
-                                    <div class="font-bold text-emerald-300 font-mono">Rp100M / Rp15B</div>
-                                    <div class="text-[10px] text-gray-300 font-mono">1 / 150 allocation units</div>
+                                    <div class="font-bold text-emerald-300 font-mono">8,000 USDT / 880,000 USDT</div>
+                                    <div class="text-[10px] text-gray-300 font-mono">1 / 110 seats</div>
                                 </div>
                             </div>
 
                             <div class="rounded-lg bg-black/40 p-2 border border-white/5 flex items-center justify-between text-[11px] font-mono">
                                 <span class="text-gray-400">Modeled Proportion:</span>
-                                <span class="font-bold text-emerald-300">0.67% modeled batch proportion</span>
+                                <span class="font-bold text-emerald-300">0.91% modeled batch proportion</span>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ ob_start();
                         <span class="<?= $metricLbl ?>">TOTAL ALLOCATED</span>
                         <span class="text-emerald-400"><?= $svg($ic['coin'], 'w-4 h-4') ?></span>
                     </div>
-                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">Rp100M</div>
+                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">8,000 USDT</div>
                     <div class="text-[9px] text-gray-400">Current modeled allocation</div>
                 </div>
 
@@ -267,17 +267,17 @@ ob_start();
                     <div class="lg:col-span-5 bg-black/40 border border-emerald-500/30 rounded-xl p-4 space-y-2.5">
                         <div class="flex items-center justify-between text-xs font-mono">
                             <span class="text-gray-300 font-bold uppercase">PO COLLECTION</span>
-                            <span class="text-emerald-400 font-extrabold">Rp100M / Rp15B</span>
+                            <span class="text-emerald-400 font-extrabold">8,000 USDT / 880,000 USDT</span>
                         </div>
 
                         <!-- Progress bar -->
                         <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
-                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 0.67%"></div>
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 0.91%"></div>
                         </div>
 
                         <div class="flex items-center justify-between text-[10px] font-mono text-gray-400">
-                            <span>0.67% Collected</span>
-                            <span>Rp14.9B Remaining</span>
+                            <span>0.91% Collected</span>
+                            <span>872,000 USDT Remaining</span>
                         </div>
 
                         <div class="pt-1 flex items-center justify-between">
@@ -297,22 +297,22 @@ ob_start();
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white/5 rounded-xl p-4 border border-white/5 text-xs font-mono">
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">BATCH REQUIREMENT</div>
-                        <div class="text-base font-extrabold text-white mt-0.5">Rp15,000,000,000</div>
+                        <div class="text-base font-extrabold text-white mt-0.5">880,000 USDT</div>
                         <div class="text-[9px] text-gray-500">100 HA Standard Batch</div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">PARTICIPANT ALLOCATION</div>
-                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">Rp100,000,000</div>
-                        <div class="text-[9px] text-emerald-400/80">Confirmed PO Unit</div>
+                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">8,000 USDT</div>
+                        <div class="text-[9px] text-emerald-400/80">Confirmed PO Seat</div>
                     </div>
                     <div>
-                        <div class="text-[9px] text-gray-400 uppercase">ALLOCATION UNITS</div>
-                        <div class="text-base font-extrabold text-white mt-0.5">1 / 150 Units</div>
-                        <div class="text-[9px] text-gray-500">Rp100M Per Unit</div>
+                        <div class="text-[9px] text-gray-400 uppercase">ALLOCATION SEATS</div>
+                        <div class="text-base font-extrabold text-white mt-0.5">1 / 110 Seats</div>
+                        <div class="text-[9px] text-gray-500">8,000 USDT Per Seat</div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MODELED PROPORTION</div>
-                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">0.67%</div>
+                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">0.91%</div>
                         <div class="text-[9px] text-gray-500">Batch Allocation Share</div>
                     </div>
                 </div>
@@ -514,11 +514,11 @@ ob_start();
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">PRODUCTION REQUIREMENT</div>
-                                <div class="font-bold text-white mt-0.5">Rp15,000,000,000</div>
+                                <div class="font-bold text-white mt-0.5">880,000 USDT</div>
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">MIN PO ALLOCATION</div>
-                                <div class="font-bold text-emerald-300 mt-0.5">Rp100,000,000</div>
+                                <div class="font-bold text-emerald-300 mt-0.5">8,000 USDT</div>
                             </div>
                         </div>
 
@@ -662,11 +662,11 @@ ob_start();
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-400">Planned Budget:</span>
-                                    <span class="text-emerald-300 font-bold">Rp15,000,000,000</span>
+                                    <span class="text-emerald-300 font-bold">880,000 USDT</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-400">Allocated / Committed:</span>
-                                    <span class="text-gray-400">Rp0 / Rp0</span>
+                                    <span class="text-gray-400">0 USDT / 0 USDT</span>
                                 </div>
                             </div>
 
@@ -986,17 +986,17 @@ ob_start();
                                 <td class="p-3 font-bold text-white">ALC-2026-NK001-0001</td>
                                 <td class="p-3">North Kalimantan Palm</td>
                                 <td class="p-3 text-emerald-300">NK-001</td>
-                                <td class="p-3 font-bold text-white">Rp100,000,000</td>
-                                <td class="p-3">1 / 150</td>
+                                <td class="p-3 font-bold text-white">8,000 USDT</td>
+                                <td class="p-3">1 / 110</td>
                                 <td class="p-3"><span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO CONFIRMATION</span></td>
-                                <td class="p-3 text-right"><a href="<?= $basePrefix ?>/po-allocation" class="text-emerald-400 hover:underline">MANAGE →</a></td>
+                                <td class="p-3 text-right"><a href="<?= $basePrefix ?>/po-allocation" class="text-emerald-400 hover:underline">MANAGE &rarr;</a></td>
                             </tr>
                             <tr class="hover:bg-white/5 opacity-60">
                                 <td class="p-3 font-bold text-gray-400">ALC-2026-SK001-0002</td>
                                 <td class="p-3">South Kalimantan Palm</td>
                                 <td class="p-3">SK-001</td>
-                                <td class="p-3">Rp100,000,000</td>
-                                <td class="p-3">1 / 150</td>
+                                <td class="p-3">8,000 USDT</td>
+                                <td class="p-3">1 / 110</td>
                                 <td class="p-3"><span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-bold text-gray-400 uppercase">REQUESTED</span></td>
                                 <td class="p-3 text-right"><span class="text-gray-500">VIEW</span></td>
                             </tr>

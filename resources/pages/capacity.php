@@ -170,8 +170,8 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">Modeled Production Value</div>
-                        <div class="text-2xl font-extrabold leading-tight text-white">Rp150B</div>
-                        <div class="text-[10px] text-gray-400">10 &times; Rp15B</div>
+                        <div class="text-2xl font-extrabold leading-tight text-white">8,800,000 USDT</div>
+                        <div class="text-[10px] text-gray-400">10 &times; 880,000 USDT</div>
                         <div class="mt-0.5 text-[9px] italic leading-snug text-gray-500">Model parameter &mdash; not a financial commitment.</div>
                     </div>
                 </div>
@@ -388,15 +388,15 @@ ob_start();
                     <div class="grid grid-cols-2 gap-2">
                         <div class="<?= $cellCls ?>">
                             <div class="text-[9px] uppercase text-gray-400">Production Requirement / Batch</div>
-                            <div class="mt-1 text-lg font-extrabold text-white">Rp15B</div>
+                            <div class="mt-1 text-lg font-extrabold text-white">880,000 USDT</div>
                         </div>
                         <div class="<?= $cellCls ?>">
                             <div class="text-[9px] uppercase text-gray-400">Total Modeled Production Requirement</div>
-                            <div class="mt-1 text-lg font-extrabold text-white">Rp150B</div>
+                            <div class="mt-1 text-lg font-extrabold text-white">8,800,000 USDT</div>
                         </div>
                     </div>
 
-                    <p class="text-[10px] leading-relaxed text-gray-400">Based on the current prototype production model of Rp15B per 100-ha batch.</p>
+                    <p class="text-[10px] leading-relaxed text-gray-400">Based on the current prototype production model of 880,000 USDT per 100-ha batch.</p>
                 </div>
 
                 <div class="<?= $card ?> space-y-3 p-5 lg:col-span-3">
@@ -405,7 +405,7 @@ ob_start();
                         <span>Minimum PO Allocation</span>
                     </div>
                     <div class="<?= $cellCls ?> space-y-2 p-4">
-                        <div class="text-3xl font-extrabold text-white">Rp100M</div>
+                        <div class="text-3xl font-extrabold text-white">8,000 USDT</div>
                         <p class="text-[10px] leading-relaxed text-gray-400">Minimum participation allocation per production program, subject to final legal and commercial structure.</p>
                     </div>
                 </div>

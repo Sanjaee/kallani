@@ -128,8 +128,8 @@ function batchPage() {
                             <div class="flex items-center justify-between"><span class="text-gray-400">Project</span><span class="font-bold text-white">North Kalimantan Palm</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Region</span><span class="font-bold text-white">North Kalimantan, Indonesia</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
-                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">Rp15B</span></div>
-                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">Rp100M</span></div>
+                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
+                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">8,000 USDT</span></div>
                         </div>
                         <p class="text-[9px] italic text-gray-400 leading-tight">Prototype / demonstration data. Not a representation of a confirmed or unverified contract program.</p>
                     </div>
@@ -157,7 +157,7 @@ function batchPage() {
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">02 &mdash; Production Requirement</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">Rp15B</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">880,000 USDT</div>
                         <div class="text-[10px] text-gray-400">Modeled requirement / 100 HA batch</div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ function batchPage() {
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">03 &mdash; PO Allocation</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">Rp100M MIN.</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">8,000 USDT MIN.</div>
                         <div class="text-[10px] text-gray-400">Minimum allocation</div>
                     </div>
                 </div>
@@ -247,8 +247,8 @@ function batchPage() {
                             <div class="space-y-2 text-xs border-t border-white/10 pt-3">
                                 <div class="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">Quick Summary</div>
                                 <div class="flex justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
-                                <div class="flex justify-between"><span class="text-gray-400">Requirement</span><span class="font-bold text-emerald-300">Rp15B</span></div>
-                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">Rp100M</span></div>
+                                <div class="flex justify-between"><span class="text-gray-400">Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
+                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">8,000 USDT</span></div>
                                 <div class="flex justify-between"><span class="text-gray-400">Status</span><span class="font-bold text-amber-300 flex items-center gap-1"><span class="text-[10px]">ⓘ</span> Pending</span></div>
                             </div>
                         </div>
@@ -282,7 +282,7 @@ function batchPage() {
                         <div class="space-y-2 rounded-xl border border-white/10 bg-[#050D0A] p-4">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-gray-400">PO COLLECTION</span>
-                                <span class="text-white">Rp0 <span class="text-gray-400">/ Rp15B</span></span>
+                                <span class="text-white">0 USDT <span class="text-gray-400">/ 880,000 USDT</span></span>
                                 <span class="text-emerald-300">0%</span>
                             </div>
                             <div class="h-2 w-full overflow-hidden rounded-full bg-white/10">
@@ -294,19 +294,19 @@ function batchPage() {
                         <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">TOTAL PRODUCTION REQUIREMENT</div>
-                                <div class="text-xs font-extrabold text-white mt-1">Rp15B</div>
+                                <div class="text-xs font-extrabold text-white mt-1">880,000 USDT</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">COLLECTED</div>
-                                <div class="text-xs font-extrabold text-white mt-1">Rp0</div>
+                                <div class="text-xs font-extrabold text-white mt-1">0 USDT</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">REMAINING</div>
-                                <div class="text-xs font-extrabold text-emerald-300 mt-1">Rp15B</div>
+                                <div class="text-xs font-extrabold text-emerald-300 mt-1">880,000 USDT</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">MINIMUM ALLOCATION</div>
-                                <div class="text-xs font-extrabold text-white mt-1">Rp100M</div>
+                                <div class="text-xs font-extrabold text-white mt-1">8,000 USDT</div>
                             </div>
                         </div>
                     </div>
@@ -316,25 +316,25 @@ function batchPage() {
                         <div>
                             <h3 class="text-xs font-bold uppercase tracking-wider text-white">Standard Allocation Unit</h3>
                             <p class="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                                One 100 HA batch is modeled at Rp15B and represented by 150 minimum Rp100M PO allocation units, allowing members to diversify capital across multiple batches.
+                                One 100 HA batch is modeled at 880,000 USDT and represented by 110 minimum 8,000 USDT PO allocation seats, allowing members to diversify capital across multiple batches.
                             </p>
                         </div>
 
                         <!-- Formula Box -->
                         <div class="flex items-center justify-between rounded-lg border border-emerald-500/20 bg-emerald-950/20 p-3 text-center text-xs font-bold">
                             <div>
-                                <div class="text-emerald-300">Rp15B</div>
+                                <div class="text-emerald-300">880,000 USDT</div>
                                 <div class="text-[7px] text-gray-400 font-normal uppercase mt-0.5">Batch Requirement</div>
                             </div>
-                            <div class="text-gray-400 font-normal">÷</div>
+                            <div class="text-gray-400 font-normal">&divide;</div>
                             <div>
-                                <div class="text-emerald-300">Rp100M</div>
+                                <div class="text-emerald-300">8,000 USDT</div>
                                 <div class="text-[7px] text-gray-400 font-normal uppercase mt-0.5">Min. Allocation</div>
                             </div>
                             <div class="text-gray-400 font-normal">=</div>
                             <div>
-                                <div class="text-white text-sm">150</div>
-                                <div class="text-[7px] text-emerald-300 font-bold uppercase mt-0.5">Allocation Units</div>
+                                <div class="text-white text-sm">110</div>
+                                <div class="text-[7px] text-emerald-300 font-bold uppercase mt-0.5">Seats</div>
                             </div>
                         </div>
                     </div>
@@ -435,7 +435,7 @@ function batchPage() {
                     <div id="rab-section" class="rounded-xl border border-white/10 bg-[#07110E] p-4 space-y-3">
                         <div class="border-b border-white/10 pb-2">
                             <div class="text-xs font-bold text-white">Batch RAB</div>
-                            <div class="text-[9px] text-gray-400">How the Rp15B requirement is allocated across categories.</div>
+                            <div class="text-[9px] text-gray-400">How the 880,000 USDT requirement is allocated across categories.</div>
                         </div>
 
                         <ul class="space-y-1 text-[10px] divide-y divide-white/5">
@@ -452,7 +452,7 @@ function batchPage() {
 
                         <div class="flex items-center justify-between border-t border-white/10 pt-2 text-xs">
                             <span class="text-gray-400 uppercase font-bold text-[9px]">Total Batch Requirement</span>
-                            <span class="font-extrabold text-white">Rp15B</span>
+                            <span class="font-extrabold text-white">880,000 USDT</span>
                         </div>
                     </div>
 
@@ -734,11 +734,11 @@ function batchPage() {
                 <div class="grid grid-cols-2 gap-3 text-xs">
                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-3">
                         <div class="text-[9px] uppercase text-gray-400">Allocation Unit</div>
-                        <div class="text-sm font-extrabold text-white mt-0.5">Rp100M</div>
+                        <div class="text-sm font-extrabold text-white mt-0.5">8,000 USDT</div>
                     </div>
                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-3">
                         <div class="text-[9px] uppercase text-gray-400">Batch 100 HA Requirement</div>
-                        <div class="text-sm font-extrabold text-emerald-300 mt-0.5">Rp15B</div>
+                        <div class="text-sm font-extrabold text-emerald-300 mt-0.5">880,000 USDT</div>
                     </div>
                 </div>
 
@@ -782,7 +782,7 @@ function batchPage() {
                 </div>
                 <h3 class="text-lg font-extrabold text-white">PO Allocation Requested</h3>
                 <p class="text-xs text-gray-300 max-w-sm mx-auto">
-                    Your allocation request for 1 Unit (Rp100M) on Batch NK-001 has been registered for prototype review.
+                    Your allocation request for 1 Seat (8,000 USDT) on Batch NK-001 has been registered for prototype review.
                 </p>
                 <div class="pt-2 flex justify-center gap-3">
                     <a href="<?= $basePrefix ?>/allocations" class="rounded-full bg-emerald-400 px-6 py-2 text-xs font-bold uppercase text-[#04100B] hover:brightness-110">Go to My Allocations</a>

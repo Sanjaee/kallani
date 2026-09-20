@@ -702,7 +702,7 @@ ob_start();
                             <h3 class="text-xs font-mono font-bold uppercase text-white">18 / MY PRODUCTION ALLOCATION (ALC-2026-NK001-0001)</h3>
                             <p class="text-[10px] text-gray-400">Participant view of allocation lifecycle completion</p>
                         </div>
-                        <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">Rp100M ALLOCATION</span>
+                        <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">8,000 USDT ALLOCATION</span>
                     </div>
 
                     <div class="flex flex-wrap items-center gap-1.5 text-[8px] font-mono text-gray-300">

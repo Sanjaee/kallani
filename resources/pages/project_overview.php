@@ -179,7 +179,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['shield']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">PRODUCTION REQUIREMENT</div>
-                        <div class="text-xl font-extrabold leading-tight text-amber-300">Rp15B</div>
+                        <div class="text-xl font-extrabold leading-tight text-amber-300">880,000 USDT</div>
                         <div class="text-[8px] text-gray-400">Modeled per 100 HA batch</div>
                     </div>
                 </div>
@@ -482,9 +482,9 @@ ob_start();
 
                             <div class="rounded bg-white/5 p-2.5 border border-white/5 space-y-1">
                                 <div class="text-gray-400 uppercase text-[8px]">MINIMUM PO ALLOCATION</div>
-                                <div class="text-base font-extrabold text-emerald-300">Rp100M</div>
+                                <div class="text-base font-extrabold text-emerald-300">8,000 USDT</div>
                                 <p class="text-gray-400 mt-1">
-                                    A standard 100 HA batch is modeled at Rp15B. The minimum PO allocation is Rp100M, allowing capital diversification across multiple batches.
+                                    A standard 100 HA batch is modeled at 880,000 USDT. The minimum PO allocation is 8,000 USDT (110 seats), allowing capital diversification across multiple batches.
                                 </p>
                             </div>
                         </div>
@@ -513,7 +513,7 @@ ob_start();
 
                         <div class="border-t border-white/10 pt-2 flex justify-between items-baseline">
                             <span class="text-[9px] text-gray-400 uppercase font-bold">TOTAL BATCH REQUIREMENT</span>
-                            <span class="text-base font-black text-emerald-300">Rp15B</span>
+                            <span class="text-base font-black text-emerald-300">880,000 USDT</span>
                         </div>
                     </div>
 
