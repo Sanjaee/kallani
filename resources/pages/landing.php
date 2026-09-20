@@ -586,26 +586,26 @@ ob_start();
             </p>
 
             <div class="scene-anim-item bg-[#142314]/80 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-center text-[10px] font-mono">
-                    <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
-                        <span class="text-gray-400 font-bold block">880,000 USDT REQUIREMENT</span>
-                        <span class="text-emerald-300 block">Modeled RAB</span>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-center font-mono">
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
+                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">880,000 USDT REQUIREMENT</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Modeled RAB</span>
                     </div>
-                    <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
-                        <span class="text-gray-400 font-bold block">RAB BUDGET</span>
-                        <span class="text-emerald-300 block">9 Categories</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
+                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">RAB BUDGET</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">9 Categories</span>
                     </div>
-                    <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
-                        <span class="text-gray-400 font-bold block">VENDORS</span>
-                        <span class="text-amber-300 block">Production Partners (Verification Pending)</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
+                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">VENDORS</span>
+                        <span class="text-amber-300 text-xs sm:text-sm block font-semibold">Production Partners (Pending)</span>
                     </div>
-                    <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
-                        <span class="text-gray-400 font-bold block">REGISTERED WALLET</span>
-                        <span class="text-emerald-300 block">Entity Identity</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
+                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">REGISTERED WALLET</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Entity Identity</span>
                     </div>
-                    <div class="p-3 rounded-xl bg-emerald-950 border border-emerald-400 space-y-1">
-                        <span class="text-white font-bold block">AUDIT TRAIL</span>
-                        <span class="text-emerald-300 block">Permanent Record</span>
+                    <div class="p-4 rounded-xl bg-emerald-950 border border-emerald-400 space-y-1.5 flex flex-col justify-center min-h-[90px]">
+                        <span class="text-white font-extrabold text-xs sm:text-sm block uppercase">AUDIT TRAIL</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Permanent Record</span>
                     </div>
                 </div>
 
@@ -655,7 +655,7 @@ ob_start();
                         <span class="rounded bg-amber-500/20 px-1.5 py-0.5 text-[8px] font-bold text-amber-300">PENDING</span>
                     </div>
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 flex justify-between items-center">
-                        <span class="text-gray-300 font-bold">PRODUCTION</span>
+                        <span class="text-gray-300 font-bold">EXECUTION</span>
                         <span class="rounded bg-amber-500/20 px-1.5 py-0.5 text-[8px] font-bold text-amber-300">PENDING</span>
                     </div>
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 flex justify-between items-center">
@@ -674,64 +674,41 @@ ob_start();
 
     <!-- SCENE 11 — COMMERCIAL SETTLEMENT -->
     <section id="scene-11" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="absolute inset-0 z-0 opacity-40 scale-105 pointer-events-none">
-            <img src="<?php echo $basePrefix; ?>/1.jpg" alt="Commercial Settlement" class="w-full h-full object-cover filter brightness-90 contrast-105" />
+        <div class="absolute inset-0 z-0 opacity-45 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/7.jpg" alt="Commercial Settlement" class="w-full h-full object-cover filter brightness-90 contrast-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
-            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="relative z-10 max-w-5xl mx-auto text-center w-full space-y-4">
+            <div class="scene-anim-item inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-emerald-400">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <span>11 &bull; COMMERCIAL SETTLEMENT</span>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">From Production to Commercial Settlement.</h2>
-            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Settlement is recorded against completed production and commercial transactions.
-            </p>
+            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Traceable Commercial Settlement for Every Harvest Batch.</h2>
 
-            <div class="scene-anim-item bg-[#142314]/85 p-6 sm:p-8 rounded-3xl border border-emerald-500/50 shadow-2xl backdrop-blur-md text-left space-y-5">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono">
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">1. HARVEST &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">01</span>
+            <div class="scene-anim-item bg-[#142314]/90 p-6 rounded-3xl border border-[#1E3A24] shadow-2xl backdrop-blur-md text-left space-y-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono">
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">HARVEST OUTPUT</span>
+                        <span class="text-base font-extrabold text-white block">1,800 MT / YR</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">Modeled FFB Yield</span>
                     </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">2. WEIGHING &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">02</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">PROCESSING ACC.</span>
+                        <span class="text-base font-extrabold text-white block">396 MT CPO</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">22% Extraction Rate</span>
                     </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">3. QUALITY ACCEPTANCE &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">03</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">COMMERCIAL VALUE</span>
+                        <span class="text-base font-extrabold text-emerald-300 block">336,600 USDT</span>
+                        <span class="text-[10px] text-gray-400 block font-semibold">@ 850 USDT / MT</span>
                     </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">4. PROCESSING &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">04</span>
-                    </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">5. PRODUCT &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">05</span>
-                    </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">6. BUYER &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">06</span>
-                    </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">7. DELIVERY &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">07</span>
-                    </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
-                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">8. COMMERCIAL ACCEPTANCE &rsaquo;</span>
-                        <span class="text-[10px] text-emerald-400 font-bold">08</span>
-                    </div>
-                    <div class="p-3.5 sm:p-4 rounded-2xl bg-emerald-950 border border-emerald-400 flex items-center justify-between gap-2 shadow-lg shadow-emerald-950/50">
-                        <span class="text-xs sm:text-sm font-extrabold text-emerald-300 tracking-wide">9. SETTLEMENT ✓</span>
-                        <span class="text-[10px] text-emerald-300 font-bold uppercase">FINAL</span>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">SETTLEMENT VAULT</span>
+                        <span class="text-base font-extrabold text-amber-300 block">AUTOMATED</span>
+                        <span class="text-[10px] text-amber-400/80 block font-semibold">Smart Contract Release</span>
                     </div>
                 </div>
-
-                <p class="text-xs sm:text-sm italic text-gray-300 text-center leading-relaxed pt-1">
-                    Commercial settlement requires verified delivery and commercial acceptance before transaction closure.
-                </p>
             </div>
         </div>
     </section>
@@ -754,19 +731,19 @@ ob_start();
             <div class="scene-anim-item grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-center">
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">24-MONTH TARGET</span>
-                    <div class="text-xl font-extrabold text-white">10,000 HA</div>
+                    <div class="text-lg sm:text-xl font-extrabold text-white">10,000 HA</div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">PRODUCTION BATCHES</span>
-                    <div class="text-xl font-extrabold text-emerald-300">100</div>
+                    <div class="text-lg sm:text-xl font-extrabold text-emerald-300">100</div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED VALUE</span>
-                    <div class="text-xl font-extrabold text-white">88,000,000 USDT</div>
+                    <div class="text-sm sm:text-base font-extrabold text-white whitespace-nowrap">88,000,000 USDT</div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED 3% FEE</span>
-                    <div class="text-xl font-extrabold text-amber-300">2,640,000 USDT</div>
+                    <div class="text-sm sm:text-base font-extrabold text-amber-300 whitespace-nowrap">2,640,000 USDT</div>
                 </div>
             </div>
 
@@ -778,14 +755,17 @@ ob_start();
             <div class="scene-anim-item bg-black/40 p-4 rounded-2xl border border-white/10 max-w-2xl mx-auto space-y-2 text-center">
                 <div class="text-[10px] font-mono text-gray-400 uppercase font-bold tracking-wider">REGISTER OR JOIN NINA PRODUCTION NETWORK</div>
                 <div class="flex flex-wrap justify-center gap-2 pt-1">
-                    <a href="<?php echo $basePrefix; ?>/capacity" class="px-3 py-1.5 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-emerald-500/40 text-xs font-bold text-emerald-300 flex items-center gap-1.5 transition">
-                        <span>🌱 Register Mitra Lahan</span>
+                    <a href="<?php echo $basePrefix; ?>/capacity" class="px-3.5 py-2 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-emerald-500/40 text-xs font-bold text-emerald-300 flex items-center gap-2 transition">
+                        <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
+                        <span>Register Mitra Lahan</span>
                     </a>
-                    <a href="<?php echo $basePrefix; ?>/demand" class="px-3 py-1.5 rounded-lg bg-blue-950 hover:bg-blue-900 border border-blue-500/40 text-xs font-bold text-blue-300 flex items-center gap-1.5 transition">
-                        <span>🏭 Request Buyer PO Order</span>
+                    <a href="<?php echo $basePrefix; ?>/demand" class="px-3.5 py-2 rounded-lg bg-blue-950 hover:bg-blue-900 border border-blue-500/40 text-xs font-bold text-blue-300 flex items-center gap-2 transition">
+                        <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0H9m1 0h2"/></svg>
+                        <span>Request Buyer PO Order</span>
                     </a>
-                    <a href="<?php echo $basePrefix; ?>/vendors" class="px-3 py-1.5 rounded-lg bg-amber-950 hover:bg-amber-900 border border-amber-500/40 text-xs font-bold text-amber-300 flex items-center gap-1.5 transition">
-                        <span>🚜 Register Vendor Partner</span>
+                    <a href="<?php echo $basePrefix; ?>/vendors" class="px-3.5 py-2 rounded-lg bg-amber-950 hover:bg-amber-900 border border-amber-500/40 text-xs font-bold text-amber-300 flex items-center gap-2 transition">
+                        <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Register Vendor Partner</span>
                     </a>
                 </div>
             </div>

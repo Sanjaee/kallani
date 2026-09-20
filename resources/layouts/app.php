@@ -855,34 +855,34 @@ if (strpos($reqPath, '/explore') === 0 || strpos($reqPath, '/projects') === 0 ||
             </a>
             
             <!-- Desktop Nav Links with Active Underline -->
-            <div class="hidden md:flex gap-8 items-center text-xs font-mono tracking-wider">
-                <a href="<?php echo $basePrefix; ?>/" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'home') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
-                    <span>HOME</span>
-                    <?php if ($activeTab === 'home'): ?>
+            <div class="hidden md:flex gap-6 xl:gap-8 items-center text-xs font-mono tracking-wider">
+                <a href="<?php echo $basePrefix; ?>/demand" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'demand') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>DEMAND</span>
+                    <?php if ($activeTab === 'demand'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/capacity" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'capacity') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>CAPACITY MAPPING</span>
+                    <?php if ($activeTab === 'capacity'): ?>
                         <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
                     <?php endif; ?>
                 </a>
                 <a href="<?php echo $basePrefix; ?>/explore" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'explore') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
-                    <span>EXPLORE</span>
+                    <span>EXPLORE PROJECTS</span>
                     <?php if ($activeTab === 'explore'): ?>
                         <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
                     <?php endif; ?>
                 </a>
-                <a href="<?php echo $basePrefix; ?>/#system-architecture" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'how-it-works') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
-                    <span>HOW IT WORKS</span>
-                    <?php if ($activeTab === 'how-it-works'): ?>
+                <a href="<?php echo $basePrefix; ?>/allocations" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'allocations') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>MY ALLOCATIONS</span>
+                    <?php if ($activeTab === 'allocations'): ?>
                         <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
                     <?php endif; ?>
                 </a>
                 <a href="<?php echo $basePrefix; ?>/audit-trail" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'audit') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
-                    <span>AUDIT</span>
+                    <span>AUDIT TRAIL</span>
                     <?php if ($activeTab === 'audit'): ?>
-                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
-                    <?php endif; ?>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/#about" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'about') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
-                    <span>ABOUT</span>
-                    <?php if ($activeTab === 'about'): ?>
                         <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
                     <?php endif; ?>
                 </a>

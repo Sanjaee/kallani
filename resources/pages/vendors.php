@@ -771,28 +771,28 @@ ob_start();
                         <div class="space-y-2 text-xs font-mono">
                             <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-400 text-sm">📄</span>
+                                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                                     <span class="text-gray-300 font-bold">Company Registration (NIB / Legal)</span>
                                 </div>
                                 <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
                             </div>
                             <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-400 text-sm">🚜</span>
+                                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                                     <span class="text-gray-300 font-bold">Heavy Equipment License & Asset Proof</span>
                                 </div>
                                 <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
                             </div>
                             <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-400 text-sm">📋</span>
+                                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                                     <span class="text-gray-300 font-bold">Project History Record & Portfolio</span>
                                 </div>
                                 <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
                             </div>
                             <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-400 text-sm">🔑</span>
+                                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
                                     <span class="text-gray-300 font-bold">Registered Wallet Authorization Doc</span>
                                 </div>
                                 <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
