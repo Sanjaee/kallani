@@ -3,20 +3,30 @@
 return [
     'system_constants' => [
         'batch_area_ha' => 100,
-        'indicative_budget_per_batch_idr' => 15000000000, // Rp15B
-        'indicative_cost_per_ha_idr' => 150000000, // Rp150M/ha
-        'min_po_allocation_idr' => 1000000000, // Rp1B
+        'indicative_budget_per_batch_usdt' => 880000, // 880,000 USDT
+        'indicative_cost_per_ha_usdt' => 8800, // 8,800 USDT/ha
+        'min_po_allocation_usdt' => 8000, // 8,000 USDT
+        'total_seats_per_batch' => 110, // 110 Seats
+        'simulation_rate_idr_per_usdt' => 17800, // Rp17.800 / USDT
         'demo_demand_ha' => 1000,
         'demo_batches_count' => 10,
-        'demo_production_requirement_idr' => 150000000000, // Rp150B
+        'demo_production_requirement_usdt' => 8800000, // 8,800,000 USDT
         'target_24m_ha' => 10000,
         'target_24m_batches' => 100,
-        'target_24m_modeled_value_idr' => 1500000000000, // Rp1.5T
+        'target_24m_modeled_value_usdt' => 88000000, // 88,000,000 USDT
         'target_24m_service_fee_pct' => 3,
-        'target_24m_fee_opportunity_idr' => 45000000000, // Rp45B
+        'target_24m_fee_opportunity_usdt' => 2640000, // 2,640,000 USDT
         'contract_horizon_years' => 20,
         'development_ramp_up_years' => 5,
         'commercial_delivery_years' => 15,
+
+        // Legacy compatibility keys mapped to USDT values
+        'indicative_budget_per_batch_idr' => 880000,
+        'indicative_cost_per_ha_idr' => 8800,
+        'min_po_allocation_idr' => 8000,
+        'demo_production_requirement_idr' => 8800000,
+        'target_24m_modeled_value_idr' => 88000000,
+        'target_24m_fee_opportunity_idr' => 2640000,
     ],
     'demo_demands' => [
         [
