@@ -41,10 +41,7 @@ ob_start();
     <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
         <div class="max-w-4xl w-full text-center">
             <h1 style="font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.28em; color: #FFFFFF; text-transform: uppercase; font-weight: 300; margin-bottom: 0.75rem; text-align: center; text-shadow: 0 0 50px rgba(197, 160, 89, 0.15); padding-left: 0.28em;">KALLANI</h1>
-            <div class="flex items-center justify-center gap-2 mb-10 text-center">
-                <span style="font-size: clamp(0.55rem, 1.1vw, 0.82rem); letter-spacing: 0.22em; color: #C5A059; text-transform: uppercase; font-weight: 400; opacity: 0.95; white-space: nowrap;">NINA OPERATING SYSTEM &bull; PRODUCTIVE NATURAL ASSETS</span>
-                <span class="inline-block w-1.5 h-3.5 bg-[#C5A059] animate-pulse"></span>
-            </div>
+            <p style="font-size: clamp(0.55rem, 1.1vw, 0.82rem); letter-spacing: 0.22em; color: #C5A059; text-transform: uppercase; font-weight: 400; opacity: 0.95; padding-left: 0.22em; margin-bottom: 2.5rem; text-align: center; white-space: nowrap;">NINA OPERATING SYSTEM &bull; PRODUCTIVE NATURAL ASSETS</p>
 
             <!-- Loader Progress Bar & Counter -->
             <div class="space-y-3 max-w-md mx-auto">
