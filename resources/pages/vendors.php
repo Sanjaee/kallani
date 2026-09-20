@@ -56,31 +56,31 @@ ob_start();
     <div class="relative z-10">
 
         <!-- ================= 1 & 2. HERO HEADER SECTION ================= -->
-        <section class="relative overflow-hidden border-b border-white/10 shadow-2xl">
+        <section class="relative overflow-hidden shadow-2xl" style="border-bottom: none !important;">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/90 via-[#050D07]/60 to-[#050D07]/20"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/90 via-transparent to-transparent"></div>
 
-            <div class="relative space-y-6 px-6 py-8 lg:px-8 lg:py-10">
+            <div class="relative space-y-5 px-6 pt-3 pb-6 lg:px-8 lg:pt-3 lg:pb-8">
 
                 <!-- Top Row: Breadcrumb & Right Header CTA Buttons -->
                 <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div class="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-gray-300 backdrop-blur-md">
-                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                        <a href="<?= $basePrefix ?>/allocations" class="hover:text-white">MY ALLOCATIONS</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white">NORTH KALIMANTAN PALM</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/batches" class="hover:text-white">BATCH NK-001</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/milestones" class="hover:text-white">MILESTONE 01</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/rab" class="hover:text-white">RAB</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/vendors" class="hover:text-white">VENDORS</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <span class="font-bold text-white">VENDOR-001</span>
-                    </div>
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <a href="<?= $basePrefix ?>/allocations" class="hover:text-white transition-colors">MY ALLOCATIONS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white transition-colors">NORTH KALIMANTAN PALM</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/batches" class="hover:text-white transition-colors">BATCH NK-001</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/milestones" class="hover:text-white transition-colors">MILESTONE 01</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/rab" class="hover:text-white transition-colors">RAB</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/vendors" class="hover:text-white transition-colors">VENDORS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="font-bold text-white uppercase">VENDOR-001</span>
+                    </nav>
 
                     <!-- Header Primary/Secondary Actions (Top Right) -->
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold">

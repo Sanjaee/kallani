@@ -7,6 +7,20 @@ $config = require $configPath;
 $currentPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public' : '';
 $activePage = $activePage ?? 'demand';
+
+$reqPath = str_replace($basePrefix, '', $currentPath);
+$activeTab = 'demand';
+if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requirements') === 0) {
+    $activeTab = 'demand';
+} elseif (strpos($reqPath, '/capacity') === 0) {
+    $activeTab = 'capacity';
+} elseif (strpos($reqPath, '/explore') === 0 || strpos($reqPath, '/projects') === 0 || strpos($reqPath, '/project-overview') === 0) {
+    $activeTab = 'explore';
+} elseif (strpos($reqPath, '/allocations') === 0 || strpos($reqPath, '/my-allocations') === 0 || strpos($reqPath, '/po-allocation') === 0) {
+    $activeTab = 'allocations';
+} elseif (strpos($reqPath, '/audit') === 0) {
+    $activeTab = 'audit';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" class="dark">
@@ -58,21 +72,71 @@ $activePage = $activePage ?? 'demand';
 </head>
 <body class="bg-[#040804] text-gray-100 font-inter min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black">
 
-    <div class="flex flex-1 min-h-screen overflow-hidden">
+    <!-- FULL WIDTH TOP NAVBAR (SPANS FULL WIDTH ACROSS SCREEN ABOVE SIDEBAR AND MAIN CONTENT) -->
+    <header class="h-16 bg-[#060D07]/95 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-50 shrink-0 w-full" style="border-bottom: none !important;">
+        <!-- Left: Logo & Subtext (Single Logo) -->
+        <a href="<?php echo $basePrefix; ?>/" class="flex flex-col group text-left py-1 w-56 shrink-0">
+            <span class="text-base font-serif font-extrabold tracking-[0.25em] uppercase leading-none transition-colors" style="color: #FFFFFF !important;">KALLANI</span>
+            <span class="text-[9px] font-mono tracking-[0.18em] uppercase leading-none mt-1" style="color: #FFFFFF !important;">NINA / OPERATING SYSTEM</span>
+        </a>
 
-        <!-- LEFT SIDEBAR NAVIGATION (MATCHING IMAGE #2 EXACTLY) -->
+        <!-- Desktop Nav Links with Active Underline -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-mono tracking-wider">
+            <a href="<?php echo $basePrefix; ?>/demand" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'demand') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                <span>DEMAND</span>
+                <?php if ($activeTab === 'demand'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+            <a href="<?php echo $basePrefix; ?>/capacity" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'capacity') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                <span>CAPACITY MAPPING</span>
+                <?php if ($activeTab === 'capacity'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+            <a href="<?php echo $basePrefix; ?>/explore" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'explore') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                <span>EXPLORE PROJECTS</span>
+                <?php if ($activeTab === 'explore'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+            <a href="<?php echo $basePrefix; ?>/allocations" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'allocations') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                <span>MY ALLOCATIONS</span>
+                <?php if ($activeTab === 'allocations'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+            <a href="<?php echo $basePrefix; ?>/audit-trail" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'audit') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                <span>AUDIT TRAIL</span>
+                <?php if ($activeTab === 'audit'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+        </nav>
+
+        <!-- Right Controls: Language & Status -->
+        <div class="flex items-center gap-5 text-xs font-mono">
+            <div class="text-gray-400 select-none hidden sm:block">
+                <strong class="text-white cursor-pointer hover:text-emerald-400">EN</strong> 
+                <span class="text-gray-600 mx-1">|</span> 
+                <span class="cursor-pointer hover:text-white">ID</span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#08150D] border border-emerald-500/30 text-[11px] text-gray-300 shadow-sm">
+                <span>SYSTEM STATUS</span>
+                <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <strong class="text-white font-bold">DEMO</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER (SIDEBAR ON LEFT, MAIN VIEW ON RIGHT BELOW FULL NAVBAR) -->
+    <div class="flex flex-1 overflow-hidden">
+
+        <!-- LEFT SIDEBAR NAVIGATION (NO DUPLICATE LOGO) -->
         <aside class="w-64 bg-[#060D07] border-r border-[#152416] flex flex-col justify-between shrink-0 relative z-30 select-none overflow-y-auto">
             
             <!-- Sidebar Top Content -->
             <div class="p-5 space-y-6">
-
-                <!-- Brand Header -->
-                <div class="space-y-1 pb-4 border-b border-[#152416]">
-                    <a href="<?php echo $basePrefix; ?>/" class="block">
-                        <div class="text-xl font-serif font-light tracking-[0.25em] text-white uppercase leading-none">KALLANI</div>
-                        <div class="text-[9px] font-mono tracking-[0.2em] text-emerald-400 uppercase mt-1">NINA / OPERATING SYSTEM</div>
-                    </a>
-                </div>
 
                 <!-- CATEGORY 1: PRODUCTION -->
                 <div class="space-y-1.5">
@@ -201,31 +265,10 @@ $activePage = $activePage ?? 'demand';
 
         <!-- MAIN DASHBOARD CONTENT WRAPPER -->
         <div class="flex-1 flex flex-col min-w-0 bg-[#040804] overflow-y-auto">
-
-            <!-- TOP HEADER BAR -->
-            <header class="h-14 border-b border-[#152416] bg-[#060D07]/90 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-20">
-                <nav class="flex items-center gap-6 text-xs font-mono text-gray-300">
-                    <a href="<?php echo $basePrefix; ?>/" class="hover:text-emerald-400 transition font-medium">HOME</a>
-                    <a href="<?php echo $basePrefix; ?>/explore" class="hover:text-emerald-400 transition font-medium">EXPLORE</a>
-                    <a href="<?php echo $basePrefix; ?>/#system-architecture" class="hover:text-emerald-400 transition font-medium">HOW IT WORKS</a>
-                    <a href="<?php echo $basePrefix; ?>/audit-trail" class="hover:text-emerald-400 transition font-medium">AUDIT</a>
-                    <a href="<?php echo $basePrefix; ?>/explore" class="hover:text-emerald-400 transition font-medium">ABOUT</a>
-                </nav>
-
-                <div class="flex items-center gap-4 text-xs font-mono">
-                    <span class="text-gray-400"><strong class="text-white">EN</strong> | ID</span>
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 text-[11px]">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                        SYSTEM STATUS <strong class="text-white">DEMO</strong>
-                    </span>
-                </div>
-            </header>
-
             <!-- MAIN VIEW BODY -->
             <main class="flex-1">
                 <?php echo $content ?? ''; ?>
             </main>
-
         </div>
 
     </div>

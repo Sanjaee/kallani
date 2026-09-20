@@ -51,16 +51,20 @@ ob_start();
     <div class="relative z-10">
 
         <!-- ================= HERO SECTION ================= -->
-        <section class="relative overflow-hidden border-b border-white/10 shadow-2xl">
+        <section class="relative overflow-hidden shadow-2xl" style="border-bottom: none !important;">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/90 via-[#050D07]/60 to-[#050D07]/20"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/90 via-transparent to-transparent"></div>
 
-            <div class="relative space-y-4 px-6 py-8 lg:px-8 lg:py-10">
-                <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
-                    <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">MITRA DASHBOARD</span>
-                    <span>08 / MY PRODUCTION ALLOCATIONS</span>
-                </div>
+            <div class="relative space-y-4 px-6 pt-3 pb-6 lg:px-8 lg:pt-3 lg:pb-8">
+                <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                    <a href="<?= $basePrefix ?>/demand" class="hover:text-white transition-colors">PRODUCTION REQUIREMENTS</a>
+                    <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <a href="<?= $basePrefix ?>/demand" class="hover:text-white transition-colors">DR-2026-001</a>
+                    <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <span class="font-bold text-white uppercase">MY PRODUCTION ALLOCATIONS</span>
+                </nav>
 
                 <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">My Production Allocations</h1>
                 

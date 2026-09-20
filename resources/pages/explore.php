@@ -34,7 +34,7 @@ $projects = array_map(fn($p) => $p + ['location' => $p['region'] . ', Indonesia'
 $assetTypes = array_values(array_unique(array_column($projects, 'category')));
 $regions    = array_values(array_unique(array_column($projects, 'region')));
 sort($regions);
-$projectUrl = $basePrefix . '/batches';
+$projectUrl = $basePrefix . '/project-overview';
 
 /* Icons: $svg(inner-paths, size-classes) */
 $svg = fn(string $inner, string $cls = 'w-5 h-5') =>
@@ -192,23 +192,23 @@ ob_start();
     <div class="relative z-10">
 
         <!-- ================= HERO ================= -->
-        <section class="relative overflow-hidden border-b border-white/10 shadow-2xl">
+        <section class="relative overflow-hidden shadow-2xl" style="border-bottom: none !important;">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Aerial view of forest and river" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/85 via-[#050D07]/45 to-[#050D07]/5"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/80 via-transparent to-transparent"></div>
 
-            <div class="relative grid min-h-[300px] grid-cols-1 items-start gap-8 px-6 py-8 lg:grid-cols-12 lg:px-8 lg:py-10">
+            <div class="relative grid min-h-[260px] grid-cols-1 items-start gap-8 px-6 pt-3 pb-6 lg:grid-cols-12 lg:px-8 lg:pt-3 lg:pb-8">
 
                 <!-- Left -->
                 <div class="space-y-4 lg:col-span-7">
-                    <div class="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-gray-300 backdrop-blur-md">
-                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                        <span>Production Requirements</span>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <span><?= $e($demoId) ?></span>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <span class="font-bold text-white">Explore Projects</span>
-                    </div>
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <a href="<?= $basePrefix ?>/demand" class="hover:text-white transition-colors">PRODUCTION REQUIREMENTS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/demand" class="hover:text-white transition-colors"><?= $e($demoId) ?></a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="font-bold text-white uppercase">EXPLORE PROJECTS</span>
+                    </nav>
 
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
                         <span>04 / Explore Production Projects</span>
@@ -607,12 +607,10 @@ ob_start();
         <footer class="border-t border-white/10 bg-[#040C09]/95">
             <div class="grid grid-cols-1 gap-8 px-6 py-8 lg:grid-cols-12 lg:px-8">
 
-                <div class="flex items-start gap-5 lg:col-span-4">
-                    <div class="text-xl font-extrabold tracking-[0.18em] text-white">KALLANI</div>
-                    <div class="pt-0.5">
-                        <div class="text-xs font-bold text-white">NINA</div>
-                        <p class="mt-0.5 max-w-[200px] text-[10px] leading-snug text-gray-400">Operating System for Productive Natural Assets</p>
-                    </div>
+                <div class="flex flex-col group text-left lg:col-span-4 space-y-1">
+                    <span class="text-xl sm:text-2xl font-serif font-extrabold tracking-[0.25em] text-white uppercase leading-none">KALLANI</span>
+                    <span class="text-[9px] font-mono tracking-[0.18em] text-white uppercase leading-none">NINA / OPERATING SYSTEM</span>
+                    <p class="pt-1.5 max-w-[240px] text-[10px] leading-snug text-gray-400">Operating System for Productive Natural Assets</p>
                 </div>
 
                 <nav class="grid grid-cols-3 gap-6 lg:col-span-5" aria-label="Footer">

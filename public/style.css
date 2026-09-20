@@ -294,12 +294,11 @@ a { text-decoration: none; color: inherit; }
 
 /* Navigation & Components */
 .navbar {
-  background-color: #FFFFFF !important;
-  border-bottom: 1px solid #E5E5E5 !important;
+  background-color: #060D07 !important;
+  border-bottom: 1px solid #152416 !important;
   position: sticky;
   top: 0;
   z-index: 50;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .navbar-container {
   width: 100% !important;

@@ -263,12 +263,11 @@ $basePrefix = (strpos($currentPath, '/kallani/public') === 0) ? '/kallani/public
 
         /* Navbar & Sidebar */
         .navbar {
-          background-color: #FFFFFF !important;
-          border-bottom: 1px solid #E5E5E5 !important;
+          background-color: #060D07 !important;
+          border-bottom: 1px solid #152416 !important;
           position: sticky !important;
           top: 0 !important;
           z-index: 50 !important;
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
         }
         .navbar-container {
           width: 100% !important;
@@ -830,35 +829,81 @@ $cleanCurrentPath = rtrim(str_replace('/kallani/public', '', $currentPath), '/')
 if ($cleanCurrentPath === '') { $cleanCurrentPath = '/'; }
 $isHomePage = ($cleanCurrentPath === '/');
 ?>
-<body class="bg-[#F7F7F4] text-[#171717] font-inter <?php echo $isHomePage ? 'h-screen w-screen overflow-hidden' : 'min-h-screen'; ?>" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">
+<?php
+$reqPath = str_replace($basePrefix, '', $cleanCurrentPath);
+$activeTab = 'home';
+if (strpos($reqPath, '/explore') === 0 || strpos($reqPath, '/projects') === 0 || strpos($reqPath, '/project-overview') === 0) {
+    $activeTab = 'explore';
+} elseif (strpos($reqPath, '/audit') === 0) {
+    $activeTab = 'audit';
+} elseif (strpos($reqPath, '/how-it-works') === 0) {
+    $activeTab = 'how-it-works';
+} elseif (strpos($reqPath, '/about') === 0) {
+    $activeTab = 'about';
+} elseif ($reqPath === '/' || $reqPath === '') {
+    $activeTab = 'home';
+}
+?>
+<body class="bg-[#040804] text-gray-100 font-inter <?php echo $isHomePage ? 'h-screen w-screen overflow-hidden' : 'min-h-screen'; ?>" x-data="{ mobileMenuOpen: false, sidebarOpen: false }">
 
-    <!-- Navbar (Hidden during Presentation Scenes 1-11, Revealed on Scene 12) -->
-    <nav id="main-navbar" class="bg-white border-b border-[#E5E5E5] fixed top-0 left-0 right-0 z-[100] shadow-sm navbar transition-all duration-700 transform <?php echo $isHomePage ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'; ?>">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between navbar-container">
-            <!-- Left: Logo -->
-            <a href="<?php echo $basePrefix; ?>/" class="text-xl sm:text-2xl font-serif font-light text-[#2D5016] dark:text-emerald-400 tracking-[0.3em] uppercase hover:opacity-90 navbar-logo shrink-0 pl-[0.3em]">KALLANI</a>
+    <nav id="main-navbar" class="bg-[#060D07]/95 backdrop-blur-md fixed top-0 left-0 right-0 z-[100] shadow-2xl transition-all duration-700 transform <?php echo $isHomePage ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'; ?>" style="border-bottom: none !important;">
+        <div class="w-full px-6 py-3 flex items-center justify-between">
+            <!-- Left: Logo & Subtext (Stacked vertical) -->
+            <a href="<?php echo $basePrefix; ?>/" class="flex flex-col group text-left py-0.5">
+                <span class="text-base sm:text-lg font-serif font-extrabold tracking-[0.28em] uppercase leading-none transition-colors" style="color: #FFFFFF !important;">KALLANI</span>
+                <span class="text-[9px] font-mono tracking-[0.18em] uppercase leading-none mt-1" style="color: #FFFFFF !important;">NINA / OPERATING SYSTEM</span>
+            </a>
             
-            <!-- Desktop Nav Links (Hidden on Mobile) -->
-            <div class="hidden md:flex gap-4 items-center nav-links">
-                <a href="<?php echo $basePrefix; ?>/" data-i18n="navHome" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo $cleanCurrentPath === '/' ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Home</a>
-                <a href="<?php echo $basePrefix; ?>/explore" data-i18n="navExplore" class="text-sm font-medium text-[#6B6B6B] hover:text-[#171717] transition-colors nav-link <?php echo strpos($cleanCurrentPath, '/explore') === 0 ? 'active text-[#2D5016] font-bold border-b-2 border-[#2D5016] pb-1' : ''; ?>">Explore</a>
-                
-                <!-- Language Switcher -->
-                <div class="flex items-center p-1 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 font-semibold text-xs text-gray-600 dark:text-gray-300">
-                    <button onclick="setLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-lg transition-all cursor-pointer">EN</button>
-                    <button onclick="setLanguage('id')" id="lang-btn-id" class="px-2.5 py-1 rounded-lg transition-all cursor-pointer">ID</button>
-                </div>
-
-                <!-- Theme Toggle -->
-                <button id="theme-toggle" onclick="toggleDarkMode()" class="group p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Toggle Theme">
-                    <span id="theme-toggle-icon" class="flex items-center justify-center"></span>
-                </button>
-                
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#F0F0EC] text-[#171717] badge-demo">DEMO</span>
+            <!-- Desktop Nav Links with Active Underline -->
+            <div class="hidden md:flex gap-8 items-center text-xs font-mono tracking-wider">
+                <a href="<?php echo $basePrefix; ?>/" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'home') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>HOME</span>
+                    <?php if ($activeTab === 'home'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/explore" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'explore') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>EXPLORE</span>
+                    <?php if ($activeTab === 'explore'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/#system-architecture" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'how-it-works') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>HOW IT WORKS</span>
+                    <?php if ($activeTab === 'how-it-works'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/audit-trail" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'audit') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>AUDIT</span>
+                    <?php if ($activeTab === 'audit'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
+                <a href="<?php echo $basePrefix; ?>/#about" class="relative py-1 font-semibold transition-colors <?php echo ($activeTab === 'about') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
+                    <span>ABOUT</span>
+                    <?php if ($activeTab === 'about'): ?>
+                        <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                    <?php endif; ?>
+                </a>
             </div>
 
-            <!-- Mobile Hamburger Button (Right Side, Mobile Only < 768px) -->
-            <button @click="mobileMenuOpen = true" class="mobile-menu-btn p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 flex items-center justify-center cursor-pointer shadow-sm" title="Open Navigation Menu">
+            <!-- Right Controls: Language & Status -->
+            <div class="hidden md:flex items-center gap-5 text-xs font-mono">
+                <div class="text-gray-400 select-none">
+                    <strong class="text-white cursor-pointer hover:text-emerald-400">EN</strong> 
+                    <span class="text-gray-600 mx-1">|</span> 
+                    <span class="cursor-pointer hover:text-white">ID</span>
+                </div>
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#08150D] border border-emerald-500/30 text-[11px] text-gray-300 shadow-sm">
+                    <span>SYSTEM STATUS</span>
+                    <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <strong class="text-white font-bold">DEMO</strong>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button @click="mobileMenuOpen = true" class="md:hidden p-2 rounded-xl bg-white/5 text-gray-300 border border-white/10 flex items-center justify-center cursor-pointer shadow-sm">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -992,9 +1037,10 @@ $isHomePage = ($cleanCurrentPath === '/');
     <footer class="bg-white border-t border-[#E5E5E5] py-8 mt-12">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="font-bold text-[#171717] mb-2 text-lg">KALLANI</h4>
-                    <p class="text-sm text-[#6B6B6B]">Operating System for Productive Natural Assets</p>
+                <div class="flex flex-col space-y-1">
+                    <span class="text-xl font-serif font-extrabold tracking-[0.25em] text-[#171717] uppercase leading-none">KALLANI</span>
+                    <span class="text-[9px] font-mono tracking-[0.18em] text-[#171717] uppercase leading-none">NINA / OPERATING SYSTEM</span>
+                    <p class="text-xs text-[#6B6B6B] mt-2">Operating System for Productive Natural Assets</p>
                 </div>
                 <div>
                     <h5 class="font-semibold text-[#171717] mb-3 text-sm">Product</h5>

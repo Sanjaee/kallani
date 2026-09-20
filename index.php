@@ -27,13 +27,19 @@ if ($uri === '' || $uri === '/') {
 } elseif ($uri === '/capacity' || $uri === '/capacity-mapping' || preg_match('/^\/production-requirements\/([a-z0-9-]+)\/capacity$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capacity$/i', $uri)) {
     include $baseDir . '/resources/pages/capacity.php';
 } elseif ($uri === '/explore') {
-    include $baseDir . '/resources/pages/explore.php';
+    if (isset($_GET['id']) && $_GET['id'] !== '') {
+        include $baseDir . '/resources/pages/project_overview.php';
+    } else {
+        include $baseDir . '/resources/pages/explore.php';
+    }
 } elseif ($uri === '/allocations/new' || $uri === '/po-allocation' || preg_match('/^\/batches\/([a-z0-9-]+)\/allocate$/i', $uri)) {
     include $baseDir . '/resources/pages/po_allocation.php';
 } elseif ($uri === '/allocations' || $uri === '/my-allocations' || preg_match('/^\/my-allocations\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/allocations$/i', $uri)) {
     include $baseDir . '/resources/pages/allocations.php';
-} elseif ($uri === '/batches' || $uri === '/project' || preg_match('/^\/explore\/projects\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/batches\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/batches$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/asset$/i', $uri)) {
+} elseif ($uri === '/batches' || preg_match('/^\/batches\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/batches$/i', $uri)) {
     include $baseDir . '/resources/pages/batches.php';
+} elseif ($uri === '/project-overview' || preg_match('/^\/explore\/projects\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)$/i', $uri)) {
+    include $baseDir . '/resources/pages/project_overview.php';
 } elseif ($uri === '/milestones' || preg_match('/^\/projects\/([a-z0-9-]+)\/milestones$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/i', $uri)) {
     include $baseDir . '/resources/pages/milestones.php';
 } elseif ($uri === '/rab' || $uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/i', $uri)) {
@@ -46,9 +52,6 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/documents.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)$/', $uri)) {
-    // Default project view redirects/loads capacity mapping view in dark dashboard
-    include $baseDir . '/resources/pages/capacity.php';
 } else {
     http_response_code(404);
     include $baseDir . '/resources/pages/404.php';

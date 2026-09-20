@@ -60,7 +60,6 @@ ob_start();
     <div id="presentation-header" class="fixed top-6 left-6 z-40 flex items-center transition-all duration-500">
         <a href="<?php echo $basePrefix; ?>/" class="group flex items-center gap-3">
             <span class="text-xl sm:text-2xl font-serif font-light tracking-[0.3em] text-white uppercase block leading-none hover:text-emerald-300 transition-colors pl-[0.3em]">KALLANI</span>
-            <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-mono font-bold text-emerald-300 border border-emerald-500/30">NINA OS</span>
         </a>
     </div>
 
@@ -90,10 +89,6 @@ ob_start();
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-            <div class="scene-anim-item inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-950/80 px-3.5 py-1 text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-emerald-300 backdrop-blur-md mb-4">
-                <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>NINA OPERATING SYSTEM &bull; JPEG #01</span>
-            </div>
 
             <h1 class="scene-anim-item text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-tight">
                 <span>From Demand to Production.</span> <br class="hidden sm:inline" />
@@ -566,7 +561,10 @@ ob_start();
                 </div>
 
                 <div class="flex justify-end pt-2">
-                    <a href="<?php echo $basePrefix; ?>/rab" class="text-xs font-bold text-emerald-300 hover:underline">VIEW EXECUTION FLOW &rsaquo;</a>
+                    <a href="<?php echo $basePrefix; ?>/rab" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-emerald-400/40 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 text-xs font-mono font-bold tracking-wider text-emerald-300 transition">
+                        <span>VIEW EXECUTION FLOW</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
                 </div>
             </div>
         </div>

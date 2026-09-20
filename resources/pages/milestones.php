@@ -50,25 +50,25 @@ ob_start();
     <div class="relative z-10">
 
         <!-- ================= HERO (STYLE MATCHING BATCHES.PHP) ================= -->
-        <section class="relative overflow-hidden border-b border-white/10 shadow-2xl">
+        <section class="relative overflow-hidden shadow-2xl" style="border-bottom: none !important;">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/85 via-[#050D07]/45 to-[#050D07]/10"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/80 via-transparent to-transparent"></div>
 
-            <div class="relative grid min-h-[280px] grid-cols-1 items-start gap-8 px-6 py-8 lg:grid-cols-12 lg:px-8 lg:py-10">
+            <div class="relative grid min-h-[250px] grid-cols-1 items-start gap-8 px-6 pt-3 pb-6 lg:grid-cols-12 lg:px-8 lg:pt-3 lg:pb-8">
 
                 <!-- Left: breadcrumb, title, description -->
                 <div class="space-y-4 lg:col-span-7">
-                    <div class="inline-flex flex-wrap items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-gray-300 backdrop-blur-md">
-                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                        <a href="<?= $basePrefix ?>/allocations" class="hover:text-white">MY ALLOCATIONS</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white">NORTH KALIMANTAN PALM</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <a href="<?= $basePrefix ?>/batches" class="hover:text-white">BATCH NK-001</a>
-                        <span class="text-gray-500">&rsaquo;</span>
-                        <span class="font-bold text-white">MILESTONE 01</span>
-                    </div>
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <a href="<?= $basePrefix ?>/allocations" class="hover:text-white transition-colors">MY ALLOCATIONS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white transition-colors">NORTH KALIMANTAN PALM</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/batches" class="hover:text-white transition-colors">BATCH NK-001</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="font-bold text-white uppercase">MILESTONE 01</span>
+                    </nav>
 
                     <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
                         <span>09 / MILESTONE & EXECUTION</span>

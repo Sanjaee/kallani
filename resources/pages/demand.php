@@ -91,25 +91,23 @@ ob_start();
     <div class="relative z-10 space-y-6">
 
         <!-- ================= HERO + OVERVIEW STRIP ================= -->
-        <section class="overflow-hidden border border-white/10 shadow-2xl">
+        <section class="overflow-hidden border-0 shadow-2xl">
 
             <!-- Hero -->
-            <div class="relative min-h-[300px] p-6 sm:p-8 lg:px-10 lg:py-9">
+            <div class="relative min-h-[260px] px-6 pt-3 pb-8 sm:px-8 lg:px-10 lg:pt-3 lg:pb-8">
                 <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/75 via-[#050D07]/35 to-transparent"></div>
 
                 <div class="relative grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
 
                     <!-- Left: title & actions -->
-                    <div class="space-y-4 lg:col-span-7">
-                        <div class="space-y-2.5">
-                            <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-100">02 / Production Requirement</div>
-                            <span class="inline-flex items-center gap-2 rounded-md border border-white/15 bg-black/40 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-gray-100 backdrop-blur-md">
-                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                                Demand Intake
-                                <svg class="h-3 w-3 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-                            </span>
-                        </div>
+                    <div class="space-y-3 lg:col-span-7">
+                        <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300 mb-1">
+                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                            <a href="<?= $basePrefix ?>/demand" class="hover:text-white transition-colors">PRODUCTION REQUIREMENTS</a>
+                            <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                            <span class="font-bold text-white uppercase"><?= $e($demoId) ?></span>
+                        </nav>
 
                         <h1 class="text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">Start With Demand.</h1>
                         <p class="max-w-xl text-sm leading-relaxed text-gray-100/90">
