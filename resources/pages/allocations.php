@@ -518,7 +518,7 @@ ob_start();
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">MIN PO ALLOCATION</div>
-                                <div class="font-bold text-emerald-300 mt-0.5">Rp1,000,000,000</div>
+                                <div class="font-bold text-emerald-300 mt-0.5">Rp100,000,000</div>
                             </div>
                         </div>
 
@@ -986,8 +986,8 @@ ob_start();
                                 <td class="p-3 font-bold text-white">ALC-2026-NK001-0001</td>
                                 <td class="p-3">North Kalimantan Palm</td>
                                 <td class="p-3 text-emerald-300">NK-001</td>
-                                <td class="p-3 font-bold text-white">Rp1,000,000,000</td>
-                                <td class="p-3">1 / 15</td>
+                                <td class="p-3 font-bold text-white">Rp100,000,000</td>
+                                <td class="p-3">1 / 150</td>
                                 <td class="p-3"><span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO CONFIRMATION</span></td>
                                 <td class="p-3 text-right"><a href="<?= $basePrefix ?>/po-allocation" class="text-emerald-400 hover:underline">MANAGE →</a></td>
                             </tr>
@@ -995,8 +995,8 @@ ob_start();
                                 <td class="p-3 font-bold text-gray-400">ALC-2026-SK001-0002</td>
                                 <td class="p-3">South Kalimantan Palm</td>
                                 <td class="p-3">SK-001</td>
-                                <td class="p-3">Rp1,000,000,000</td>
-                                <td class="p-3">1 / 15</td>
+                                <td class="p-3">Rp100,000,000</td>
+                                <td class="p-3">1 / 150</td>
                                 <td class="p-3"><span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-bold text-gray-400 uppercase">REQUESTED</span></td>
                                 <td class="p-3 text-right"><span class="text-gray-500">VIEW</span></td>
                             </tr>

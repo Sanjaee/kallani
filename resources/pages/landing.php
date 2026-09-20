@@ -452,7 +452,7 @@ ob_start();
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">MINIMUM PO ALLOCATION</span>
-                            <div class="text-base font-extrabold text-emerald-300">Rp1,000,000,000</div>
+                            <div class="text-base font-extrabold text-emerald-300">Rp100,000,000</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</span>

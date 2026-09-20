@@ -441,9 +441,9 @@ ob_start();
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MINIMUM PRODUCTION ALLOCATION UNIT</div>
-                        <div class="text-xl font-extrabold text-white mt-0.5">Rp1,000,000,000</div>
+                        <div class="text-xl font-extrabold text-white mt-0.5">Rp100,000,000</div>
                         <div class="text-[9px] text-gray-400 mt-1">
-                            15 minimum allocation units per 100 HA production batch.
+                            150 minimum allocation units per 100 HA production batch.
                         </div>
                     </div>
                 </div>
