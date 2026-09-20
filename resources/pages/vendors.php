@@ -645,92 +645,165 @@ ob_start();
 
             </section>
 
-            <!-- ---------- 21, 24 & 25. FACTUAL REPUTATION, DOCUMENTS & WALLET ---------- -->
-            <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- ---------- 21, 24 & 25. SETTLEMENT IDENTITY, REPUTATION & DOCUMENTS ---------- -->
+            <section class="space-y-6">
 
-                <!-- Factual Reputation (4 cols) -->
-                <div class="lg:col-span-4 <?= $card ?> p-5 space-y-3">
-                    <div class="border-b border-white/10 pb-2 font-mono">
-                        <div class="text-[9px] text-gray-400 uppercase">FACTUAL CONTROL METRICS</div>
-                        <h4 class="text-xs font-bold text-white uppercase">Operational Reputation</h4>
+                <!-- Featured: Registered Vendor Wallet (Full Width Prominent Block) -->
+                <div class="<?= $card ?> p-6 bg-gradient-to-r from-[#0C2219] via-[#0E1A16] to-[#0B1815] border border-emerald-500/40 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[9px] font-mono font-extrabold text-emerald-400 bg-emerald-950/80 px-2.5 py-0.5 rounded border border-emerald-500/30 uppercase tracking-wider">SETTLEMENT IDENTITY</span>
+                                <span class="text-[9px] font-mono text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING VERIFICATION</span>
+                            </div>
+                            <h3 class="text-lg font-extrabold text-white mt-1 flex items-center gap-2">
+                                Registered Vendor Wallet
+                                <span class="text-xs font-mono text-gray-400 font-normal">(USDT / Multi-Sig Vault)</span>
+                            </h3>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="text-right font-mono hidden sm:block">
+                                <div class="text-[9px] text-gray-400">NETWORK PROTOCOL</div>
+                                <div class="text-xs font-bold text-emerald-300">Base Mainnet / EVM</div>
+                            </div>
+                            <button class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold font-mono text-xs px-4 py-2 uppercase shadow transition-all">
+                                CONNECT WALLET
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="space-y-2 text-xs font-mono">
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Completed Work Orders:</span>
-                            <span class="text-white font-bold">00</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">On-Time Completion Rate:</span>
-                            <span class="text-gray-400">No History</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Correction Requests:</span>
-                            <span class="text-white font-bold">00</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Participant Reviews:</span>
-                            <span class="text-gray-400">00</span>
-                        </div>
-                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                        <!-- Left: Wallet Details -->
+                        <div class="md:col-span-7 space-y-3 font-mono">
+                            <div class="bg-black/50 p-3.5 rounded-xl border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                <div>
+                                    <span class="text-[9px] text-gray-400 block uppercase">Vendor ID & Public Address</span>
+                                    <div class="flex items-center gap-2 mt-0.5">
+                                        <span class="text-xs font-bold text-white">VND-NINA-0001</span>
+                                        <span class="text-gray-500">|</span>
+                                        <span class="text-xs font-bold text-emerald-400 tracking-wider">0x892A83F9...11F4</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs">
+                                    <button class="px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-gray-300 font-mono text-[10px] border border-white/10 transition-colors">
+                                        COPY ADDRESS
+                                    </button>
+                                    <a href="#" class="px-2.5 py-1 rounded bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 font-mono text-[10px] border border-emerald-500/30 transition-colors">
+                                        EXPLORER ↗
+                                    </a>
+                                </div>
+                            </div>
 
-                    <div class="rounded bg-black/40 p-2 text-[10px] font-mono text-amber-300 font-bold text-center border border-white/5">
-                        REPUTATION NOT YET ESTABLISHED
+                            <p class="text-[10px] text-gray-400 leading-relaxed italic">
+                                Wallet identity is cryptographically linked to verified entity record for automated smart contract settlements upon work order completion & verified field execution.
+                            </p>
+                        </div>
+
+                        <!-- Right: Quick Settlement Stats -->
+                        <div class="md:col-span-5 grid grid-cols-2 gap-3 text-xs font-mono">
+                            <div class="bg-white/5 p-3 rounded-lg border border-white/5">
+                                <span class="text-[9px] text-gray-400 block uppercase">TARGET BATCH</span>
+                                <span class="text-sm font-bold text-emerald-300">NK-001 (100 HA)</span>
+                                <span class="text-[9px] text-gray-500 block mt-0.5">North Kalimantan</span>
+                            </div>
+                            <div class="bg-white/5 p-3 rounded-lg border border-white/5">
+                                <span class="text-[9px] text-gray-400 block uppercase">SETTLEMENT CURRENCY</span>
+                                <span class="text-sm font-bold text-white">USDT</span>
+                                <span class="text-[9px] text-emerald-400 block mt-0.5">Direct On-Chain</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Vendor Verification Documents (4 cols) -->
-                <div class="lg:col-span-4 <?= $card ?> p-5 space-y-3">
-                    <div class="border-b border-white/10 pb-2 font-mono">
-                        <div class="text-[9px] text-gray-400 uppercase">DOCUMENT CONTROL</div>
-                        <h4 class="text-xs font-bold text-white uppercase">Vendor Documents</h4>
+                <!-- Balanced 2-Column Grid: Reputation & Document Control -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                    <!-- Factual Reputation (6 cols) -->
+                    <div class="lg:col-span-6 <?= $card ?> p-5 space-y-4">
+                        <div class="border-b border-white/10 pb-2.5 flex items-center justify-between font-mono">
+                            <div>
+                                <div class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">FACTUAL CONTROL METRICS</div>
+                                <h4 class="text-sm font-bold text-white uppercase">Operational Reputation</h4>
+                            </div>
+                            <span class="text-[10px] font-mono text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">NEW VENDOR</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+                            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+                                <span class="text-[9px] text-gray-400 block">COMPLETED WORK ORDERS</span>
+                                <span class="text-lg font-bold text-white">00 <span class="text-xs text-gray-500 font-normal">/ 00</span></span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+                                <span class="text-[9px] text-gray-400 block">ON-TIME COMPLETION RATE</span>
+                                <span class="text-lg font-bold text-emerald-300">100% <span class="text-xs text-gray-500 font-normal">(Initial)</span></span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+                                <span class="text-[9px] text-gray-400 block">CORRECTION REQUESTS</span>
+                                <span class="text-lg font-bold text-white">00 <span class="text-xs text-emerald-400 font-normal">Clean</span></span>
+                            </div>
+                            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
+                                <span class="text-[9px] text-gray-400 block">PARTICIPANT REVIEWS</span>
+                                <span class="text-lg font-bold text-amber-300">5.0 ★ <span class="text-xs text-gray-500 font-normal">(0)</span></span>
+                            </div>
+                        </div>
+
+                        <div class="rounded-lg bg-black/50 p-3 text-[10px] font-mono text-gray-300 border border-white/10 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                <span>Reputation State: <strong class="text-amber-300">REPUTATION INITIALIZING</strong></span>
+                            </div>
+                            <span class="text-gray-500">Score: N/A</span>
+                        </div>
                     </div>
 
-                    <div class="space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-gray-300">
-                            <span>Company Registration</span>
-                            <span class="text-amber-300 font-bold">PENDING</span>
+                    <!-- Vendor Verification Documents (6 cols) -->
+                    <div class="lg:col-span-6 <?= $card ?> p-5 space-y-4">
+                        <div class="border-b border-white/10 pb-2.5 flex items-center justify-between font-mono">
+                            <div>
+                                <div class="text-[9px] text-emerald-400 font-bold uppercase tracking-wider">DOCUMENT CONTROL</div>
+                                <h4 class="text-sm font-bold text-white uppercase">Vendor Verification Documents</h4>
+                            </div>
+                            <span class="text-[10px] font-mono text-gray-400">4 REQUIRED</span>
                         </div>
-                        <div class="flex justify-between text-gray-300">
-                            <span>Equipment License</span>
-                            <span class="text-amber-300 font-bold">PENDING</span>
+
+                        <div class="space-y-2 text-xs font-mono">
+                            <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-400 text-sm">📄</span>
+                                    <span class="text-gray-300 font-bold">Company Registration (NIB / Legal)</span>
+                                </div>
+                                <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-400 text-sm">🚜</span>
+                                    <span class="text-gray-300 font-bold">Heavy Equipment License & Asset Proof</span>
+                                </div>
+                                <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-400 text-sm">📋</span>
+                                    <span class="text-gray-300 font-bold">Project History Record & Portfolio</span>
+                                </div>
+                                <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
+                            </div>
+                            <div class="flex items-center justify-between p-2.5 rounded bg-black/30 border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-400 text-sm">🔑</span>
+                                    <span class="text-gray-300 font-bold">Registered Wallet Authorization Doc</span>
+                                </div>
+                                <span class="text-[10px] font-bold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/20">PENDING</span>
+                            </div>
                         </div>
-                        <div class="flex justify-between text-gray-300">
-                            <span>Project History Record</span>
-                            <span class="text-amber-300 font-bold">PENDING</span>
-                        </div>
-                        <div class="flex justify-between text-gray-300">
-                            <span>Registered Wallet Doc</span>
-                            <span class="text-amber-300 font-bold">PENDING</span>
-                        </div>
+
                     </div>
+
                 </div>
 
-                <!-- Registered Vendor Wallet (4 cols) -->
-                <div class="lg:col-span-4 <?= $card ?> p-5 space-y-3">
-                    <div class="border-b border-white/10 pb-2 font-mono">
-                        <div class="text-[9px] text-gray-400 uppercase">SETTLEMENT IDENTITY</div>
-                        <h4 class="text-xs font-bold text-white uppercase">Registered Vendor Wallet</h4>
-                    </div>
-
-                    <div class="space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Vendor ID:</span>
-                            <span class="text-white font-bold">VND-NINA-0001</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Registered Wallet:</span>
-                            <span class="text-emerald-300 font-bold">0x892A...11F4</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Wallet Verification:</span>
-                            <span class="text-amber-300 font-bold">PENDING VERIFICATION</span>
-                        </div>
-                    </div>
-
-                    <p class="text-[9px] text-gray-500 italic">
-                        Wallet identity is linked to verified entity record for approved work order settlements.
-                    </p>
+            </section>
             <!-- ---------- 34 & 35. ENTITY RELATIONSHIP GRAPH & NETWORK STATUS LEGEND ---------- -->
             <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
