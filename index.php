@@ -19,37 +19,34 @@ if ($uri !== '/' && is_file($staticFile)) {
     return false;
 }
 
+// Router for NINA Operating System Dashboard
 if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/landing.php';
+} elseif ($uri === '/demand' || $uri === '/production-requirements') {
+    include $baseDir . '/resources/pages/demand.php';
+} elseif ($uri === '/capacity-mapping' || preg_match('/^\/projects\/([a-z0-9-]+)\/capacity$/', $uri)) {
+    include $baseDir . '/resources/pages/capacity.php';
 } elseif ($uri === '/explore') {
     include $baseDir . '/resources/pages/explore.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/overview.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/asset$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/asset.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/operations.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/verification$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/verification.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/capital.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/distribution$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/distribution.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/esg$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/esg.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/documents$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/documents.php';
-} elseif (preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri, $matches)) {
-    $_GET['project_id'] = $matches[1];
-    include $baseDir . '/resources/pages/project/audit.php';
+} elseif ($uri === '/my-allocations' || preg_match('/^\/projects\/([a-z0-9-]+)\/allocations$/', $uri)) {
+    include $baseDir . '/resources/pages/allocations.php';
+} elseif ($uri === '/batches' || preg_match('/^\/projects\/([a-z0-9-]+)\/batches$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/asset$/', $uri)) {
+    include $baseDir . '/resources/pages/batches.php';
+} elseif ($uri === '/milestones' || preg_match('/^\/projects\/([a-z0-9-]+)\/milestones$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/', $uri)) {
+    include $baseDir . '/resources/pages/milestones.php';
+} elseif ($uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/', $uri)) {
+    include $baseDir . '/resources/pages/rab.php';
+} elseif ($uri === '/vendors' || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/', $uri)) {
+    include $baseDir . '/resources/pages/vendors.php';
+} elseif ($uri === '/verification' || preg_match('/^\/projects\/([a-z0-9-]+)\/verification$/', $uri)) {
+    include $baseDir . '/resources/pages/verification.php';
+} elseif ($uri === '/documents' || preg_match('/^\/projects\/([a-z0-9-]+)\/documents$/', $uri)) {
+    include $baseDir . '/resources/pages/documents.php';
+} elseif ($uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
+    include $baseDir . '/resources/pages/audit.php';
+} elseif (preg_match('/^\/projects\/([a-z0-9-]+)$/', $uri)) {
+    // Default project view redirects/loads capacity mapping view in dark dashboard
+    include $baseDir . '/resources/pages/capacity.php';
 } else {
     http_response_code(404);
     include $baseDir . '/resources/pages/404.php';

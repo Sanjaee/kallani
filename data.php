@@ -1,6 +1,45 @@
 <?php
 
 return [
+    'system_constants' => [
+        'batch_area_ha' => 100,
+        'indicative_budget_per_batch_idr' => 15000000000, // Rp15B
+        'indicative_cost_per_ha_idr' => 150000000, // Rp150M/ha
+        'min_po_allocation_idr' => 1000000000, // Rp1B
+        'demo_demand_ha' => 1000,
+        'demo_batches_count' => 10,
+        'demo_production_requirement_idr' => 150000000000, // Rp150B
+        'target_24m_ha' => 10000,
+        'target_24m_batches' => 100,
+        'target_24m_modeled_value_idr' => 1500000000000, // Rp1.5T
+        'target_24m_service_fee_pct' => 3,
+        'target_24m_fee_opportunity_idr' => 45000000000, // Rp45B
+        'contract_horizon_years' => 20,
+        'development_ramp_up_years' => 5,
+        'commercial_delivery_years' => 15,
+    ],
+    'demo_demands' => [
+        [
+            'id' => 'DR-2026-001',
+            'buyer' => 'DEMO OFFTAKE BUYER',
+            'status' => 'EXAMPLE / SIMULATED',
+            'product' => 'Palm Oil Product',
+            'required_capacity_ha' => 1000,
+            'contract_horizon_years' => 20,
+            'development_years' => 5,
+            'commercial_delivery_years' => 15,
+            'preferred_region' => 'Indonesia',
+            'planting_density' => '143 trees / ha',
+            'verification_requirements' => [
+                'Verified Land',
+                'Verified Production Partner',
+                'Certified Seed Source',
+                'Production Traceability',
+                'Commercial Traceability',
+                'Audit Trail'
+            ]
+        ]
+    ],
     'projects' => [
         [
             'id' => 'north-kalimantan-palm',
