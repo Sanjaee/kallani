@@ -153,12 +153,12 @@ ob_start();
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[10px]">
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center">
                             <span class="font-bold text-emerald-300 block">NORTH KALIMANTAN</span>
-                            <span class="text-white block font-semibold">350 HA • 3 BATCHES</span>
+                            <span class="text-white block font-semibold">300 HA • 3 BATCHES</span>
                             <span class="text-[8px] text-gray-400 block">NK-001, NK-002, NK-003</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center">
                             <span class="font-bold text-emerald-300 block">SOUTH KALIMANTAN</span>
-                            <span class="text-white block font-semibold">650 HA • 7 BATCHES</span>
+                            <span class="text-white block font-semibold">700 HA • 7 BATCHES</span>
                             <span class="text-[8px] text-gray-400 block">SK-001 to SK-007</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center opacity-70">
@@ -254,8 +254,8 @@ ob_start();
                     <!-- Quick Filter Buttons -->
                     <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
                         <button type="button" class="rounded bg-emerald-950 px-3 py-1.5 text-emerald-300 border border-emerald-400/40 font-bold">ALL REGIONS</button>
-                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">North Kalimantan (350 HA)</button>
-                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">South Kalimantan (650 HA)</button>
+                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">North Kalimantan (300 HA)</button>
+                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">South Kalimantan (700 HA)</button>
                         <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">East Kalimantan (Pipeline)</button>
                     </div>
                 </div>
@@ -316,8 +316,8 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-[11px]">
-                            <div class="flex justify-between"><span>North Kalimantan Cluster</span><strong class="text-white">350 HA</strong></div>
-                            <div class="flex justify-between"><span>South Kalimantan Cluster</span><strong class="text-white">650 HA</strong></div>
+                            <div class="flex justify-between"><span>North Kalimantan Cluster</span><strong class="text-white">300 HA</strong></div>
+                            <div class="flex justify-between"><span>South Kalimantan Cluster</span><strong class="text-white">700 HA</strong></div>
                             <div class="flex justify-between border-t border-white/10 pt-1.5 text-emerald-300 font-bold"><span>Total Network Mapped</span><span>1,000 HA</span></div>
                         </div>
                     </div>
@@ -346,7 +346,7 @@ ob_start();
                         <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-2 flex flex-col justify-between">
                             <div>
                                 <span class="text-[9px] font-bold text-emerald-300 uppercase block">NORTH KALIMANTAN</span>
-                                <div class="text-base font-extrabold text-white mt-1">350 HA</div>
+                                <div class="text-base font-extrabold text-white mt-1">300 HA</div>
                                 <div class="text-[9px] text-gray-300 mt-1">Palm Production</div>
                                 <div class="text-[9px] text-gray-400">Standard Batch: 100 HA</div>
                             </div>
@@ -359,7 +359,7 @@ ob_start();
                         <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-2 flex flex-col justify-between">
                             <div>
                                 <span class="text-[9px] font-bold text-emerald-300 uppercase block">SOUTH KALIMANTAN</span>
-                                <div class="text-base font-extrabold text-white mt-1">650 HA</div>
+                                <div class="text-base font-extrabold text-white mt-1">700 HA</div>
                                 <div class="text-[9px] text-gray-300 mt-1">Palm Production</div>
                                 <div class="text-[9px] text-gray-400">Standard Batch: 100 HA</div>
                             </div>
@@ -453,14 +453,14 @@ ob_start();
                             <tr>
                                 <td class="py-2.5 px-2 font-bold text-white">Demo Production Partner</td>
                                 <td class="py-2.5 px-2">North Kalimantan</td>
-                                <td class="py-2.5 px-2 text-emerald-300 font-bold">350 HA</td>
+                                <td class="py-2.5 px-2 text-emerald-300 font-bold">300 HA</td>
                                 <td class="py-2.5 px-2 text-amber-300">Pending Verification</td>
                                 <td class="py-2.5 px-2 text-gray-400 text-[10px]">Not Established</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-2 font-bold text-white">Production Partner 02</td>
                                 <td class="py-2.5 px-2">South Kalimantan</td>
-                                <td class="py-2.5 px-2 text-emerald-300 font-bold">650 HA</td>
+                                <td class="py-2.5 px-2 text-emerald-300 font-bold">700 HA</td>
                                 <td class="py-2.5 px-2 text-amber-300">Pending Verification</td>
                                 <td class="py-2.5 px-2 text-gray-400 text-[10px]">Not Established</td>
                             </tr>

@@ -374,22 +374,22 @@ ob_start();
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">NORTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">350 HA MAPPED CAPACITY</span>
+                            <span class="text-emerald-300 font-bold">300 HA MAPPED CAPACITY</span>
                         </div>
                         <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-emerald-400 h-full w-[35%]"></div>
+                            <div class="bg-emerald-400 h-full w-[30%]"></div>
                         </div>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">SOUTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">650 HA MAPPED CAPACITY</span>
+                            <span class="text-emerald-300 font-bold">700 HA MAPPED CAPACITY</span>
                         </div>
                         <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-emerald-400 h-full w-[65%]"></div>
+                            <div class="bg-emerald-400 h-full w-[70%]"></div>
                         </div>
                     </div>
                 </div>

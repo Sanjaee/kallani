@@ -341,7 +341,7 @@ ob_start();
                         </div>
 
                         <div class="text-[10px] text-gray-400">
-                            Coverage: <strong class="text-emerald-300">North Kalimantan (350 HA)</strong> + <strong class="text-emerald-300">South Kalimantan (650 HA)</strong>
+                            Coverage: <strong class="text-emerald-300">North Kalimantan (300 HA)</strong> + <strong class="text-emerald-300">South Kalimantan (700 HA)</strong>
                         </div>
                     </div>
                 </div>
@@ -365,12 +365,12 @@ ob_start();
                             <tbody class="divide-y divide-white/5 text-gray-200">
                                 <tr>
                                     <td class="p-2 font-bold text-white">North Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">350 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">300 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED / DEMO</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-2 font-bold text-white">South Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">650 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">700 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED / DEMO</span></td>
                                 </tr>
                                 <tr>
@@ -730,7 +730,7 @@ ob_start();
                         </div>
                         <div class="bg-white/5 p-2 rounded border border-white/5">
                             <span class="text-emerald-400 font-bold block">3. Capacity Mapped</span>
-                            <span class="text-gray-400 text-[9px]">NK (350HA) + SK (650HA)</span>
+                            <span class="text-gray-400 text-[9px]">NK (300HA) + SK (700HA)</span>
                         </div>
                         <div class="bg-white/5 p-2 rounded border border-white/5">
                             <span class="text-emerald-300 font-bold block">4. Batches Created</span>

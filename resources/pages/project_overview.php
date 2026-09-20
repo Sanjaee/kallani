@@ -129,7 +129,7 @@ ob_start();
                             </div>
                             <div class="rounded border border-white/10 bg-white/5 p-2">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">MAPPED CAPACITY</div>
-                                <div class="text-base font-black text-emerald-300 mt-0.5">350 HA</div>
+                                <div class="text-base font-black text-emerald-300 mt-0.5">300 HA</div>
                             </div>
                         </div>
 
@@ -161,8 +161,8 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">MAPPED CAPACITY</div>
-                        <div class="text-xl font-extrabold leading-tight text-emerald-300">350 HA</div>
-                        <div class="text-[8px] text-gray-400">of 1,000 HA requirement (35%)</div>
+                        <div class="text-xl font-extrabold leading-tight text-emerald-300">300 HA</div>
+                        <div class="text-[8px] text-gray-400">of 1,000 HA requirement (30%)</div>
                     </div>
                 </div>
 
@@ -211,7 +211,7 @@ ob_start();
                             </div>
                             <div class="flex items-center justify-between py-1 border-b border-white/5">
                                 <span class="text-gray-400 flex items-center gap-1.5"><?= $svg($ic['target'], 'w-3.5 h-3.5 text-emerald-300') ?> Mapped Capacity</span>
-                                <span class="font-bold text-emerald-300">350 HA</span>
+                                <span class="font-bold text-emerald-300">300 HA</span>
                             </div>
                             <div class="flex items-center justify-between py-1">
                                 <span class="text-gray-400 flex items-center gap-1.5"><?= $svg($ic['shield'], 'w-3.5 h-3.5 text-emerald-300') ?> Standard Batch</span>
@@ -307,7 +307,7 @@ ob_start();
                                 </div>
                                 <div class="space-y-1 text-[9px] text-gray-400">
                                     <div class="flex justify-between"><span>Region</span><span class="text-white font-bold">North Kalimantan</span></div>
-                                    <div class="flex justify-between"><span>Mapped Area</span><span class="text-emerald-300 font-bold">350 HA</span></div>
+                                    <div class="flex justify-between"><span>Mapped Area</span><span class="text-emerald-300 font-bold">300 HA</span></div>
                                     <div class="flex justify-between"><span>Network Capacity</span><span class="text-white font-bold">4,000 HA</span></div>
                                     <div class="flex justify-between"><span>GIS Record</span><span class="text-amber-300">Pending / Demo</span></div>
                                     <div class="flex justify-between"><span>Documentation</span><span class="text-amber-300">Pending / Demo</span></div>
@@ -385,7 +385,7 @@ ob_start();
                         <div class="grid grid-cols-3 gap-3 text-center">
                             <div class="rounded-xl border border-emerald-400/30 bg-[#071F17] p-3">
                                 <div class="text-[8px] font-bold text-emerald-300 uppercase">PROJECT CAPACITY</div>
-                                <div class="text-base font-extrabold text-white">350 HA</div>
+                                <div class="text-base font-extrabold text-white">300 HA</div>
                                 <div class="text-[7px] text-emerald-300 uppercase">MAPPED CAPACITY</div>
                             </div>
 

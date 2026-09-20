@@ -21,8 +21,8 @@ $demoBuyer = $demoDemand['buyer'] ?? 'DEMO OFFTAKE BUYER';
    pos  : CSS object-position so the same photo crops differently per card
    badge: demo | pipeline | planned | pending      verification: pending | pipeline | verified */
 $projects = [
-    ['id' => 1, 'name' => 'North Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'North Kalimantan',   'network' => 4000, 'mapped' => 350, 'partner' => 'Demo Production Partner',   'verification' => 'pending',  'badge' => 'demo',     'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => false], 'img' => '/1.jpg', 'pos' => '50% 35%', 'lat' => 2.85,  'lng' => 116.55],
-    ['id' => 2, 'name' => 'South Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'South Kalimantan',   'network' => 2500, 'mapped' => 650, 'partner' => 'Demo Production Partner 2', 'verification' => 'pending',  'badge' => 'pipeline', 'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => false, 'audit' => false], 'img' => '/2.jpg', 'pos' => '50% 60%', 'lat' => -2.98, 'lng' => 115.08],
+    ['id' => 1, 'name' => 'North Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'North Kalimantan',   'network' => 4000, 'mapped' => 300, 'partner' => 'Demo Production Partner',   'verification' => 'pending',  'badge' => 'demo',     'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => false], 'img' => '/1.jpg', 'pos' => '50% 35%', 'lat' => 2.85,  'lng' => 116.55],
+    ['id' => 2, 'name' => 'South Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'South Kalimantan',   'network' => 2500, 'mapped' => 700, 'partner' => 'Demo Production Partner 2', 'verification' => 'pending',  'badge' => 'pipeline', 'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => false, 'audit' => false], 'img' => '/2.jpg', 'pos' => '50% 60%', 'lat' => -2.98, 'lng' => 115.08],
     ['id' => 3, 'name' => 'Sumatra Agro Project',    'category' => 'Agriculture',     'region' => 'Sumatra',            'network' => 1800, 'mapped' => 0,   'partner' => 'Demo Production Partner 3', 'verification' => 'pipeline', 'badge' => 'planned',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => false, 'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/1.jpg', 'pos' => '20% 70%', 'lat' => -2.2,  'lng' => 103.5],
     ['id' => 4, 'name' => 'Central Kalimantan Forest', 'category' => 'Forestry',      'region' => 'Central Kalimantan', 'network' => 1200, 'mapped' => 0,   'partner' => 'Demo Production Partner 4', 'verification' => 'pending',  'badge' => 'pending',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => false, 'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/2.jpg', 'pos' => '80% 40%', 'lat' => -1.7,  'lng' => 113.4],
     ['id' => 5, 'name' => 'West Kalimantan Agro',    'category' => 'Agriculture',     'region' => 'West Kalimantan',    'network' => 1500, 'mapped' => 0,   'partner' => 'Demo Production Partner 5', 'verification' => 'pipeline', 'badge' => 'planned',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/1.jpg', 'pos' => '85% 55%', 'lat' => -0.1,  'lng' => 110.6],
@@ -434,13 +434,13 @@ ob_start();
                     <dl class="mt-3 space-y-3 text-[11px]">
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3">
                             <dt class="flex items-center gap-2 text-white"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>North Kalimantan</dt>
-                            <dd class="text-right font-bold text-white">350 HA</dd>
-                            <dd class="text-right text-gray-400">35%</dd>
+                            <dd class="text-right font-bold text-white">300 HA</dd>
+                            <dd class="text-right text-gray-400">30%</dd>
                         </div>
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3">
                             <dt class="flex items-center gap-2 text-white"><span class="h-2 w-2 rounded-full bg-sky-400"></span>South Kalimantan</dt>
-                            <dd class="text-right font-bold text-white">650 HA</dd>
-                            <dd class="text-right text-gray-400">65%</dd>
+                            <dd class="text-right font-bold text-white">700 HA</dd>
+                            <dd class="text-right text-gray-400">70%</dd>
                         </div>
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3 border-t border-white/15 pt-3 font-bold text-white">
                             <dt>Total</dt>

@@ -319,7 +319,7 @@ ob_start();
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white/5 p-3 rounded-lg border border-white/5 text-xs font-mono">
                             <div>
                                 <div class="text-[9px] text-gray-400">MAPPED CAPACITY</div>
-                                <div class="font-bold text-emerald-300 text-sm mt-0.5">350 HA</div>
+                                <div class="font-bold text-emerald-300 text-sm mt-0.5">300 HA</div>
                                 <div class="text-[9px] text-gray-500">North Kalimantan</div>
                             </div>
                             <div>
