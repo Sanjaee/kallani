@@ -5,7 +5,7 @@ if (!file_exists($configPath)) {
 }
 $config = require $configPath;
 $project = $config['projects'][0];
-$title = 'Kallani — Operating System for Productive Natural Assets';
+$title = 'Kallani — NINA Operating System for Productive Natural Assets';
 $basePrefix = (strpos($_SERVER['REQUEST_URI'] ?? '', '/kallani/public') === 0) ? '/kallani/public' : '';
 ob_start();
 ?>
@@ -33,7 +33,7 @@ ob_start();
         'PO': 'Mitra PO allocations collected for verified production batch requirements.',
         'RAB': '9-category cost structure linking requirement directly to vendor work orders.',
         'Execution': 'Field work orders, GIS mapping, evidence upload, and multi-tier verification.',
-        'Settlement': 'Harvesting, weighing, processing, delivery, and commercial transaction settlement.'
+        'Settlement': 'Harvesting, weighing, quality acceptance, processing, delivery, commercial acceptance, and settlement.'
     }
 }">
 
@@ -41,7 +41,7 @@ ob_start();
     <div id="intro-loader" class="fixed inset-0 z-[9999] bg-[#0F1C0E] text-white flex flex-col items-center justify-center p-6 select-none">
         <div class="max-w-4xl w-full text-center">
             <h1 style="font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.28em; color: #FFFFFF; text-transform: uppercase; font-weight: 300; margin-bottom: 0.75rem; text-align: center; text-shadow: 0 0 50px rgba(197, 160, 89, 0.15); padding-left: 0.28em;">KALLANI</h1>
-            <p class="tagline" style="font-size: clamp(0.85rem, 1.2vw, 1.1rem); letter-spacing: 0.45em; color: #C5A059; text-transform: uppercase; font-weight: 400; opacity: 0.95; padding-left: 0.45em; margin-bottom: 2.5rem;">NINA OPERATING SYSTEM &bull; PRODUCTIVE ASSETS</p>
+            <p class="tagline" style="font-size: clamp(0.85rem, 1.2vw, 1.1rem); letter-spacing: 0.45em; color: #C5A059; text-transform: uppercase; font-weight: 400; opacity: 0.95; padding-left: 0.45em; margin-bottom: 2.5rem;">NINA OPERATING SYSTEM &bull; PRODUCTIVE NATURAL ASSETS</p>
 
             <!-- Loader Progress Bar & Counter -->
             <div class="space-y-3 max-w-md mx-auto">
@@ -107,7 +107,7 @@ ob_start();
                     <div class="text-[8px] text-gray-400">Standard Unit</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
-                    <div class="text-[9px] text-gray-400 uppercase font-bold">REQUIREMENT</div>
+                    <div class="text-[9px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</div>
                     <div class="text-sm font-black text-emerald-300 mt-0.5">Rp15B</div>
                     <div class="text-[8px] text-gray-400">Rp150M / HA Modeled</div>
                 </div>
@@ -117,16 +117,16 @@ ob_start();
                     <div class="text-[8px] text-gray-400">Minimum Unit</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
-                    <div class="text-[9px] text-gray-400 uppercase font-bold">HORIZON</div>
+                    <div class="text-[9px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</div>
                     <div class="text-sm font-black text-amber-300 mt-0.5">20 YEARS</div>
-                    <div class="text-[8px] text-gray-400">Ramp Up & Delivery</div>
+                    <div class="text-[8px] text-gray-400">5 Yrs Ramp-up + 15 Yrs Delivery</div>
                 </div>
             </div>
 
             <!-- CTAs -->
             <div class="scene-anim-item flex flex-wrap items-center justify-center gap-4">
-                <a href="<?php echo $basePrefix; ?>/explore" class="rounded-xl bg-emerald-500 hover:bg-emerald-400 px-6 py-3 text-xs sm:text-sm font-extrabold text-emerald-950 uppercase tracking-wide shadow-xl transition-all hover:scale-105">
-                    EXPLORE PRODUCTION
+                <a href="<?php echo $basePrefix; ?>/production-programs" class="rounded-xl bg-emerald-500 hover:bg-emerald-400 px-6 py-3 text-xs sm:text-sm font-extrabold text-emerald-950 uppercase tracking-wide shadow-xl transition-all hover:scale-105">
+                    VIEW PRODUCTION PROGRAMS
                 </a>
                 <button type="button" onclick="window.goToScene(1)" class="rounded-xl border border-white/20 bg-white/10 hover:bg-white/20 px-6 py-3 text-xs sm:text-sm font-bold text-white uppercase tracking-wide backdrop-blur-md transition-all hover:scale-105">
                     VIEW SYSTEM FLOW
@@ -307,7 +307,7 @@ ob_start();
                     </div>
 
                     <p class="text-[10px] italic text-gray-400">
-                        Example buyer requirement mapped into verified regional production clusters.
+                        Example buyer requirement mapped into candidate regional production clusters.
                     </p>
                 </div>
             </div>
@@ -328,7 +328,7 @@ ob_start();
 
             <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">Convert Demand Into Production Capacity.</h2>
             <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Buyer requirement mapped into verified land capacity across regional production clusters.
+                Buyer requirement mapped into regional production capacity across regional clusters.
             </p>
 
             <div class="scene-anim-item bg-[#142314]/80 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
@@ -341,9 +341,9 @@ ob_start();
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">NORTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">350 HA</span>
+                            <span class="text-emerald-300 font-bold">350 HA MAPPED CAPACITY</span>
                         </div>
-                        <div class="text-[10px] text-gray-400">3.5 Standard Batches (NK-001 to NK-004)</div>
+                        <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
                             <div class="bg-emerald-400 h-full w-[35%]"></div>
                         </div>
@@ -352,13 +352,20 @@ ob_start();
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">SOUTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">650 HA</span>
+                            <span class="text-emerald-300 font-bold">650 HA MAPPED CAPACITY</span>
                         </div>
-                        <div class="text-[10px] text-gray-400">6.5 Standard Batches (SK-001 to SK-007)</div>
+                        <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
                             <div class="bg-emerald-400 h-full w-[65%]"></div>
                         </div>
                     </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-black/50 border border-emerald-500/30 text-[11px] font-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                        <strong class="text-emerald-300">EXECUTABLE BATCH STRUCTURE:</strong> <span class="text-white">10 &times; 100 HA (Batches NK-001 to NK-010)</span>
+                    </div>
+                    <span class="text-[10px] text-gray-400 italic">Actual batch assignment executed upon verified capacity</span>
                 </div>
 
                 <div class="flex items-center justify-between border-t border-white/10 pt-3 text-xs">
@@ -407,7 +414,7 @@ ob_start();
 
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
-                            <span class="text-[8px] text-gray-400 uppercase font-bold">PRODUCTION REQUIREMENT</span>
+                            <span class="text-[8px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</span>
                             <div class="text-base font-extrabold text-white">Rp15,000,000,000</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
@@ -416,11 +423,11 @@ ob_start();
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</span>
-                            <div class="text-sm font-bold text-white">20 Years</div>
+                            <div class="text-sm font-bold text-white">20 Years Total</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">DEVELOPMENT / RAMP-UP</span>
-                            <div class="text-sm font-bold text-amber-300">5 Years (15 Yrs Commercial)</div>
+                            <div class="text-sm font-bold text-amber-300">5 Yrs Ramp-up + 15 Yrs Delivery</div>
                         </div>
                     </div>
                 </div>
@@ -490,24 +497,26 @@ ob_start();
                     </div>
                 </div>
 
-                <!-- MY PRODUCTION ALLOCATION CARD -->
+                <!-- MY PRODUCTION ALLOCATION CARD (SIMULATED STATE) -->
                 <div class="scene-anim-item lg:col-span-7 bg-[#142314]/80 p-6 rounded-3xl border border-emerald-500/40 shadow-2xl backdrop-blur-md text-left space-y-4">
                     <div class="flex items-center justify-between border-b border-white/10 pb-3">
                         <div>
-                            <div class="text-[9px] font-mono font-bold text-emerald-300 uppercase">MY PRODUCTION ALLOCATION</div>
-                            <h3 class="text-base font-bold text-white">BATCH NK-001 &bull; 100 HA</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED STATE / DEMO PROTOTYPE</span>
+                            </div>
+                            <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; 100 HA ALLOCATION</h3>
                         </div>
                         <span class="font-bold text-emerald-300 text-sm">Rp1,000,000,000</span>
                     </div>
 
                     <div class="space-y-2 text-[10px] font-mono">
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
-                            <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> PO Collected</span>
-                            <span class="text-gray-400">100%</span>
+                            <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> PO Collection (Simulated State)</span>
+                            <span class="text-gray-400 font-bold">100% Collected</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
-                            <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Milestone 01 (Land Prep)</span>
-                            <span class="text-amber-300">In Execution</span>
+                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Milestone 01 (Land Prep)</span>
+                            <span class="text-amber-300">Simulated Execution</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5 text-gray-500">
                             <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gray-600"></span> Milestone 02 &ndash; 04</span>
@@ -548,7 +557,7 @@ ob_start();
                     </div>
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
                         <span class="text-gray-400 font-bold block">VENDORS</span>
-                        <span class="text-emerald-300 block">Verified Partners</span>
+                        <span class="text-amber-300 block">Production Partners (Verification Pending)</span>
                     </div>
                     <div class="p-3 rounded-xl bg-black/40 border border-white/10 space-y-1">
                         <span class="text-gray-400 font-bold block">REGISTERED WALLET</span>
@@ -641,18 +650,20 @@ ob_start();
             </p>
 
             <div class="scene-anim-item bg-[#142314]/85 p-6 rounded-3xl border border-emerald-500/50 shadow-2xl backdrop-blur-md text-left space-y-4">
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 text-[9px] font-mono text-center">
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">HARVEST &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">WEIGHING &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PROCESSING &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PRODUCT &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">BUYER &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-white/10 font-bold text-white">DELIVERY &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-emerald-950 border border-emerald-400 font-bold text-emerald-300">SETTLEMENT ✓</div>
+                <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-1.5 text-[8px] font-mono text-center">
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">HARVEST &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">WEIGHING &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">QUALITY ACCEPTANCE &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PROCESSING &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PRODUCT &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">BUYER &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">DELIVERY &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">COMMERCIAL ACCEPTANCE &rsaquo;</div>
+                    <div class="p-2 rounded-xl bg-emerald-950 border border-emerald-400 font-bold text-emerald-300 col-span-3 sm:col-span-1">SETTLEMENT ✓</div>
                 </div>
 
                 <p class="text-[9px] italic text-gray-400 text-center">
-                    Settlement is recorded against the completed production and commercial transaction.
+                    Commercial settlement requires verified delivery and commercial acceptance before transaction closure.
                 </p>
             </div>
         </div>
@@ -698,8 +709,8 @@ ob_start();
 
             <!-- Final CTAs -->
             <div class="scene-anim-item flex flex-wrap items-center justify-center gap-4 pt-2">
-                <a href="<?php echo $basePrefix; ?>/explore" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs uppercase tracking-wide shadow-xl transition-all hover:scale-105">
-                    ENTER DEMO SYSTEM &rsaquo;
+                <a href="<?php echo $basePrefix; ?>/production-programs" class="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold text-xs uppercase tracking-wide shadow-xl transition-all hover:scale-105">
+                    VIEW PRODUCTION PROGRAMS &rsaquo;
                 </a>
                 <a href="<?php echo $basePrefix; ?>/explore" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all hover:scale-105 uppercase tracking-wide">
                     EXPLORE PROJECTS
