@@ -218,6 +218,15 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                         </div>
                         <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'vendors') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">13</span>
                     </a>
+
+                    <!-- 15 Commercial Delivery -->
+                    <a href="<?php echo $basePrefix; ?>/commercial-output" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'commercial') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                            <span>Commercial Delivery</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'commercial') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">15</span>
+                    </a>
                 </div>
 
                 <!-- CATEGORY 3: TRANSPARENCY -->

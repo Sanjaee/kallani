@@ -50,6 +50,8 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/verification.php';
 } elseif ($uri === '/documents' || preg_match('/^\/projects\/([a-z0-9-]+)\/documents$/', $uri)) {
     include $baseDir . '/resources/pages/documents.php';
+} elseif ($uri === '/commercial-output' || $uri === '/harvest' || $uri === '/delivery' || $uri === '/commercial' || preg_match('/^\/projects\/([a-z0-9-]+)\/commercial$/i', $uri)) {
+    include $baseDir . '/resources/pages/commercial_output.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
 } else {
