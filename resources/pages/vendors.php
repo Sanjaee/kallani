@@ -929,7 +929,7 @@ ob_start();
                     </div>
                     <div>
                         <label class="text-[9px] text-gray-400 block mb-1">ACTUAL CAPABILITY / AREA</label>
-                        <input type="text" placeholder="e.g. 350 HA Land / 10 Excavators" class="w-full rounded bg-black/40 border border-white/10 px-3 py-2 text-white placeholder-gray-500 focus:border-emerald-500" />
+                        <input type="text" placeholder="e.g. 300 HA Land / 10 Excavators" class="w-full rounded bg-black/40 border border-white/10 px-3 py-2 text-white placeholder-gray-500 focus:border-emerald-500" />
                     </div>
                 </div>
             </section>

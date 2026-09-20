@@ -571,7 +571,7 @@ ob_start();
                             </div>
                             <div class="p-1.5 rounded bg-white/5">
                                 <div class="text-gray-400">ACTIVE CAP.</div>
-                                <div class="font-bold text-emerald-300 text-[10px]">350 HA</div>
+                                <div class="font-bold text-emerald-300 text-[10px]">300 HA</div>
                             </div>
                             <div class="p-1.5 rounded bg-white/5">
                                 <div class="text-gray-400">COMPLETED</div>
