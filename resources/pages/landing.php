@@ -689,20 +689,47 @@ ob_start();
                 Settlement is recorded against completed production and commercial transactions.
             </p>
 
-            <div class="scene-anim-item bg-[#142314]/85 p-6 rounded-3xl border border-emerald-500/50 shadow-2xl backdrop-blur-md text-left space-y-4">
-                <div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-1.5 text-[8px] font-mono text-center">
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">HARVEST &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">WEIGHING &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">QUALITY ACCEPTANCE &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PROCESSING &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">PRODUCT &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">BUYER &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">DELIVERY &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-black/40 border border-white/10 font-bold text-white">COMMERCIAL ACCEPTANCE &rsaquo;</div>
-                    <div class="p-2 rounded-xl bg-emerald-950 border border-emerald-400 font-bold text-emerald-300 col-span-3 sm:col-span-1">SETTLEMENT ✓</div>
+            <div class="scene-anim-item bg-[#142314]/85 p-6 sm:p-8 rounded-3xl border border-emerald-500/50 shadow-2xl backdrop-blur-md text-left space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono">
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">1. HARVEST &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">01</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">2. WEIGHING &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">02</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">3. QUALITY ACCEPTANCE &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">03</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">4. PROCESSING &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">04</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">5. PRODUCT &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">05</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">6. BUYER &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">06</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">7. DELIVERY &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">07</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-black/40 border border-white/15 flex items-center justify-between gap-2 hover:border-emerald-500/50 transition-colors">
+                        <span class="text-xs sm:text-sm font-extrabold text-white tracking-wide">8. COMMERCIAL ACCEPTANCE &rsaquo;</span>
+                        <span class="text-[10px] text-emerald-400 font-bold">08</span>
+                    </div>
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-emerald-950 border border-emerald-400 flex items-center justify-between gap-2 shadow-lg shadow-emerald-950/50">
+                        <span class="text-xs sm:text-sm font-extrabold text-emerald-300 tracking-wide">9. SETTLEMENT ✓</span>
+                        <span class="text-[10px] text-emerald-300 font-bold uppercase">FINAL</span>
+                    </div>
                 </div>
 
-                <p class="text-[9px] italic text-gray-400 text-center">
+                <p class="text-xs sm:text-sm italic text-gray-300 text-center leading-relaxed pt-1">
                     Commercial settlement requires verified delivery and commercial acceptance before transaction closure.
                 </p>
             </div>
