@@ -24,25 +24,27 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/landing.php';
 } elseif ($uri === '/demand' || $uri === '/production-requirements') {
     include $baseDir . '/resources/pages/demand.php';
-} elseif ($uri === '/capacity-mapping' || preg_match('/^\/projects\/([a-z0-9-]+)\/capacity$/', $uri)) {
+} elseif ($uri === '/capacity' || $uri === '/capacity-mapping' || preg_match('/^\/production-requirements\/([a-z0-9-]+)\/capacity$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capacity$/i', $uri)) {
     include $baseDir . '/resources/pages/capacity.php';
 } elseif ($uri === '/explore') {
     include $baseDir . '/resources/pages/explore.php';
-} elseif ($uri === '/my-allocations' || preg_match('/^\/projects\/([a-z0-9-]+)\/allocations$/', $uri)) {
+} elseif ($uri === '/allocations/new' || $uri === '/po-allocation' || preg_match('/^\/batches\/([a-z0-9-]+)\/allocate$/i', $uri)) {
+    include $baseDir . '/resources/pages/po_allocation.php';
+} elseif ($uri === '/allocations' || $uri === '/my-allocations' || preg_match('/^\/my-allocations\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/allocations$/i', $uri)) {
     include $baseDir . '/resources/pages/allocations.php';
-} elseif ($uri === '/batches' || preg_match('/^\/projects\/([a-z0-9-]+)\/batches$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/asset$/', $uri)) {
+} elseif ($uri === '/batches' || $uri === '/project' || preg_match('/^\/explore\/projects\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/batches\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/batches$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/asset$/i', $uri)) {
     include $baseDir . '/resources/pages/batches.php';
-} elseif ($uri === '/milestones' || preg_match('/^\/projects\/([a-z0-9-]+)\/milestones$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/', $uri)) {
+} elseif ($uri === '/milestones' || preg_match('/^\/projects\/([a-z0-9-]+)\/milestones$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/i', $uri)) {
     include $baseDir . '/resources/pages/milestones.php';
-} elseif ($uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/', $uri)) {
+} elseif ($uri === '/rab' || $uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/i', $uri)) {
     include $baseDir . '/resources/pages/rab.php';
-} elseif ($uri === '/vendors' || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/', $uri)) {
+} elseif ($uri === '/vendors' || preg_match('/^\/vendors\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/i', $uri)) {
     include $baseDir . '/resources/pages/vendors.php';
 } elseif ($uri === '/verification' || preg_match('/^\/projects\/([a-z0-9-]+)\/verification$/', $uri)) {
     include $baseDir . '/resources/pages/verification.php';
 } elseif ($uri === '/documents' || preg_match('/^\/projects\/([a-z0-9-]+)\/documents$/', $uri)) {
     include $baseDir . '/resources/pages/documents.php';
-} elseif ($uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
+} elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
 } elseif (preg_match('/^\/projects\/([a-z0-9-]+)$/', $uri)) {
     // Default project view redirects/loads capacity mapping view in dark dashboard
