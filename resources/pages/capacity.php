@@ -405,7 +405,7 @@ ob_start();
                         <span>Minimum PO Allocation</span>
                     </div>
                     <div class="<?= $cellCls ?> space-y-2 p-4">
-                        <div class="text-3xl font-extrabold text-white">Rp1B</div>
+                        <div class="text-3xl font-extrabold text-white">Rp100M</div>
                         <p class="text-[10px] leading-relaxed text-gray-400">Minimum participation allocation per production program, subject to final legal and commercial structure.</p>
                     </div>
                 </div>

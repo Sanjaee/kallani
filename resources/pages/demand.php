@@ -477,7 +477,7 @@ ob_start();
                         <div class="text-center text-gray-500 font-bold text-xs">↓</div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
                             <span class="text-gray-300">PRODUCTION ALLOCATIONS</span>
-                            <span class="font-bold text-emerald-300">Rp1B Min Unit</span>
+                            <span class="font-bold text-emerald-300">Rp100M Min Unit</span>
                         </div>
                     </div>
                 </div>

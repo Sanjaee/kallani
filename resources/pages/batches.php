@@ -129,7 +129,7 @@ function batchPage() {
                             <div class="flex items-center justify-between"><span class="text-gray-400">Region</span><span class="font-bold text-white">North Kalimantan, Indonesia</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">Rp15B</span></div>
-                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">Rp1B</span></div>
+                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">Rp100M</span></div>
                         </div>
                         <p class="text-[9px] italic text-gray-400 leading-tight">Prototype / demonstration data. Not a representation of a confirmed or unverified contract program.</p>
                     </div>
@@ -166,7 +166,7 @@ function batchPage() {
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">03 &mdash; PO Allocation</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">Rp1B MIN.</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">Rp100M MIN.</div>
                         <div class="text-[10px] text-gray-400">Minimum allocation</div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ function batchPage() {
                                 <div class="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">Quick Summary</div>
                                 <div class="flex justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
                                 <div class="flex justify-between"><span class="text-gray-400">Requirement</span><span class="font-bold text-emerald-300">Rp15B</span></div>
-                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">Rp1B</span></div>
+                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">Rp100M</span></div>
                                 <div class="flex justify-between"><span class="text-gray-400">Status</span><span class="font-bold text-amber-300 flex items-center gap-1"><span class="text-[10px]">ⓘ</span> Pending</span></div>
                             </div>
                         </div>
@@ -306,7 +306,7 @@ function batchPage() {
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">MINIMUM ALLOCATION</div>
-                                <div class="text-xs font-extrabold text-white mt-1">Rp1B</div>
+                                <div class="text-xs font-extrabold text-white mt-1">Rp100M</div>
                             </div>
                         </div>
                     </div>
@@ -316,7 +316,7 @@ function batchPage() {
                         <div>
                             <h3 class="text-xs font-bold uppercase tracking-wider text-white">Standard Allocation Unit</h3>
                             <p class="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                                One 100 HA batch is modeled at Rp15B and can be represented by up to 15 minimum Rp1B PO allocation units, subject to the final commercial and legal structure.
+                                One 100 HA batch is modeled at Rp15B and represented by 150 minimum Rp100M PO allocation units, allowing members to diversify capital across multiple batches.
                             </p>
                         </div>
 
@@ -326,14 +326,14 @@ function batchPage() {
                                 <div class="text-emerald-300">Rp15B</div>
                                 <div class="text-[7px] text-gray-400 font-normal uppercase mt-0.5">Batch Requirement</div>
                             </div>
-                            <div class="text-gray-400 font-normal">+</div>
+                            <div class="text-gray-400 font-normal">÷</div>
                             <div>
-                                <div class="text-emerald-300">Rp1B</div>
+                                <div class="text-emerald-300">Rp100M</div>
                                 <div class="text-[7px] text-gray-400 font-normal uppercase mt-0.5">Min. Allocation</div>
                             </div>
                             <div class="text-gray-400 font-normal">=</div>
                             <div>
-                                <div class="text-white text-sm">15</div>
+                                <div class="text-white text-sm">150</div>
                                 <div class="text-[7px] text-emerald-300 font-bold uppercase mt-0.5">Allocation Units</div>
                             </div>
                         </div>
@@ -734,7 +734,7 @@ function batchPage() {
                 <div class="grid grid-cols-2 gap-3 text-xs">
                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-3">
                         <div class="text-[9px] uppercase text-gray-400">Allocation Unit</div>
-                        <div class="text-sm font-extrabold text-white mt-0.5">Rp1B</div>
+                        <div class="text-sm font-extrabold text-white mt-0.5">Rp100M</div>
                     </div>
                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-3">
                         <div class="text-[9px] uppercase text-gray-400">Batch 100 HA Requirement</div>
@@ -782,7 +782,7 @@ function batchPage() {
                 </div>
                 <h3 class="text-lg font-extrabold text-white">PO Allocation Requested</h3>
                 <p class="text-xs text-gray-300 max-w-sm mx-auto">
-                    Your allocation request for 1 Unit (Rp1B) on Batch NK-001 has been registered for prototype review.
+                    Your allocation request for 1 Unit (Rp100M) on Batch NK-001 has been registered for prototype review.
                 </p>
                 <div class="pt-2 flex justify-center gap-3">
                     <a href="<?= $basePrefix ?>/allocations" class="rounded-full bg-emerald-400 px-6 py-2 text-xs font-bold uppercase text-[#04100B] hover:brightness-110">Go to My Allocations</a>

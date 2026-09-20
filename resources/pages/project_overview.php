@@ -482,9 +482,9 @@ ob_start();
 
                             <div class="rounded bg-white/5 p-2.5 border border-white/5 space-y-1">
                                 <div class="text-gray-400 uppercase text-[8px]">MINIMUM PO ALLOCATION</div>
-                                <div class="text-base font-extrabold text-emerald-300">Rp1B</div>
-                                <p class="text-[7.5px] text-gray-400">
-                                    A standard 100 HA batch is modeled at Rp15B. The minimum PO allocation is Rp1B, subject to the final commercial and legal structure.
+                                <div class="text-base font-extrabold text-emerald-300">Rp100M</div>
+                                <p class="text-gray-400 mt-1">
+                                    A standard 100 HA batch is modeled at Rp15B. The minimum PO allocation is Rp100M, allowing capital diversification across multiple batches.
                                 </p>
                             </div>
                         </div>

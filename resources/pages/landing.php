@@ -113,8 +113,8 @@ ob_start();
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">MIN PO ALLOCATION</div>
-                    <div class="text-sm font-black text-white mt-0.5">Rp1B</div>
-                    <div class="text-[8px] text-gray-400">Minimum Unit</div>
+                    <div class="text-sm font-black text-white mt-0.5">Rp100M</div>
+                    <div class="text-[8px] text-gray-400">Rp100 Juta Minimum Unit</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</div>
@@ -285,29 +285,62 @@ ob_start();
                     </div>
                 </div>
 
-                <!-- Card UI: DEMO OFFTAKE REQUIREMENT -->
+                <!-- Card UI: MULTIPLE CORPORATE OFFTAKE PO REQUIREMENTS -->
                 <div class="scene-anim-item lg:col-span-7 bg-[#142314]/80 p-6 rounded-3xl border border-emerald-500/40 shadow-2xl backdrop-blur-md text-left space-y-4">
                     <div class="flex items-center justify-between border-b border-white/10 pb-3">
                         <div>
-                            <div class="text-[9px] font-mono font-bold text-emerald-300 uppercase">DEMO OFFTAKE REQUIREMENT</div>
-                            <h3 class="text-lg font-bold text-white">1,000 HA Production Requirement</h3>
+                            <div class="text-[9px] font-mono font-bold text-emerald-300 uppercase">VERIFIED BUYER PO REQUIREMENTS</div>
+                            <h3 class="text-base font-bold text-white">3,500 HA Total Offtake Portfolio</h3>
                         </div>
-                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30">DEMO / EXAMPLE</span>
+                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30">DEMO OFFTAKE CONTRACTS</span>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-3 text-xs">
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
-                            <span class="text-[9px] text-gray-400 uppercase font-bold">ANNUAL REQUIREMENT</span>
-                            <div class="text-sm font-extrabold text-white">Defined by Buyer Spec</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-extrabold text-white">Lotte Chemical Corp (Korea)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 text-[8px] font-mono border border-blue-800">PO-2026-LOTTE-001</span>
+                                </div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Bio-Extraction Oil &bull; 2,000 HA Mapped Requirement</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-mono font-bold text-emerald-300">2,000 HA</div>
+                                <div class="text-[9px] text-gray-400">30,000 MT/Yr</div>
+                            </div>
                         </div>
-                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-1">
-                            <span class="text-[9px] text-gray-400 uppercase font-bold">BUYER ENTITY</span>
-                            <div class="text-sm font-extrabold text-emerald-300">Demo Offtake Buyer</div>
+
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-extrabold text-white">Sanko Supply & Energy (Japan)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[8px] font-mono border border-emerald-800">PO-2026-SANKO-002</span>
+                                </div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Biofuel & Feedstock &bull; 1,000 HA Mapped Requirement</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-mono font-bold text-emerald-300">1,000 HA</div>
+                                <div class="text-[9px] text-gray-400">15,000 MT/Yr</div>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-extrabold text-white">Sinar Biomass Global</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 text-[8px] font-mono border border-amber-800">PO-2026-SRE-003</span>
+                                </div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Bio-Oil &bull; 500 HA Mapped Requirement</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-mono font-bold text-emerald-300">500 HA</div>
+                                <div class="text-[9px] text-gray-400">7,500 MT/Yr</div>
+                            </div>
                         </div>
                     </div>
 
                     <p class="text-[10px] italic text-gray-400">
-                        Example buyer requirement mapped into candidate regional production clusters.
+                        Multiple corporate buyer POs mapped into candidate regional production clusters (1 Batch = 100 HA).
                     </p>
                 </div>
             </div>
@@ -504,9 +537,12 @@ ob_start();
                             <div class="flex items-center gap-2">
                                 <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED STATE / DEMO PROTOTYPE</span>
                             </div>
-                            <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; 100 HA ALLOCATION</h3>
+                            <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; ALLOCATION UNIT</h3>
                         </div>
-                        <span class="font-bold text-emerald-300 text-sm">Rp1,000,000,000</span>
+                        <div class="text-right">
+                            <span class="font-bold text-emerald-300 text-sm block">Rp100,000,000</span>
+                            <span class="text-[9px] text-gray-400">1 Unit Minimum PO (Max 150 Units / Batch)</span>
+                        </div>
                     </div>
 
                     <div class="space-y-2 text-[10px] font-mono">
@@ -523,6 +559,10 @@ ob_start();
                             <span>Pending</span>
                         </div>
                     </div>
+
+                    <p class="text-[10px] italic text-emerald-300/80">
+                        Minimum allocation set to Rp100M / unit so members can diversify capital across multiple batches instead of locking into a single project.
+                    </p>
                 </div>
             </div>
         </div>
@@ -706,6 +746,22 @@ ob_start();
             <p class="text-[9px] italic text-gray-400">
                 Modeled target, not achieved results or guaranteed revenue.
             </p>
+
+            <!-- System Intake / Registration Action Bar -->
+            <div class="scene-anim-item bg-black/40 p-4 rounded-2xl border border-white/10 max-w-2xl mx-auto space-y-2 text-center">
+                <div class="text-[10px] font-mono text-gray-400 uppercase font-bold tracking-wider">REGISTER OR JOIN NINA PRODUCTION NETWORK</div>
+                <div class="flex flex-wrap justify-center gap-2 pt-1">
+                    <a href="<?php echo $basePrefix; ?>/capacity" class="px-3 py-1.5 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-emerald-500/40 text-xs font-bold text-emerald-300 flex items-center gap-1.5 transition">
+                        <span>🌱 Register Mitra Lahan</span>
+                    </a>
+                    <a href="<?php echo $basePrefix; ?>/demand" class="px-3 py-1.5 rounded-lg bg-blue-950 hover:bg-blue-900 border border-blue-500/40 text-xs font-bold text-blue-300 flex items-center gap-1.5 transition">
+                        <span>🏭 Request Buyer PO Order</span>
+                    </a>
+                    <a href="<?php echo $basePrefix; ?>/vendors" class="px-3 py-1.5 rounded-lg bg-amber-950 hover:bg-amber-900 border border-amber-500/40 text-xs font-bold text-amber-300 flex items-center gap-1.5 transition">
+                        <span>🚜 Register Vendor Partner</span>
+                    </a>
+                </div>
+            </div>
 
             <!-- Final CTAs -->
             <div class="scene-anim-item flex flex-wrap items-center justify-center gap-4 pt-2">

@@ -756,7 +756,7 @@ ob_start();
 
                         <div class="grid grid-cols-2 gap-2 text-xs border-t border-white/10 pt-2">
                             <div><div class="text-[8px] text-gray-400 uppercase">Target</div><div class="font-bold text-emerald-300">25%</div></div>
-                            <div><div class="text-[8px] text-gray-400 uppercase">Allocation</div><div class="font-bold text-white">Rp1B</div></div>
+                            <div><div class="text-[8px] text-gray-400 uppercase">Allocation</div><div class="font-bold text-white">Rp100M</div></div>
                         </div>
 
                         <div class="text-[9px] text-gray-400">Next Milestone: <strong class="text-gray-300">M02 &mdash; Locked</strong></div>

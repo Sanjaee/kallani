@@ -292,7 +292,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">AUD-2026-0011</td>
                                         <td class="py-2.5 px-3 font-semibold text-white">Verified Participant</td>
                                         <td class="py-2.5 px-3 text-emerald-300">04 PO Allocation</td>
-                                        <td class="py-2.5 px-3 text-gray-200">PO Allocation Request Submitted (ALC-2026-NK001 - Rp1B)</td>
+                                        <td class="py-2.5 px-3 text-gray-200">PO Allocation Request Submitted (ALC-2026-NK001 - Rp100M)</td>
                                         <td class="py-2.5 px-3 font-mono text-gray-400">ALC-2026-NK001</td>
                                         <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">RECORDED</span></td>
                                     </tr>

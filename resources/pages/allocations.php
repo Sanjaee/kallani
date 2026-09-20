@@ -115,14 +115,14 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="text-[9px] font-mono text-gray-400">ALLOCATION / BATCH</div>
-                                    <div class="font-bold text-emerald-300 font-mono">Rp1B / Rp15B</div>
-                                    <div class="text-[10px] text-gray-300 font-mono">1 / 15 allocation units</div>
+                                    <div class="font-bold text-emerald-300 font-mono">Rp100M / Rp15B</div>
+                                    <div class="text-[10px] text-gray-300 font-mono">1 / 150 allocation units</div>
                                 </div>
                             </div>
 
                             <div class="rounded-lg bg-black/40 p-2 border border-white/5 flex items-center justify-between text-[11px] font-mono">
                                 <span class="text-gray-400">Modeled Proportion:</span>
-                                <span class="font-bold text-emerald-300">6.67% modeled batch proportion</span>
+                                <span class="font-bold text-emerald-300">0.67% modeled batch proportion</span>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ ob_start();
                         <span class="<?= $metricLbl ?>">TOTAL ALLOCATED</span>
                         <span class="text-emerald-400"><?= $svg($ic['coin'], 'w-4 h-4') ?></span>
                     </div>
-                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">Rp1B</div>
+                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">Rp100M</div>
                     <div class="text-[9px] text-gray-400">Current modeled allocation</div>
                 </div>
 
@@ -267,17 +267,17 @@ ob_start();
                     <div class="lg:col-span-5 bg-black/40 border border-emerald-500/30 rounded-xl p-4 space-y-2.5">
                         <div class="flex items-center justify-between text-xs font-mono">
                             <span class="text-gray-300 font-bold uppercase">PO COLLECTION</span>
-                            <span class="text-emerald-400 font-extrabold">Rp1B / Rp15B</span>
+                            <span class="text-emerald-400 font-extrabold">Rp100M / Rp15B</span>
                         </div>
 
                         <!-- Progress bar -->
                         <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
-                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 6.67%"></div>
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 0.67%"></div>
                         </div>
 
                         <div class="flex items-center justify-between text-[10px] font-mono text-gray-400">
-                            <span>6.67% Collected</span>
-                            <span>Rp14B Remaining</span>
+                            <span>0.67% Collected</span>
+                            <span>Rp14.9B Remaining</span>
                         </div>
 
                         <div class="pt-1 flex items-center justify-between">
@@ -302,17 +302,17 @@ ob_start();
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">PARTICIPANT ALLOCATION</div>
-                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">Rp1,000,000,000</div>
+                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">Rp100,000,000</div>
                         <div class="text-[9px] text-emerald-400/80">Confirmed PO Unit</div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">ALLOCATION UNITS</div>
-                        <div class="text-base font-extrabold text-white mt-0.5">1 / 15 Units</div>
-                        <div class="text-[9px] text-gray-500">Rp1B Per Unit</div>
+                        <div class="text-base font-extrabold text-white mt-0.5">1 / 150 Units</div>
+                        <div class="text-[9px] text-gray-500">Rp100M Per Unit</div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MODELED PROPORTION</div>
-                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">6.67%</div>
+                        <div class="text-base font-extrabold text-emerald-300 mt-0.5">0.67%</div>
                         <div class="text-[9px] text-gray-500">Batch Allocation Share</div>
                     </div>
                 </div>

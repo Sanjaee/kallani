@@ -220,7 +220,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['target']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">MINIMUM PO ALLOCATION</div>
-                            <div class="text-lg font-extrabold text-white">Rp1B</div>
+                            <div class="text-lg font-extrabold text-white">Rp100M</div>
                             <div class="text-[8px] text-gray-400 font-mono">Per participant allocation</div>
                         </div>
                     </div>

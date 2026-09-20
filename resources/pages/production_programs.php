@@ -620,7 +620,7 @@ ob_start();
                         </a>
                         <a href="<?= $basePrefix ?>/allocations" class="block p-2 rounded bg-white/5 hover:bg-white/10 border border-white/5 flex justify-between pl-10">
                             <span class="text-gray-300">ALLOCATION: <strong class="text-white">ALC-2026-NK001-0001</strong></span>
-                            <span class="text-emerald-400">Rp1B PO Unit</span>
+                            <span class="text-emerald-400">Rp100M PO Unit</span>
                         </a>
                     </div>
                 </div>
