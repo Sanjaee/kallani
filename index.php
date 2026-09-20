@@ -44,7 +44,7 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/milestones.php';
 } elseif ($uri === '/rab' || $uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/i', $uri)) {
     include $baseDir . '/resources/pages/rab.php';
-} elseif ($uri === '/vendors' || preg_match('/^\/vendors\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/i', $uri)) {
+} elseif ($uri === '/vendors' || $uri === '/partners' || $uri === '/partners-vendors' || preg_match('/^\/vendors\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/i', $uri)) {
     include $baseDir . '/resources/pages/vendors.php';
 } elseif ($uri === '/verification' || preg_match('/^\/projects\/([a-z0-9-]+)\/verification$/', $uri)) {
     include $baseDir . '/resources/pages/verification.php';
@@ -52,6 +52,12 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/documents.php';
 } elseif ($uri === '/commercial-output' || $uri === '/harvest' || $uri === '/delivery' || $uri === '/commercial' || preg_match('/^\/projects\/([a-z0-9-]+)\/commercial$/i', $uri)) {
     include $baseDir . '/resources/pages/commercial_output.php';
+} elseif ($uri === '/batch-completion' || $uri === '/completion' || $uri === '/settlement' || preg_match('/^\/projects\/([a-z0-9-]+)\/completion$/i', $uri)) {
+    include $baseDir . '/resources/pages/batch_completion.php';
+} elseif ($uri === '/network' || $uri === '/production-network' || preg_match('/^\/projects\/([a-z0-9-]+)\/network$/i', $uri)) {
+    include $baseDir . '/resources/pages/production_network.php';
+} elseif ($uri === '/production-programs' || $uri === '/programs' || preg_match('/^\/production-programs\/([a-z0-9-]+)$/i', $uri)) {
+    include $baseDir . '/resources/pages/production_programs.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
 } else {

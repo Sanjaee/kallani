@@ -6,7 +6,7 @@ if (!file_exists($configPath)) {
 $config = require $configPath;
 $title = '07 / PO Allocation — NINA Operating System';
 $basePrefix = (strpos($_SERVER['REQUEST_URI'] ?? '', '/kallani/public') === 0) ? '/kallani/public' : '';
-$activePage = 'batches';
+$activePage = 'po-allocation';
 
 /* ---------- Helpers & Icons ---------- */
 $e = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');

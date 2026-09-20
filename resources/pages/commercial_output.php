@@ -218,8 +218,102 @@ ob_start();
                                 <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-mono font-bold text-emerald-300 border border-emerald-500/30">11 STAGES</span>
                             </div>
 
-                            <!-- Horizontal Stage Flow Grid -->
-                            <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 pt-4">
+                            <!-- Precision Horizontal Node-and-Line Stepper Flow -->
+                            <div class="overflow-x-auto pb-3 pt-2 scrollbar-none border-b border-white/10 mb-3">
+                                <div class="min-w-[950px] grid grid-cols-11 font-mono text-[9px] relative px-2">
+                                    
+                                    <!-- Step 1: Production -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
+                                        <span class="font-bold text-emerald-300 mt-1.5">Production</span>
+                                        <span class="text-[8px] text-gray-400">In Dev</span>
+                                    </div>
+
+                                    <!-- Step 2: Harvest -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-amber-500 text-black flex items-center justify-center font-bold text-[10px] ring-4 ring-amber-500/20 shadow-md z-10">●</div>
+                                        <span class="font-bold text-amber-300 mt-1.5">Harvest</span>
+                                        <span class="text-[8px] text-gray-400">Not Started</span>
+                                    </div>
+
+                                    <!-- Step 3: Weighing -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Weighing</span>
+                                        <span class="text-[8px] text-gray-500">Pending</span>
+                                    </div>
+
+                                    <!-- Step 4: Quality -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Quality</span>
+                                        <span class="text-[8px] text-gray-500">Pending</span>
+                                    </div>
+
+                                    <!-- Step 5: Processing -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Processing</span>
+                                        <span class="text-[8px] text-gray-500">Not Started</span>
+                                    </div>
+
+                                    <!-- Step 6: Product -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Product</span>
+                                        <span class="text-[8px] text-gray-500">Pending</span>
+                                    </div>
+
+                                    <!-- Step 7: Offtaker -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md z-10">✓</div>
+                                        <span class="font-bold text-emerald-300 mt-1.5">Offtaker</span>
+                                        <span class="text-[8px] text-emerald-400">Mapped</span>
+                                    </div>
+
+                                    <!-- Step 8: Delivery -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Delivery</span>
+                                        <span class="text-[8px] text-gray-500">Not Ready</span>
+                                    </div>
+
+                                    <!-- Step 9: Acceptance -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Acceptance</span>
+                                        <span class="text-[8px] text-gray-500">Pending</span>
+                                    </div>
+
+                                    <!-- Step 10: Settlement -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Settlement</span>
+                                        <span class="text-[8px] text-gray-500">Pending</span>
+                                    </div>
+
+                                    <!-- Step 11: Completion -->
+                                    <div class="flex flex-col items-center text-center relative group">
+                                        <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[9px] z-10">○</div>
+                                        <span class="text-gray-400 font-medium mt-1.5">Completion</span>
+                                        <span class="text-[8px] text-gray-500">Locked</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Horizontal Stage Flow Grid Cards -->
+                            <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 pt-1">
                                 
                                 <?php
                                 $lifecycle = [
@@ -774,6 +868,67 @@ ob_start();
                     <a href="<?= $basePrefix ?>/audit-trail" class="text-[10px] font-mono text-emerald-300 hover:underline flex items-center gap-1">
                         <span>View complete protocol audit trail log</span><?= $svg($ic['arrow'], 'w-3 h-3') ?>
                     </a>
+                </div>
+
+            </section>
+
+            <!-- ---------- 21. COMMERCIAL DOCUMENTS, 22. AUDIT TRAIL, 23. PARTICIPANT VISIBILITY ---------- -->
+            <section class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+
+                <!-- 21 / COMMERCIAL DOCUMENT CENTER -->
+                <div class="<?= $card ?> p-5 space-y-3">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+                        <h3 class="text-xs font-mono font-bold uppercase text-white">21 / COMMERCIAL DOCUMENT CENTER</h3>
+                        <span class="rounded bg-white/5 px-2 py-0.5 text-[9px] text-gray-400">9 DOCUMENTS</span>
+                    </div>
+                    <div class="space-y-1.5 text-[11px] font-mono">
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Harvest Record</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Weighing Record</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Processing Record</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Product Record</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Commercial Agreement</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Delivery Order</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Proof of Delivery</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-0.5"><span>Buyer Acceptance</span><span class="text-amber-300">Pending</span></div>
+                        <div class="flex justify-between py-0.5"><span>Settlement Record</span><span class="text-amber-300">Pending</span></div>
+                    </div>
+                </div>
+
+                <!-- 22 / COMMERCIAL AUDIT TRAIL -->
+                <div class="<?= $card ?> p-5 space-y-3">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+                        <h3 class="text-xs font-mono font-bold uppercase text-white">22 / COMMERCIAL AUDIT TRAIL</h3>
+                        <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] text-emerald-300 border border-emerald-500/30">EVENT CHAIN</span>
+                    </div>
+                    <div class="space-y-1 text-[9px] font-mono text-gray-300">
+                        <div class="p-1 rounded bg-white/5">1. HARVEST CREATED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">2. WEIGHT VERIFIED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">3. PROCESSING RECORDED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">4. PRODUCT CREATED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">5. DELIVERY CREATED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">6. BUYER RECEIVED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">7. QUALITY ACCEPTED (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">8. COMMERCIAL SETTLEMENT APPROVED</div>
+                        <div class="p-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/30 font-bold">9. SETTLEMENT EXECUTED & COMPLETED</div>
+                    </div>
+                </div>
+
+                <!-- 23 / PARTICIPANT VISIBILITY -->
+                <div class="<?= $card ?> p-5 space-y-3">
+                    <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+                        <h3 class="text-xs font-mono font-bold uppercase text-white">23 / PARTICIPANT VISIBILITY</h3>
+                        <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] text-emerald-300 border border-emerald-500/30">TRANSPARENCY</span>
+                    </div>
+                    <div class="space-y-1 text-[10px] font-mono text-gray-300">
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Production progress</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Harvest status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Weighing status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Processing status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Product output status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Delivery status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Buyer acceptance status</span></div>
+                        <div class="flex items-center gap-1 text-emerald-300"><span>✓</span> <span class="text-white">Settlement status & Audit trail</span></div>
+                    </div>
                 </div>
 
             </section>
