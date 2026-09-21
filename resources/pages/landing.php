@@ -829,17 +829,17 @@ ob_start();
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono">
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
                         <span class="text-gray-400 font-bold block text-[10px] uppercase">FFB HARVEST YIELD</span>
-                        <span class="text-base font-extrabold text-white block">1,803 TBS / YR</span>
-                        <span class="text-[10px] text-emerald-400 block font-semibold">18.03 TBS/HA Benchmark</span>
+                        <span class="text-base font-extrabold text-white block">1,800 TBS / YR</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">18.00 TBS/HA Benchmark</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
                         <span class="text-gray-400 font-bold block text-[10px] uppercase">MODELED CPO OUTPUT</span>
-                        <span class="text-base font-extrabold text-white block">360.6 MT CPO / YR</span>
-                        <span class="text-[10px] text-emerald-400 block font-semibold">20% OER Assumption</span>
+                        <span class="text-base font-extrabold text-white block">396 MT CPO / YR</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">22% OER Assumption</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
                         <span class="text-gray-400 font-bold block text-[10px] uppercase">EQUIVALENT VOLUME</span>
-                        <span class="text-base font-extrabold text-emerald-300 block">~405,849 L CPO / YR</span>
+                        <span class="text-base font-extrabold text-emerald-300 block">~445,945 L CPO / YR</span>
                         <span class="text-[10px] text-gray-400 block font-semibold">Stated Density Model</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
@@ -868,7 +868,7 @@ ob_start();
                 </div>
                 <div class="pt-1 text-center">
                     <p class="text-[10px] italic text-gray-400 font-mono">
-                        * Basis: 100 HA &bull; Benchmark: 18.03 TBS/HA/YEAR (1,803 TBS/yr) &bull; OER Assumption: 20% (360.6 MT CPO/yr &bull; ~405,849 L CPO/yr). Semua data merupakan model produksi terstruktur, bukan jaminan produksi (guaranteed production).
+                        * Basis: 100 HA &bull; Benchmark: 18.00 TBS/HA/YEAR (1,800 TBS/yr) &bull; OER Assumption: 22% (396 MT CPO/yr &bull; ~445,945 L CPO/yr). All data represents a structured production model, not guaranteed production.
                     </p>
                 </div>
             </div>
