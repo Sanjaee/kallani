@@ -239,14 +239,14 @@ ob_start();
                                 <tbody class="divide-y divide-white/10">
                                     <tr>
                                         <td class="py-3 font-semibold text-white"><span class="flex items-center gap-2"><span class="h-2 w-2 shrink-0 rounded-full bg-emerald-400"></span>North Kalimantan</span></td>
-                                        <td class="py-3 text-right text-gray-200">300 HA</td>
-                                        <td class="py-3 text-right text-gray-200">3</td>
+                                        <td class="py-3 text-right text-gray-200">200 HA</td>
+                                        <td class="py-3 text-right text-gray-200">2</td>
                                         <td class="py-3 text-right"><span class="rounded border border-emerald-500/30 bg-emerald-500/15 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300">&bull; DEMO</span></td>
                                     </tr>
                                     <tr>
                                         <td class="py-3 font-semibold text-white"><span class="flex items-center gap-2"><span class="h-2 w-2 shrink-0 rounded-full bg-sky-400"></span>South Kalimantan</span></td>
-                                        <td class="py-3 text-right text-gray-200">700 HA</td>
-                                        <td class="py-3 text-right text-gray-200">7</td>
+                                        <td class="py-3 text-right text-gray-200">800 HA</td>
+                                        <td class="py-3 text-right text-gray-200">8</td>
                                         <td class="py-3 text-right"><span class="rounded border border-emerald-500/30 bg-emerald-500/15 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300">&bull; DEMO</span></td>
                                     </tr>
                                 </tbody>
@@ -678,13 +678,13 @@ ob_start();
         // Zone pins: the circle sits exactly on the coordinate, the label extends to the right
         new HtmlMarker(
             northKalimantan, mapInstance,
-            zoneMarkerHtml('border-emerald-400 text-emerald-300', 'North Kalimantan', '300 HA', '3'),
-            { transform: 'translate(-18px, -50%)', onClick: () => showInfo(northKalimantan, zoneInfoHtml('North Kalimantan Zone', '300 HA', '3')) }
+            zoneMarkerHtml('border-emerald-400 text-emerald-300', 'North Kalimantan', '200 HA', '2'),
+            { transform: 'translate(-18px, -50%)', onClick: () => showInfo(northKalimantan, zoneInfoHtml('North Kalimantan Zone', '200 HA', '2')) }
         );
         new HtmlMarker(
             southKalimantan, mapInstance,
-            zoneMarkerHtml('border-sky-400 text-sky-300', 'South Kalimantan', '700 HA', '7'),
-            { transform: 'translate(-18px, -50%)', onClick: () => showInfo(southKalimantan, zoneInfoHtml('South Kalimantan Zone', '700 HA', '7')) }
+            zoneMarkerHtml('border-sky-400 text-sky-300', 'South Kalimantan', '800 HA', '8'),
+            { transform: 'translate(-18px, -50%)', onClick: () => showInfo(southKalimantan, zoneInfoHtml('South Kalimantan Zone', '800 HA', '8')) }
         );
 
         // Buyer requirement: dotted connector + card (skipped on very narrow screens)

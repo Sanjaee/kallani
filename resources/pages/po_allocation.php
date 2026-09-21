@@ -129,7 +129,7 @@ ob_start();
                                 <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-300">
                                     <div><span class="text-gray-400">Region:</span> <strong class="text-white">North Kalimantan, Indonesia</strong></div>
                                     <div><span class="text-gray-400">Batch Size:</span> <strong class="text-white">100 HA</strong></div>
-                                    <div><span class="text-gray-400">Requirement:</span> <strong class="text-emerald-300 font-bold">880,000 USDT</strong></div>
+                                    <div><span class="text-gray-400">Requirement:</span> <strong class="text-emerald-300 font-bold">880.000 usdt</strong></div>
                                     <div><span class="text-gray-400">Project Status:</span> <span class="text-amber-300 font-bold">DEMO / PENDING</span></div>
                                 </div>
 
@@ -149,43 +149,43 @@ ob_start();
 
                         <!-- Quick Selection Pills -->
                         <div class="flex flex-wrap items-center gap-2">
-                            <button type="button" class="rounded-lg bg-emerald-950 px-4 py-2 text-xs font-bold text-emerald-300 border border-emerald-400 shadow">8,000 USDT (1 Seat)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">24,000 USDT (3 Seats)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">40,000 USDT (5 Seats)</button>
-                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">80,000 USDT (10 Seats)</button>
+                            <button type="button" class="rounded-lg bg-emerald-950 px-4 py-2 text-xs font-bold text-emerald-300 border border-emerald-400 shadow">8.000 usdt (1 Unit)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">24.000 usdt (3 Units)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">40.000 usdt (5 Units)</button>
+                            <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">80.000 usdt (10 Units)</button>
                             <button type="button" class="rounded-lg bg-white/5 px-4 py-2 text-xs font-bold text-gray-300 border border-white/10 hover:bg-white/10">Custom</button>
                         </div>
 
                         <!-- Input Box -->
                         <div class="space-y-1">
-                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">MINIMUM 8,000 USDT (1 SEAT)</label>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">MINIMUM 8.000 usdt (1 PO ALLOCATION UNIT)</label>
                             <div class="relative">
-                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">USDT</span>
-                                <input type="text" value="8,000" readonly class="w-full rounded-xl border border-emerald-400/50 bg-[#07110E] py-3 pl-16 pr-4 text-lg font-black text-white focus:outline-none" />
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">usdt</span>
+                                <input type="text" value="8.000" readonly class="w-full rounded-xl border border-emerald-400/50 bg-[#07110E] py-3 pl-16 pr-4 text-lg font-black text-white focus:outline-none" />
                             </div>
-                            <span class="text-[9px] font-mono text-emerald-300 block pt-0.5">1 &times; 8,000 USDT PO allocation seat</span>
+                            <span class="text-[9px] font-mono text-emerald-300 block pt-0.5">1 &times; 8.000 usdt PO allocation unit</span>
                         </div>
 
                         <!-- Allocation Breakdown Grid -->
                         <div class="grid grid-cols-3 gap-3 text-center text-xs">
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">BATCH REQUIREMENT</div>
-                                <div class="text-sm font-black text-white mt-0.5">880,000 USDT</div>
+                                <div class="text-sm font-black text-white mt-0.5">880.000 usdt</div>
                             </div>
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">YOUR ALLOCATION</div>
-                                <div class="text-sm font-black text-emerald-300 mt-0.5">8,000 USDT</div>
+                                <div class="text-sm font-black text-emerald-300 mt-0.5">8.000 usdt</div>
                             </div>
                             <div class="p-3 rounded-lg border border-white/10 bg-[#07110E]">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">REMAINING REQUIREMENT</div>
-                                <div class="text-sm font-black text-white mt-0.5">872,000 USDT</div>
+                                <div class="text-sm font-black text-white mt-0.5">872.000 usdt</div>
                             </div>
                         </div>
 
                         <!-- Allocation Units Dot Progress Tracker -->
                         <div class="space-y-2 border-t border-white/10 pt-3">
                             <div class="flex justify-between text-xs font-bold">
-                                <span class="text-gray-300">1 / 110 seats</span>
+                                <span class="text-gray-300">1 / 110 PO allocation units</span>
                                 <span class="text-emerald-300">0.91%</span>
                             </div>
 
@@ -194,11 +194,11 @@ ob_start();
                                 <?php for ($i = 0; $i < 14; $i++): ?>
                                     <span class="h-3 w-3 rounded-full bg-white/10 border border-white/20"></span>
                                 <?php endfor; ?>
-                                <span class="text-[9px] font-mono text-gray-400">+95 more seats</span>
+                                <span class="text-[9px] font-mono text-gray-400">+95 more units</span>
                             </div>
 
                             <p class="text-[9px] text-gray-400">
-                                A standard 880,000 USDT batch is represented by 110 minimum 8,000 USDT allocation seats, allowing members to diversify capital across multiple production batches.
+                                Mitra dapat mengambil production allocation minimum 8.000 usdt dan, sesuai struktur program, dapat mengalokasikan production demand across multiple batches (110 minimum PO allocation units per 100 HA batch).
                             </p>
                         </div>
                     </section>

@@ -124,11 +124,11 @@ ob_start();
                             <div class="grid grid-cols-2 gap-2 text-xs bg-black/40 p-2 rounded border border-white/5">
                                 <div>
                                     <div class="text-[9px] text-gray-400">MODELED VALUE</div>
-                                    <div class="font-bold text-white text-sm">88,000,000 USDT</div>
+                                    <div class="font-bold text-white text-sm">88.000.000 usdt</div>
                                 </div>
                                 <div>
                                     <div class="text-[9px] text-gray-400">GROSS FEE (3%)</div>
-                                    <div class="font-bold text-emerald-300 text-sm">2,640,000 USDT</div>
+                                    <div class="font-bold text-emerald-300 text-sm">2.640.000 usdt</div>
                                 </div>
                             </div>
 
@@ -180,8 +180,8 @@ ob_start();
                         <span class="<?= $metricLbl ?>">MAPPED VALUE</span>
                         <span class="text-emerald-400"><?= $svg($ic['coin'], 'w-4 h-4') ?></span>
                     </div>
-                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">8,800,000 USDT</div>
-                    <div class="text-[9px] text-gray-400">10 &times; 880,000 USDT Modeled</div>
+                    <div class="mt-1 text-2xl font-extrabold text-white font-mono">8.800.000 usdt</div>
+                    <div class="text-[9px] text-gray-400">10 &times; 880.000 usdt Modeled</div>
                 </div>
 
                 <div class="<?= $card ?> px-4 py-3">
@@ -253,9 +253,9 @@ ob_start();
                             </tr>
                             <tr>
                                 <td class="p-2.5 font-bold text-white">Modeled Production Value</td>
-                                <td class="p-2.5 text-white">88,000,000 USDT</td>
-                                <td class="p-2.5 text-emerald-300 font-bold">8,800,000 USDT</td>
-                                <td class="p-2.5 text-amber-300">8,800,000 USDT Mapped Model</td>
+                                <td class="p-2.5 text-white">88.000.000 usdt</td>
+                                <td class="p-2.5 text-emerald-300 font-bold">8.800.000 usdt</td>
+                                <td class="p-2.5 text-amber-300">8.800.000 usdt Mapped Model</td>
                             </tr>
                             <tr>
                                 <td class="p-2.5 font-bold text-white">Verified Production Capacity</td>
@@ -341,7 +341,7 @@ ob_start();
                         </div>
 
                         <div class="text-[10px] text-gray-400">
-                            Coverage: <strong class="text-emerald-300">North Kalimantan (300 HA)</strong> + <strong class="text-emerald-300">South Kalimantan (700 HA)</strong>
+                            Coverage: <strong class="text-emerald-300">North Kalimantan (200 HA)</strong> + <strong class="text-emerald-300">South Kalimantan (800 HA)</strong>
                         </div>
                     </div>
                 </div>
@@ -365,12 +365,12 @@ ob_start();
                             <tbody class="divide-y divide-white/5 text-gray-200">
                                 <tr>
                                     <td class="p-2 font-bold text-white">North Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">300 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">200 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED / DEMO</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-2 font-bold text-white">South Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">700 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">800 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED / DEMO</span></td>
                                 </tr>
                                 <tr>
@@ -447,7 +447,7 @@ ob_start();
                     <div class="space-y-2 font-mono text-xs">
                         <div class="flex justify-between">
                             <span class="text-gray-400">Modeled Requirement:</span>
-                            <span class="text-emerald-300 font-bold">8,800,000 USDT (10 &times; 880,000 USDT)</span>
+                            <span class="text-emerald-300 font-bold">8.800.000 usdt (10 &times; 880.000 usdt)</span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Planned Budget:</span>
@@ -455,11 +455,11 @@ ob_start();
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Allocated / Committed:</span>
-                            <span class="text-gray-400">0 USDT / 0 USDT</span>
+                            <span class="text-gray-400">0 usdt / 0 usdt</span>
                         </div>
                         <div class="flex justify-between">
                             <span class="text-gray-400">Executed / Verified:</span>
-                            <span class="text-gray-400">0 USDT / 0 USDT</span>
+                            <span class="text-gray-400">0 usdt / 0 usdt</span>
                         </div>
                     </div>
 
@@ -620,7 +620,7 @@ ob_start();
                         </a>
                         <a href="<?= $basePrefix ?>/allocations" class="block p-2 rounded bg-white/5 hover:bg-white/10 border border-white/5 flex justify-between pl-10">
                             <span class="text-gray-300">ALLOCATION: <strong class="text-white">ALC-2026-NK001-0001</strong></span>
-                            <span class="text-emerald-400">8,000 USDT PO Seat</span>
+                            <span class="text-emerald-400">8.000 usdt PO allocation unit</span>
                         </a>
                     </div>
                 </div>
@@ -650,7 +650,7 @@ ob_start();
                         <div class="flex justify-between items-start bg-white/5 p-2 rounded">
                             <div>
                                 <span class="text-[9px] text-amber-400 font-bold">RAB-2026-NK001-V01</span>
-                                <div class="text-white font-bold text-[11px]">Production RAB created (880,000 USDT)</div>
+                                <div class="text-white font-bold text-[11px]">Production RAB created (880.000 usdt)</div>
                             </div>
                             <span class="text-[8px] text-amber-300 bg-amber-950 px-1.5 py-0.5 rounded">PENDING</span>
                         </div>

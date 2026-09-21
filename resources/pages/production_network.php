@@ -153,13 +153,13 @@ ob_start();
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[10px]">
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center">
                             <span class="font-bold text-emerald-300 block">NORTH KALIMANTAN</span>
-                            <span class="text-white block font-semibold">300 HA • 3 BATCHES</span>
-                            <span class="text-[8px] text-gray-400 block">NK-001, NK-002, NK-003</span>
+                            <span class="text-white block font-semibold">200 HA • 2 BATCHES</span>
+                            <span class="text-[8px] text-gray-400 block">NK-001, NK-002</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center">
                             <span class="font-bold text-emerald-300 block">SOUTH KALIMANTAN</span>
-                            <span class="text-white block font-semibold">700 HA • 7 BATCHES</span>
-                            <span class="text-[8px] text-gray-400 block">SK-001 to SK-007</span>
+                            <span class="text-white block font-semibold">800 HA • 8 BATCHES</span>
+                            <span class="text-[8px] text-gray-400 block">SK-001 to SK-008</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1 text-center opacity-70">
                             <span class="font-bold text-amber-300 block">EAST KALIMANTAN</span>
@@ -210,7 +210,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['dollar']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">PRODUCTION VALUE</div>
-                            <div class="text-lg font-extrabold text-emerald-300">88,000,000 USDT</div>
+                            <div class="text-lg font-extrabold text-emerald-300">88.000.000 usdt</div>
                             <div class="text-[8px] text-gray-400 font-mono">Modeled requirement</div>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['target']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">MINIMUM PO ALLOCATION</div>
-                            <div class="text-lg font-extrabold text-white">8,000 USDT</div>
+                            <div class="text-lg font-extrabold text-white">8.000 usdt</div>
                             <div class="text-[8px] text-gray-400 font-mono">Per participant allocation</div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ ob_start();
                         <span class="<?= $iconBox ?> text-emerald-400"><?= $svg($ic['dollar']) ?></span>
                         <div>
                             <div class="<?= $metricLbl ?>">SERVICE FEE OPPORTUNITY</div>
-                            <div class="text-lg font-extrabold text-emerald-300">2,640,000 USDT</div>
+                            <div class="text-lg font-extrabold text-emerald-300">2.640.000 usdt</div>
                             <div class="text-[8px] text-gray-400 font-mono">Modeled 3% gross fee</div>
                         </div>
                     </div>
@@ -254,8 +254,8 @@ ob_start();
                     <!-- Quick Filter Buttons -->
                     <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
                         <button type="button" class="rounded bg-emerald-950 px-3 py-1.5 text-emerald-300 border border-emerald-400/40 font-bold">ALL REGIONS</button>
-                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">North Kalimantan (300 HA)</button>
-                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">South Kalimantan (700 HA)</button>
+                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">North Kalimantan (200 HA)</button>
+                        <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">South Kalimantan (800 HA)</button>
                         <button type="button" class="rounded bg-white/5 px-3 py-1.5 text-gray-300 hover:bg-white/10">East Kalimantan (Pipeline)</button>
                     </div>
                 </div>
@@ -316,8 +316,8 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-[11px]">
-                            <div class="flex justify-between"><span>North Kalimantan Cluster</span><strong class="text-white">300 HA</strong></div>
-                            <div class="flex justify-between"><span>South Kalimantan Cluster</span><strong class="text-white">700 HA</strong></div>
+                            <div class="flex justify-between"><span>North Kalimantan Cluster</span><strong class="text-white">200 HA</strong></div>
+                            <div class="flex justify-between"><span>South Kalimantan Cluster</span><strong class="text-white">800 HA</strong></div>
                             <div class="flex justify-between border-t border-white/10 pt-1.5 text-emerald-300 font-bold"><span>Total Network Mapped</span><span>1,000 HA</span></div>
                         </div>
                     </div>
@@ -346,7 +346,7 @@ ob_start();
                         <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-2 flex flex-col justify-between">
                             <div>
                                 <span class="text-[9px] font-bold text-emerald-300 uppercase block">NORTH KALIMANTAN</span>
-                                <div class="text-base font-extrabold text-white mt-1">300 HA</div>
+                                <div class="text-base font-extrabold text-white mt-1">200 HA</div>
                                 <div class="text-[9px] text-gray-300 mt-1">Palm Production</div>
                                 <div class="text-[9px] text-gray-400">Standard Batch: 100 HA</div>
                             </div>
@@ -359,7 +359,7 @@ ob_start();
                         <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-2 flex flex-col justify-between">
                             <div>
                                 <span class="text-[9px] font-bold text-emerald-300 uppercase block">SOUTH KALIMANTAN</span>
-                                <div class="text-base font-extrabold text-white mt-1">700 HA</div>
+                                <div class="text-base font-extrabold text-white mt-1">800 HA</div>
                                 <div class="text-[9px] text-gray-300 mt-1">Palm Production</div>
                                 <div class="text-[9px] text-gray-400">Standard Batch: 100 HA</div>
                             </div>
@@ -398,28 +398,28 @@ ob_start();
                     <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">NK-001</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 font-bold">DEMO / PENDING VERIF</span></div>
                         <div class="text-gray-300 text-[11px]">100 HA &bull; North Kalimantan</div>
-                        <div class="text-emerald-300 font-bold">880,000 USDT Modeled Requirement</div>
+                        <div class="text-emerald-300 font-bold">880.000 usdt Modeled Requirement</div>
                         <a href="<?= $basePrefix ?>/batches" class="text-[9px] font-bold text-emerald-300 hover:underline block pt-1">VIEW BATCH DETAILS &rarr;</a>
                     </div>
 
                     <div class="rounded-lg border border-white/10 bg-white/5 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">NK-002</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-gray-400">PIPELINE</span></div>
                         <div class="text-gray-300 text-[11px]">100 HA &bull; North Kalimantan</div>
-                        <div class="text-gray-400">880,000 USDT Modeled Requirement</div>
+                        <div class="text-gray-400">880.000 usdt Modeled Requirement</div>
                         <span class="text-[9px] text-gray-500 block pt-1">PIPELINE BATCH</span>
                     </div>
 
                     <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/30 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">SK-001</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 font-bold">MAPPED / DEMO</span></div>
                         <div class="text-gray-300 text-[11px]">100 HA &bull; South Kalimantan</div>
-                        <div class="text-emerald-300 font-bold">880,000 USDT Modeled Requirement</div>
+                        <div class="text-emerald-300 font-bold">880.000 usdt Modeled Requirement</div>
                         <span class="text-[9px] text-emerald-300 block pt-1">MAPPED CAPACITY</span>
                     </div>
 
                     <div class="rounded-lg border border-white/10 bg-white/5 p-3.5 space-y-2">
                         <div class="flex justify-between items-center"><strong class="text-white text-sm">SK-002</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-white/5 text-gray-400">PIPELINE</span></div>
                         <div class="text-gray-300 text-[11px]">100 HA &bull; South Kalimantan</div>
-                        <div class="text-gray-400">880,000 USDT Modeled Requirement</div>
+                        <div class="text-gray-400">880.000 usdt Modeled Requirement</div>
                         <span class="text-[9px] text-gray-500 block pt-1">PIPELINE BATCH</span>
                     </div>
 
@@ -451,16 +451,16 @@ ob_start();
                         </thead>
                         <tbody class="divide-y divide-white/5 text-gray-200">
                             <tr>
-                                <td class="py-2.5 px-2 font-bold text-white">Demo Production Partner</td>
+                                <td class="py-2.5 px-2 font-bold text-white">Production Partner 01</td>
                                 <td class="py-2.5 px-2">North Kalimantan</td>
-                                <td class="py-2.5 px-2 text-emerald-300 font-bold">300 HA</td>
+                                <td class="py-2.5 px-2 text-emerald-300 font-bold">200 HA</td>
                                 <td class="py-2.5 px-2 text-amber-300">Pending Verification</td>
                                 <td class="py-2.5 px-2 text-gray-400 text-[10px]">Not Established</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-2 font-bold text-white">Production Partner 02</td>
                                 <td class="py-2.5 px-2">South Kalimantan</td>
-                                <td class="py-2.5 px-2 text-emerald-300 font-bold">700 HA</td>
+                                <td class="py-2.5 px-2 text-emerald-300 font-bold">800 HA</td>
                                 <td class="py-2.5 px-2 text-amber-300">Pending Verification</td>
                                 <td class="py-2.5 px-2 text-gray-400 text-[10px]">Not Established</td>
                             </tr>
@@ -656,16 +656,16 @@ ob_start();
                         </div>
                         <div class="p-3 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-gray-400 block">PRODUCTION VALUE</span>
-                            <strong class="text-xl font-extrabold text-emerald-300">88,000,000 USDT</strong>
+                            <strong class="text-xl font-extrabold text-emerald-300">88.000.000 usdt</strong>
                         </div>
                         <div class="p-3 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-gray-400 block">SERVICE FEE OPPORTUNITY</span>
-                            <strong class="text-xl font-extrabold text-emerald-300">2,640,000 USDT</strong>
+                            <strong class="text-xl font-extrabold text-emerald-300">2.640.000 usdt</strong>
                         </div>
                     </div>
 
                     <div class="text-[8px] font-mono text-gray-400 italic">
-                        Footnote: Modelled target based on 100 HA standard batches at 880,000 USDT modeled production requirement per batch. Target scenario, not achieved production, committed capacity or guaranteed revenue.
+                        Footnote: Modelled target based on 100 HA standard batches at 880.000 usdt modeled production requirement per batch. Target scenario, not achieved production, committed capacity or guaranteed revenue.
                     </div>
                 </div>
 

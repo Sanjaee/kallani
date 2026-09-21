@@ -318,13 +318,13 @@ ob_start();
                         <div class="relative z-10 grid grid-cols-2 gap-3">
                             <div class="bg-[#091C13]/90 p-3 rounded-lg border border-emerald-500/40 space-y-1">
                                 <div class="text-[10px] text-emerald-400 font-bold">NORTH KALIMANTAN</div>
-                                <div class="text-xl font-extrabold text-white">300 HA</div>
-                                <div class="text-[9px] text-gray-400">3 × 100 HA Executable Batches</div>
+                                <div class="text-xl font-extrabold text-white">200 HA</div>
+                                <div class="text-[9px] text-gray-400">2 × 100 HA Executable Batches</div>
                             </div>
                             <div class="bg-[#091C13]/90 p-3 rounded-lg border border-emerald-500/40 space-y-1">
                                 <div class="text-[10px] text-emerald-400 font-bold">SOUTH KALIMANTAN</div>
-                                <div class="text-xl font-extrabold text-white">700 HA</div>
-                                <div class="text-[9px] text-gray-400">7 × 100 HA Executable Batches</div>
+                                <div class="text-xl font-extrabold text-white">800 HA</div>
+                                <div class="text-[9px] text-gray-400">8 × 100 HA Executable Batches</div>
                             </div>
                         </div>
                     </div>
@@ -350,14 +350,14 @@ ob_start();
                             <tbody class="divide-y divide-white/5 text-gray-200">
                                 <tr>
                                     <td class="p-2 font-bold text-white">North Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">300 HA</td>
-                                    <td class="p-2">3 × 100 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">200 HA</td>
+                                    <td class="p-2">2 × 100 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-2 font-bold text-white">South Kalimantan</td>
-                                    <td class="p-2 text-emerald-300 font-bold">700 HA</td>
-                                    <td class="p-2">7 × 100 HA</td>
+                                    <td class="p-2 text-emerald-300 font-bold">800 HA</td>
+                                    <td class="p-2">8 × 100 HA</td>
                                     <td class="p-2"><span class="text-emerald-400 bg-emerald-950 px-1.5 py-0.5 rounded text-[9px] font-bold">MAPPED</span></td>
                                 </tr>
                                 <tr class="bg-white/5 font-bold">
@@ -680,11 +680,11 @@ ob_start();
                         <div class="text-[9px] text-gray-400">1,000 HA target capacity set</div>
                     </div>
                     <div class="bg-white/5 p-2 rounded border border-white/5 space-y-1">
-                        <span class="text-emerald-400 font-bold">3. 300 HA Mapped</span>
+                        <span class="text-emerald-400 font-bold">3. 200 HA Mapped</span>
                         <div class="text-[9px] text-gray-400">North Kalimantan region</div>
                     </div>
                     <div class="bg-white/5 p-2 rounded border border-white/5 space-y-1">
-                        <span class="text-emerald-400 font-bold">4. 700 HA Mapped</span>
+                        <span class="text-emerald-400 font-bold">4. 800 HA Mapped</span>
                         <div class="text-[9px] text-gray-400">South Kalimantan region</div>
                     </div>
                     <div class="bg-white/5 p-2 rounded border border-white/5 space-y-1">

@@ -128,8 +128,8 @@ function batchPage() {
                             <div class="flex items-center justify-between"><span class="text-gray-400">Project</span><span class="font-bold text-white">North Kalimantan Palm</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Region</span><span class="font-bold text-white">North Kalimantan, Indonesia</span></div>
                             <div class="flex items-center justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
-                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
-                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">8,000 USDT</span></div>
+                            <div class="flex items-center justify-between"><span class="text-gray-400">Production Requirement</span><span class="font-bold text-emerald-300">880.000 usdt</span></div>
+                            <div class="flex items-center justify-between border-t border-white/10 pt-2"><span class="text-gray-400">Minimum PO Allocation</span><span class="font-bold text-white">8.000 usdt</span></div>
                         </div>
                         <p class="text-[9px] italic text-gray-400 leading-tight">Prototype / demonstration data. Not a representation of a confirmed or unverified contract program.</p>
                     </div>
@@ -157,7 +157,7 @@ function batchPage() {
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">02 &mdash; Production Requirement</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">880,000 USDT</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">880.000 usdt</div>
                         <div class="text-[10px] text-gray-400">Modeled requirement / 100 HA batch</div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ function batchPage() {
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">03 &mdash; PO Allocation</div>
-                        <div class="text-xl font-extrabold leading-tight text-white">8,000 USDT MIN.</div>
+                        <div class="text-xl font-extrabold leading-tight text-white">8.000 usdt MIN.</div>
                         <div class="text-[10px] text-gray-400">Minimum allocation</div>
                     </div>
                 </div>
@@ -247,8 +247,8 @@ function batchPage() {
                             <div class="space-y-2 text-xs border-t border-white/10 pt-3">
                                 <div class="text-[10px] font-bold uppercase tracking-wider text-gray-400 mb-1">Quick Summary</div>
                                 <div class="flex justify-between"><span class="text-gray-400">Batch Size</span><span class="font-bold text-white">100 HA</span></div>
-                                <div class="flex justify-between"><span class="text-gray-400">Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
-                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">8,000 USDT</span></div>
+                                <div class="flex justify-between"><span class="text-gray-400">Requirement</span><span class="font-bold text-emerald-300">880.000 usdt</span></div>
+                                <div class="flex justify-between"><span class="text-gray-400">Min. PO Allocation</span><span class="font-bold text-white">8.000 usdt</span></div>
                                 <div class="flex justify-between"><span class="text-gray-400">Status</span><span class="font-bold text-amber-300 flex items-center gap-1"><span class="text-[10px]">ⓘ</span> Pending</span></div>
                             </div>
                         </div>
@@ -282,7 +282,7 @@ function batchPage() {
                         <div class="space-y-2 rounded-xl border border-white/10 bg-[#050D0A] p-4">
                             <div class="flex justify-between text-xs font-bold">
                                 <span class="text-gray-400">PO COLLECTION</span>
-                                <span class="text-white">0 USDT <span class="text-gray-400">/ 880,000 USDT</span></span>
+                                <span class="text-white">0 usdt <span class="text-gray-400">/ 880.000 usdt</span></span>
                                 <span class="text-emerald-300">0%</span>
                             </div>
                             <div class="h-2 w-full overflow-hidden rounded-full bg-white/10">
@@ -294,19 +294,19 @@ function batchPage() {
                         <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">TOTAL PRODUCTION REQUIREMENT</div>
-                                <div class="text-xs font-extrabold text-white mt-1">880,000 USDT</div>
+                                <div class="text-xs font-extrabold text-white mt-1">880.000 usdt</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">COLLECTED</div>
-                                <div class="text-xs font-extrabold text-white mt-1">0 USDT</div>
+                                <div class="text-xs font-extrabold text-white mt-1">0 usdt</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">REMAINING</div>
-                                <div class="text-xs font-extrabold text-emerald-300 mt-1">880,000 USDT</div>
+                                <div class="text-xs font-extrabold text-emerald-300 mt-1">880.000 usdt</div>
                             </div>
                             <div class="rounded-lg border border-white/10 bg-[#050D0A] p-2.5">
                                 <div class="text-[8px] font-bold uppercase text-gray-400 leading-tight">MINIMUM ALLOCATION</div>
-                                <div class="text-xs font-extrabold text-white mt-1">8,000 USDT</div>
+                                <div class="text-xs font-extrabold text-white mt-1">8.000 usdt</div>
                             </div>
                         </div>
                     </div>
@@ -316,7 +316,7 @@ function batchPage() {
                         <div>
                             <h3 class="text-xs font-bold uppercase tracking-wider text-white">Standard Allocation Unit</h3>
                             <p class="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                                One 100 HA batch is modeled at 880,000 USDT and represented by 110 minimum 8,000 USDT PO allocation seats, allowing members to diversify capital across multiple batches.
+                                One 100 HA batch is modeled at 880.000 usdt and represented by 110 minimum 8.000 usdt PO allocation units, allowing participants to allocate production demand across multiple batches.
                             </p>
                         </div>
 
@@ -452,7 +452,7 @@ function batchPage() {
 
                         <div class="flex items-center justify-between border-t border-white/10 pt-2 text-xs">
                             <span class="text-gray-400 uppercase font-bold text-[9px]">Total Batch Requirement</span>
-                            <span class="font-extrabold text-white">880,000 USDT</span>
+                            <span class="font-extrabold text-white">880.000 usdt</span>
                         </div>
                     </div>
 

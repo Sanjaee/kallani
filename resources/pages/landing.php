@@ -108,13 +108,13 @@ ob_start();
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</div>
-                    <div class="text-sm font-black text-emerald-300 mt-0.5">880,000 USDT</div>
-                    <div class="text-[8px] text-gray-400">8,800 USDT / HA Modeled</div>
+                    <div class="text-sm font-black text-emerald-300 mt-0.5">880.000 usdt</div>
+                    <div class="text-[8px] text-gray-400">8.800 usdt/HA Modeled</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">MIN PO ALLOCATION</div>
-                    <div class="text-sm font-black text-white mt-0.5">8,000 USDT</div>
-                    <div class="text-[8px] text-gray-400">8,000 USDT / Seat (110 Seats)</div>
+                    <div class="text-sm font-black text-white mt-0.5">8.000 usdt</div>
+                    <div class="text-[8px] text-gray-400">110 Minimum PO Units / Batch</div>
                 </div>
                 <div class="p-3 rounded-xl border border-white/10 bg-black/40 backdrop-blur-md">
                     <div class="text-[9px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</div>
@@ -289,20 +289,20 @@ ob_start();
                 <div class="scene-anim-item lg:col-span-7 bg-[#142314]/80 p-6 rounded-3xl border border-emerald-500/40 shadow-2xl backdrop-blur-md text-left space-y-4">
                     <div class="flex items-center justify-between border-b border-white/10 pb-3">
                         <div>
-                            <div class="text-[9px] font-mono font-bold text-emerald-300 uppercase">VERIFIED BUYER PO REQUIREMENTS</div>
-                            <h3 class="text-base font-bold text-white">3,500 HA Total Offtake Portfolio</h3>
+                            <div class="text-[9px] font-mono font-bold text-emerald-300 uppercase">DEMO OFFTAKE REQUIREMENTS</div>
+                            <h3 class="text-base font-bold text-white">3,500 HA Mapped Demand Portfolio</h3>
                         </div>
-                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30">DEMO OFFTAKE CONTRACTS</span>
+                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30">DEMO OFFTAKE SPECIFICATIONS</span>
                     </div>
 
                     <div class="space-y-2 text-xs">
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Lotte Chemical Corp (Korea)</span>
-                                    <span class="px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 text-[8px] font-mono border border-blue-800">PO-2026-LOTTE-001</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Chemical Corp</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 text-[8px] font-mono border border-blue-800">DEMO-PO-2026-SANIA-001</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Bio-Extraction Oil &bull; 2,000 HA Mapped Requirement</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Bio-Extraction Oil &bull; 2,000 HA Mapped Requirement (Example Spec)</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">2,000 HA</div>
@@ -313,10 +313,10 @@ ob_start();
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Sanko Supply & Energy (Japan)</span>
-                                    <span class="px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[8px] font-mono border border-emerald-800">PO-2026-SANKO-002</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Supply (Simulated)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[8px] font-mono border border-emerald-800">DEMO-PO-2026-SANIA-002</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Biofuel & Feedstock &bull; 1,000 HA Mapped Requirement</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Biofuel & Feedstock &bull; 1,000 HA Mapped Requirement (Example Spec)</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">1,000 HA</div>
@@ -327,10 +327,10 @@ ob_start();
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Sinar Biomass Global</span>
-                                    <span class="px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 text-[8px] font-mono border border-amber-800">PO-2026-SRE-003</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Biomass (Simulated)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 text-[8px] font-mono border border-amber-800">DEMO-PO-2026-SANIA-003</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Bio-Oil &bull; 500 HA Mapped Requirement</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Bio-Oil &bull; 500 HA Mapped Requirement (Example Spec)</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">500 HA</div>
@@ -340,7 +340,7 @@ ob_start();
                     </div>
 
                     <p class="text-[10px] italic text-gray-400">
-                        Multiple corporate buyer POs mapped into candidate regional production clusters (1 Batch = 100 HA).
+                        Demo offtake specifications mapped into regional executable production batches (1 Standard Batch = 100 HA).
                     </p>
                 </div>
             </div>
@@ -374,22 +374,22 @@ ob_start();
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">NORTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">300 HA MAPPED CAPACITY</span>
+                            <span class="text-emerald-300 font-bold">200 HA MAPPED CAPACITY</span>
                         </div>
                         <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-emerald-400 h-full w-[30%]"></div>
+                            <div class="bg-emerald-400 h-full w-[20%]"></div>
                         </div>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/10 space-y-2">
                         <div class="flex justify-between items-center">
                             <span class="font-bold text-white">SOUTH KALIMANTAN CLUSTER</span>
-                            <span class="text-emerald-300 font-bold">700 HA MAPPED CAPACITY</span>
+                            <span class="text-emerald-300 font-bold">800 HA MAPPED CAPACITY</span>
                         </div>
                         <div class="text-[10px] text-gray-400">Physical Asset Parcel Mapping &bull; Status: MAPPED</div>
                         <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
-                            <div class="bg-emerald-400 h-full w-[70%]"></div>
+                            <div class="bg-emerald-400 h-full w-[80%]"></div>
                         </div>
                     </div>
                 </div>
@@ -448,11 +448,11 @@ ob_start();
                     <div class="grid grid-cols-2 gap-3 text-xs">
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">MODELED BATCH REQUIREMENT</span>
-                            <div class="text-base font-extrabold text-white">880,000 USDT</div>
+                            <div class="text-base font-extrabold text-white">880.000 usdt</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">MINIMUM PO ALLOCATION</span>
-                            <div class="text-base font-extrabold text-emerald-300">8,000 USDT</div>
+                            <div class="text-base font-extrabold text-emerald-300">8.000 usdt</div>
                         </div>
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 space-y-0.5">
                             <span class="text-[8px] text-gray-400 uppercase font-bold">CONTRACT HORIZON</span>
@@ -469,38 +469,177 @@ ob_start();
     </section>
 
     <!-- SCENE 07 — PRODUCTION LIFECYCLE TIMELINE -->
-    <section id="scene-07" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-6 opacity-0 pointer-events-none z-10">
-        <div class="absolute inset-0 z-0 opacity-45 scale-105 pointer-events-none">
-            <img src="<?php echo $basePrefix; ?>/7.jpg" alt="Production Lifecycle" class="w-full h-full object-cover filter brightness-90 contrast-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1C0E] via-[#0F1C0E]/65 to-[#0F1C0E]/30"></div>
+    <section id="scene-07" class="scene absolute inset-0 w-full h-full flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none z-10">
+        <div class="absolute inset-0 z-0 opacity-55 scale-105 pointer-events-none">
+            <img src="<?php echo $basePrefix; ?>/7.jpg" alt="Production Lifecycle" class="w-full h-full object-cover filter brightness-95 contrast-105" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#06120F] via-[#06120F]/90 to-transparent"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto text-center w-full">
-            <div class="scene-anim-item inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-3">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <span>07 &bull; PRODUCTION LIFECYCLE</span>
+        <div class="relative z-10 max-w-6xl mx-auto w-full text-left my-auto">
+
+            <div class="mb-2.5 sm:mb-3">
+                <div class="scene-anim-item inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.2em] text-emerald-400 mb-1">
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span>07 &bull; PRODUCTION LIFECYCLE</span>
+                </div>
+
+                <h2 class="scene-anim-item text-xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-1 tracking-tight">One Lifecycle. Every Stage Visible.</h2>
+                <p class="scene-anim-item text-[11px] sm:text-xs text-gray-300 max-w-xl leading-relaxed">
+                    From production requirement to commercial settlement, every material event is recorded and traceable.
+                </p>
             </div>
 
-            <h2 class="scene-anim-item text-3xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">One Lifecycle. Every Stage Visible.</h2>
-            <p class="scene-anim-item text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-                From production requirement to commercial settlement, every material event is recorded and traceable.
-            </p>
+            <!-- Dark Glass Card with Palm Forest Overlay inside on the right -->
+            <div class="scene-anim-item w-full bg-[#0B1815]/95 p-3 sm:p-5 rounded-2xl sm:rounded-3xl border border-emerald-500/30 shadow-2xl backdrop-blur-md relative overflow-hidden">
 
-            <div class="scene-anim-item bg-[#142314]/80 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md">
-                <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 text-[9px] font-mono text-center">
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">01 DEMAND &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">02 CAPACITY &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">03 BATCH &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">04 PO &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">05 MILESTONE &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">06 RAB &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">07 VENDOR &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">08 EXECUTION &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">09 VERIFY &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">10 PROCESS &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-black/40 border border-emerald-500/30 font-bold text-white">11 DELIVER &rsaquo;</div>
-                    <div class="p-2.5 rounded-xl bg-emerald-950 border border-emerald-400 font-bold text-emerald-300">12 SETTLE ✓</div>
+                <!-- Inner Right Background Image Overlay (fades into dark on the left) -->
+                <div class="absolute inset-y-0 right-0 w-1/2 pointer-events-none opacity-25 lg:opacity-40">
+                    <img src="<?php echo $basePrefix; ?>/7.jpg" alt="" class="w-full h-full object-cover object-right filter brightness-90 contrast-105" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#0B1815] via-[#0B1815]/80 to-transparent"></div>
+                </div>
+
+                <!-- Flow wrapper -->
+                <div class="relative z-10 pl-4 sm:pl-6 font-mono uppercase tracking-wide leading-tight text-[9px] sm:text-[10px] xl:text-xs">
+
+                    <!-- Spine vertikal kiri -->
+                    <div class="absolute left-1.5 sm:left-2 top-2.5 bottom-2.5 w-[1.5px] sm:w-[2px] rounded-full bg-gradient-to-b from-emerald-500/10 via-emerald-500/60 to-emerald-400" aria-hidden="true"></div>
+
+                    <ol class="space-y-2 sm:space-y-3" aria-label="Production lifecycle stages">
+
+                        <!-- Row 1: Buyer Demand -> Production Requirement -> Capacity Mapping -->
+                        <li class="relative">
+                            <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#06120F] border-2 border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/10" aria-hidden="true"></span>
+                            <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+                                    <span>Buyer Demand</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">01</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                    <span>Production Requirement</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">02</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                                    <span>Capacity Mapping</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">03</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- Row 2: Asset -> Partner -> Batch -->
+                        <li class="relative">
+                            <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#06120F] border-2 border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/10" aria-hidden="true"></span>
+                            <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+                                    <span>Asset</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">04</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                                    <span>Partner</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">05</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+                                    <span>Batch</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">06</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- Row 3: PO Allocation -> Milestones -> RAB -> Vendors -->
+                        <li class="relative">
+                            <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#06120F] border-2 border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/10" aria-hidden="true"></span>
+                            <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.4-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1.1 0-2-.5-2.5-1.5M12 6v2M12 16v2"/></svg>
+                                    <span>PO Allocation</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">07</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+                                    <span>Milestones</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">08</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7h6m-6 4h6m-6 4h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
+                                    <span>RAB</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">09</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4"/></svg>
+                                    <span>Vendors</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">10</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- Row 4: Execution -> Verification -> Harvest/Processing -> Delivery -->
+                        <li class="relative">
+                            <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#06120F] border-2 border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/10" aria-hidden="true"></span>
+                            <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                    <span>Execution</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">11</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <span>Verification</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">12</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V11"/><path d="M12 11c0-4 3-7 8-7 0 5-3 8-8 7z"/><path d="M12 15c0-3-2.5-5.5-7-5.5 0 4 2.5 6.5 7 5.5z"/></svg>
+                                    <span>Harvest / Processing</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">13</span>
+                                </li>
+                                <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                                    <span>Delivery</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">14</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- Row 5: Commercial Settlement -> Audit Trail -->
+                        <li class="relative">
+                            <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 ring-2 sm:ring-4 ring-emerald-400/25 shadow-[0_0_14px_rgba(52,211,153,0.6)]" aria-hidden="true"></span>
+                            <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-emerald-950/95 border border-emerald-400/80 text-emerald-300 font-bold text-[8px] sm:text-[9px] lg:text-[10px] shadow-lg shadow-emerald-500/20 backdrop-blur-sm whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                    <span>Commercial Settlement &check;</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/50" aria-hidden="true">15</span>
+                                </li>
+                                <li class="hidden sm:inline text-emerald-500 text-[10px]" aria-hidden="true">&rarr;</li>
+                                <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
+                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                                    <span>Audit Trail</span>
+                                    <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">16</span>
+                                </li>
+                            </ol>
+                        </li>
+
+                    </ol>
+                </div>
+
+                <!-- Footnote -->
+                <div class="relative z-10 mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-white/10 pl-4 sm:pl-6 text-[9px] sm:text-[10px] font-mono text-gray-400 italic">
+                    One production lifecycle. One auditable operating environment.
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -537,18 +676,18 @@ ob_start();
                             <div class="flex items-center gap-2">
                                 <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED STATE / DEMO PROTOTYPE</span>
                             </div>
-                            <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; ALLOCATION UNIT</h3>
+                            <h3 class="text-base font-bold text-white mt-1">BATCH NK-001 &bull; PO ALLOCATION UNIT</h3>
                         </div>
                         <div class="text-right">
-                            <span class="font-bold text-emerald-300 text-sm block">8,000 USDT</span>
-                            <span class="text-[9px] text-gray-400">1 Seat Minimum PO (Max 110 Seats / Batch)</span>
+                            <span class="font-bold text-emerald-300 text-sm block">8.000 usdt</span>
+                            <span class="text-[9px] text-gray-400">Minimum PO Allocation (110 Units / Batch)</span>
                         </div>
                     </div>
 
                     <div class="space-y-2 text-[10px] font-mono">
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
                             <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> PO Collection (Simulated State)</span>
-                            <span class="text-gray-400 font-bold">100% Collected</span>
+                            <span class="text-gray-400 font-bold">100% Mapped</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
                             <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Milestone 01 (Land Prep)</span>
@@ -561,7 +700,7 @@ ob_start();
                     </div>
 
                     <p class="text-[10px] italic text-emerald-300/80">
-                        Minimum allocation set to 8,000 USDT / seat so members can diversify capital across multiple batches instead of locking into a single project.
+                        Members can take a minimum production allocation of 8,000 usdt and allocate production demand across multiple batches according to the NINA program structure.
                     </p>
                 </div>
             </div>
@@ -588,7 +727,7 @@ ob_start();
             <div class="scene-anim-item bg-[#142314]/80 p-6 rounded-3xl border border-[#1E3A24]/80 shadow-2xl backdrop-blur-md text-left space-y-4">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-center font-mono">
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
-                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">880,000 USDT REQUIREMENT</span>
+                        <span class="text-gray-300 font-bold text-xs sm:text-sm block uppercase">880.000 usdt REQUIREMENT</span>
                         <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Modeled RAB</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5 flex flex-col justify-center min-h-[90px]">
@@ -689,25 +828,48 @@ ob_start();
             <div class="scene-anim-item bg-[#142314]/90 p-6 rounded-3xl border border-[#1E3A24] shadow-2xl backdrop-blur-md text-left space-y-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono">
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
-                        <span class="text-gray-400 font-bold block text-[10px] uppercase">HARVEST OUTPUT</span>
-                        <span class="text-base font-extrabold text-white block">1,800 MT / YR</span>
-                        <span class="text-[10px] text-emerald-400 block font-semibold">Modeled FFB Yield</span>
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">FFB HARVEST YIELD</span>
+                        <span class="text-base font-extrabold text-white block">1,803 TBS / YR</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">18.03 TBS/HA Benchmark</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
-                        <span class="text-gray-400 font-bold block text-[10px] uppercase">PROCESSING ACC.</span>
-                        <span class="text-base font-extrabold text-white block">396 MT CPO</span>
-                        <span class="text-[10px] text-emerald-400 block font-semibold">22% Extraction Rate</span>
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">MODELED CPO OUTPUT</span>
+                        <span class="text-base font-extrabold text-white block">360.6 MT CPO / YR</span>
+                        <span class="text-[10px] text-emerald-400 block font-semibold">20% OER Assumption</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
-                        <span class="text-gray-400 font-bold block text-[10px] uppercase">COMMERCIAL VALUE</span>
-                        <span class="text-base font-extrabold text-emerald-300 block">336,600 USDT</span>
-                        <span class="text-[10px] text-gray-400 block font-semibold">@ 850 USDT / MT</span>
+                        <span class="text-gray-400 font-bold block text-[10px] uppercase">EQUIVALENT VOLUME</span>
+                        <span class="text-base font-extrabold text-emerald-300 block">~405,849 L CPO / YR</span>
+                        <span class="text-[10px] text-gray-400 block font-semibold">Stated Density Model</span>
                     </div>
                     <div class="p-4 rounded-xl bg-black/40 border border-white/10 space-y-1.5">
                         <span class="text-gray-400 font-bold block text-[10px] uppercase">SETTLEMENT VAULT</span>
-                        <span class="text-base font-extrabold text-amber-300 block">AUTOMATED</span>
-                        <span class="text-[10px] text-amber-400/80 block font-semibold">Smart Contract Release</span>
+                        <span class="text-base font-extrabold text-amber-300 block">TRACEABLE PROTOCOL</span>
+                        <span class="text-[10px] text-amber-400/80 block font-semibold">11-Stage Verification</span>
                     </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-black/50 border border-emerald-500/30 text-[10px] font-mono text-gray-300">
+                    <div class="text-emerald-400 font-bold mb-1">OPERATING SETTLEMENT PROTOCOL:</div>
+                    <div class="flex flex-wrap items-center gap-1.5 text-gray-400">
+                        <span>Verified Production</span> &rarr; 
+                        <span>Harvest</span> &rarr; 
+                        <span>Weighing</span> &rarr; 
+                        <span>Processing</span> &rarr; 
+                        <span>Product</span> &rarr; 
+                        <span>Buyer</span> &rarr; 
+                        <span>Delivery</span> &rarr; 
+                        <strong class="text-white">Commercial Acceptance</strong> &rarr; 
+                        <span>Settlement Eligibility</span> &rarr; 
+                        <span>Approval</span> &rarr; 
+                        <span>Designated Downstream Operating Co.</span> &rarr; 
+                        <span>Registered Recipient</span> &rarr; 
+                        <strong class="text-emerald-300">Audit Trail</strong>
+                    </div>
+                </div>
+                <div class="pt-1 text-center">
+                    <p class="text-[10px] italic text-gray-400 font-mono">
+                        * Basis: 100 HA &bull; Benchmark: 18.03 TBS/HA/YEAR (1,803 TBS/yr) &bull; OER Assumption: 20% (360.6 MT CPO/yr &bull; ~405,849 L CPO/yr). Semua data merupakan model produksi terstruktur, bukan jaminan produksi (guaranteed production).
+                    </p>
                 </div>
             </div>
         </div>
@@ -739,33 +901,39 @@ ob_start();
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED VALUE</span>
-                    <div class="text-sm sm:text-base font-extrabold text-white whitespace-nowrap">88,000,000 USDT</div>
+                    <div class="text-sm sm:text-base font-extrabold text-white whitespace-nowrap">88.000.000 usdt</div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-black/50 border border-white/10 space-y-1">
                     <span class="text-[8px] font-mono text-gray-400 uppercase font-bold">MODELED 3% FEE</span>
-                    <div class="text-sm sm:text-base font-extrabold text-amber-300 whitespace-nowrap">2,640,000 USDT</div>
+                    <div class="text-sm sm:text-base font-extrabold text-amber-300 whitespace-nowrap">2.640.000 usdt</div>
                 </div>
             </div>
 
             <p class="text-[9px] italic text-gray-400">
-                Modeled target, not achieved results or guaranteed revenue.
+                Modeled target scenario based on 100 HA standard batches, not guaranteed production or revenue.
             </p>
 
-            <!-- System Intake / Registration Action Bar -->
-            <div class="scene-anim-item bg-black/40 p-4 rounded-2xl border border-white/10 max-w-2xl mx-auto space-y-2 text-center">
-                <div class="text-[10px] font-mono text-gray-400 uppercase font-bold tracking-wider">REGISTER OR JOIN NINA PRODUCTION NETWORK</div>
-                <div class="flex flex-wrap justify-center gap-2 pt-1">
-                    <a href="<?php echo $basePrefix; ?>/capacity" class="px-3.5 py-2 rounded-lg bg-emerald-950 hover:bg-emerald-900 border border-emerald-500/40 text-xs font-bold text-emerald-300 flex items-center gap-2 transition">
-                        <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
-                        <span>Register Mitra Lahan</span>
+            <!-- System Intake / Registration Action Bar (JOIN THE NINA NETWORK) -->
+            <div class="scene-anim-item bg-[#142314]/90 p-5 rounded-3xl border border-emerald-500/40 max-w-4xl mx-auto space-y-3 text-center shadow-2xl backdrop-blur-md">
+                <div class="text-xs font-mono text-emerald-400 uppercase font-extrabold tracking-widest">JOIN THE NINA NETWORK</div>
+                <p class="text-xs text-gray-300 max-w-xl mx-auto leading-relaxed">
+                    Choose how your company or productive asset connects to the NINA production network.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left">
+                    <a href="<?php echo $basePrefix; ?>/capacity" class="group p-4 rounded-2xl bg-black/40 hover:bg-emerald-950/80 border border-emerald-500/30 hover:border-emerald-400 transition-all">
+                        <div class="text-[10px] font-mono font-bold text-emerald-400 uppercase mb-1">01 &bull; MITRA LAHAN</div>
+                        <div class="text-sm font-extrabold text-white group-hover:text-emerald-300 transition-colors">BECOME A LAND PARTNER</div>
+                        <div class="text-[11px] text-gray-400 mt-1.5 leading-snug">Daftarkan lahan dan kapasitas produksi Anda ke dalam jaringan NINA.</div>
                     </a>
-                    <a href="<?php echo $basePrefix; ?>/demand" class="px-3.5 py-2 rounded-lg bg-blue-950 hover:bg-blue-900 border border-blue-500/40 text-xs font-bold text-blue-300 flex items-center gap-2 transition">
-                        <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0H9m1 0h2"/></svg>
-                        <span>Request Buyer PO Order</span>
+                    <a href="<?php echo $basePrefix; ?>/vendors" class="group p-4 rounded-2xl bg-black/40 hover:bg-amber-950/80 border border-amber-500/30 hover:border-amber-400 transition-all">
+                        <div class="text-[10px] font-mono font-bold text-amber-400 uppercase mb-1">02 &bull; VENDOR PROJECT</div>
+                        <div class="text-sm font-extrabold text-white group-hover:text-amber-300 transition-colors">BECOME A PROJECT VENDOR</div>
+                        <div class="text-[11px] text-gray-400 mt-1.5 leading-snug">Daftarkan produk, layanan, dan kapasitas operasional Anda untuk mendukung production project NINA.</div>
                     </a>
-                    <a href="<?php echo $basePrefix; ?>/vendors" class="px-3.5 py-2 rounded-lg bg-amber-950 hover:bg-amber-900 border border-amber-500/40 text-xs font-bold text-amber-300 flex items-center gap-2 transition">
-                        <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span>Register Vendor Partner</span>
+                    <a href="<?php echo $basePrefix; ?>/demand" class="group p-4 rounded-2xl bg-black/40 hover:bg-blue-950/80 border border-blue-500/30 hover:border-blue-400 transition-all">
+                        <div class="text-[10px] font-mono font-bold text-blue-400 uppercase mb-1">03 &bull; OFFTAKER</div>
+                        <div class="text-sm font-extrabold text-white group-hover:text-blue-300 transition-colors">BECOME AN OFFTAKER</div>
+                        <div class="text-[11px] text-gray-400 mt-1.5 leading-snug">Sampaikan kebutuhan produk dan kapasitas pembelian perusahaan Anda kepada NINA.</div>
                     </a>
                 </div>
             </div>

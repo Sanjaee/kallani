@@ -20,14 +20,162 @@ $demoBuyer = $demoDemand['buyer'] ?? 'DEMO OFFTAKE BUYER';
    img  : photo path inside /public (swap with real project photos)
    pos  : CSS object-position so the same photo crops differently per card
    badge: demo | pipeline | planned | pending      verification: pending | pipeline | verified */
+/* Demo project catalogue (NINA Operating System Model) */
 $projects = [
-    ['id' => 1, 'name' => 'North Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'North Kalimantan',   'network' => 4000, 'mapped' => 300, 'partner' => 'Demo Production Partner',   'verification' => 'pending',  'badge' => 'demo',     'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => false], 'img' => '/1.jpg', 'pos' => '50% 35%', 'lat' => 2.85,  'lng' => 116.55],
-    ['id' => 2, 'name' => 'South Kalimantan Palm',   'category' => 'Palm Production', 'region' => 'South Kalimantan',   'network' => 2500, 'mapped' => 700, 'partner' => 'Demo Production Partner 2', 'verification' => 'pending',  'badge' => 'pipeline', 'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => false, 'audit' => false], 'img' => '/2.jpg', 'pos' => '50% 60%', 'lat' => -2.98, 'lng' => 115.08],
-    ['id' => 3, 'name' => 'Sumatra Agro Project',    'category' => 'Agriculture',     'region' => 'Sumatra',            'network' => 1800, 'mapped' => 0,   'partner' => 'Demo Production Partner 3', 'verification' => 'pipeline', 'badge' => 'planned',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => false, 'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/1.jpg', 'pos' => '20% 70%', 'lat' => -2.2,  'lng' => 103.5],
-    ['id' => 4, 'name' => 'Central Kalimantan Forest', 'category' => 'Forestry',      'region' => 'Central Kalimantan', 'network' => 1200, 'mapped' => 0,   'partner' => 'Demo Production Partner 4', 'verification' => 'pending',  'badge' => 'pending',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => false, 'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/2.jpg', 'pos' => '80% 40%', 'lat' => -1.7,  'lng' => 113.4],
-    ['id' => 5, 'name' => 'West Kalimantan Agro',    'category' => 'Agriculture',     'region' => 'West Kalimantan',    'network' => 1500, 'mapped' => 0,   'partner' => 'Demo Production Partner 5', 'verification' => 'pipeline', 'badge' => 'planned',  'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/1.jpg', 'pos' => '85% 55%', 'lat' => -0.1,  'lng' => 110.6],
-    ['id' => 6, 'name' => 'Riau Palm Estate',        'category' => 'Palm Production', 'region' => 'Sumatra',            'network' => 3000, 'mapped' => 0,   'partner' => 'Demo Production Partner 6', 'verification' => 'verified', 'badge' => 'demo',     'availability' => 'Available', 'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => true],  'img' => '/2.jpg', 'pos' => '30% 30%', 'lat' => 0.5,   'lng' => 101.6],
-    ['id' => 7, 'name' => 'Sulawesi Cacao Project',  'category' => 'Agriculture',     'region' => 'Sulawesi',           'network' => 800,  'mapped' => 0,   'partner' => 'Demo Production Partner 7', 'verification' => 'pending',  'badge' => 'pending',  'availability' => 'Available', 'checks' => ['land' => false, 'partner' => false, 'seed' => false, 'gis' => false, 'audit' => false], 'img' => '/1.jpg', 'pos' => '60% 80%', 'lat' => -1.8,  'lng' => 120.8],
+    [
+        'id' => 1, 
+        'name' => 'North Kalimantan Palm Project',   
+        'category' => 'Palm Production', 
+        'region' => 'North Kalimantan',   
+        'network' => 300, 
+        'mapped' => 300,
+        'batch_count' => 3, 
+        'modeled_budget' => '2.640.000 usdt',
+        'land_status' => 'GIS Boundary Surveyed',
+        'seed_status' => 'Certified High Yield',
+        'partner' => 'Verified Land Partner (Mitra Lahan)',   
+        'verification' => 82, 
+        'verif_label' => 'verified',
+        'badge' => 'demo',     
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => false], 
+        'img' => '/1.jpg', 
+        'pos' => '50% 35%', 
+        'lat' => 2.85,  
+        'lng' => 116.55
+    ],
+    [
+        'id' => 2, 
+        'name' => 'South Kalimantan Palm Cluster',   
+        'category' => 'Palm Production', 
+        'region' => 'South Kalimantan',   
+        'network' => 700, 
+        'mapped' => 700, 
+        'batch_count' => 7,
+        'modeled_budget' => '6.160.000 usdt',
+        'land_status' => 'GIS Boundary Verified',
+        'seed_status' => 'Certified Seedlings Allocated',
+        'partner' => 'Verified Land Partner (Mitra Lahan)', 
+        'verification' => 94, 
+        'verif_label' => 'verified',
+        'badge' => 'pipeline', 
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true, 'audit' => true], 
+        'img' => '/2.jpg', 
+        'pos' => '50% 60%', 
+        'lat' => -2.98, 
+        'lng' => 115.08
+    ],
+    [
+        'id' => 3, 
+        'name' => 'Central Kalimantan Eco Forest', 
+        'category' => 'Forestry',      
+        'region' => 'Central Kalimantan', 
+        'network' => 1200, 
+        'mapped' => 1200,   
+        'batch_count' => 12,
+        'modeled_budget' => '10.560.000 usdt',
+        'land_status' => 'Concession Surveyed',
+        'seed_status' => 'Native Nursery Certified',
+        'partner' => 'State & Community Partner', 
+        'verification' => 78, 
+        'verif_label' => 'pipeline',
+        'badge' => 'planned',  
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true, 'seed' => false, 'gis' => true, 'audit' => false], 
+        'img' => '/3.jpg', 
+        'pos' => '80% 40%', 
+        'lat' => -1.7,  
+        'lng' => 113.4
+    ],
+    [
+        'id' => 4, 
+        'name' => 'Mahakam Water Infrastructure', 
+        'category' => 'Infrastructure', 
+        'region' => 'East Kalimantan', 
+        'network' => 500, 
+        'mapped' => 500,   
+        'batch_count' => 5,
+        'modeled_budget' => '4.400.000 usdt',
+        'land_status' => 'Hydro Survey Complete',
+        'seed_status' => 'N/A — Infrastructure Unit',
+        'partner' => 'Regional Vendor Partner', 
+        'verification' => 88, 
+        'verif_label' => 'verified',
+        'badge' => 'demo',  
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
+        'img' => '/5.jpg', 
+        'pos' => '50% 50%', 
+        'lat' => -0.5,  
+        'lng' => 117.15
+    ],
+    [
+        'id' => 5, 
+        'name' => 'West Papua Certified Timber Zone', 
+        'category' => 'Forestry', 
+        'region' => 'West Papua', 
+        'network' => 1500, 
+        'mapped' => 1500,   
+        'batch_count' => 15,
+        'modeled_budget' => '13.200.000 usdt',
+        'land_status' => 'Forest Cadastre Verified',
+        'seed_status' => 'Natural Regeneration Certified',
+        'partner' => 'Customary Land Partner', 
+        'verification' => 91, 
+        'verif_label' => 'verified',
+        'badge' => 'pipeline',  
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
+        'img' => '/6.jpg', 
+        'pos' => '40% 40%', 
+        'lat' => -1.33,  
+        'lng' => 133.17
+    ],
+    [
+        'id' => 6, 
+        'name' => 'South Sulawesi Agro Park', 
+        'category' => 'Agriculture', 
+        'region' => 'South Sulawesi', 
+        'network' => 800, 
+        'mapped' => 800,   
+        'batch_count' => 8,
+        'modeled_budget' => '7.040.000 usdt',
+        'land_status' => 'GIS Cadastre Complete',
+        'seed_status' => 'Multi-Crop Certified',
+        'partner' => 'Cooperative Land Partner', 
+        'verification' => 75, 
+        'verif_label' => 'pending',
+        'badge' => 'planned',  
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true, 'seed' => false, 'gis' => false, 'audit' => false], 
+        'img' => '/7.jpg', 
+        'pos' => '60% 80%', 
+        'lat' => -3.6,  
+        'lng' => 119.85
+    ],
+    [
+        'id' => 7, 
+        'name' => 'Kaltim Offtake Processing Hub', 
+        'category' => 'Infrastructure', 
+        'region' => 'East Kalimantan', 
+        'network' => 200, 
+        'mapped' => 200,   
+        'batch_count' => 2,
+        'modeled_budget' => '1.760.000 usdt',
+        'land_status' => 'Port & Terminal Permitted',
+        'seed_status' => 'N/A — Offtake Hub',
+        'partner' => 'Logistics Vendor Partner', 
+        'verification' => 96, 
+        'verif_label' => 'verified',
+        'badge' => 'demo',  
+        'availability' => 'Available', 
+        'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
+        'img' => '/8.jpg', 
+        'pos' => '30% 30%', 
+        'lat' => -1.26,  
+        'lng' => 116.83
+    ],
 ];
 $projects = array_map(fn($p) => $p + ['location' => $p['region'] . ', Indonesia'], $projects);
 
@@ -434,13 +582,13 @@ ob_start();
                     <dl class="mt-3 space-y-3 text-[11px]">
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3">
                             <dt class="flex items-center gap-2 text-white"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>North Kalimantan</dt>
-                            <dd class="text-right font-bold text-white">300 HA</dd>
-                            <dd class="text-right text-gray-400">30%</dd>
+                            <dd class="text-right font-bold text-white">200 HA</dd>
+                            <dd class="text-right text-gray-400">20%</dd>
                         </div>
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3">
                             <dt class="flex items-center gap-2 text-white"><span class="h-2 w-2 rounded-full bg-sky-400"></span>South Kalimantan</dt>
-                            <dd class="text-right font-bold text-white">700 HA</dd>
-                            <dd class="text-right text-gray-400">70%</dd>
+                            <dd class="text-right font-bold text-white">800 HA</dd>
+                            <dd class="text-right text-gray-400">80%</dd>
                         </div>
                         <div class="grid grid-cols-[1fr_auto_2.5rem] items-center gap-3 border-t border-white/15 pt-3 font-bold text-white">
                             <dt>Total</dt>
@@ -504,25 +652,25 @@ ob_start();
                                 </div>
 
                                 <dl class="space-y-1.5 text-[10px]">
-                                    <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Network Capacity</dt><dd class="font-bold text-white" x-text="fmt(p.network) + ' HA'"></dd></div>
                                     <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Mapped Capacity</dt><dd class="font-bold text-white" x-text="fmt(p.mapped) + ' HA'"></dd></div>
-                                    <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Batch Capacity</dt><dd class="font-bold text-white">100 HA / batch</dd></div>
+                                    <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Batch Structure</dt><dd class="font-bold text-emerald-300" x-text="p.batch_count + ' × 100 HA Batches'"></dd></div>
+                                    <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Modeled Requirement</dt><dd class="font-bold text-white" x-text="p.modeled_budget"></dd></div>
                                 </dl>
 
-                                <div class="border-t border-white/10 pt-3">
-                                    <div class="text-[9px] text-gray-400">Production Partner</div>
-                                    <div class="text-[11px] font-bold text-white" x-text="p.partner"></div>
+                                <div class="border-t border-white/10 pt-2.5 space-y-1 text-[10px]">
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Partner</span><span class="font-bold text-white truncate max-w-[140px]" x-text="p.partner"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Land Status</span><span class="text-emerald-300 font-medium truncate max-w-[140px]" x-text="p.land_status"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Seed Status</span><span class="text-gray-300 font-medium truncate max-w-[140px]" x-text="p.seed_status"></span></div>
                                 </div>
 
-                                <div class="space-y-2">
+                                <div class="space-y-1.5">
                                     <div class="flex items-center justify-between text-[10px]">
-                                        <span class="text-gray-400">Verification</span>
-                                        <span class="text-[9px] font-bold uppercase" :class="verifCls[p.verification]" x-text="p.verification"></span>
+                                        <span class="text-gray-400">Verification Score</span>
+                                        <span class="text-[10px] font-bold text-emerald-300" x-text="p.verification + '% GIS Verified'"></span>
                                     </div>
                                     <div class="h-1.5 overflow-hidden rounded-full bg-white/10">
-                                        <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-200" :style="'width:' + pct(p) + '%'"></div>
+                                        <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-200" :style="'width:' + p.verification + '%'"></div>
                                     </div>
-                                    <div class="text-[9px] text-gray-400" x-text="fmt(p.mapped) + ' / 1,000 HA matched'"></div>
                                 </div>
 
                                 <div class="flex flex-wrap gap-x-3 gap-y-1">
@@ -536,8 +684,8 @@ ob_start();
                                 </div>
 
                                 <a :href="projectUrl + '?id=' + p.id"
-                                   class="mt-auto inline-flex w-fit items-center gap-1.5 rounded-lg border border-white/25 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-white transition hover:bg-white/10">
-                                    <span>View Project</span><?= $arrow ?>
+                                   class="mt-auto inline-flex w-fit items-center gap-1.5 rounded-lg border border-emerald-400/40 bg-emerald-500/10 hover:bg-emerald-500/20 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-emerald-300 transition">
+                                    <span>View Production Project</span><?= $arrow ?>
                                 </a>
                             </div>
                         </article>

@@ -129,7 +129,7 @@ ob_start();
                             <span class="text-xs font-bold uppercase tracking-wider text-gray-400">TOTAL BATCH REQUIREMENT</span>
                             <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">MODELED REQUIREMENT</span>
                         </div>
-                        <div class="text-3xl font-black tracking-tight text-white sm:text-4xl">880,000 USDT</div>
+                        <div class="text-3xl font-black tracking-tight text-white sm:text-4xl">880.000 usdt</div>
                     </div>
                     <div class="flex flex-wrap items-center gap-4 text-xs">
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-3 text-center">
@@ -138,7 +138,7 @@ ob_start();
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-3 text-center">
                             <div class="text-[9px] text-gray-400 uppercase font-bold">INDICATIVE AVERAGE</div>
-                            <div class="text-sm font-extrabold text-emerald-300 mt-0.5">8,800 USDT / HA</div>
+                            <div class="text-sm font-extrabold text-emerald-300 mt-0.5">8.800 usdt/HA</div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['coin']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">TOTAL RAB</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">880,000 USDT</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">880.000 usdt</div>
                         <div class="text-[9px] text-gray-400">Model Requirement</div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['grid']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">ALLOCATED</div>
-                        <div class="text-lg font-extrabold leading-tight text-emerald-300">0 USDT</div>
+                        <div class="text-lg font-extrabold leading-tight text-emerald-300">0 usdt</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['clock']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">COMMITTED</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">0 USDT</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">0 usdt</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">EXECUTED</div>
-                        <div class="text-lg font-extrabold leading-tight text-white">0 USDT</div>
+                        <div class="text-lg font-extrabold leading-tight text-white">0 usdt</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['shield']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">VERIFIED</div>
-                        <div class="text-lg font-extrabold leading-tight text-amber-300">0 USDT</div>
+                        <div class="text-lg font-extrabold leading-tight text-amber-300">0 usdt</div>
                         <div class="text-[9px] text-gray-400">Initial Demo</div>
                     </div>
                 </div>
@@ -351,6 +351,110 @@ ob_start();
 
                     </div>
 
+                    <!-- BSC TESTNET / BSCSCAN AUTOMATED FUND SPLIT VERIFIER SIMULATOR -->
+                    <section class="<?= $card ?> p-5 space-y-4 border border-emerald-500/40 bg-[#071510]/95 shadow-2xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-400/30 uppercase">BSC TESTNET PROTOCOL</span>
+                                    <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">REAL-TIME TRANSPARENCY SIMULATION</span>
+                                </div>
+                                <h2 class="text-base font-bold text-white mt-1">100% PO Collection Fund Split & Vendor Wallet Verification</h2>
+                                <p class="text-xs text-gray-300">Automatic 24/7 on-chain split distribution of 880,000 USDT batch budget directly to designated vendor wallets upon 100% collection.</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span class="text-xs font-mono font-bold text-emerald-400 block">TOTAL BATCH BUDGET</span>
+                                <span class="text-lg font-extrabold text-white font-mono">880,000 USDT</span>
+                            </div>
+                        </div>
+
+                        <!-- Vendor Split Matrix -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs font-mono">
+                            <!-- Vendor 1: Pupuk / PT ABC -->
+                            <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] text-emerald-400 font-bold uppercase">FERTILIZER & INPUTS</span>
+                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                </div>
+                                <div class="font-extrabold text-white text-sm">PT ABC Agro</div>
+                                <div class="text-xs font-bold text-emerald-300">176,000 USDT <span class="text-[9px] text-gray-400 font-normal">(20%)</span></div>
+                                <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
+                                    <span class="block text-gray-500">REGISTERED WALLET:</span>
+                                    <a href="https://testnet.bscscan.com/address/0x892A83F912C456789012345678901234567811F4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
+                                        <span>0x892A...11F4</span>
+                                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Vendor 2: Seedlings / PT XYZ -->
+                            <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] text-emerald-400 font-bold uppercase">SEEDLINGS & NURSERY</span>
+                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                </div>
+                                <div class="font-extrabold text-white text-sm">PT XYZ Seedlings</div>
+                                <div class="text-xs font-bold text-emerald-300">140,800 USDT <span class="text-[9px] text-gray-400 font-normal">(16%)</span></div>
+                                <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
+                                    <span class="block text-gray-500">REGISTERED WALLET:</span>
+                                    <a href="https://testnet.bscscan.com/address/0x7A3F9C2B88901234567890123456789012349C2B" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
+                                        <span>0x7A3F...9C2B</span>
+                                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Vendor 3: Heavy Machinery / PT KLM -->
+                            <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] text-emerald-400 font-bold uppercase">HEAVY MACHINERY & PREP</span>
+                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                </div>
+                                <div class="font-extrabold text-white text-sm">PT KLM Machinery</div>
+                                <div class="text-xs font-bold text-emerald-300">158,400 USDT <span class="text-[9px] text-gray-400 font-normal">(18%)</span></div>
+                                <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
+                                    <span class="block text-gray-500">REGISTERED WALLET:</span>
+                                    <a href="https://testnet.bscscan.com/address/0x4D1E8A92C45678901234567890123456789092C4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
+                                        <span>0x4D1E...92C4</span>
+                                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Vendor 4: Land Partner Maintenance / PT Kaltara 8 -->
+                            <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] text-emerald-400 font-bold uppercase">OPERATIONS & LAND PARTNER</span>
+                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01-M04 STAGED</span>
+                                </div>
+                                <div class="font-extrabold text-white text-sm">PT Kaltara 8 (Land Partner)</div>
+                                <div class="text-xs font-bold text-emerald-300">193,600 USDT <span class="text-[9px] text-gray-400 font-normal">(22%)</span></div>
+                                <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
+                                    <span class="block text-gray-500">REGISTERED WALLET:</span>
+                                    <a href="https://testnet.bscscan.com/address/0x3F7A1B88A15678901234567890123456789088A1" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
+                                        <span>0x3F7A...88A1</span>
+                                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Simulated On-Chain Transaction Hash & BscScan Explorer Bar -->
+                        <div class="p-3.5 rounded-xl bg-black/60 border border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+                            <div class="space-y-0.5">
+                                <div class="text-emerald-400 font-bold text-[10px] uppercase flex items-center gap-1.5">
+                                    <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    <span>SIMULATED BSC TESTNET TRANSACTION HASH (SPLIT DISBURSEMENT)</span>
+                                </div>
+                                <div class="text-white font-bold text-xs truncate">0x9e2b4c12d38a9f2c41b07b5d2e33f52c4e6f8a77a8b9c0d1e2f3a4b5c6d7e8f9</div>
+                            </div>
+                            <a href="https://testnet.bscscan.com/tx/0x9e2b4c12d38a9f2c41b07b5d2e33f52c4e6f8a77a8b9c0d1e2f3a4b5c6d7e8f9" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-[10px] tracking-wider uppercase inline-flex items-center gap-1.5 shrink-0 transition">
+                                <span>VERIFY ON BSCSCAN</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                    </section>
+
                     <!-- 15. MAIN TABLE — FULL RAB DETAIL & 16. FILTERS -->
                     <section id="full-rab-table" class="<?= $card ?> p-5 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
@@ -412,7 +516,7 @@ ob_start();
                                     <?php endforeach; ?>
                                     <tr class="border-t border-white/20 font-bold text-white bg-white/5">
                                         <td class="py-2.5 px-3">TOTAL</td>
-                                        <td class="py-2.5 px-3 text-emerald-300">880,000 USDT</td>
+                                        <td class="py-2.5 px-3 text-emerald-300">880.000 usdt</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
                                         <td class="py-2.5 px-3 text-gray-500">&mdash;</td>
@@ -440,35 +544,35 @@ ob_start();
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-emerald-400 w-full animate-bar-full"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-400 font-semibold mt-0.5">880,000 USDT</div>
+                                        <div class="text-[8px] text-gray-400 font-semibold mt-0.5">880.000 usdt</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>ALLOCATED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-blue-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 usdt</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>COMMITTED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-amber-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 usdt</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>EXECUTED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-rose-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 usdt</div>
                                     </div>
                                     <div>
                                         <div class="flex justify-between font-bold text-gray-400"><span>VERIFIED</span><span>0%</span></div>
                                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mt-0.5">
                                             <div class="h-full bg-gray-400 w-0"></div>
                                         </div>
-                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 USDT</div>
+                                        <div class="text-[8px] text-gray-500 font-semibold mt-0.5">0 usdt</div>
                                     </div>
                                 </div>
                             </div>
@@ -574,7 +678,7 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-xs">
-                            <div class="flex justify-between"><span class="text-gray-400">Total Requirement</span><span class="font-bold text-emerald-300">880,000 USDT</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Total Requirement</span><span class="font-bold text-emerald-300">880.000 usdt</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">RAB Version</span><span class="font-bold text-white">V01</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Categories</span><span class="font-bold text-white">09</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Execution Progress</span><span class="font-bold text-amber-300">0%</span></div>

@@ -693,7 +693,7 @@ ob_start();
 
                     <div class="space-y-2 text-xs font-mono">
                         <div class="flex justify-between"><span class="text-gray-400">Linked Requirement</span><span class="text-emerald-300 font-bold">DR-2026-001</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Offtake Buyer</span><span class="text-white font-bold">Demo Offtake Buyer — Lotte (Simulated)</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Offtake Buyer</span><span class="text-white font-bold">Demo Offtake Buyer — Sania (Simulated)</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Production Requirement</span><span class="text-white">1,000 HA Capacity</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Mapped Capacity</span><span class="text-emerald-300 font-bold">1,000 HA (10 × 100 HA Batches)</span></div>
                     </div>
