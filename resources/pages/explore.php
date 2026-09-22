@@ -28,6 +28,8 @@ $projects = [
         'company' => 'PT. Kaltara 8',
         'listing_id' => 'ID-ML-0001',
         'project_code' => 'PO-KAL-0001',
+        'zone_code' => 'ZONE-02-KAL',
+        'joined' => 'August 2024',
         'category' => 'Palm Production', 
         'region' => 'North Kalimantan',   
         'network' => 200, 
@@ -53,6 +55,8 @@ $projects = [
         'company' => 'PT. Banua Palm Mandiri',
         'listing_id' => 'ID-ML-0002',
         'project_code' => 'PO-KAL-0002',
+        'zone_code' => 'ZONE-02-KAL',
+        'joined' => 'October 2024',
         'category' => 'Palm Production', 
         'region' => 'South Kalimantan',   
         'network' => 800, 
@@ -78,6 +82,8 @@ $projects = [
         'company' => 'PT. Kahayan Lestari',
         'listing_id' => 'ID-ML-0003',
         'project_code' => 'PO-KAL-0003',
+        'zone_code' => 'ZONE-02-KAL',
+        'joined' => 'November 2024',
         'category' => 'Forestry',      
         'region' => 'Central Kalimantan', 
         'network' => 1200, 
@@ -103,6 +109,8 @@ $projects = [
         'company' => 'PT. Mahakam Tirta Perdana',
         'listing_id' => 'ID-ML-0004',
         'project_code' => 'PO-KAL-0004',
+        'zone_code' => 'ZONE-02-KAL',
+        'joined' => 'January 2025',
         'category' => 'Infrastructure', 
         'region' => 'East Kalimantan', 
         'network' => 500, 
@@ -128,6 +136,8 @@ $projects = [
         'company' => 'PT. Papua Hutan Lestari',
         'listing_id' => 'ID-ML-0005',
         'project_code' => 'PO-PAP-0005',
+        'zone_code' => 'ZONE-07-PAP',
+        'joined' => 'February 2025',
         'category' => 'Forestry', 
         'region' => 'West Papua', 
         'network' => 1500, 
@@ -153,6 +163,8 @@ $projects = [
         'company' => 'PT. Sulawesi Agro Mandiri',
         'listing_id' => 'ID-ML-0006',
         'project_code' => 'PO-SUL-0006',
+        'zone_code' => 'ZONE-04-SUL',
+        'joined' => 'March 2025',
         'category' => 'Agriculture', 
         'region' => 'South Sulawesi', 
         'network' => 800, 
@@ -178,6 +190,8 @@ $projects = [
         'company' => 'PT. Kaltim Logistik Utama',
         'listing_id' => 'ID-ML-0007',
         'project_code' => 'PO-KAL-0007',
+        'zone_code' => 'ZONE-02-KAL',
+        'joined' => 'May 2025',
         'category' => 'Infrastructure', 
         'region' => 'East Kalimantan', 
         'network' => 200, 
@@ -685,10 +699,11 @@ ob_start();
                                     <div class="flex items-center justify-between gap-2"><dt class="text-gray-400">Modeled Requirement</dt><dd class="font-bold text-white" x-text="p.modeled_budget"></dd></div>
                                 </dl>
 
-                                <div class="border-t border-white/10 pt-2.5 space-y-1 text-[10px]">
-                                    <div class="flex justify-between items-center"><span class="text-gray-400">Partner</span><span class="font-bold text-white truncate max-w-[140px]" x-text="p.partner"></span></div>
-                                    <div class="flex justify-between items-center"><span class="text-gray-400">Land Status</span><span class="text-emerald-300 font-medium truncate max-w-[140px]" x-text="p.land_status"></span></div>
-                                    <div class="flex justify-between items-center"><span class="text-gray-400">Seed Status</span><span class="text-gray-300 font-medium truncate max-w-[140px]" x-text="p.seed_status"></span></div>
+                                <div class="space-y-1 border-t border-white/10 pt-2.5 text-[10px]">
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Partner Entity</span><span class="max-w-[140px] truncate font-bold text-white" x-text="p.company"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Joined NINA</span><span class="font-mono font-bold text-emerald-300" x-text="p.joined"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Island Zone</span><span class="font-mono font-semibold text-gray-300" x-text="p.zone_code"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Land Status</span><span class="max-w-[140px] truncate font-medium text-emerald-300" x-text="p.land_status"></span></div>
                                 </div>
 
                                 <div class="space-y-1.5">

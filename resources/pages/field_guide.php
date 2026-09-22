@@ -285,6 +285,23 @@ ob_start();
                 { title: 'Partners & Vendors', url: '<?= $basePrefix ?>/vendors' }
             ]
         },
+        'island_zonasi': {
+            term: 'Regional Island Zoning (Kode Zonasi)',
+            fullName: 'NINA Regional Island Classification System',
+            category: 'network',
+            categoryName: 'Network & Infrastructure',
+            simple: 'The standardized regional island coding system for Indonesia production projects (SUM = Sumatera, KAL = Kalimantan, JAW = Jawa, SUL = Sulawesi, NTB = Nusa Tenggara/Bali, MLK = Maluku, PAP = Papua).',
+            whyItMatters: 'Ensures clear legal standing, geographic traceability, and island-specific operational compliance across Indonesia.',
+            example: 'PO-KAL-0001 (Zone 02 / Kalimantan), PO-PAP-0005 (Zone 07 / Papua), PO-SUL-0006 (Zone 04 / Sulawesi).',
+            ninaUse: 'Project Code Assignment, GIS Clustering & Legal Standing',
+            warning: 'Project codes must include exact island regional prefix for GIS polygon validation.',
+            related: ['Plantation', 'GIS', 'Production Capacity'],
+            image: '<?= $basePrefix ?>/1.jpg',
+            whereAppears: [
+                { title: 'Explore Projects', url: '<?= $basePrefix ?>/explore' },
+                { title: 'Project Overview', url: '<?= $basePrefix ?>/project-overview' }
+            ]
+        },
         'prod_cap': {
             term: 'Production Capacity',
             fullName: 'Aggregate Land Capacity',

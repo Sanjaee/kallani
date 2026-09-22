@@ -84,6 +84,10 @@ ob_start();
                         <span class="text-gray-400">ID Listing: <strong class="text-white">ID-ML-0001</strong></span>
                         <span class="text-gray-500">•</span>
                         <span class="text-gray-400">No Project: <strong class="text-white">PO-KAL-0001</strong></span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-400">Zone: <strong class="text-emerald-300">ZONE-02-KAL</strong></span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-400">Joined NINA: <strong class="text-emerald-300">August 2024</strong></span>
                     </div>
                     <p class="max-w-xl text-base font-semibold leading-normal text-emerald-300 mt-2">
                         Verified-capacity production project within the NINA productive asset network.
