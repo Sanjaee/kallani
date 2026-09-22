@@ -372,10 +372,10 @@ ob_start();
                         <!-- Model Column -->
                         <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-2">
                             <span class="text-[9px] font-bold text-emerald-300 uppercase block border-b border-emerald-500/20 pb-1">MODEL (Benchmark)</span>
-                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">TBS Yield:</span><strong class="text-white">18.03 T/HA/YR</strong></div>
-                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">Model TBS:</span><strong class="text-emerald-300">1,803 T/YR</strong></div>
-                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">OER:</span><strong class="text-white">20%</strong></div>
-                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">Model CPO:</span><strong class="text-emerald-300">360.6 T/YR</strong></div>
+                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">TBS Yield:</span><strong class="text-white">18.00 T/HA/YR</strong></div>
+                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">Model TBS:</span><strong class="text-emerald-300">1,800 T/YR</strong></div>
+                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">OER:</span><strong class="text-white">22%</strong></div>
+                            <div class="flex justify-between text-[11px]"><span class="text-gray-400">Model CPO:</span><strong class="text-emerald-300">396 T/YR</strong></div>
                             <div class="text-[8px] text-gray-400 italic pt-1 border-t border-emerald-500/20">Modelled capacity only. Not a guaranteed outcome.</div>
                         </div>
 

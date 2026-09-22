@@ -22,6 +22,8 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
     $activeTab = 'network';
 } elseif (strpos($reqPath, '/audit') === 0) {
     $activeTab = 'audit';
+} elseif (strpos($reqPath, '/field-guide') === 0 || strpos($reqPath, '/glossary') === 0 || strpos($reqPath, '/guide') === 0) {
+    $activeTab = 'guide';
 }
 ?>
 <!DOCTYPE html>
@@ -111,6 +113,15 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
             <a href="<?php echo $basePrefix; ?>/audit-trail" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'audit') ? 'text-white font-bold' : 'text-gray-300 hover:text-white'; ?>">
                 <span>AUDIT TRAIL</span>
                 <?php if ($activeTab === 'audit'): ?>
+                    <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
+                <?php endif; ?>
+            </a>
+            <a href="<?php echo $basePrefix; ?>/field-guide" class="relative py-1.5 font-semibold transition-colors <?php echo ($activeTab === 'guide') ? 'text-white font-bold' : 'text-emerald-400 hover:text-emerald-300'; ?>">
+                <span class="flex items-center gap-1">
+                    <span>FIELD GUIDE</span>
+                    <span class="text-[9px] px-1 py-0.2 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">22</span>
+                </span>
+                <?php if ($activeTab === 'guide'): ?>
                     <span class="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald-400 rounded-full"></span>
                 <?php endif; ?>
             </a>
@@ -324,6 +335,13 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                     </div>
                     <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">20</span>
                 </a>
+                <a href="<?php echo $basePrefix; ?>/field-guide" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'field-guide') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-emerald-400 hover:text-white hover:bg-white/5'; ?>">
+                    <div class="flex items-center gap-2.5">
+                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span>Field Guide</span>
+                    </div>
+                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">22</span>
+                </a>
             </div>
         </div>
 
@@ -504,6 +522,15 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                             <span>Audit Trail</span>
                         </div>
                         <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'audit') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">20</span>
+                    </a>
+
+                    <!-- 22 Field Guide -->
+                    <a href="<?php echo $basePrefix; ?>/field-guide" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'field-guide') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-emerald-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            <span>Field Guide</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'field-guide') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-emerald-950 text-emerald-400 border border-emerald-800/40'; ?>">22</span>
                     </a>
                 </div>
 

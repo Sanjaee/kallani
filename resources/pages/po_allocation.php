@@ -206,8 +206,8 @@ ob_start();
                     <!-- 8. ALLOCATION SHARE & NO-OWNERSHIP DISCLAIMER -->
                     <section class="<?= $card ?> p-4 bg-amber-950/20 border-amber-500/30 space-y-2">
                         <div class="flex justify-between items-center text-xs font-bold">
-                            <span class="text-amber-300 uppercase tracking-wider">Allocation Share of Batch Requirement</span>
-                            <span class="text-amber-300 text-sm">6.67%*</span>
+                            <div class="text-[10px] text-gray-400 mt-0.5">Allocation Share of Batch Requirement</div>
+                            <span class="text-amber-300 text-sm">0.91%*</span>
                         </div>
                         <p class="text-[9px] italic text-gray-300 leading-relaxed">
                             *This percentage represents the allocation proportion within the modeled batch requirement and does not represent legal ownership of land or the operating company.

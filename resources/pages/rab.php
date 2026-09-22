@@ -83,6 +83,7 @@ ob_start();
                     <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-300 pt-1">
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Project: <strong class="text-white">North Kalimantan Palm</strong></span>
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Batch: <strong class="text-white">NK-001</strong></span>
+                        <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Operator: <strong class="text-emerald-300">PT. Kaltara 8</strong></span>
                     </div>
                 </div>
 
@@ -444,11 +445,11 @@ ob_start();
                             <div class="space-y-0.5">
                                 <div class="text-emerald-400 font-bold text-[10px] uppercase flex items-center gap-1.5">
                                     <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    <span>SIMULATED BSC TESTNET TRANSACTION HASH (SPLIT DISBURSEMENT)</span>
+                                    <span>SIMULATED TRANSACTION</span>
                                 </div>
-                                <div class="text-white font-bold text-xs truncate">0x9e2b4c12d38a9f2c41b07b5d2e33f52c4e6f8a77a8b9c0d1e2f3a4b5c6d7e8f9</div>
+                                <div class="text-white font-bold text-xs truncate">[DEMO HASH]</div>
                             </div>
-                            <a href="https://testnet.bscscan.com/tx/0x9e2b4c12d38a9f2c41b07b5d2e33f52c4e6f8a77a8b9c0d1e2f3a4b5c6d7e8f9" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-[10px] tracking-wider uppercase inline-flex items-center gap-1.5 shrink-0 transition">
+                            <a href="#" class="px-3 py-2 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-[10px] tracking-wider uppercase inline-flex items-center gap-1.5 shrink-0 transition cursor-default">
                                 <span>VERIFY ON BSCSCAN</span>
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                             </a>

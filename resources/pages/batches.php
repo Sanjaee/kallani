@@ -224,7 +224,7 @@ function batchPage() {
                                     <div class="flex justify-between"><dt class="text-gray-400">Commercial Delivery</dt><dd class="font-bold text-white">15 years</dd></div>
                                     <div class="flex justify-between"><dt class="text-gray-400">Seed</dt><dd class="font-bold text-white">Certified Superior Seed</dd></div>
                                     <div class="flex justify-between"><dt class="text-gray-400">Planting Density</dt><dd class="font-bold text-white">143 trees / ha</dd></div>
-                                    <div class="flex justify-between"><dt class="text-gray-400">Production Model</dt><dd class="font-bold text-white">18.03 t TBS / he. / year*</dd></div>
+                                    <div class="flex justify-between"><dt class="text-gray-400">Production Model</dt><dd class="font-bold text-white">18.00 t TBS / ha. / year*</dd></div>
                                 </dl>
                             </div>
                         </div>
@@ -341,7 +341,7 @@ function batchPage() {
 
                     <!-- Right: Allocation Grid (15 Slots) -->
                     <div class="lg:col-span-4 rounded-xl border border-white/10 bg-[#07110E] p-5 space-y-3">
-                        <div class="text-[10px] font-bold uppercase tracking-wider text-gray-300">Allocation Units (15)</div>
+                        <div class="text-[10px] font-bold uppercase tracking-wider text-gray-300">Allocation Units (1-110)</div>
                         <div class="grid grid-cols-5 gap-1.5 text-center text-[9px]">
                             <?php for ($i = 1; $i <= 15; $i++): ?>
                                 <div class="rounded border border-white/10 bg-[#050D0A] py-1.5 px-1 flex flex-col items-center justify-center">
@@ -416,13 +416,16 @@ function batchPage() {
                         </div>
 
                         <div class="space-y-2 text-xs">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Required Conditions</div>
-                            <ul class="space-y-1.5 text-[11px] text-gray-300">
-                                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> PO Collection</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> RAB Confirmation</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Vendor Assignment</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Execution Approval</li>
-                                <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Verification Record</li>
+                            <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                                <span>Required Conditions</span>
+                                <span class="text-amber-300">0 / 5 READY</span>
+                            </div>
+                            <ul class="space-y-1.5 text-[11px] text-gray-300 font-mono">
+                                <li class="flex items-center gap-2"><span class="text-gray-500">○</span> PO Collection <span class="text-amber-300/80 ml-auto text-[9px] uppercase">Pending</span></li>
+                                <li class="flex items-center gap-2"><span class="text-gray-500">○</span> RAB Confirmation <span class="text-amber-300/80 ml-auto text-[9px] uppercase">Pending</span></li>
+                                <li class="flex items-center gap-2"><span class="text-gray-500">○</span> Vendor Assignment <span class="text-amber-300/80 ml-auto text-[9px] uppercase">Pending</span></li>
+                                <li class="flex items-center gap-2"><span class="text-gray-500">○</span> Field Verification <span class="text-amber-300/80 ml-auto text-[9px] uppercase">Pending</span></li>
+                                <li class="flex items-center gap-2"><span class="text-gray-500">○</span> Execution Approval <span class="text-gray-500 ml-auto text-[9px] uppercase">Locked</span></li>
                             </ul>
                         </div>
 

@@ -299,10 +299,10 @@ ob_start();
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Chemical Corp</span>
-                                    <span class="px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 text-[8px] font-mono border border-blue-800">DEMO-PO-2026-SANIA-001</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — PT Megasurya Mas (SunCo)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-blue-950 text-blue-300 text-[8px] font-mono border border-blue-800">DEMO-PO-2026-SUNCO-001</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Bio-Extraction Oil &bull; 2,000 HA Mapped Requirement (Example Spec)</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Palm Oil (CPO) for Cooking Oil &bull; 2,000 HA Mapped Requirement</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">2,000 HA</div>
@@ -313,10 +313,10 @@ ob_start();
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Supply (Simulated)</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — PT Wilmar Internasional (Sania)</span>
                                     <span class="px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[8px] font-mono border border-emerald-800">DEMO-PO-2026-SANIA-002</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Biofuel & Feedstock &bull; 1,000 HA Mapped Requirement (Example Spec)</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Palm Oil (CPO) for Cooking Oil &bull; 1,000 HA Mapped Requirement</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">1,000 HA</div>
@@ -327,10 +327,10 @@ ob_start();
                         <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-extrabold text-white">Demo Offtake Buyer — Sania Biomass (Simulated)</span>
-                                    <span class="px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 text-[8px] font-mono border border-amber-800">DEMO-PO-2026-SANIA-003</span>
+                                    <span class="font-extrabold text-white">Demo Offtake Buyer — PT Tunas Baru Lampung Tbk (Rose Brand)</span>
+                                    <span class="px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 text-[8px] font-mono border border-amber-800">DEMO-PO-2026-ROSE-003</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Bio-Oil &bull; 500 HA Mapped Requirement (Example Spec)</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">Crude Palm Oil (CPO) for Cooking Oil &bull; 500 HA Mapped Requirement</div>
                             </div>
                             <div class="text-right">
                                 <div class="font-mono font-bold text-emerald-300">500 HA</div>

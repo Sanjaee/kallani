@@ -60,6 +60,8 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/production_programs.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
+} elseif ($uri === '/field-guide' || $uri === '/glossary' || $uri === '/guide') {
+    include $baseDir . '/resources/pages/field_guide.php';
 } else {
     http_response_code(404);
     include $baseDir . '/resources/pages/404.php';

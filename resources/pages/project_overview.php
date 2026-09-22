@@ -406,13 +406,13 @@ ob_start();
                             <div class="rounded-lg bg-white/5 p-2.5 border border-white/5">
                                 <div class="text-gray-400 text-[8px] uppercase">PRODUCTION INDICATORS</div>
                                 <div class="text-white font-bold">TBS Productivity (benchmark)</div>
-                                <div class="text-emerald-300 text-xs font-mono font-bold">18.03 t/ha/year</div>
+                                <div class="text-emerald-300 text-xs font-mono font-bold">18.00 t/ha/year</div>
                             </div>
 
                             <div class="rounded-lg bg-white/5 p-2.5 border border-white/5">
                                 <div class="text-gray-400 text-[8px] uppercase">OER (MODEL ASSUMPTION)</div>
                                 <div class="text-white font-bold">CPO Output (model)</div>
-                                <div class="text-emerald-300 text-xs font-mono font-bold">20% <span class="text-[8px] text-gray-400 font-normal">(360.6 t/year per 100 ha)</span></div>
+                                <div class="text-emerald-300 text-xs font-mono font-bold">22% <span class="text-[8px] text-gray-400 font-normal">(396 t/year per 100 ha)</span></div>
                             </div>
                         </div>
                     </div>
@@ -624,9 +624,11 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-[8.5px] rounded bg-[#07110E] p-2 border border-white/10">
-                            <div><span class="text-gray-400 block">ENTITY</span><span class="font-bold text-white">Demo Production Partner</span></div>
+                            <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara 8</span></div>
+                            <div><span class="text-gray-400 block">TIER & REPUTATION</span><span class="font-bold text-emerald-300">Silver | ⭐ 5.0</span></div>
+                            <div><span class="text-gray-400 block">JOINED NINA</span><span class="font-bold text-slate-300">August 2024</span></div>
                             <div><span class="text-gray-400 block">REGISTERED WALLET</span><span class="font-mono text-emerald-300 font-bold">0x7A3F...9C2B</span></div>
-                            <div><span class="text-gray-400 block">STATUS</span><span class="text-amber-300 font-bold">REGISTERED / DEMO</span></div>
+                            <div><span class="text-gray-400 block">STATUS</span><span class="text-amber-300 font-bold">REGISTERED / VERIFIED</span></div>
                         </div>
                     </div>
 

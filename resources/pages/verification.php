@@ -79,7 +79,7 @@ ob_start();
                 <div class="space-y-3">
                     <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
                         <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">ASSURANCE PROTOCOL</span>
-                        <span>14 / INDEPENDENT VERIFICATION VAULT</span>
+                        <span>14 / VERIFICATION FRAMEWORK VAULT</span>
                         <span class="rounded border border-amber-400/40 bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-amber-300">DEMO / AUDITED MATRIX</span>
                     </div>
 
@@ -123,7 +123,7 @@ ob_start();
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
                             <div class="text-[8px] font-bold uppercase text-gray-400">ASSURANCE MODEL</div>
-                            <div class="font-bold text-white text-[11px]">Multi-Tier Independent</div>
+                            <div class="font-bold text-white text-[11px]">Multi-Tier Framework</div>
                         </div>
                     </div>
                 </div>
@@ -169,7 +169,7 @@ ob_start();
                     <div>
                         <div class="<?= $metricLbl ?>">PROTOCOL</div>
                         <div class="text-sm font-extrabold leading-tight text-white">MULTI-TIER</div>
-                        <div class="text-[8px] text-gray-400">Independent Assurance</div>
+                        <div class="text-[8px] text-gray-400">Framework Assurance</div>
                     </div>
                 </div>
 
@@ -195,8 +195,8 @@ ob_start();
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
                             <div>
                                 <div class="text-[8px] font-bold uppercase tracking-wider text-emerald-300">01 / AUDIT MATRIX</div>
-                                <h2 class="text-base font-bold text-white">Independent Verification Domain Matrix</h2>
-                                <p class="text-xs text-gray-300">Every operational domain requires third-party verification records.</p>
+                                <h2 class="text-base font-bold text-white">Verification Framework Domain Matrix</h2>
+                                <p class="text-xs text-gray-300">Every operational domain requires structured verification framework records.</p>
                             </div>
                             <span class="rounded bg-emerald-950 px-2.5 py-1 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">DEMO AUDIT MATRIX</span>
                         </div>
@@ -231,7 +231,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-semibold text-white flex items-center gap-2">
                                             <span class="text-emerald-300"><?= $svg($ic['doc'], 'w-3.5 h-3.5') ?></span> Land Rights & Legal Title
                                         </td>
-                                        <td class="py-2.5 px-3">HGU Concession Master Title</td>
+                                        <td class="py-2.5 px-3">Land Rights / Legal Documentation</td>
                                         <td class="py-2.5 px-3 text-gray-400">Legal Counsel Document Review</td>
                                         <td class="py-2.5 px-3 text-amber-300">To be Appointed</td>
                                         <td class="py-2.5 px-3 font-mono text-gray-400">VER-LEG-002</td>
@@ -341,9 +341,9 @@ ob_start();
                         </div>
 
                         <div class="space-y-2 text-xs">
-                            <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Matrix Status</span><span class="font-bold text-amber-300">Pending Independent Audit</span></div>
+                            <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Matrix Status</span><span class="font-bold text-amber-300">Pending Framework Audit</span></div>
                             <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Verified Domains</span><span class="font-bold text-emerald-300">02 / 07</span></div>
-                            <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Assurance Model</span><span class="font-bold text-white">Multi-Tier Independent</span></div>
+                            <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Assurance Model</span><span class="font-bold text-white">Multi-Tier Framework</span></div>
                             <div class="flex justify-between py-1"><span class="text-gray-400">System Record</span><span class="font-mono text-white">Verified Immutable</span></div>
                         </div>
 
@@ -381,7 +381,7 @@ ob_start();
                     <!-- Card 3: EXPORT VERIFICATION REPORT -->
                     <div class="<?= $card ?> p-4 space-y-2">
                         <div class="text-[9px] font-bold uppercase tracking-wider text-gray-400">EXPORT VERIFICATION</div>
-                        <p class="text-[9px] text-gray-400">Download independent verification report.</p>
+                        <p class="text-[9px] text-gray-400">Download verification framework report.</p>
                         <button type="button" class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-950/80 border border-emerald-400/40 py-2.5 text-[10px] font-extrabold uppercase text-emerald-300 hover:bg-emerald-900/80">
                             <span>EXPORT VERIFICATION REPORT (PDF)</span><?= $svg($ic['download'], 'w-3.5 h-3.5') ?>
                         </button>

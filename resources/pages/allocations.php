@@ -260,6 +260,14 @@ ob_start();
                                 <span>Area: <strong class="text-white">100 HA</strong></span>
                             </div>
                             <p class="text-[11px] text-gray-400">One minimum allocation unit within the standard 100 HA production batch structure.</p>
+                            
+                            <!-- Planting Operator Info -->
+                            <div class="mt-2 flex flex-wrap items-center gap-3 sm:gap-4 border-t border-white/10 pt-2.5 text-[10px] font-mono">
+                                <div><span class="text-gray-500">OPERATOR: </span><strong class="text-emerald-300">PT. KALTARA 8</strong></div>
+                                <div><span class="text-gray-500">TIER: </span><span class="rounded border border-slate-500/30 bg-slate-800/50 px-1.5 py-0.5 font-bold text-slate-300">SILVER</span></div>
+                                <div><span class="text-gray-500">REPUTATION: </span><strong class="text-amber-300">5.0</strong></div>
+                                <div><span class="text-gray-500">JOINED NINA: </span><strong class="text-white">AUG 2024</strong></div>
+                            </div>
                         </div>
                     </div>
 
@@ -474,7 +482,7 @@ ob_start();
                     </div>
                     <div class="flex items-center gap-2 text-amber-300 font-semibold">
                         <span class="text-amber-400">○</span>
-                        <span>Required batch collection complete (6.67%)</span>
+                        <span>Required batch collection complete (0.91%)</span>
                     </div>
                     <div class="flex items-center gap-2 text-gray-400">
                         <span>○</span>
@@ -547,23 +555,23 @@ ob_start();
 
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
                             <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                                <div class="text-[9px] text-gray-400">YIELD BENCHMARK</div>
-                                <div class="text-base font-extrabold text-white mt-0.5">18.03 T</div>
+                                <div class="text-[9px] text-gray-400">BENCHMARK TBS (YIELD)</div>
+                                <div class="text-base font-extrabold text-white mt-0.5">18.00 T</div>
                                 <div class="text-[9px] text-gray-500">TBS / HA / Year</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                                <div class="text-[9px] text-gray-400">MODELLED BATCH OUTPUT</div>
-                                <div class="text-base font-extrabold text-white mt-0.5">1,803 T</div>
+                                <div class="text-[9px] text-gray-400">MODELLED TBS (100 HA)</div>
+                                <div class="text-base font-extrabold text-white mt-0.5">1,800 T</div>
                                 <div class="text-[9px] text-gray-500">TBS / Year (100 HA)</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-lg border border-white/5">
                                 <div class="text-[9px] text-gray-400">OER ASSUMPTION</div>
-                                <div class="text-base font-extrabold text-white mt-0.5">20.00%</div>
+                                <div class="text-base font-extrabold text-white mt-0.5">22%</div>
                                 <div class="text-[9px] text-gray-500">Oil Extraction Rate</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                                <div class="text-[9px] text-gray-400">MODELLED CPO OUTPUT</div>
-                                <div class="text-base font-extrabold text-emerald-300 mt-0.5">360.6 T</div>
+                                <div class="text-[9px] text-gray-400">MODELLED CPO VOLUME</div>
+                                <div class="text-base font-extrabold text-emerald-300 mt-0.5">396 T</div>
                                 <div class="text-[9px] text-gray-500">CPO / Year</div>
                             </div>
                         </div>

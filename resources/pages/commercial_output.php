@@ -421,10 +421,10 @@ ob_start();
                     <div class="rounded-lg border border-emerald-500/30 bg-emerald-950/40 p-3 space-y-1">
                         <div class="flex items-center justify-between text-[10px] font-bold text-emerald-300">
                             <span>MODELED ANNUAL TBS CAPACITY (BENCHMARK)</span>
-                            <span class="font-mono text-white text-xs">1,803 T / YEAR</span>
+                            <span class="font-mono text-white text-xs">1,800 T / YEAR</span>
                         </div>
                         <p class="text-[9px] text-gray-300 leading-tight">
-                            Benchmark basis: 18.03 t TBS/ha/year × 100 ha = 1,803 t TBS/year. Labelled as <strong>MODELLED CAPACITY</strong> — not guaranteed actual production.
+                            Benchmark basis: 18.00 t TBS/ha/year × 100 ha = 1,800 t TBS/year. Labelled as <strong>MODELLED CAPACITY</strong> — not guaranteed actual production.
                         </p>
                     </div>
                 </div>
@@ -460,13 +460,13 @@ ob_start();
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-3 font-semibold text-white">TBS / HA / Year</td>
-                                <td class="py-2.5 px-3 text-emerald-300 font-bold">18.03 T</td>
+                                <td class="py-2.5 px-3 text-emerald-300 font-bold">18.00 T</td>
                                 <td class="py-2.5 px-3 text-amber-300">Pending Harvest</td>
                                 <td class="py-2.5 px-3 text-gray-400">Planning Model</td>
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-3 font-semibold text-white">Annual TBS Output</td>
-                                <td class="py-2.5 px-3 text-emerald-300 font-bold">1,803 T</td>
+                                <td class="py-2.5 px-3 text-emerald-300 font-bold">1,800 T</td>
                                 <td class="py-2.5 px-3 text-amber-300">Pending Harvest</td>
                                 <td class="py-2.5 px-3 text-gray-400">Planning Model</td>
                             </tr>
@@ -478,7 +478,7 @@ ob_start();
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-3 font-semibold text-white">CPO Product Output</td>
-                                <td class="py-2.5 px-3 text-emerald-300 font-bold">360.6 T</td>
+                                <td class="py-2.5 px-3 text-emerald-300 font-bold">396 T</td>
                                 <td class="py-2.5 px-3 text-amber-300">Pending Processing</td>
                                 <td class="py-2.5 px-3 text-gray-400">Planning Model</td>
                             </tr>
@@ -605,10 +605,10 @@ ob_start();
                         <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300">MODEL</span>
                     </div>
                     <div class="rounded bg-black/40 border border-emerald-500/30 p-3 space-y-2 font-mono text-xs">
-                        <div class="flex justify-between text-gray-300"><span>OER Model Parameter:</span><strong class="text-emerald-300">20%</strong></div>
+                        <div class="flex justify-between text-gray-300"><span>OER Model Parameter:</span><strong class="text-emerald-300">22%</strong></div>
                         <div class="text-[10px] text-gray-400">Calculation Example:</div>
                         <div class="text-[11px] text-white font-bold bg-white/5 p-1.5 rounded text-center">
-                            1,803 T TBS × 20% OER = 360.6 T CPO
+                            1,800 T TBS × 22% OER = 396 T CPO
                         </div>
                     </div>
                     <div class="text-[9px] font-mono text-gray-400">
@@ -693,7 +693,7 @@ ob_start();
 
                     <div class="space-y-2 text-xs font-mono">
                         <div class="flex justify-between"><span class="text-gray-400">Linked Requirement</span><span class="text-emerald-300 font-bold">DR-2026-001</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Offtake Buyer</span><span class="text-white font-bold">Demo Offtake Buyer — Sania (Simulated)</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Offtake Buyer</span><span class="text-white font-bold">Demo Offtake Buyer — PT Wilmar Internasional (Sania)</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Production Requirement</span><span class="text-white">1,000 HA Capacity</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Mapped Capacity</span><span class="text-emerald-300 font-bold">1,000 HA (10 × 100 HA Batches)</span></div>
                     </div>
@@ -947,11 +947,11 @@ ob_start();
                     </div>
 
                     <div class="space-y-2 text-xs font-mono">
-                        <div class="flex justify-between"><span class="text-gray-400">Benchmark TBS Yield</span><span class="text-white font-bold">18.03 T / HA / YEAR</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Modelled TBS (100 HA)</span><span class="text-emerald-300 font-bold">1,803 T / YEAR</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Model OER</span><span class="text-white font-bold">20%</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Modelled CPO</span><span class="text-emerald-300 font-bold">360.6 T / YEAR</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Modelled CPO Volume</span><span class="text-white font-bold">≈405,849 L / YEAR*</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Benchmark TBS Yield</span><span class="text-white font-bold">18.00 T / HA / YEAR</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Modelled TBS (100 HA)</span><span class="text-emerald-300 font-bold">1,800 T / YEAR</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Model OER</span><span class="text-white font-bold">22%</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Modelled CPO</span><span class="text-emerald-300 font-bold">396 T / YEAR</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Modelled CPO Volume</span><span class="text-white font-bold">≈445,945 L / YEAR*</span></div>
                     </div>
 
                     <div class="text-[9px] font-mono text-gray-400 italic">

@@ -532,7 +532,7 @@ ob_start();
                             <div class="space-y-2">
                                 <div class="border-b border-white/10 pb-2">
                                     <h3 class="text-xs font-bold uppercase tracking-wider text-white">Verification</h3>
-                                    <p class="text-[9px] text-gray-400">Independent verification of execution and compliance.</p>
+                                    <p class="text-[9px] text-gray-400">Framework verification of execution and compliance.</p>
                                 </div>
 
                                 <div class="space-y-1 text-[10px]">
@@ -559,11 +559,15 @@ ob_start();
 
                                 <div class="relative w-full py-2">
                                     <div class="absolute top-[12px] left-[15px] right-[15px] h-[2px] bg-white/20 z-0"></div>
-                                    <div class="relative z-10 flex items-center justify-between text-center text-[8px] font-bold">
-                                        <div class="bg-[#07110E] px-1 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Execution</div>
-                                        <div class="bg-[#07110E] px-1 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Evidence</div>
-                                        <div class="bg-[#07110E] px-1 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Verification</div>
-                                        <div class="bg-[#07110E] px-1 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Approval</div>
+                                    <div class="relative z-10 flex items-center justify-between text-center text-[7px] font-bold tracking-tight">
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>RAB</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Work Order</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Partner</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Execution</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Evidence</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Verification</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Approval</div>
+                                        <div class="bg-[#07110E] px-0.5 text-gray-300 flex flex-col items-center gap-0.5"><span class="h-4 w-4 rounded-full border border-white/30 bg-[#07110E] flex items-center justify-center">○</span>Eligibility</div>
                                     </div>
                                 </div>
                             </div>
@@ -632,7 +636,7 @@ ob_start();
                             </div>
 
                             <div class="pt-2">
-                                <span class="rounded bg-emerald-950/80 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">SIMULATED RECORD</span>
+                                <span class="rounded bg-emerald-950/80 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">SIMULATED TRANSACTION</span>
                             </div>
                         </div>
 
