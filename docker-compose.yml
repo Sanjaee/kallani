@@ -10,6 +10,8 @@ services:
     working_dir: /app
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
     networks:
       - media_backend
 
