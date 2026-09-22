@@ -268,6 +268,23 @@ ob_start();
                 { title: 'Demand First / #02', url: '<?= $basePrefix ?>/demand' }
             ]
         },
+        'reputation_tier': {
+            term: 'Operator Tiers & Reputation',
+            fullName: 'NINA Partner Reputation & Progression Protocol',
+            category: 'network',
+            categoryName: 'Network & Infrastructure',
+            simple: 'The operational ranking system (Silver 100 HA → Gold 1,000 HA → Platinum 10,000 HA → Institutional 100,000 HA) based on verified execution history.',
+            whyItMatters: 'Every new entity starts strictly at 0.0 / 5.0 with 0 reviews and 0 completed batches. High-tier capacity listing requires proven execution history.',
+            example: 'PT. Kaltara 8 starts at Silver Tier (100 HA/batch, 0.0 rating). Completing 10 batches (1,100 reviews) unlocks Gold Tier (1,000 HA/batch).',
+            ninaUse: 'Partner Qualification, PO Allocation Minimums & Listing Limits',
+            warning: 'Fabricated ratings are strictly prohibited. Reputation is earned solely through verified batch delivery.',
+            related: ['Production Partner', 'PO Allocation', 'Production Batch'],
+            image: '<?= $basePrefix ?>/3.jpg',
+            whereAppears: [
+                { title: 'Project Overview', url: '<?= $basePrefix ?>/project-overview' },
+                { title: 'Partners & Vendors', url: '<?= $basePrefix ?>/vendors' }
+            ]
+        },
         'prod_cap': {
             term: 'Production Capacity',
             fullName: 'Aggregate Land Capacity',

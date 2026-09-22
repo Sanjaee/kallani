@@ -319,23 +319,23 @@ ob_start();
                         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white/5 p-3 rounded-lg border border-white/5 text-xs font-mono">
                             <div>
                                 <div class="text-[9px] text-gray-400">MAPPED CAPACITY</div>
-                                <div class="font-bold text-emerald-300 text-sm mt-0.5">300 HA</div>
+                                <div class="mt-0.5 text-sm font-bold text-emerald-300">200 HA</div>
                                 <div class="text-[9px] text-gray-500">North Kalimantan</div>
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">STANDARD BATCH</div>
-                                <div class="font-bold text-white text-sm mt-0.5">100 HA</div>
+                                <div class="mt-0.5 text-sm font-bold text-white">100 HA</div>
                                 <div class="text-[9px] text-gray-500">NK-001 Mapped</div>
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">COMPLETED BATCHES</div>
-                                <div class="font-bold text-white text-sm mt-0.5">00</div>
+                                <div class="mt-0.5 text-sm font-bold text-white">00</div>
                                 <div class="text-[9px] text-gray-500">Historical Record Pending</div>
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">REPUTATION STATE</div>
-                                <div class="font-bold text-amber-300 text-xs mt-0.5">NOT YET ESTABLISHED</div>
-                                <div class="text-[9px] text-gray-500">New Entity</div>
+                                <div class="mt-0.5 text-xs font-bold text-amber-300">★ 0.0 / 5.0</div>
+                                <div class="text-[9px] text-gray-500">New Entity (0 Reviews)</div>
                             </div>
                         </div>
 
@@ -504,9 +504,9 @@ ob_start();
                             <div class="text-[11px] font-mono text-emerald-300">Category: Heavy Equipment</div>
                             <div class="text-[10px] font-mono text-gray-400">Region: North Kalimantan</div>
                         </div>
-                        <div class="border-t border-white/5 pt-2 text-[10px] font-mono text-gray-400 flex justify-between">
+                        <div class="flex justify-between border-t border-white/5 pt-2 text-[10px] font-mono text-gray-400">
                             <span>Work Orders: <strong class="text-white">01</strong></span>
-                            <span>Reputation: <strong class="text-amber-300">New</strong></span>
+                            <span>Reputation: <strong class="text-amber-300">★ 0.0 / 5.0</strong></span>
                         </div>
                     </div>
 
@@ -514,17 +514,17 @@ ob_start();
                     <div class="<?= $card ?> p-4 space-y-3 opacity-90">
                         <div class="flex items-start justify-between">
                             <span class="<?= $iconBox ?>"><?= $svg($ic['leaf']) ?></span>
-                            <span class="text-[9px] font-mono font-bold text-gray-400 bg-white/10 px-2 py-0.5 rounded">PIPELINE</span>
+                            <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-mono font-bold text-gray-400">PIPELINE</span>
                         </div>
                         <div>
                             <div class="text-[9px] font-mono text-gray-400">ID: VND-NINA-0002</div>
-                            <h4 class="font-extrabold text-white text-sm">CERTIFIED SEED PRODUCER</h4>
+                            <h4 class="text-sm font-extrabold text-white">CERTIFIED SEED PRODUCER</h4>
                             <div class="text-[11px] font-mono text-emerald-300">Category: Superior Planting Seeds</div>
                             <div class="text-[10px] font-mono text-gray-400">Region: Indonesia / Demo</div>
                         </div>
-                        <div class="border-t border-white/5 pt-2 text-[10px] font-mono text-gray-400 flex justify-between">
+                        <div class="flex justify-between border-t border-white/5 pt-2 text-[10px] font-mono text-gray-400">
                             <span>Work Orders: <strong class="text-gray-400">00</strong></span>
-                            <span>Reputation: <strong class="text-gray-400">Pipeline</strong></span>
+                            <span>Reputation: <strong class="text-gray-400">★ 0.0 / 5.0</strong></span>
                         </div>
                     </div>
 
@@ -743,18 +743,25 @@ ob_start();
                                 <span class="text-[9px] text-gray-400 block">CORRECTION REQUESTS</span>
                                 <span class="text-lg font-bold text-white">00 <span class="text-xs text-emerald-400 font-normal">Clean</span></span>
                             </div>
-                            <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
-                                <span class="text-[9px] text-gray-400 block">PARTICIPANT REVIEWS</span>
-                                <span class="text-lg font-bold text-amber-300">5.0 ★ <span class="text-xs text-gray-500 font-normal">(0)</span></span>
+                            <div class="space-y-1 border border-white/5 bg-black/30 p-3 rounded-lg">
+                                <span class="block text-[9px] text-gray-400">PARTICIPANT REVIEWS</span>
+                                <span class="text-lg font-bold text-amber-300">★ 0.0 <span class="text-xs font-normal text-gray-500">(0 Reviews)</span></span>
                             </div>
                         </div>
 
-                        <div class="rounded-lg bg-black/50 p-3 text-[10px] font-mono text-gray-300 border border-white/10 flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                                <span>Reputation State: <strong class="text-amber-300">REPUTATION INITIALIZING</strong></span>
+                        <div class="space-y-1.5 rounded-lg border border-white/10 bg-black/50 p-3 font-mono text-[10px] text-gray-300">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                    <span>Reputation State: <strong class="text-amber-300">★ 0.0 / 5.0 (Starting Point)</strong></span>
+                                </div>
+                                <span class="font-bold text-emerald-400">Silver Tier (100 HA / Batch)</span>
                             </div>
-                            <span class="text-gray-500">Score: N/A</span>
+                            <div class="flex items-center justify-between border-t border-white/10 pt-1.5 text-[9px] text-gray-400">
+                                <span>Reviews: <strong class="text-white">0</strong></span>
+                                <span>Completed Batches: <strong class="text-white">0</strong></span>
+                                <span>Tier Progression: <strong class="text-emerald-300">Silver &rarr; Gold (1,000 HA) &rarr; Platinum (10,000 HA)</strong></span>
+                            </div>
                         </div>
                     </div>
 

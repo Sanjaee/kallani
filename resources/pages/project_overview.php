@@ -138,8 +138,8 @@ ob_start();
                                 <div class="text-base font-black text-white mt-0.5">4,000 HA*</div>
                             </div>
                             <div class="rounded border border-white/10 bg-white/5 p-2">
-                                <div class="text-[8px] text-gray-400 uppercase font-bold">MAPPED CAPACITY</div>
-                                <div class="text-base font-black text-emerald-300 mt-0.5">300 HA</div>
+                                <div class="text-[8px] font-bold uppercase text-gray-400">MAPPED CAPACITY</div>
+                                <div class="mt-0.5 text-base font-black text-emerald-300">200 HA</div>
                             </div>
                         </div>
 
@@ -171,8 +171,8 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">MAPPED CAPACITY</div>
-                        <div class="text-xl font-extrabold leading-tight text-emerald-300">300 HA</div>
-                        <div class="text-[8px] text-gray-400">of 1,000 HA requirement (30%)</div>
+                        <div class="text-xl font-extrabold leading-tight text-emerald-300">200 HA</div>
+                        <div class="text-[8px] text-gray-400">of 1,000 HA requirement (20%)</div>
                     </div>
                 </div>
 
@@ -219,9 +219,9 @@ ob_start();
                                 <span class="text-gray-400 flex items-center gap-1.5"><?= $svg($ic['grid'], 'w-3.5 h-3.5 text-emerald-300') ?> Network Capacity</span>
                                 <span class="font-bold text-white">4,000 HA</span>
                             </div>
-                            <div class="flex items-center justify-between py-1 border-b border-white/5">
-                                <span class="text-gray-400 flex items-center gap-1.5"><?= $svg($ic['target'], 'w-3.5 h-3.5 text-emerald-300') ?> Mapped Capacity</span>
-                                <span class="font-bold text-emerald-300">300 HA</span>
+                            <div class="flex items-center justify-between border-b border-white/5 py-1">
+                                <span class="flex items-center gap-1.5 text-gray-400"><?= $svg($ic['target'], 'w-3.5 h-3.5 text-emerald-300') ?> Mapped Capacity</span>
+                                <span class="font-bold text-emerald-300">200 HA</span>
                             </div>
                             <div class="flex items-center justify-between py-1">
                                 <span class="text-gray-400 flex items-center gap-1.5"><?= $svg($ic['shield'], 'w-3.5 h-3.5 text-emerald-300') ?> Standard Batch</span>
@@ -316,9 +316,9 @@ ob_start();
                                     <span class="rounded bg-amber-500/20 px-1.5 py-0.5 text-[7px] font-bold text-amber-300">PENDING VERIFICATION</span>
                                 </div>
                                 <div class="space-y-1 text-[9px] text-gray-400">
-                                    <div class="flex justify-between"><span>Region</span><span class="text-white font-bold">North Kalimantan</span></div>
-                                    <div class="flex justify-between"><span>Mapped Area</span><span class="text-emerald-300 font-bold">300 HA</span></div>
-                                    <div class="flex justify-between"><span>Network Capacity</span><span class="text-white font-bold">4,000 HA</span></div>
+                                    <div class="flex justify-between"><span>Region</span><span class="font-bold text-white">North Kalimantan</span></div>
+                                    <div class="flex justify-between"><span>Mapped Area</span><span class="font-bold text-emerald-300">200 HA</span></div>
+                                    <div class="flex justify-between"><span>Network Capacity</span><span class="font-bold text-white">4,000 HA</span></div>
                                     <div class="flex justify-between"><span>GIS Record</span><span class="text-amber-300">Pending / Demo</span></div>
                                     <div class="flex justify-between"><span>Documentation</span><span class="text-amber-300">Pending / Demo</span></div>
                                 </div>
@@ -394,14 +394,14 @@ ob_start();
 
                         <div class="grid grid-cols-3 gap-3 text-center">
                             <div class="rounded-xl border border-emerald-400/30 bg-[#071F17] p-3">
-                                <div class="text-[8px] font-bold text-emerald-300 uppercase">PROJECT CAPACITY</div>
-                                <div class="text-base font-extrabold text-white">300 HA</div>
-                                <div class="text-[7px] text-emerald-300 uppercase">MAPPED CAPACITY</div>
+                                <div class="text-[8px] font-bold uppercase text-emerald-300">PROJECT CAPACITY</div>
+                                <div class="text-base font-extrabold text-white">200 HA</div>
+                                <div class="text-[7px] font-bold uppercase text-emerald-300">MAPPED CAPACITY</div>
                             </div>
 
                             <div class="rounded-xl border border-white/10 bg-[#07110E] p-3">
-                                <div class="text-[8px] font-bold text-gray-400 uppercase">CAPACITY BREAKDOWN</div>
-                                <div class="text-base font-extrabold text-white">3 &times; 100 HA</div>
+                                <div class="text-[8px] font-bold uppercase text-gray-400">CAPACITY BREAKDOWN</div>
+                                <div class="text-base font-extrabold text-white">2 &times; 100 HA</div>
                                 <div class="text-[7px] text-gray-400">Executable batch capacity</div>
                             </div>
 
@@ -579,24 +579,24 @@ ob_start();
                                 <div class="text-gray-400">NETWORK CAP.</div>
                                 <div class="font-bold text-white text-[10px]">4,000 HA</div>
                             </div>
-                            <div class="p-1.5 rounded bg-white/5">
+                            <div class="rounded bg-white/5 p-1.5">
                                 <div class="text-gray-400">ACTIVE CAP.</div>
-                                <div class="font-bold text-emerald-300 text-[10px]">300 HA</div>
+                                <div class="text-[10px] font-bold text-emerald-300">200 HA</div>
                             </div>
-                            <div class="p-1.5 rounded bg-white/5">
+                            <div class="rounded bg-white/5 p-1.5">
                                 <div class="text-gray-400">COMPLETED</div>
-                                <div class="font-bold text-white text-[10px]">&mdash; / DEMO</div>
+                                <div class="text-[10px] font-bold text-white">&mdash; / DEMO</div>
                             </div>
-                            <div class="p-1.5 rounded bg-white/5">
+                            <div class="rounded bg-white/5 p-1.5">
                                 <div class="text-gray-400">TENURE</div>
-                                <div class="font-bold text-white text-[10px]">&mdash; / DEMO</div>
+                                <div class="text-[10px] font-bold text-white">&mdash; / DEMO</div>
                             </div>
                         </div>
 
-                        <div class="p-2 rounded border border-white/10 bg-[#07110E] text-center space-y-0.5">
-                            <div class="text-[8px] font-bold text-gray-400 uppercase">REPUTATION</div>
-                            <div class="text-[9px] font-bold text-white">NOT YET ESTABLISHED</div>
-                            <div class="text-[7px] text-gray-500">Generated from completed batches</div>
+                        <div class="rounded border border-white/10 bg-[#07110E] p-2 text-center space-y-0.5">
+                            <div class="text-[8px] font-bold uppercase text-gray-400">REPUTATION</div>
+                            <div class="text-[10px] font-extrabold text-amber-300">★ 0.0 / 5.0</div>
+                            <div class="text-[7px] text-gray-400">Reviews: 0 • Completed Batches: 0</div>
                         </div>
                     </div>
 
@@ -635,7 +635,9 @@ ob_start();
 
                         <div class="space-y-1.5 text-[8.5px] rounded bg-[#07110E] p-2 border border-white/10">
                             <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara 8</span></div>
-                            <div><span class="text-gray-400 block">TIER & REPUTATION</span><span class="font-bold text-emerald-300">Silver | ⭐ 5.0</span></div>
+                            <div><span class="block text-gray-400">OPERATOR TIER</span><span class="font-bold text-emerald-300">Silver Tier (100 HA / Batch)</span></div>
+                            <div><span class="block text-gray-400">REPUTATION STATE</span><span class="font-bold text-amber-300">★ 0.0 / 5.0</span></div>
+                            <div><span class="block text-gray-400">REVIEWS & BATCHES</span><span class="font-bold text-white">Reviews: 0 • Completed Batches: 0</span></div>
                             <div><span class="text-gray-400 block">JOINED NINA</span><span class="font-bold text-slate-300">August 2024</span></div>
                             <div><span class="text-gray-400 block">REGISTERED WALLET</span><span class="font-mono text-emerald-300 font-bold">0x7A3F...9C2B</span></div>
                             <div><span class="text-gray-400 block">STATUS</span><span class="text-amber-300 font-bold">REGISTERED / VERIFIED</span></div>

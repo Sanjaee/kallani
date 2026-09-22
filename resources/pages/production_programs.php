@@ -730,7 +730,7 @@ ob_start();
                         </div>
                         <div class="bg-white/5 p-2 rounded border border-white/5">
                             <span class="text-emerald-400 font-bold block">3. Capacity Mapped</span>
-                            <span class="text-gray-400 text-[9px]">NK (300HA) + SK (700HA)</span>
+                            <span class="text-gray-400 text-[9px]">NK (200 HA) + SK (800 HA)</span>
                         </div>
                         <div class="bg-white/5 p-2 rounded border border-white/5">
                             <span class="text-emerald-300 font-bold block">4. Batches Created</span>
