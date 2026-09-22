@@ -79,7 +79,13 @@ ob_start();
                     </div>
 
                     <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">North Kalimantan Palm</h1>
-                    <p class="max-w-xl text-base font-semibold leading-normal text-emerald-300">
+                    <div class="mt-2 flex flex-wrap items-center gap-2 font-mono text-xs text-emerald-300">
+                        <span class="rounded border border-emerald-400/40 bg-emerald-500/10 px-2 py-0.5 font-bold">PT. Kaltara 8</span>
+                        <span class="text-gray-400">ID Listing: <strong class="text-white">ID-ML-0001</strong></span>
+                        <span class="text-gray-500">•</span>
+                        <span class="text-gray-400">No Project: <strong class="text-white">PO-KAL-0001</strong></span>
+                    </div>
+                    <p class="max-w-xl text-base font-semibold leading-normal text-emerald-300 mt-2">
                         Verified-capacity production project within the NINA productive asset network.
                     </p>
 
@@ -95,18 +101,22 @@ ob_start();
                 <div class="lg:col-span-5 lg:col-start-8">
                     <div class="space-y-4 rounded-xl border border-white/15 bg-[#08130F]/80 p-5 shadow-2xl backdrop-blur-xl">
                         <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white flex items-center gap-2">
+                            <span class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-white">
                                 <span class="h-2 w-2 rounded-full bg-amber-400"></span> PROJECT STATUS
                             </span>
-                            <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">DEMO</span>
+                            <span class="rounded border border-emerald-500/30 bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300">DEMO</span>
                         </div>
 
-                        <div class="text-xs font-bold text-amber-300 uppercase tracking-wide">DEMO / PENDING VERIFICATION</div>
+                        <div class="text-xs font-bold uppercase tracking-wide text-amber-300">DEMO / PENDING VERIFICATION</div>
 
                         <div class="grid grid-cols-2 gap-2 text-[10px]">
                             <div class="rounded border border-white/10 bg-white/5 p-2">
-                                <div class="text-[8px] text-gray-400 uppercase font-bold">PROJECT ID</div>
-                                <div class="font-extrabold font-mono text-white mt-0.5">PRJ-NK-001</div>
+                                <div class="text-[8px] font-bold uppercase text-gray-400">OPERATING ENTITY</div>
+                                <div class="mt-0.5 font-mono font-extrabold text-emerald-300 truncate">PT. Kaltara 8</div>
+                            </div>
+                            <div class="rounded border border-white/10 bg-white/5 p-2">
+                                <div class="text-[8px] font-bold uppercase text-gray-400">LISTING / NO PROJECT</div>
+                                <div class="mt-0.5 font-mono text-[9px] font-extrabold text-white truncate">ID-ML-0001 / PO-KAL-0001</div>
                             </div>
                             <div class="rounded border border-white/10 bg-white/5 p-2">
                                 <div class="text-[8px] text-gray-400 uppercase font-bold">REGION</div>

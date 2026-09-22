@@ -25,6 +25,9 @@ $projects = [
     [
         'id' => 1, 
         'name' => 'North Kalimantan Palm Project',   
+        'company' => 'PT. Kaltara 8',
+        'listing_id' => 'ID-ML-0001',
+        'project_code' => 'PO-KAL-0001',
         'category' => 'Palm Production', 
         'region' => 'North Kalimantan',   
         'network' => 300, 
@@ -33,7 +36,7 @@ $projects = [
         'modeled_budget' => '2.640.000 usdt',
         'land_status' => 'GIS Boundary Surveyed',
         'seed_status' => 'Certified High Yield',
-        'partner' => 'Verified Land Partner (Mitra Lahan)',   
+        'partner' => 'PT. Kaltara 8 (Mitra Pelaksana)',   
         'verification' => 82, 
         'verif_label' => 'verified',
         'badge' => 'demo',     
@@ -47,6 +50,9 @@ $projects = [
     [
         'id' => 2, 
         'name' => 'South Kalimantan Palm Cluster',   
+        'company' => 'PT. Banua Palm Mandiri',
+        'listing_id' => 'ID-ML-0002',
+        'project_code' => 'PO-KAL-0002',
         'category' => 'Palm Production', 
         'region' => 'South Kalimantan',   
         'network' => 700, 
@@ -55,7 +61,7 @@ $projects = [
         'modeled_budget' => '6.160.000 usdt',
         'land_status' => 'GIS Boundary Verified',
         'seed_status' => 'Certified Seedlings Allocated',
-        'partner' => 'Verified Land Partner (Mitra Lahan)', 
+        'partner' => 'PT. Banua Palm Mandiri (Mitra Lahan)', 
         'verification' => 94, 
         'verif_label' => 'verified',
         'badge' => 'pipeline', 
@@ -69,6 +75,9 @@ $projects = [
     [
         'id' => 3, 
         'name' => 'Central Kalimantan Eco Forest', 
+        'company' => 'PT. Kahayan Lestari',
+        'listing_id' => 'ID-ML-0003',
+        'project_code' => 'PO-KAL-0003',
         'category' => 'Forestry',      
         'region' => 'Central Kalimantan', 
         'network' => 1200, 
@@ -77,7 +86,7 @@ $projects = [
         'modeled_budget' => '10.560.000 usdt',
         'land_status' => 'Concession Surveyed',
         'seed_status' => 'Native Nursery Certified',
-        'partner' => 'State & Community Partner', 
+        'partner' => 'PT. Kahayan Lestari (Mitra Hutan)', 
         'verification' => 78, 
         'verif_label' => 'pipeline',
         'badge' => 'planned',  
@@ -91,6 +100,9 @@ $projects = [
     [
         'id' => 4, 
         'name' => 'Mahakam Water Infrastructure', 
+        'company' => 'PT. Mahakam Tirta Perdana',
+        'listing_id' => 'ID-ML-0004',
+        'project_code' => 'PO-KAL-0004',
         'category' => 'Infrastructure', 
         'region' => 'East Kalimantan', 
         'network' => 500, 
@@ -99,7 +111,7 @@ $projects = [
         'modeled_budget' => '4.400.000 usdt',
         'land_status' => 'Hydro Survey Complete',
         'seed_status' => 'N/A — Infrastructure Unit',
-        'partner' => 'Regional Vendor Partner', 
+        'partner' => 'PT. Mahakam Tirta Perdana', 
         'verification' => 88, 
         'verif_label' => 'verified',
         'badge' => 'demo',  
@@ -113,6 +125,9 @@ $projects = [
     [
         'id' => 5, 
         'name' => 'West Papua Certified Timber Zone', 
+        'company' => 'PT. Papua Hutan Lestari',
+        'listing_id' => 'ID-ML-0005',
+        'project_code' => 'PO-PAP-0005',
         'category' => 'Forestry', 
         'region' => 'West Papua', 
         'network' => 1500, 
@@ -121,7 +136,7 @@ $projects = [
         'modeled_budget' => '13.200.000 usdt',
         'land_status' => 'Forest Cadastre Verified',
         'seed_status' => 'Natural Regeneration Certified',
-        'partner' => 'Customary Land Partner', 
+        'partner' => 'PT. Papua Hutan Lestari', 
         'verification' => 91, 
         'verif_label' => 'verified',
         'badge' => 'pipeline',  
@@ -135,6 +150,9 @@ $projects = [
     [
         'id' => 6, 
         'name' => 'South Sulawesi Agro Park', 
+        'company' => 'PT. Sulawesi Agro Mandiri',
+        'listing_id' => 'ID-ML-0006',
+        'project_code' => 'PO-SUL-0006',
         'category' => 'Agriculture', 
         'region' => 'South Sulawesi', 
         'network' => 800, 
@@ -143,7 +161,7 @@ $projects = [
         'modeled_budget' => '7.040.000 usdt',
         'land_status' => 'GIS Cadastre Complete',
         'seed_status' => 'Multi-Crop Certified',
-        'partner' => 'Cooperative Land Partner', 
+        'partner' => 'PT. Sulawesi Agro Mandiri', 
         'verification' => 75, 
         'verif_label' => 'pending',
         'badge' => 'planned',  
@@ -157,6 +175,9 @@ $projects = [
     [
         'id' => 7, 
         'name' => 'Kaltim Offtake Processing Hub', 
+        'company' => 'PT. Kaltim Logistik Utama',
+        'listing_id' => 'ID-ML-0007',
+        'project_code' => 'PO-KAL-0007',
         'category' => 'Infrastructure', 
         'region' => 'East Kalimantan', 
         'network' => 200, 
@@ -165,7 +186,7 @@ $projects = [
         'modeled_budget' => '1.760.000 usdt',
         'land_status' => 'Port & Terminal Permitted',
         'seed_status' => 'N/A — Offtake Hub',
-        'partner' => 'Logistics Vendor Partner', 
+        'partner' => 'PT. Kaltim Logistik Utama', 
         'verification' => 96, 
         'verif_label' => 'verified',
         'badge' => 'demo',  
@@ -642,8 +663,15 @@ ob_start();
 
                             <div class="flex flex-1 flex-col gap-3 p-4">
                                 <div class="space-y-1">
+                                    <div class="flex items-center justify-between gap-1 text-[9px] font-mono font-semibold tracking-wide text-emerald-400">
+                                        <span class="truncate" x-text="p.company"></span>
+                                        <span class="shrink-0 text-gray-400" x-text="p.listing_id"></span>
+                                    </div>
                                     <h3 class="text-sm font-bold leading-snug text-white" x-text="p.name"></h3>
-                                    <div class="flex items-center gap-1.5 text-[10px] text-gray-300">
+                                    <div class="text-[9px] font-mono text-gray-400">
+                                        No Project: <span class="font-bold text-gray-200" x-text="p.project_code"></span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5 pt-0.5 text-[10px] text-gray-300">
                                         <span class="text-emerald-300"><?= $svg($ic['leaf'], 'w-3 h-3') ?></span><span x-text="p.category"></span>
                                     </div>
                                     <div class="flex items-center gap-1.5 text-[10px] text-gray-400">

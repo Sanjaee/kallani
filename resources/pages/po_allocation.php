@@ -122,15 +122,23 @@ ob_start();
 
                             <div class="space-y-2 flex-1 text-xs">
                                 <div class="flex flex-wrap items-center justify-between gap-2">
-                                    <h3 class="text-sm font-extrabold text-white">NORTH KALIMANTAN PALM &bull; BATCH NK-001</h3>
-                                    <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30">PENDING PO COLLECTION</span>
+                                    <div>
+                                        <h3 class="text-sm font-extrabold text-white">NORTH KALIMANTAN PALM &bull; BATCH NK-001</h3>
+                                        <div class="mt-0.5 flex items-center gap-2 font-mono text-[10px]">
+                                            <span class="font-bold text-emerald-300">PT. Kaltara 8</span>
+                                            <span class="text-gray-400">ID: ID-ML-0001</span>
+                                            <span class="text-gray-500">•</span>
+                                            <span class="text-gray-400">No Project: PO-KAL-0001</span>
+                                        </div>
+                                    </div>
+                                    <span class="rounded border border-amber-400/30 bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300">PENDING PO COLLECTION</span>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-300">
                                     <div><span class="text-gray-400">Region:</span> <strong class="text-white">North Kalimantan, Indonesia</strong></div>
                                     <div><span class="text-gray-400">Batch Size:</span> <strong class="text-white">100 HA</strong></div>
-                                    <div><span class="text-gray-400">Requirement:</span> <strong class="text-emerald-300 font-bold">880.000 usdt</strong></div>
-                                    <div><span class="text-gray-400">Project Status:</span> <span class="text-amber-300 font-bold">DEMO / PENDING</span></div>
+                                    <div><span class="text-gray-400">Requirement:</span> <strong class="font-bold text-emerald-300">880.000 usdt</strong></div>
+                                    <div><span class="text-gray-400">Project Status:</span> <span class="font-bold text-amber-300">DEMO / PENDING</span></div>
                                 </div>
 
                                 <div class="pt-1">

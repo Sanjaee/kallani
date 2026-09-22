@@ -84,6 +84,8 @@ ob_start();
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Project: <strong class="text-white">North Kalimantan Palm</strong></span>
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Batch: <strong class="text-white">NK-001</strong></span>
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Operator: <strong class="text-emerald-300">PT. Kaltara 8</strong></span>
+                        <span class="flex items-center gap-1.5 font-mono text-[11px] text-gray-400">ID Listing: <strong class="text-gray-200">ID-ML-0001</strong></span>
+                        <span class="flex items-center gap-1.5 font-mono text-[11px] text-gray-400">No Project: <strong class="text-gray-200">PO-KAL-0001</strong></span>
                     </div>
                 </div>
 
