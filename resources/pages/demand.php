@@ -443,7 +443,7 @@ ob_start();
                         <div class="text-[9px] text-gray-400 uppercase">MINIMUM PRODUCTION ALLOCATION UNIT</div>
                         <div class="text-xl font-extrabold text-white mt-0.5">8,000 USDT</div>
                         <div class="text-[9px] text-gray-400 mt-1">
-                            110 seats (minimum allocation units) per 100 HA production batch.
+                            110 Allocation Units (minimum allocation units) per 100 HA production batch.
                         </div>
                     </div>
                 </div>
@@ -477,7 +477,7 @@ ob_start();
                         <div class="text-center text-gray-500 font-bold text-xs">&darr;</div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
                             <span class="text-gray-300">PRODUCTION ALLOCATIONS</span>
-                            <span class="font-bold text-emerald-300">8,000 USDT / Seat</span>
+                            <span class="font-bold text-emerald-300">8,000 USDT / Allocation Unit</span>
                         </div>
                         </div>
                     </div>

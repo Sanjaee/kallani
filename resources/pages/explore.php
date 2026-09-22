@@ -28,8 +28,12 @@ $projects = [
         'company' => 'PT. Kaltara 8',
         'listing_id' => 'ID-ML-0001',
         'project_code' => 'PO-KAL-0001',
+        'batch_id' => 'NK-001-B001',
         'zone_code' => 'ZONE-02-KAL',
-        'joined' => 'August 2024',
+        'joined' => 'Aug 2024 (2 Yrs)',
+        'tier' => 'SILVER TIER',
+        'rating' => '0.0',
+        'reviews' => 0,
         'category' => 'Palm Production', 
         'region' => 'North Kalimantan',   
         'network' => 200, 
@@ -55,8 +59,12 @@ $projects = [
         'company' => 'PT. Banua Palm Mandiri',
         'listing_id' => 'ID-ML-0002',
         'project_code' => 'PO-KAL-0002',
+        'batch_id' => 'NK-002-B001',
         'zone_code' => 'ZONE-02-KAL',
-        'joined' => 'October 2024',
+        'joined' => 'Jan 2021 (5 Yrs)',
+        'tier' => 'GOLD TIER',
+        'rating' => '4.8',
+        'reviews' => 12,
         'category' => 'Palm Production', 
         'region' => 'South Kalimantan',   
         'network' => 800, 
@@ -683,7 +691,7 @@ ob_start();
                                     </div>
                                     <h3 class="text-sm font-bold leading-snug text-white" x-text="p.name"></h3>
                                     <div class="text-[9px] font-mono text-gray-400">
-                                        No Project: <span class="font-bold text-gray-200" x-text="p.project_code"></span>
+                                        PO Confirmation: <span class="font-bold text-gray-200" x-text="p.project_code"></span>
                                     </div>
                                     <div class="flex items-center gap-1.5 pt-0.5 text-[10px] text-gray-300">
                                         <span class="text-emerald-300"><?= $svg($ic['leaf'], 'w-3 h-3') ?></span><span x-text="p.category"></span>
@@ -701,7 +709,16 @@ ob_start();
 
                                 <div class="space-y-1 border-t border-white/10 pt-2.5 text-[10px]">
                                     <div class="flex justify-between items-center"><span class="text-gray-400">Partner Entity</span><span class="max-w-[140px] truncate font-bold text-white" x-text="p.company"></span></div>
-                                    <div class="flex justify-between items-center"><span class="text-gray-400">Joined NINA</span><span class="font-mono font-bold text-emerald-300" x-text="p.joined"></span></div>
+                                    <div class="flex justify-between items-center"><span class="text-gray-400">Joined NINA</span><span class="font-mono font-bold text-slate-300" x-text="p.joined"></span></div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-400">Reputation</span>
+                                        <template x-if="p.rating === '0.0' || !p.rating">
+                                            <span class="font-mono font-bold text-white">0.0 <span class="text-[8px] text-gray-400 font-normal">(Unrated)</span></span>
+                                        </template>
+                                        <template x-if="p.rating && p.rating !== '0.0'">
+                                            <span class="font-mono font-bold text-amber-300">★ <span x-text="p.rating"></span> <span class="text-[8px] text-amber-400/80" x-text="'(' + p.reviews + ' rev)'"></span></span>
+                                        </template>
+                                    </div>
                                     <div class="flex justify-between items-center"><span class="text-gray-400">Island Zone</span><span class="font-mono font-semibold text-gray-300" x-text="p.zone_code"></span></div>
                                     <div class="flex justify-between items-center"><span class="text-gray-400">Land Status</span><span class="max-w-[140px] truncate font-medium text-emerald-300" x-text="p.land_status"></span></div>
                                 </div>

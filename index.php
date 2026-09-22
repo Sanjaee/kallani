@@ -60,6 +60,8 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/production_programs.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
     include $baseDir . '/resources/pages/audit.php';
+} elseif ($uri === '/review' || $uri === '/reviews' || preg_match('/^\/projects\/([a-z0-9-]+)\/review$/i', $uri) || preg_match('/^\/vendors\/([a-z0-9-]+)\/review$/i', $uri)) {
+    include $baseDir . '/resources/pages/review.php';
 } elseif ($uri === '/field-guide' || $uri === '/glossary' || $uri === '/guide') {
     include $baseDir . '/resources/pages/field_guide.php';
 } else {

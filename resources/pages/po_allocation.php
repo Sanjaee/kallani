@@ -336,7 +336,7 @@ ob_start();
                             <div class="flex justify-between"><span class="text-gray-400">ALLOCATION</span><span class="font-bold text-emerald-300 text-sm">8,000 USDT</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">MINIMUM</span><span class="font-bold text-white">8,000 USDT</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">BATCH REQUIREMENT</span><span class="font-bold text-white">880,000 USDT</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION SEATS</span><span class="font-bold font-mono text-emerald-300">1 / 110</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">ALLOCATION UNITS</span><span class="font-bold font-mono text-emerald-300">1 / 110</span></div>
                         </div>
 
                         <div class="space-y-1.5 border-t border-white/10 pt-3 text-[10px]">

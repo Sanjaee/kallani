@@ -334,7 +334,7 @@ function batchPage() {
                             <div class="text-gray-400 font-normal">=</div>
                             <div>
                                 <div class="text-white text-sm">110</div>
-                                <div class="text-[7px] text-emerald-300 font-bold uppercase mt-0.5">Seats</div>
+                                <div class="text-[7px] text-emerald-300 font-bold uppercase mt-0.5">Units</div>
                             </div>
                         </div>
                     </div>
@@ -785,7 +785,7 @@ function batchPage() {
                 </div>
                 <h3 class="text-lg font-extrabold text-white">PO Allocation Requested</h3>
                 <p class="text-xs text-gray-300 max-w-sm mx-auto">
-                    Your allocation request for 1 Seat (8,000 USDT) on Batch NK-001 has been registered for prototype review.
+                    Your allocation request for 1 Allocation Unit (8,000 USDT) on Batch NK-001 has been registered for prototype review.
                 </p>
                 <div class="pt-2 flex justify-center gap-3">
                     <a href="<?= $basePrefix ?>/allocations" class="rounded-full bg-emerald-400 px-6 py-2 text-xs font-bold uppercase text-[#04100B] hover:brightness-110">Go to My Allocations</a>

@@ -599,7 +599,7 @@ ob_start();
 
                         <div class="rounded border border-white/10 bg-[#07110E] p-2 text-center space-y-0.5">
                             <div class="text-[8px] font-bold uppercase text-gray-400">REPUTATION</div>
-                            <div class="text-[10px] font-extrabold text-amber-300">★ 0.0 / 5.0</div>
+                            <div class="text-[10px] font-extrabold text-white">0.0 / 5.0</div>
                             <div class="text-[7px] text-gray-400">Reviews: 0 • Completed Batches: 0</div>
                         </div>
                     </div>
@@ -640,7 +640,7 @@ ob_start();
                         <div class="space-y-1.5 text-[8.5px] rounded bg-[#07110E] p-2 border border-white/10">
                             <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara 8</span></div>
                             <div><span class="block text-gray-400">OPERATOR TIER</span><span class="font-bold text-emerald-300">Silver Tier (100 HA / Batch)</span></div>
-                            <div><span class="block text-gray-400">REPUTATION STATE</span><span class="font-bold text-amber-300">★ 0.0 / 5.0</span></div>
+                            <div><span class="block text-gray-400">REPUTATION STATE</span><span class="font-bold text-white">0.0 / 5.0 (UNRATED)</span></div>
                             <div><span class="block text-gray-400">REVIEWS & BATCHES</span><span class="font-bold text-white">Reviews: 0 • Completed Batches: 0</span></div>
                             <div><span class="text-gray-400 block">JOINED NINA</span><span class="font-bold text-slate-300">August 2024</span></div>
                             <div><span class="text-gray-400 block">REGISTERED WALLET</span><span class="font-mono text-emerald-300 font-bold">0x7A3F...9C2B</span></div>
@@ -669,6 +669,8 @@ ob_start();
                         </a>
                     </div>
                 </div>
+
+
 
             </div>
 

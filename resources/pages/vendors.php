@@ -334,8 +334,8 @@ ob_start();
                             </div>
                             <div>
                                 <div class="text-[9px] text-gray-400">REPUTATION STATE</div>
-                                <div class="mt-0.5 text-xs font-bold text-amber-300">★ 0.0 / 5.0</div>
-                                <div class="text-[9px] text-gray-500">New Entity (0 Reviews)</div>
+                                <div class="mt-0.5 text-xs font-bold text-white">0.0 / 5.0</div>
+                                <div class="text-[9px] text-gray-400 font-mono">Unrated (0 Reviews)</div>
                             </div>
                         </div>
 
@@ -506,7 +506,7 @@ ob_start();
                         </div>
                         <div class="flex justify-between border-t border-white/5 pt-2 text-[10px] font-mono text-gray-400">
                             <span>Work Orders: <strong class="text-white">01</strong></span>
-                            <span>Reputation: <strong class="text-amber-300">★ 0.0 / 5.0</strong></span>
+                            <span>Reputation: <strong class="text-white">0.0</strong> <span class="text-gray-500">/</span> <strong class="text-amber-300">★ 5.0</strong></span>
                         </div>
                     </div>
 
@@ -745,15 +745,15 @@ ob_start();
                             </div>
                             <div class="space-y-1 border border-white/5 bg-black/30 p-3 rounded-lg">
                                 <span class="block text-[9px] text-gray-400">PARTICIPANT REVIEWS</span>
-                                <span class="text-lg font-bold text-amber-300">★ 0.0 <span class="text-xs font-normal text-gray-500">(0 Reviews)</span></span>
+                                <span class="text-lg font-bold text-white">0.0 <span class="text-xs font-normal text-gray-500">(0 Reviews)</span></span>
                             </div>
                         </div>
 
                         <div class="space-y-1.5 rounded-lg border border-white/10 bg-black/50 p-3 font-mono text-[10px] text-gray-300">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-2">
-                                    <span class="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
-                                    <span>Reputation State: <strong class="text-amber-300">★ 0.0 / 5.0 (Starting Point)</strong></span>
+                                    <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                                    <span>Reputation State: <strong class="text-white">0.0 / 5.0 (UNRATED)</strong></span>
                                 </div>
                                 <span class="font-bold text-emerald-400">Silver Tier (100 HA / Batch)</span>
                             </div>

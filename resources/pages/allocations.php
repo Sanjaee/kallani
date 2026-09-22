@@ -116,7 +116,7 @@ ob_start();
                                 <div>
                                     <div class="text-[9px] font-mono text-gray-400">ALLOCATION / BATCH</div>
                                     <div class="font-bold text-emerald-300 font-mono">8,000 USDT / 880,000 USDT</div>
-                                    <div class="text-[10px] text-gray-300 font-mono">1 / 110 seats</div>
+                                    <div class="text-[10px] text-gray-300 font-mono">1 / 110 Allocation Units</div>
                                 </div>
                             </div>
 
@@ -265,7 +265,7 @@ ob_start();
                             <div class="mt-2 flex flex-wrap items-center gap-3 border-t border-white/10 pt-2.5 font-mono text-[10px] sm:gap-4">
                                 <div><span class="text-gray-500">OPERATOR: </span><strong class="text-emerald-300">PT. KALTARA 8</strong></div>
                                 <div><span class="text-gray-500">TIER: </span><span class="rounded border border-slate-500/30 bg-slate-800/50 px-1.5 py-0.5 font-bold text-slate-300">SILVER</span></div>
-                                <div><span class="text-gray-500">REPUTATION: </span><strong class="text-amber-300">★ 0.0 / 5.0</strong></div>
+                                <div><span class="text-gray-500">REPUTATION: </span><strong class="text-white">0.0</strong> <span class="text-gray-500">/</span> <strong class="text-amber-300">★ 5.0</strong></div>
                                 <div><span class="text-gray-500">JOINED NINA: </span><strong class="text-white">AUG 2024</strong></div>
                             </div>
                         </div>
@@ -311,12 +311,12 @@ ob_start();
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">PARTICIPANT ALLOCATION</div>
                         <div class="text-base font-extrabold text-emerald-300 mt-0.5">8,000 USDT</div>
-                        <div class="text-[9px] text-emerald-400/80">Confirmed PO Seat</div>
+                        <div class="text-[9px] text-emerald-400/80">Confirmed Allocation Unit</div>
                     </div>
                     <div>
-                        <div class="text-[9px] text-gray-400 uppercase">ALLOCATION SEATS</div>
-                        <div class="text-base font-extrabold text-white mt-0.5">1 / 110 Seats</div>
-                        <div class="text-[9px] text-gray-500">8,000 USDT Per Seat</div>
+                        <div class="text-[9px] text-gray-400 uppercase">ALLOCATION UNITS</div>
+                        <div class="text-base font-extrabold text-white mt-0.5">1 / 110 Units</div>
+                        <div class="text-[9px] text-gray-500">8,000 USDT Per Unit</div>
                     </div>
                     <div>
                         <div class="text-[9px] text-gray-400 uppercase">MODELED PROPORTION</div>
@@ -952,16 +952,16 @@ ob_start();
                         <div class="space-y-2 font-mono text-xs">
                             <div class="flex justify-between">
                                 <span class="text-gray-400">Reputation Status:</span>
-                                <span class="font-bold text-amber-300">★ 0.0 / 5.0 (0 Reviews)</span>
+                                <span class="font-bold"><strong class="text-white">0.0</strong> <span class="text-gray-500">/</span> <strong class="text-amber-300">★ 5.0</strong> <span class="text-gray-400 font-normal">(0 Reviews)</span></span>
                             </div>
                             <div class="text-[10px] text-gray-400 leading-relaxed">
                                 Participant reviews and operational experience ratings become available strictly after batch completion and settlement closure.
                             </div>
                         </div>
 
-                        <div class="flex gap-2 pt-1">
-                            <button disabled class="flex-1 rounded bg-white/5 text-gray-500 font-mono text-[10px] py-1.5 uppercase cursor-not-allowed">COMPLETION REPORT</button>
-                            <button disabled class="flex-1 rounded bg-white/5 text-gray-500 font-mono text-[10px] py-1.5 uppercase cursor-not-allowed">WRITE REVIEW</button>
+                        <div class="flex gap-2 pt-1 font-mono text-[10px]">
+                            <a href="<?= $basePrefix ?>/batch-completion" class="flex-1 rounded bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white py-1.5 uppercase text-center border border-white/10 transition">COMPLETION REPORT</a>
+                            <a href="<?= $basePrefix ?>/review?type=land-partner" class="flex-1 rounded bg-emerald-500/20 text-emerald-300 hover:bg-emerald-500/30 border border-emerald-500/40 py-1.5 uppercase text-center font-bold transition">WRITE REVIEW</a>
                         </div>
                     </div>
 
