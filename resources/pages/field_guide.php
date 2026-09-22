@@ -398,7 +398,7 @@ ob_start();
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/95 via-[#050D07]/80 to-[#050D07]/40"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F] via-transparent to-transparent"></div>
 
-            <div class="relative space-y-5 px-6 pt-10 pb-12 lg:px-10 lg:pt-12 lg:pb-14 flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+            <div class="relative space-y-4 px-6 pt-3 pb-6 lg:px-8 lg:pt-3 lg:pb-8 flex flex-col lg:flex-row lg:items-start justify-between gap-8">
                 <!-- Left Content -->
                 <div class="space-y-3 max-w-3xl">
                     <!-- Top Row: Breadcrumb -->
