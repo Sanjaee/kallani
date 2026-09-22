@@ -401,9 +401,19 @@ ob_start();
             <div class="relative space-y-5 px-6 pt-10 pb-12 lg:px-10 lg:pt-12 lg:pb-14 flex flex-col lg:flex-row lg:items-start justify-between gap-8">
                 <!-- Left Content -->
                 <div class="space-y-4 max-w-3xl">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white transition-colors">OPERATING SYSTEM</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="<?= $basePrefix ?>/explore" class="hover:text-white transition-colors">01-21 PRODUCTION OS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="font-bold text-white uppercase">22 / NINA FIELD GUIDE</span>
+                    </nav>
+
                     <div class="inline-flex items-center gap-2 rounded-md bg-emerald-950/80 border border-emerald-500/30 px-2.5 py-1 text-[10px] font-mono font-bold tracking-[0.18em] text-emerald-300 uppercase">
                         <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        NINA FIELD GUIDE
+                        22 / NINA FIELD GUIDE
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight text-white">
