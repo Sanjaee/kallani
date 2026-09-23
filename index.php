@@ -56,6 +56,8 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/batch_completion.php';
 } elseif ($uri === '/network' || $uri === '/production-network' || preg_match('/^\/projects\/([a-z0-9-]+)\/network$/i', $uri)) {
     include $baseDir . '/resources/pages/production_network.php';
+} elseif ($uri === '/participant-network' || $uri === '/participants' || $uri === '/participant-reviews') {
+    include $baseDir . '/resources/pages/participant_network.php';
 } elseif ($uri === '/production-programs' || $uri === '/programs' || preg_match('/^\/production-programs\/([a-z0-9-]+)$/i', $uri)) {
     include $baseDir . '/resources/pages/production_programs.php';
 } elseif ($uri === '/audit' || $uri === '/audit-trail' || preg_match('/^\/projects\/([a-z0-9-]+)\/audit$/', $uri)) {
