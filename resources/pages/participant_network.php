@@ -41,11 +41,11 @@ $metricLbl = 'text-[9px] font-mono font-medium uppercase tracking-wider text-gra
 
 /* ---------- Tier definitions (used to drive section 02) ---------- */
 $tiers = [
-    ['key' => 'NOVA', 'no' => '01', 'icon' => $ic['seed'], 'color' => 'emerald', 'label' => 'Entry Network Participant', 'threshold' => '≥ 8,000 USDT', 'desc' => 'Cumulative Participation:', 'count' => 4],
-    ['key' => 'ORBIT', 'no' => '02', 'icon' => $ic['orbit'], 'color' => 'sky', 'label' => 'Established Network Participant', 'threshold' => '≥ 18,000 USDT', 'desc' => 'Cumulative Participation:', 'count' => 3],
-    ['key' => 'CONSTELLATION', 'no' => '03', 'icon' => $ic['stars'], 'color' => 'purple', 'label' => 'Advanced Network Participant', 'threshold' => '≥ 28,000 USDT', 'desc' => 'Cumulative Participation:', 'count' => 5],
-    ['key' => 'SOVEREIGN', 'no' => '04', 'icon' => $ic['crown'], 'color' => 'amber', 'label' => 'High-Capacity Private Participant', 'threshold' => '≥ 88,000 USDT', 'desc' => 'Cumulative Participation:', 'count' => 7],
-    ['key' => 'INSTITUTIONAL', 'no' => '05', 'icon' => $ic['bank'], 'color' => 'cyan', 'label' => 'Qualified Institutional Participant', 'threshold' => 'QUALIFIED', 'desc' => 'Qualification:', 'count' => 9],
+    ['key' => 'NOVA', 'no' => '01', 'icon' => $ic['seed'], 'color' => 'emerald', 'label' => 'Entry Network Participant', 'threshold' => '≥ US$8,000', 'desc' => 'PO Allocation Unit:'],
+    ['key' => 'ORBIT', 'no' => '02', 'icon' => $ic['orbit'], 'color' => 'sky', 'label' => 'Established Network Participant', 'threshold' => '≥ US$18,000', 'desc' => 'PO Allocation Unit:'],
+    ['key' => 'CONSTELLATION', 'no' => '03', 'icon' => $ic['stars'], 'color' => 'purple', 'label' => 'Advanced Network Participant', 'threshold' => '≥ US$28,000', 'desc' => 'PO Allocation Unit:'],
+    ['key' => 'SOVEREIGN', 'no' => '04', 'icon' => $ic['crown'], 'color' => 'amber', 'label' => 'High-Capacity Private Participant', 'threshold' => '≥ US$88,000', 'desc' => 'PO Allocation Unit:'],
+    ['key' => 'INSTITUTIONAL', 'no' => '05', 'icon' => $ic['bank'], 'color' => 'cyan', 'label' => 'Qualified Institutional Participant', 'threshold' => '≥ US$280,000', 'desc' => 'PO Allocation Unit:'],
 ];
 $tierColorMap = [
     'emerald' => ['ring' => 'border-emerald-500/30 hover:border-emerald-400', 'chip' => 'bg-emerald-950 text-emerald-300 border-emerald-500/30', 'ic' => 'bg-emerald-950 text-emerald-300 border-emerald-500/40', 'bar' => 'bg-emerald-400'],
@@ -72,235 +72,187 @@ $entityClassDist = [
 
 /* ---------- 28 PARTICIPANT SIMULATED & ILLUSTRATIVE RECORDS ---------- */
 $participants = [
-    // --- 1. ENTRY & PRIVATE PARTICIPANTS (NOVA & ORBIT) ---
     [
-        'id' => 'NINA-P-0001', 'name' => 'Private Participant A', 'class' => 'PRIVATE', 'tier' => 'NOVA',
-        'cum' => 'US$8,000', 'projects' => 1, 'active_po' => 1, 'completed' => 0, 'program' => 'North Kalimantan Palm — Demo', 'po_val' => 'US$8,000 — Simulated',
-        'review' => 'The production timeline makes it easier to understand what happens after a PO allocation is confirmed.',
-        'scope' => ['Production Timeline', 'PO Allocation', 'Milestone Visibility', 'Documentation'],
-        'stars' => '4.8', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0001', 'name' => 'BANK CENTRAL ASIA', 'class' => 'FINANCIAL INSTITUTION', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Commercial Agriculture Financing',
+        'context' => 'Indonesian Banking', 'review' => 'Entity verification, land documentation, ESG controls, transaction traceability and operational reporting.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0002', 'name' => 'Private Entrepreneur B', 'class' => 'PRIVATE', 'tier' => 'NOVA',
-        'cum' => 'US$8,500', 'projects' => 1, 'active_po' => 1, 'completed' => 0, 'program' => 'South Kalimantan Bio-Agriculture', 'po_val' => 'US$8,500 — Simulated',
-        'review' => 'Clear operational breakdown before execution starts gives confidence in participation.',
-        'scope' => ['RAB Breakdown', 'Work Orders', 'Field Status'],
-        'stars' => '4.7', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0002', 'name' => 'MAYAPADA GROUP', 'class' => 'FAMILY / CORPORATE CAPITAL', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Sustainable Agro-Forestry Facility',
+        'context' => 'Indonesian Ecosystem', 'review' => 'Governance, documentation, sustainability classification and long-term productive assets.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0003', 'name' => 'Agri Investor Specialist', 'class' => 'PRIVATE', 'tier' => 'NOVA',
-        'cum' => 'US$12,000', 'projects' => 2, 'active_po' => 1, 'completed' => 1, 'program' => 'North Kalimantan Palm — Demo', 'po_val' => 'US$12,000 — Simulated',
-        'review' => 'First completed batch delivered exact output verification documents directly to wallet.',
-        'scope' => ['Verification Documents', 'Delivery Record', 'Wallet Proof'],
-        'stars' => '4.9', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0003', 'name' => 'BLACKROCK', 'class' => 'GLOBAL ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$2,800,000', 'allocations' => 10, 'program' => 'Indonesia Palm Production Program',
+        'context' => 'Global Institution', 'review' => 'Institutional-grade traceability, governance, palm-oil ESG risk, verification and long-term value.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0004', 'name' => 'Jakarta Private Office', 'class' => 'PRIVATE OFFICE', 'tier' => 'ORBIT',
-        'cum' => 'US$18,000', 'projects' => 2, 'active_po' => 1, 'completed' => 1, 'program' => 'Sumatra Commercial Crops', 'po_val' => 'US$18,000 — Simulated',
-        'review' => 'Well structured and transparent process gives confidence in multi-batch allocation.',
-        'scope' => ['Multi-batch control', 'Audit trail', 'Yield reporting'],
-        'stars' => '4.7', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
-    ],
-
-    // --- 2. FAMILY OFFICES & PRIVATE EQUITY (ORBIT & CONSTELLATION) ---
-    [
-        'id' => 'NINA-P-0005', 'name' => 'Singapore Private Office', 'class' => 'PRIVATE OFFICE', 'tier' => 'ORBIT',
-        'cum' => 'US$20,000', 'projects' => 3, 'active_po' => 2, 'completed' => 1, 'program' => 'Kalimantan Land Expansion', 'po_val' => 'US$20,000 — Simulated',
-        'review' => 'The level of detail in the reporting and RAB line items is very helpful for our team.',
-        'scope' => ['RAB line item', 'Vendor WO', 'Verification'],
-        'stars' => '4.9', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0004', 'name' => 'VANGUARD', 'class' => 'ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$2,240,000', 'allocations' => 8, 'program' => 'Indonesia Palm Production Program',
+        'context' => 'Global Institution', 'review' => 'Standardized reporting, stewardship, consistency of operating records and long-duration monitoring.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0006', 'name' => 'Surabaya Family Venture', 'class' => 'FAMILY OFFICE', 'tier' => 'ORBIT',
-        'cum' => 'US$21,500', 'projects' => 3, 'active_po' => 2, 'completed' => 1, 'program' => 'Kalimantan Land Expansion', 'po_val' => 'US$21,500 — Simulated',
-        'review' => 'Direct connection between RAB line items and vendor work orders is impressive.',
-        'scope' => ['RAB line item', 'Vendor WO', 'Verification'],
-        'stars' => '4.8', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0005', 'name' => 'BLACKSTONE', 'class' => 'ALTERNATIVE ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,400,000', 'allocations' => 5, 'program' => 'Multi-Region Productive Asset Program',
+        'context' => 'Global Institution', 'review' => 'Real-asset execution, infrastructure, vendor control, production evidence and commercial output.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0007', 'name' => 'Asia Private Equity Fund', 'class' => 'PRIVATE EQUITY', 'tier' => 'CONSTELLATION',
-        'cum' => 'US$28,000', 'projects' => 3, 'active_po' => 2, 'completed' => 1, 'program' => 'Industrial Agriculture Corridor', 'po_val' => 'US$28,000 — Simulated',
-        'review' => 'The prototype connects operational controls, RAB visibility, execution verification and production documentation within one workflow.',
-        'scope' => ['RAB Control', 'Work Orders', 'Execution', 'Verification'],
-        'stars' => '4.8', 'badge' => 'SIMULATED USE CASE', 'is_illustrative' => false
+        'id' => 'NINA-C-0006', 'name' => 'STATE STREET', 'class' => 'FINANCIAL INFRASTRUCTURE', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,680,000', 'allocations' => 6, 'program' => 'Agricultural Financing Architecture',
+        'context' => 'Global Institution', 'review' => 'Capital infrastructure, farmer financing, data standardization and operational reporting.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0008', 'name' => 'Southeast Asia Alternative Fund', 'class' => 'PRIVATE EQUITY', 'tier' => 'CONSTELLATION',
-        'cum' => 'US$35,000', 'projects' => 4, 'active_po' => 2, 'completed' => 2, 'program' => 'Kalimantan Infrastructure & Agri', 'po_val' => 'US$35,000 — Simulated',
-        'review' => 'Verification process adds credibility to field production data and milestone releases.',
-        'scope' => ['Equipment WO', 'Milestone Clearance', 'Land Dev'],
-        'stars' => '4.7', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
-    ],
-
-    // --- 3. SOVEREIGN TIER & HIGH-CAPACITY INDIVIDUALS ---
-    [
-        'id' => 'NINA-P-0009', 'name' => 'Southeast Asia Family Office', 'class' => 'FAMILY OFFICE', 'tier' => 'SOVEREIGN',
-        'cum' => 'US$120,000', 'projects' => 6, 'active_po' => 3, 'completed' => 3, 'program' => 'North Kalimantan Palm — Demo', 'po_val' => 'US$120,000 — Simulated',
-        'review' => 'The system provides a common operational view across multiple production programs while preserving project-level records.',
-        'scope' => ['Multi-project visibility', 'Production allocation', 'Program monitoring', 'Verification', 'Commercial traceability'],
-        'stars' => '4.9', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
+        'id' => 'NINA-C-0007', 'name' => 'ALPHABET / GOOGLE', 'class' => 'TECHNOLOGY / CORPORATE', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agroforestry & AI Integration',
+        'context' => 'Global Technology', 'review' => 'Data architecture, geospatial intelligence, AI, production monitoring and API readiness.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0010', 'name' => 'R. Hartono (Illustrative Private Participant)', 'class' => 'PRIVATE', 'tier' => 'SOVEREIGN',
-        'cum' => 'US$125,000 — SIMULATED', 'projects' => 4, 'active_po' => 2, 'completed' => 2, 'program' => 'North Kalimantan Palm — Demo', 'po_val' => 'US$100,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: High-Net-Worth Private Capital / Family Business Ecosystem',
-        'review' => 'High-capacity private participant simulation demonstrating individualized portfolio tracking across sovereign-scale limits.',
-        'scope' => ['Individual Allocation', 'Portfolio Ledger', 'Verified Settlement'],
-        'stars' => '4.9', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
+        'id' => 'NINA-C-0008', 'name' => 'META', 'class' => 'TECHNOLOGY / CORPORATE', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Digital Identity & Supply Chain',
+        'context' => 'Global Technology', 'review' => 'Network effects, digital identity, operational data, AI-assisted field intelligence.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0011', 'name' => 'J. Lim (Illustrative Private Capital Profile)', 'class' => 'PRIVATE OFFICE', 'tier' => 'SOVEREIGN',
-        'cum' => 'US$250,000 — SIMULATED', 'projects' => 6, 'active_po' => 3, 'completed' => 3, 'program' => 'Regional Asset & Bio-Production', 'po_val' => 'US$250,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Private Capital / Co-Founder ARA & JL Family Office Scale Reference',
-        'review' => 'Illustrative profile showing how specialized Asian family office principals could manage alternative real-asset allocations through NINA.',
-        'scope' => ['Real Asset Management', 'Multi-region Allocation', 'Institutional Governance'],
-        'stars' => '5.0', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
+        'id' => 'NINA-C-0009', 'name' => 'NVIDIA', 'class' => 'AI / COMPUTING INFRASTRUCTURE', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Precision Farming Intelligence',
+        'context' => 'Global Technology', 'review' => 'Edge AI, drones, satellite data, computer vision, predictive maintenance and plantation intelligence.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0012', 'name' => 'Singapore Hedge Fund', 'class' => 'HEDGE FUND', 'tier' => 'SOVEREIGN',
-        'cum' => 'US$98,000', 'projects' => 4, 'active_po' => 2, 'completed' => 1, 'program' => 'Logistics & Agri Supply Network', 'po_val' => 'US$98,000 — Simulated',
-        'review' => 'The platform makes complex production structures and multi-vendor RABs easier to manage.',
-        'scope' => ['Supply Chain', 'Transport WO', 'Commercial Delivery'],
-        'stars' => '4.6', 'badge' => 'SIMULATED PARTICIPANT', 'is_illustrative' => false
-    ],
-
-    // --- 4. GLOBAL INSTITUTIONAL ASSET MANAGERS (REAL COMPANY PROFILES - ILLUSTRATIVE ONLY) ---
-    [
-        'id' => 'NINA-P-0013', 'name' => 'BlackRock (Illustrative Profile)', 'class' => 'ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$2,500,000 — SIMULATION', 'projects' => 10, 'active_po' => 6, 'completed' => 4, 'program' => 'North Kalimantan Palm (NK-001 → NK-010)', 'po_val' => 'US$2,500,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Top-tier global asset manager (~US$14T AUM as of Dec 31, 2025)',
-        'logo' => $basePrefix . '/blackrock_logo.jpg',
-        'review' => 'Illustrative example of how an institutional asset manager could review production capacity, operational controls and verified commercial output through NINA.',
-        'scope' => ['Production Capacity', 'Operational Controls', 'Verified Output', 'Traceability'],
-        'stars' => '4.9', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
+        'id' => 'NINA-C-0010', 'name' => 'THE COCA-COLA COMPANY', 'class' => 'STRATEGIC BUYER', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Sustainable Agricultural Sourcing',
+        'context' => 'Global Consumer', 'review' => 'Sustainable agricultural sourcing, supply continuity, traceability and quality.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0014', 'name' => 'Vanguard (Illustrative Profile)', 'class' => 'ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$2,000,000 — SIMULATION', 'projects' => 8, 'active_po' => 5, 'completed' => 3, 'program' => 'Indonesia Palm Production Program', 'po_val' => 'US$2,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Leading global investment management company',
-        'logo' => $basePrefix . '/vanguard_logo.jpg',
-        'review' => 'Illustrative architecture framework for index and asset allocation managers inspecting standardized productive asset protocols.',
-        'scope' => ['Standardized Protocol', 'Asset Allocation', 'Verification Ledger'],
-        'stars' => '4.8', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
+        'id' => 'NINA-C-0011', 'name' => 'PEPSICO', 'class' => 'STRATEGIC BUYER', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Regenerative Agriculture Program',
+        'context' => 'Global Consumer', 'review' => 'Sustainable sourcing, palm-oil supply chain, farmer capability, traceability and offtake continuity.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0015', 'name' => 'Blackstone (Illustrative Profile)', 'class' => 'ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$3,000,000 — SIMULATION', 'projects' => 12, 'active_po' => 7, 'completed' => 5, 'program' => 'Demo Multi-Region Production Program', 'po_val' => 'US$3,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Leading alternative asset manager (~US$1.3T AUM in 2025 release)',
-        'logo' => $basePrefix . '/blackstone_logo.jpg',
-        'review' => 'Illustrative profile evaluating real-asset operational transparency, RAB control, and third-party vendor execution verification.',
-        'scope' => ['Real-Asset Transparency', 'RAB Control', 'Vendor Execution'],
-        'stars' => '5.0', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
-    ],
-
-    // --- 5. INDONESIA INSTITUTIONAL & SOVEREIGN ---
-    [
-        'id' => 'NINA-P-0016', 'name' => 'Danantara (Illustrative Sovereign Entity)', 'class' => 'PUBLIC INSTITUTION', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$10,000,000 — SIMULATION', 'projects' => 15, 'active_po' => 10, 'completed' => 5, 'program' => 'National Productive Asset Program', 'po_val' => 'US$10,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Sovereign / State-Scale Allocation Entity',
-        'review' => 'Demonstrates state-scale sovereign wealth management protocols, regional batch distribution, and national economic impact tracking.',
-        'scope' => ['Sovereign Allocation', 'Regional Batch Distribution', 'National Impact'],
-        'stars' => '5.0', 'badge' => 'NO REAL PARTICIPATION IMPLIED', 'is_illustrative' => true
+        'id' => 'NINA-C-0012', 'name' => 'DANANTARA INDONESIA', 'class' => 'STATE INVESTMENT', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$2,800,000', 'allocations' => 10, 'program' => 'National Productive Asset Program',
+        'context' => 'Sovereign / State-Scale', 'review' => 'National-scale asset governance, production capacity, downstream integration, auditability and strategic infrastructure.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0017', 'name' => 'Indonesian Banking Group (Illustrative)', 'class' => 'FINANCIAL INSTITUTION', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$5,000,000 — SIMULATION', 'projects' => 9, 'active_po' => 6, 'completed' => 3, 'program' => 'Commercial Agriculture Financing Facility', 'po_val' => 'US$5,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Major regional commercial bank',
-        'review' => 'Illustrates how financial institutions integrate custodial wallet settlement and verified warehouse delivery receipts.',
-        'scope' => ['Custodial Wallet', 'Warehouse Receipt', 'Credit Verification'],
-        'stars' => '4.8', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
-    ],
-
-    // --- 6. INDONESIAN CONGLOMERATE GROUPS (ILLUSTRATIVE PROFILES) ---
-    [
-        'id' => 'NINA-P-0018', 'name' => 'Hartono Family / Djarum Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$5,000,000 — SIMULATION', 'projects' => 8, 'active_po' => 5, 'completed' => 3, 'program' => 'Regional Agro-Industrial Corridor', 'po_val' => 'US$5,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Large Indonesian Business Group Ecosystem',
-        'review' => 'Illustrative profile evaluating multi-sector industrial crop off-take and automated vendor disbursement.',
-        'scope' => ['Multi-sector Offtake', 'Corporate Treasury', 'Automated RAB'],
-        'stars' => '4.9', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0013', 'name' => 'TEMASEK', 'class' => 'STATE-OWNED INVESTMENT', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,680,000', 'allocations' => 6, 'program' => 'Southeast Asia Green Economy',
+        'context' => 'Sovereign / State-Scale', 'review' => 'Smallholder capability, certification, sustainable agriculture and traceable supply chain technology.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0019', 'name' => 'Salim Group-Related Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$5,000,000 — SIMULATION', 'projects' => 8, 'active_po' => 4, 'completed' => 4, 'program' => 'Agri-Food & Plantation Network', 'po_val' => 'US$5,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Major Integrated Food & Agri Conglomerate',
-        'review' => 'Demonstrates end-to-end integration between certified seed suppliers, fertilizer vendors and off-take processing facilities.',
-        'scope' => ['Integrated Food Supply', 'Certified Seeds', 'Processing Facility'],
-        'stars' => '4.9', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0014', 'name' => 'GIC', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agricultural Infrastructure & Marketplace',
+        'context' => 'Sovereign / State-Scale', 'review' => 'Productive asset viability, infrastructure integration, agricultural marketplace and long-term capital deployment.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0020', 'name' => 'Muria Investama (BCA Group-Related)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$2,500,000 — SIMULATION', 'projects' => 7, 'active_po' => 4, 'completed' => 3, 'program' => 'Agri-Tech & Land Development Program', 'po_val' => 'US$2,500,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Corporate Investment Arm',
-        'review' => 'Demonstrates strategic corporate investment allocation, multi-vendor RAB monitoring, and yield settlement.',
-        'scope' => ['Corporate Treasury', 'Vendor RAB', 'Yield Settlement'],
-        'stars' => '4.9', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0015', 'name' => 'KHAZANAH NASIONAL', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Smallholder Aggregation Network',
+        'context' => 'Sovereign / State-Scale', 'review' => 'Smallholder aggregation, data visibility, and sustainable agriculture ecosystem development.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0021', 'name' => 'Tahir Family / Mayapada Ecosystem (Illustrative)', 'class' => 'FAMILY OFFICE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$3,000,000 — SIMULATION', 'projects' => 6, 'active_po' => 3, 'completed' => 3, 'program' => 'Sustainable Agro-Forestry Facility', 'po_val' => 'US$3,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Family Office / Financial Conglomerate',
-        'review' => 'Shows how impact capital and sustainable production goals can be audited via real-time satellite GIS verification.',
-        'scope' => ['Impact Metrics', 'GIS Verification', 'ESG Compliance'],
-        'stars' => '4.8', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0016', 'name' => 'PUBLIC INVESTMENT FUND (PIF)', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Global Food Security Initiative',
+        'context' => 'Sovereign / State-Scale', 'review' => 'Food security, agricultural assets, technology integration and global supply chain resilience.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0022', 'name' => 'Riady Family / Lippo Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$4,000,000 — SIMULATION', 'projects' => 7, 'active_po' => 4, 'completed' => 3, 'program' => 'Regional Land & Infrastructure Development', 'po_val' => 'US$4,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Real Estate & Conglomerate Group',
-        'review' => 'Demonstrates how physical asset development and commercial off-take agreements are linked within one operating layer.',
-        'scope' => ['Asset Clearance', 'Commercial Offtake', 'Infrastructure RAB'],
-        'stars' => '4.7', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0017', 'name' => 'ABU DHABI INVESTMENT AUTHORITY', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Agricultural Productivity Facility',
+        'context' => 'Sovereign / State-Scale', 'review' => 'Agricultural inputs, productivity enhancement, and global food infrastructure investments.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0023', 'name' => 'Saratoga / Soeryadjaya Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$4,000,000 — SIMULATION', 'projects' => 8, 'active_po' => 5, 'completed' => 3, 'program' => 'Active Bio-Energy & Plantation Corridor', 'po_val' => 'US$4,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Active Investment & Natural Resources Group',
-        'review' => 'Evaluates real-asset operational transparency, RAB control, and third-party vendor execution verification.',
-        'scope' => ['Active Investment', 'Bio-Energy', 'Execution Audit'],
-        'stars' => '4.9', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0018', 'name' => 'QUANTEDGE', 'class' => 'QUANTITATIVE MANAGER', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Sustainable Landscape Program',
+        'context' => 'Singapore Investment', 'review' => 'Measurable impact, MRV, farmer livelihoods, landscape monitoring and scalable financing mechanisms.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0024', 'name' => 'Artha Graha-Related Business Ecosystem', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$3,000,000 — SIMULATION', 'projects' => 6, 'active_po' => 3, 'completed' => 3, 'program' => 'Maritime & Agro Infrastructure Program', 'po_val' => 'US$3,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Regional Corporate Capital & Agro-Infrastructure',
-        'review' => 'Demonstrates large-scale land infrastructure preparation, logistics integration, and verified output.',
-        'scope' => ['Infrastructure', 'Logistics Integration', 'Land Preparation'],
-        'stars' => '4.8', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0019', 'name' => 'DYMON ASIA', 'class' => 'PRIVATE EQUITY', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Southeast Asian Real Assets',
+        'context' => 'Southeast Asia Alternative', 'review' => 'Operating partner quality, execution, regional expansion, vendor ecosystem and scalable real assets.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0025', 'name' => 'Lion Air-Related Business Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$2,000,000 — SIMULATION', 'projects' => 5, 'active_po' => 3, 'completed' => 2, 'program' => 'Logistics & Cargo Support Facility', 'po_val' => 'US$2,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: National Logistics & Transport Business Group',
-        'review' => 'Demonstrates commercial transport off-take contracts connected directly to field-level execution work orders.',
-        'scope' => ['Cargo Support', 'Transport Offtake', 'Work Orders'],
-        'stars' => '4.7', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0020', 'name' => 'GRASSHOPPER ASIA', 'class' => 'PROPRIETARY TRADING', 'tier' => 'CONSTELLATION',
+        'unit' => 'US$28,000', 'cum' => 'US$56,000', 'allocations' => 2, 'program' => 'Technology-Driven Supply Network',
+        'context' => 'Quantitative Technology', 'review' => 'Data infrastructure, systematic decision-making, technology, operational latency and risk controls.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0026', 'name' => 'Santini-Related Business Ecosystem (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$2,000,000 — SIMULATION', 'projects' => 4, 'active_po' => 2, 'completed' => 2, 'program' => 'Regional Enterprise Supply Program', 'po_val' => 'US$2,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Family Business & Corporate Holdings',
-        'review' => 'Shows how family corporate holdings handle multi-batch PO allocations across regional partners.',
-        'scope' => ['Corporate Holdings', 'Enterprise Supply', 'Batch Tracking'],
-        'stars' => '4.8', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0021', 'name' => 'PUPUK INDONESIA', 'class' => 'STATE-OWNED ENTERPRISE', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Integrated Farmer Ecosystem',
+        'context' => 'Agricultural Input', 'review' => 'RAB fertilizer tracking, vendor alignment, production yields, farmer productivity and offtake security.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0027', 'name' => 'Indonesian Conglomerate Investment Office', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$7,500,000 — SIMULATION', 'projects' => 11, 'active_po' => 7, 'completed' => 4, 'program' => 'Integrated Agro-Industrial Complex', 'po_val' => 'US$7,500,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Regional Corporate Capital',
-        'review' => 'Shows how conglomerate treasury operations handle multi-batch PO allocations across regional land partners.',
-        'scope' => ['Treasury Allocation', 'Regional Land Partners', 'Batch Tracking'],
-        'stars' => '4.8', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0022', 'name' => 'PERTAMINA', 'class' => 'STATE-OWNED ENERGY', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Regenerative Community Agriculture',
+        'context' => 'Industrial Group', 'review' => 'Land utilization, community agriculture, waste processing, and technology-driven sustainability.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-P-0028', 'name' => 'Indonesian Industrial Group (Illustrative)', 'class' => 'CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'cum' => 'US$4,000,000 — SIMULATION', 'projects' => 8, 'active_po' => 5, 'completed' => 3, 'program' => 'Strategic Industrial Crop Program', 'po_val' => 'US$4,000,000 — SIMULATION ONLY',
-        'public_ref' => 'Scale Reference: Strategic Industrial Operator',
-        'review' => 'Demonstrates industrial processing off-take contracts connected directly to field-level execution work orders.',
-        'scope' => ['Processing Offtake', 'Work Orders', 'Commercial Settlement'],
-        'stars' => '4.7', 'badge' => 'SIMULATION ONLY', 'is_illustrative' => true
+        'id' => 'NINA-C-0023', 'name' => 'PTPN IV PALMCO', 'class' => 'STATE-OWNED PLANTATION', 'tier' => 'SOVEREIGN',
+        'unit' => 'US$88,000', 'cum' => 'US$264,000', 'allocations' => 3, 'program' => 'Smallholder Productivity Program',
+        'context' => 'Palm Oil Operator', 'review' => 'Smallholder integration, mill capacity, production yield, certification standards and commercial offtake.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-C-0024', 'name' => 'INDOFOOD / INDOFOOD AGRI', 'class' => 'CORPORATE AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Integrated Palm Value Chain',
+        'context' => 'Consumer Agribusiness', 'review' => 'Seed quality, plantation execution, mill operations, refinery integration, and end-to-end traceability.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-C-0025', 'name' => 'TRIPUTRA GROUP', 'class' => 'FAMILY AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Strategic Industrial Crop Program',
+        'context' => 'Corporate Ecosystem', 'review' => 'Agricultural operations, sustainable farming, production continuity and industrial ecosystem integration.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-C-0026', 'name' => 'GOLDEN AGRI-RESOURCES', 'class' => 'CORPORATE AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Traceable Supply Chain Network',
+        'context' => 'Corporate Agribusiness', 'review' => 'Plot-level traceability, smallholder mapping, climate-resilient seeds, and blockchain-verified supply chains.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-C-0027', 'name' => 'ASTRA AGRO LESTARI', 'class' => 'PALM OIL OPERATOR', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Smallholder Inclusion Program',
+        'context' => 'Corporate Operator', 'review' => 'Farmer partnerships, plantation health analytics, AI/drone monitoring, and production traceability.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-C-0028', 'name' => 'BARITO PACIFIC', 'class' => 'INDUSTRIAL & RESOURCES', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Integrated Natural Resources',
+        'context' => 'Corporate Ecosystem', 'review' => 'Sustainable farming empowerment, productivity enhancement, and integrated industrial operations.',
+        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
     ],
 ];
+
+// Dynamically compute tier counts based on exact participant allocation history
+$tierCounts = ['NOVA' => 0, 'ORBIT' => 0, 'CONSTELLATION' => 0, 'SOVEREIGN' => 0, 'INSTITUTIONAL' => 0];
+foreach ($participants as $p) {
+    if (isset($tierCounts[$p['tier']])) {
+        $tierCounts[$p['tier']]++;
+    }
+}
+foreach ($tiers as &$t) {
+    $t['count'] = $tierCounts[$t['key']] ?? 0;
+}
+unset($t);
 
 $tierBadgeCls = [
     'NOVA' => 'bg-emerald-950 border-emerald-500/40 text-emerald-300',
@@ -405,6 +357,9 @@ ob_start();
                         <div class="hidden sm:flex items-center justify-center px-0.5 text-gray-500 shrink-0">
                             <?= $svg($ic['arrow'], 'w-4 h-4') ?>
                         </div>
+                        <div class="flex sm:hidden items-center justify-center py-1.5 text-gray-500 shrink-0">
+                            <?= $svg($ic['arrow'], 'w-4 h-4 rotate-90') ?>
+                        </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>
@@ -425,7 +380,7 @@ ob_start();
                     </div>
                     <div>
                         <div class="text-xs font-bold text-white uppercase">Participant Tier</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Measures cumulative participation history across confirmed PO allocations.</p>
+                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Indicates the size of a single PO Allocation Unit.</p>
                     </div>
                 </div>
                 <div class="<?= $card ?> p-4 flex items-start gap-3">
@@ -434,7 +389,7 @@ ob_start();
                     </div>
                     <div>
                         <div class="text-xs font-bold text-white uppercase">Entity Class</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Identifies who the participant is (Private, Family Office, Asset Manager, etc.).</p>
+                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Identifies participant organizational type (Private, Family Office, Asset Manager, etc.).</p>
                     </div>
                 </div>
                 <div class="<?= $card ?> p-4 flex items-start gap-3">
@@ -443,7 +398,7 @@ ob_start();
                     </div>
                     <div>
                         <div class="text-xs font-bold text-white uppercase">Reputation</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Measures actual verified performance / engagement history.</p>
+                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Measures verified production participation history.</p>
                     </div>
                 </div>
             </div>
@@ -618,25 +573,30 @@ ob_start();
                                 <strong class="text-emerald-400 text-xs">≥ <?= $e($p['cum']) ?></strong>
                             </div>
 
-                            <div class="flex items-center gap-3 text-[9px] font-mono text-gray-300">
-                                <span><?= $p['projects'] ?> Project<?= $p['projects'] == 1 ? '' : 's' ?></span>
-                                <span class="text-gray-600">•</span>
-                                <span><?= $p['active_po'] ?> Allocation<?= $p['active_po'] == 1 ? '' : 's' ?></span>
-                                <span class="text-gray-600">•</span>
-                                <span><?= $p['completed'] ?> Completed</span>
+                            <div class="grid grid-cols-1 gap-1 text-[9px] font-mono text-gray-300">
+                                <div class="flex items-center justify-between"><span class="text-emerald-400">Cumulative Participation:</span> <span class="truncate ml-2"><?= $e($p['cum']) ?></span></div>
+                                <div class="flex items-center justify-between"><span class="text-emerald-400">Confirmed Allocations:</span> <span class="truncate ml-2"><?= $e($p['allocations']) ?></span></div>
+                                <div class="flex items-center justify-between"><span class="text-emerald-400">Program:</span> <span class="truncate ml-2"><?= $e($p['program']) ?></span></div>
+                                <?php if (!empty($p['context'])): ?>
+                                    <div class="flex items-center justify-between"><span class="text-emerald-400">Capital Context:</span> <span class="truncate ml-2"><?= $e($p['context']) ?></span></div>
+                                <?php endif; ?>
                             </div>
 
-                            <div class="rounded-lg bg-white/[0.03] border border-white/10 p-2.5">
+                            <div class="rounded-lg bg-white/[0.03] border border-white/10 p-2.5 mt-2">
                                 <p class="text-[11px] text-gray-300 italic leading-relaxed">
                                     "<?= $e($p['review']) ?>"
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-between pt-2 border-t border-white/10 text-[8px] font-mono">
-                            <span class="text-gray-500 uppercase">● SIMULATED PARTICIPANT</span>
-                            <span class="text-amber-400 font-bold flex items-center gap-1">
-                                <?= $svg($ic['star'], 'w-3 h-3 fill-amber-400 text-amber-400') ?> <?= $e($p['stars']) ?>
+                        <div class="flex items-center justify-between pt-2 border-t border-white/10 text-[8px] font-mono mt-3">
+                            <span class="text-gray-500 uppercase"><?= $p['is_illustrative'] ? '● ILLUSTRATIVE SCENARIO' : '● SIMULATED PARTICIPANT' ?></span>
+                            <span class="<?= $p['is_illustrative'] ? 'text-gray-500' : 'text-amber-400' ?> font-bold flex items-center gap-1">
+                                <?php if (!$p['is_illustrative']): ?>
+                                    <?= $svg($ic['star'], 'w-3 h-3 fill-amber-400 text-amber-400') ?> <?= $e($p['stars']) ?>
+                                <?php else: ?>
+                                    NO ACTUAL REVIEW
+                                <?php endif; ?>
                             </span>
                         </div>
                     </div>
@@ -758,13 +718,21 @@ ob_start();
                                 <strong class="text-amber-300 truncate" x-text="selectedParticipant?.tier"></strong>
                             </div>
                             <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Cum. Participation:</span>
+                                <span class="text-gray-400 shrink-0">PO Allocation Unit:</span>
+                                <strong class="text-emerald-400 truncate" x-text="selectedParticipant?.unit"></strong>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
+                                <span class="text-gray-400 shrink-0">Cum. PO Participation:</span>
                                 <strong class="text-white truncate" x-text="selectedParticipant?.cum"></strong>
                             </div>
                             <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Review Rating:</span>
-                                <strong class="text-amber-400 flex items-center gap-1 shrink-0">
-                                    ★ <span x-text="selectedParticipant?.stars"></span> / 5.0
+                                <span class="text-gray-400 shrink-0">Confirmed Allocations:</span>
+                                <strong class="text-white truncate" x-text="selectedParticipant?.allocations"></strong>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
+                                <span class="text-gray-400 shrink-0">Status:</span>
+                                <strong class="text-gray-500 flex items-center gap-1 shrink-0 text-[10px]" x-show="selectedParticipant?.is_illustrative">
+                                    ILLUSTRATIVE
                                 </strong>
                             </div>
                         </div>
@@ -806,12 +774,29 @@ ob_start();
                             <strong class="text-amber-300 text-sm" x-text="selectedParticipant?.tier"></strong>
                         </div>
                         <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">Cumulative Participation</span>
-                            <strong class="text-white text-sm" x-text="selectedParticipant?.cum"></strong>
+                            <span class="text-[9px] text-gray-400 block uppercase">PO Allocation Unit</span>
+                            <strong class="text-emerald-400 text-sm" x-text="selectedParticipant?.unit"></strong>
                         </div>
                         <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">Identity Status</span>
-                            <strong class="text-cyan-300 text-sm" x-text="selectedParticipant?.badge"></strong>
+                            <span class="text-[9px] text-gray-400 block uppercase">Cumulative PO</span>
+                            <strong class="text-white text-sm" x-text="selectedParticipant?.cum"></strong>
+                        </div>
+                    </div>
+
+                    <!-- PARTICIPATION TRACE -->
+                    <div class="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 space-y-3">
+                        <h3 class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest border-b border-emerald-500/20 pb-2">Participation Trace</h3>
+                        <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[9px] font-mono font-bold text-gray-400 uppercase">
+                            <span class="text-white">Participant</span> <span class="text-emerald-500">→</span>
+                            <span class="text-white">PO Allocation</span> <span class="text-emerald-500">→</span>
+                            <span class="text-white">Production Program</span> <span class="text-emerald-500">→</span>
+                            <span class="text-white">Project</span> <span class="text-emerald-500">→</span>
+                            <span class="text-white">Batch</span> <span class="text-emerald-500">→</span>
+                            <span class="text-gray-400">Execution</span> <span class="text-emerald-500">→</span>
+                            <span class="text-gray-400">Verification</span> <span class="text-emerald-500">→</span>
+                            <span class="text-gray-400">Output</span> <span class="text-emerald-500">→</span>
+                            <span class="text-gray-400">Delivery</span> <span class="text-emerald-500">→</span>
+                            <span class="text-gray-400">Commercial Settlement</span>
                         </div>
                     </div>
 
@@ -835,7 +820,7 @@ ob_start();
                         </div>
                         <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-300 pt-1">
                             <div>Production Program: <strong class="text-white block" x-text="selectedParticipant?.program"></strong></div>
-                            <div>Simulated PO Allocation: <strong class="text-emerald-400 block" x-text="selectedParticipant?.po_val"></strong></div>
+                            <div>PO Allocation Unit: <strong class="text-emerald-400 block" x-text="selectedParticipant?.unit"></strong></div>
                         </div>
                     </div>
 
@@ -845,9 +830,12 @@ ob_start();
                                 <h3 class="text-xs font-bold text-white uppercase">Verified Review Record</h3>
                                 <span class="text-[9px] text-gray-400 block">NOT AN INVESTMENT RATING — PARTICIPANT EXPERIENCE ONLY</span>
                             </div>
-                            <span class="text-amber-400 font-bold flex items-center gap-1 text-xs">
+                            <span class="text-amber-400 font-bold flex items-center gap-1 text-xs" x-show="!selectedParticipant?.is_illustrative">
                                 <?= $svg($ic['star'], 'w-4 h-4 fill-amber-400 text-amber-400') ?>
                                 <span x-text="selectedParticipant?.stars"></span> / 5.0
+                            </span>
+                            <span class="text-gray-500 font-bold text-[10px] uppercase" x-show="selectedParticipant?.is_illustrative">
+                                Illustrative Experience Scenario
                             </span>
                         </div>
                         <div class="text-xs text-gray-200 italic p-3 rounded bg-black/40 border border-white/5" x-text="selectedParticipant?.review"></div>
@@ -859,41 +847,6 @@ ob_start();
                                     <span class="rounded bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 text-[9px] text-emerald-300" x-text="'✓ ' + item"></span>
                                 </template>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Score Breakdown -->
-                    <div class="rounded-xl border border-white/10 bg-black/30 p-4 space-y-2">
-                        <h3 class="text-xs font-bold text-gray-300 uppercase border-b border-white/10 pb-1.5">
-                            Operational Experience Rating Breakdown
-                        </h3>
-                        <div class="grid grid-cols-2 gap-2 text-[10px] font-mono">
-                            <div class="flex justify-between border-b border-white/5 py-1">
-                                <span class="text-gray-400">Operational Visibility</span>
-                                <strong class="text-emerald-400">4.9 / 5</strong>
-                            </div>
-                            <div class="flex justify-between border-b border-white/5 py-1">
-                                <span class="text-gray-400">Documentation</span>
-                                <strong class="text-emerald-400">4.8 / 5</strong>
-                            </div>
-                            <div class="flex justify-between border-b border-white/5 py-1">
-                                <span class="text-gray-400">Milestone Clarity</span>
-                                <strong class="text-emerald-400">4.7 / 5</strong>
-                            </div>
-                            <div class="flex justify-between border-b border-white/5 py-1">
-                                <span class="text-gray-400">Field Evidence</span>
-                                <strong class="text-emerald-400">4.8 / 5</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-lg bg-emerald-950/40 border border-emerald-500/30 p-3 text-[10px] space-y-1.5 text-emerald-200">
-                        <div class="font-bold uppercase">Review Eligibility Verified:</div>
-                        <div class="flex flex-wrap gap-2 text-[9px]">
-                            <span>✓ Allocation Confirmed</span>
-                            <span>✓ Production Completed</span>
-                            <span>✓ Batch Verified</span>
-                            <span>✓ Review Eligible</span>
                         </div>
                     </div>
                 </div> <!-- END RIGHT PANEL -->
