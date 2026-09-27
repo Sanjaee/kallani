@@ -611,6 +611,18 @@ ob_start();
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <?php 
                 foreach ($participants as $idx => $p): 
+                    $domainMap = ['BCA' => 'bca.co.id', 'MAYAPADA' => 'bankmayapada.com', 'BLACKROCK' => 'blackrock.com', 'CPP' => 'cppinvestments.com', 'BLACKSTONE' => 'blackstone.com', 'STATE STREET' => 'statestreet.com', 'ALPHABET' => 'abc.xyz', 'GOOGLE' => 'abc.xyz', 'SIEMENS' => 'siemens.com', 'NVIDIA' => 'nvidia.com', 'COCA-COLA' => 'coca-colacompany.com', 'MAERSK' => 'maersk.com', 'DANANTARA' => 'indonesia.go.id', 'IFC' => 'ifc.org', 'MUNICH RE' => 'munichre.com', 'YALE' => 'yale.edu', 'PUBLIC INVESTMENT' => 'pif.gov.sa', 'QUANTEDGE' => 'quantedge.com', 'DYMON' => 'dymonasia.com', 'GRASSHOPPER' => 'grasshopperasia.com', 'PUPUK' => 'pupuk-indonesia.com', 'PERTAMINA' => 'pertamina.com', 'PTPN' => 'holding-perkebunan.com', 'INDOFOOD' => 'indofood.com', 'TRIPUTRA' => 'triputragroup.com', 'LOUIS' => 'ldc.com'];
+                    $domain = 'example.com';
+                    foreach ($domainMap as $k => $v) {
+                        if (stripos($p['name'], $k) !== false) {
+                            $domain = $v;
+                            break;
+                        }
+                    }
+                    $logoUrl = "https://logo.clearbit.com/" . $domain;
+                    $projects = ['KALTARA 8', 'KALTARA 9', 'KALTENG 2', 'SUMUT 1'];
+                    $projName = $projects[$idx % count($projects)];
+                    $batchId = 'BATCH-' . str_pad(($idx % 12) + 1, 2, '0', STR_PAD_LEFT);
                 ?>
                     <div x-show="filterClass === 'ALL' || filterClass === '<?= $p['class'] ?>'"
                          class="rounded-xl border border-emerald-500/30 bg-[#040C0A] overflow-hidden shadow-2xl font-mono cursor-pointer hover:border-emerald-400/60 transition-all group flex flex-col"
@@ -626,8 +638,8 @@ ob_start();
                          
                          <!-- Entity Info with Project Image -->
                          <div class="px-4 py-4 flex items-center gap-4 border-b border-emerald-500/20">
-                            <div class="h-14 w-24 shrink-0 rounded-lg overflow-hidden relative border border-emerald-500/20">
-                                <img src="<?= $basePrefix ?>/1.jpg" class="h-full w-full object-cover" />
+                            <div class="h-14 w-24 shrink-0 rounded-lg overflow-hidden relative border border-emerald-500/20 bg-white/5 flex items-center justify-center p-2">
+                                <img src="<?= $logoUrl ?>" onerror="this.src='<?= $basePrefix ?>/1.jpg'" class="h-full w-full object-contain" />
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-xl font-extrabold text-white tracking-tight leading-none group-hover:text-emerald-400 transition-colors uppercase"><?= $e($p['name']) ?></h3>
@@ -664,7 +676,8 @@ ob_start();
                                  </div>
                                  <div>
                                      <div class="text-gray-400 tracking-wider">Current Project Experience</div>
-                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['allocations']) ?> Recorded Projects</div>
+                                     <div class="text-emerald-300 mt-1 text-[11px] font-extrabold font-sans uppercase tracking-widest"><?= $projName ?></div>
+                                     <div class="text-gray-400 mt-0.5 text-[10px] font-mono"><?= $batchId ?></div>
                                  </div>
                              </div>
 
