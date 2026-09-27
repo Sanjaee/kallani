@@ -317,19 +317,19 @@ ob_start();
         let unitPrice = parseInt((p.unit || '0').replace(/[^0-9]/g, ''));
         let history = [];
         if (total === 1) {
-            history.push({ name: 'Allocation #001', units: 1, amount: unitPrice });
+            history.push({ name: 'Project NINA-P-01 / Batch A', units: 1, amount: unitPrice });
         } else if (total === 2) {
-            history.push({ name: 'Allocation #001', units: 2, amount: unitPrice * 2 });
+            history.push({ name: 'Project NINA-P-01 / Batch A', units: 2, amount: unitPrice * 2 });
         } else if (total === 3) {
-            history.push({ name: 'Allocation #001', units: 2, amount: unitPrice * 2 });
-            history.push({ name: 'Allocation #002', units: 1, amount: unitPrice });
+            history.push({ name: 'Project NINA-P-01 / Batch A', units: 2, amount: unitPrice * 2 });
+            history.push({ name: 'Project NINA-P-02 / Batch B', units: 1, amount: unitPrice });
         } else if (total > 3) {
             let chunk1 = Math.floor(total * 0.3) || 1;
             let chunk2 = Math.floor(total * 0.2) || 1;
             let chunk3 = total - chunk1 - chunk2;
-            history.push({ name: 'Allocation #001', units: chunk1, amount: unitPrice * chunk1 });
-            history.push({ name: 'Allocation #002', units: chunk2, amount: unitPrice * chunk2 });
-            history.push({ name: 'Allocation #003', units: chunk3, amount: unitPrice * chunk3 });
+            history.push({ name: 'Project NINA-P-01 / Batch A', units: chunk1, amount: unitPrice * chunk1 });
+            history.push({ name: 'Project NINA-P-02 / Batch B', units: chunk2, amount: unitPrice * chunk2 });
+            history.push({ name: 'Project NINA-P-03 / Batch C', units: chunk3, amount: unitPrice * chunk3 });
         }
         return history.reverse(); // Newest first
     }
@@ -664,7 +664,7 @@ ob_start();
                                  </div>
                                  <div>
                                      <div class="text-gray-400 tracking-wider">Current Project Experience</div>
-                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['allocations']) ?> Verified Projects</div>
+                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['allocations']) ?> Recorded Projects</div>
                                  </div>
                              </div>
 
@@ -952,7 +952,7 @@ ob_start();
                         <div class="p-4 grid grid-cols-2 gap-4 text-[10px] font-mono uppercase font-bold border-b border-emerald-500/20">
                             <div>
                                 <div class="text-gray-500 tracking-wider">Published Experience Reviews</div>
-                                <div class="text-xl text-white mt-1" x-text="Math.min(getHistory(selectedParticipant).length, Math.max(1, Math.floor((selectedParticipant?.allocations || 0) * 0.8)))">2</div>
+                                <div class="text-xl text-white mt-1" x-text="getHistory(selectedParticipant).length">2</div>
                             </div>
                             <div>
                                 <div class="text-gray-500 tracking-wider">Experience Records</div>
