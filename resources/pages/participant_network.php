@@ -303,6 +303,29 @@ ob_start();
     openDetail(p) {
         this.selectedParticipant = p;
         this.drawerOpen = true;
+    },
+    
+    getHistory(p) {
+        if (!p) return [];
+        let total = p.allocations;
+        let unitPrice = parseInt((p.unit || '0').replace(/[^0-9]/g, ''));
+        let history = [];
+        if (total === 1) {
+            history.push({ name: 'Allocation #001', units: 1, amount: unitPrice });
+        } else if (total === 2) {
+            history.push({ name: 'Allocation #001', units: 2, amount: unitPrice * 2 });
+        } else if (total === 3) {
+            history.push({ name: 'Allocation #001', units: 2, amount: unitPrice * 2 });
+            history.push({ name: 'Allocation #002', units: 1, amount: unitPrice });
+        } else if (total > 3) {
+            let chunk1 = Math.floor(total * 0.3) || 1;
+            let chunk2 = Math.floor(total * 0.2) || 1;
+            let chunk3 = total - chunk1 - chunk2;
+            history.push({ name: 'Allocation #001', units: chunk1, amount: unitPrice * chunk1 });
+            history.push({ name: 'Allocation #002', units: chunk2, amount: unitPrice * chunk2 });
+            history.push({ name: 'Allocation #003', units: chunk3, amount: unitPrice * chunk3 });
+        }
+        return history.reverse(); // Newest first
     }
 }">
 
@@ -581,8 +604,7 @@ ob_start();
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <?php 
-                $recentReviews = array_slice($participants, 0, 7);
-                foreach ($recentReviews as $idx => $p): 
+                foreach ($participants as $idx => $p): 
                 ?>
                     <div x-show="filterClass === 'ALL' || filterClass === '<?= $p['class'] ?>'"
                          class="rounded-xl border border-emerald-500/30 bg-[#040C0A] overflow-hidden shadow-2xl font-mono cursor-pointer hover:border-emerald-400/60 transition-all group flex flex-col"
@@ -867,20 +889,20 @@ ob_start();
                         </div>
                         <div class="p-4 grid grid-cols-4 gap-3 text-[10px] uppercase font-bold font-mono">
                             <div class="border border-emerald-500/20 rounded-lg p-2 bg-black/20 text-center flex flex-col items-center justify-center">
-                                <div class="text-lg text-white mb-1">5</div>
+                                <div class="text-lg text-white mb-1" x-text="getHistory(selectedParticipant).length">5</div>
                                 <div class="text-[8px] text-gray-500 leading-tight">Total<br/>Projects</div>
                             </div>
                             <div class="border border-emerald-500/20 rounded-lg p-2 bg-black/20 text-center flex flex-col items-center justify-center">
-                                <div class="text-lg text-white mb-1">10</div>
+                                <div class="text-lg text-white mb-1" x-text="selectedParticipant?.allocations || 0">10</div>
                                 <div class="text-[8px] text-gray-500 leading-tight">Total<br/>Units</div>
                             </div>
                             <div class="col-span-2 border border-emerald-500/20 rounded-lg p-3 bg-emerald-950/20 flex flex-col items-center justify-center">
                                 <div class="text-gray-400 tracking-wider mb-1">Cumulative Participation</div>
-                                <div class="text-lg text-emerald-300" x-text="'US$' + (10 * parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')">US$2,800,000</div>
+                                <div class="text-lg text-emerald-300" x-text="'US$' + ((selectedParticipant?.allocations || 0) * parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')">US$2,800,000</div>
                             </div>
                             <div class="col-span-4 border border-emerald-500/20 rounded-lg p-3 bg-black/20 flex flex-col items-center justify-center">
                                 <div class="text-gray-400 tracking-wider mb-1">Confirmed Allocations</div>
-                                <div class="text-lg text-white">10</div>
+                                <div class="text-lg text-white" x-text="selectedParticipant?.allocations || 0">10</div>
                             </div>
                         </div>
                     </div>
@@ -896,21 +918,15 @@ ob_start();
                             <div class="absolute left-[21px] top-6 bottom-6 w-px bg-emerald-500/20"></div>
                             
                             <div class="space-y-4">
-                                <template x-for="item in [
-                                    {date: 'Sep 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
-                                    {date: 'Aug 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
-                                    {date: 'Jul 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
-                                    {date: 'May 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
-                                    {date: 'Mar 2026', event: 'Joined NINA', units: '2 Units', amount: 'US$560,000'}
-                                ]">
+                                <template x-for="(item, i) in getHistory(selectedParticipant)">
                                     <div class="flex items-start gap-4 relative z-10">
                                         <div class="w-3 h-3 rounded-full bg-[#020A10] border-2 border-emerald-500 flex-shrink-0 mt-0.5"></div>
                                         <div class="flex-1 flex justify-between items-center text-[10px] font-mono uppercase font-bold">
                                             <div>
-                                                <div class="text-gray-400" x-text="item.date"></div>
-                                                <div class="text-white mt-0.5" x-text="item.event"></div>
+                                                <div class="text-gray-400" x-text="item.name"></div>
+                                                <div class="text-white mt-0.5">Allocation Confirmed</div>
                                             </div>
-                                            <div class="text-right text-emerald-300" x-text="item.units + ' · ' + 'US$' + (2 * parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')"></div>
+                                            <div class="text-right text-emerald-300" x-text="item.units + (item.units > 1 ? ' Units' : ' Unit') + ' · US$' + item.amount.toLocaleString('en-US')"></div>
                                         </div>
                                     </div>
                                 </template>
@@ -930,11 +946,11 @@ ob_start();
                         <div class="p-4 grid grid-cols-2 gap-4 text-[10px] font-mono uppercase font-bold border-b border-emerald-500/20">
                             <div>
                                 <div class="text-gray-500 tracking-wider">Published Experience Reviews</div>
-                                <div class="text-xl text-white mt-1">2</div>
+                                <div class="text-xl text-white mt-1" x-text="Math.max(1, Math.floor((selectedParticipant?.allocations || 0) * 0.4))">2</div>
                             </div>
                             <div>
                                 <div class="text-gray-500 tracking-wider">Experience Records</div>
-                                <div class="text-xl text-white mt-1">5</div>
+                                <div class="text-xl text-white mt-1" x-text="getHistory(selectedParticipant).length">5</div>
                             </div>
                         </div>
                         <div class="p-3 bg-black/20 text-[9px] text-gray-400 flex items-start gap-2 italic">
