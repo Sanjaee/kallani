@@ -931,11 +931,11 @@ ob_start();
                                     </div>
                                 </template>
                             </div>
-                            </div>
                         </div>
+                    </div> <!-- End LEFT COLUMN -->
 
-                        <!-- RIGHT COLUMN -->
-                        <div class="space-y-6">
+                    <!-- RIGHT COLUMN -->
+                    <div class="space-y-6">
 
                             <!-- 04. PROJECT EXPERIENCE -->
                             <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
@@ -982,7 +982,6 @@ ob_start();
                                 </div>
                             </template>
                         </div>
-                            </div>
                         </div>
                     </div> <!-- End Grid -->
                 </div>
