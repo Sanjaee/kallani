@@ -396,8 +396,6 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                 </div>
             </div>
 
-                    </div>
-
         <!-- Drawer Footer -->
         <div class="p-5 border-t border-[#152416] bg-[#040804]/80 space-y-2 text-[11px] text-gray-400">
             <div class="flex items-center justify-between text-xs font-mono">
@@ -626,5 +624,7 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
 
 </body>
 </html>
+
+
 
 
