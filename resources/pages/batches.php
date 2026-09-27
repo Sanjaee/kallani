@@ -371,14 +371,15 @@ function batchPage() {
                         <div class="relative z-10 flex items-start justify-between text-center text-[10px]">
                             <?php
                             $milestonesPipeline = [
-                                ['step' => '01', 'name' => 'PO COLLECTION', 'desc' => '0%', 'active' => true],
-                                ['step' => '02', 'name' => 'MILESTONE 1', 'desc' => '25%', 'active' => false],
-                                ['step' => '03', 'name' => 'MILESTONE 2', 'desc' => '25%', 'active' => false],
-                                ['step' => '04', 'name' => 'MILESTONE 4', 'desc' => '25%', 'active' => false],
-                                ['step' => '06', 'name' => 'PRODUCTION', 'desc' => '25%', 'active' => false],
-                                ['step' => '07', 'name' => 'HARVESTING', 'desc' => '', 'active' => false],
-                                ['step' => '08', 'name' => 'PROCESSING', 'desc' => '', 'active' => false],
-                                ['step' => '09', 'name' => 'DELIVERY', 'desc' => '', 'active' => false],
+                                ['step' => '01', 'name' => 'GATE 01', 'desc' => '25 / 100 HA', 'active' => true],
+                                ['step' => '02', 'name' => 'GATE 02', 'desc' => '50 / 100 HA', 'active' => false],
+                                ['step' => '03', 'name' => 'GATE 03', 'desc' => '75 / 100 HA', 'active' => false],
+                                ['step' => '04', 'name' => 'GATE 04', 'desc' => '100 / 100 HA', 'active' => false],
+                                ['step' => '05', 'name' => 'PRODUCTION', 'desc' => '', 'active' => false],
+                                ['step' => '06', 'name' => 'HARVEST', 'desc' => '', 'active' => false],
+                                ['step' => '07', 'name' => 'PROCESSING', 'desc' => '', 'active' => false],
+                                ['step' => '08', 'name' => 'DELIVERY', 'desc' => '', 'active' => false],
+                                ['step' => '09', 'name' => 'SETTLEMENT', 'desc' => '', 'active' => false],
                             ];
                             foreach ($milestonesPipeline as $m):
                             ?>
@@ -402,14 +403,14 @@ function batchPage() {
                 <!-- Bottom 3 Grid Cards -->
                 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 
-                    <!-- Milestone 01 Details -->
+                    <!-- GATE 01 Details -->
                     <div id="milestones-section" class="rounded-xl border border-white/10 bg-[#07110E] p-4 space-y-3">
                         <div class="flex items-center justify-between border-b border-white/10 pb-2">
                             <div class="flex items-center gap-2">
                                 <span class="h-6 w-6 rounded-full bg-emerald-400 text-[#04100B] text-xs font-bold flex items-center justify-center">01</span>
                                 <div>
-                                    <div class="text-xs font-bold text-white">MILESTONE 01</div>
-                                    <div class="text-[9px] text-emerald-300">25% Execution Stage</div>
+                                    <div class="text-xs font-bold text-white">GATE 01</div>
+                                    <div class="text-[9px] text-emerald-300">25 / 100 HA Proof Block</div>
                                 </div>
                             </div>
                             <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-400/30">PENDING</span>
@@ -430,7 +431,7 @@ function batchPage() {
                         </div>
 
                         <a href="<?= $basePrefix ?>/milestones" class="inline-flex w-full items-center justify-center gap-1.5 rounded-lg border border-white/20 py-2 text-[10px] font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
-                            <span>View Milestone Requirements</span><?= $arrow ?>
+                            <span>View Gate Requirements</span><?= $arrow ?>
                         </a>
                     </div>
 
@@ -558,7 +559,7 @@ function batchPage() {
                             <span class="text-amber-300 font-bold text-[9px]">PENDING</span>
                         </div>
                         <div class="flex items-center justify-between py-1">
-                            <span class="text-white font-medium">Milestone 1 Release</span>
+                            <span class="text-white font-medium">Gate 01 Execution</span>
                             <span class="font-mono text-gray-400">-</span>
                             <span class="text-amber-300 font-bold text-[9px]">PENDING</span>
                         </div>

@@ -344,7 +344,7 @@ ob_start();
                             <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Matrix Status</span><span class="font-bold text-amber-300">Pending Framework Audit</span></div>
                             <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Verified Domains</span><span class="font-bold text-emerald-300">02 / 07</span></div>
                             <div class="flex justify-between py-1 border-b border-white/5"><span class="text-gray-400">Assurance Model</span><span class="font-bold text-white">Multi-Tier Framework</span></div>
-                            <div class="flex justify-between py-1"><span class="text-gray-400">System Record</span><span class="font-mono text-white">Verified Immutable</span></div>
+                            <div class="flex justify-between py-1"><span class="text-gray-400">System Record</span><span class="font-mono text-white">RECORDED / SIMULATED</span></div>
                         </div>
 
                         <a href="<?= $basePrefix ?>/documents" class="w-full flex items-center justify-between rounded-lg border border-emerald-400/40 bg-emerald-950/80 p-2.5 text-[10px] font-bold text-emerald-300 hover:bg-emerald-900/80">

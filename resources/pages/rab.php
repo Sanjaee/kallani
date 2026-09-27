@@ -362,8 +362,9 @@ ob_start();
                                     <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-400/30 uppercase">BSC TESTNET PROTOCOL</span>
                                     <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">REAL-TIME TRANSPARENCY SIMULATION</span>
                                 </div>
-                                <h2 class="text-base font-bold text-white mt-1">100% PO Collection Fund Split & Vendor Wallet Verification</h2>
-                                <p class="text-xs text-gray-300">Automatic 24/7 on-chain split distribution of 880,000 USDT batch budget directly to designated vendor wallets upon 100% collection.</p>
+                                <h2 class="text-base font-bold text-white mt-1">Simulated Settlement Routing</h2>
+                                <p class="text-xs text-gray-300 font-mono tracking-tighter">RAB → WORK ORDER → EXECUTION → EVIDENCE → VERIFICATION → RELEASE</p>
+                                <p class="text-[10px] text-gray-400 mt-2">Commercial release occurs only according to approved RAB, authorized work order, verified execution and applicable settlement conditions. No automatic vendor disbursement based solely on PO collection.</p>
                             </div>
                             <div class="text-right shrink-0">
                                 <span class="text-xs font-mono font-bold text-emerald-400 block">TOTAL BATCH BUDGET</span>

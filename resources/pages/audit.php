@@ -78,13 +78,13 @@ ob_start();
                     <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
                         <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">PROTOCOL AUDIT TRAIL</span>
                         <span>20 / PROTOCOL AUDIT TRAIL</span>
-                        <span class="rounded border border-amber-400/40 bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-amber-300">IMMUTABLE LEDGER / DEMO</span>
+                        <span class="rounded border border-amber-400/40 bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-amber-300">SIMULATED PROTOCOL AUDIT LEDGER</span>
                     </div>
 
                     <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">System Audit Trail & Event Ledger</h1>
                     
                     <p class="max-w-3xl text-sm font-medium leading-relaxed text-gray-200">
-                        Immutable chronological event log recording every material action across the entire production lifecycle.
+                        Chronological event log recording every material action across the entire production lifecycle.
                     </p>
                     <p class="text-[11px] italic text-gray-400">
                         Jejak audit permanen yang mencatat setiap kejadian dari alokasi kebutuhan buyer hingga penyelesaian komersial.
@@ -99,7 +99,7 @@ ob_start();
                             <div>
                                 <div class="flex items-center gap-2">
                                     <h2 class="text-lg font-black text-white">NORTH KALIMANTAN PROTOCOL AUDIT TRAIL</h2>
-                                    <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">CHAIN VALID</span>
+                                    <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">DEMO / SIMULATED</span>
                                 </div>
                                 <div class="text-[10px] font-mono text-gray-400 mt-0.5">LEDGER ID: <strong class="text-gray-200">AUD-LEDGER-NK001-2026</strong></div>
                             </div>
@@ -108,20 +108,20 @@ ob_start();
 
                     <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 text-xs">
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
-                            <div class="text-[8px] font-bold uppercase text-gray-400">TOTAL LOGGED EVENTS</div>
-                            <div class="font-bold text-white text-[11px]">14 Events Recorded</div>
+                            <div class="text-[8px] font-bold uppercase text-gray-400">EVENT INTEGRITY</div>
+                            <div class="font-bold text-white text-[11px]">RECORDED</div>
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
-                            <div class="text-[8px] font-bold uppercase text-gray-400">LIFECYCLE COVERAGE</div>
-                            <div class="font-bold text-emerald-300 text-[11px]">12 / 12 Stages</div>
+                            <div class="text-[8px] font-bold uppercase text-gray-400">CHRONOLOGICAL INTEGRITY</div>
+                            <div class="font-bold text-emerald-300 text-[11px]">VALID</div>
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
-                            <div class="text-[8px] font-bold uppercase text-gray-400">ACTOR ENTITIES</div>
-                            <div class="font-bold text-white text-[11px]">05 Actor Roles</div>
+                            <div class="text-[8px] font-bold uppercase text-gray-400">HASH REFERENCE</div>
+                            <div class="font-bold text-white text-[11px]">RECORDED</div>
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
-                            <div class="text-[8px] font-bold uppercase text-gray-400">CHAIN INTEGRITY</div>
-                            <div class="font-bold text-emerald-300 text-[11px]">Unbroken Ledger</div>
+                            <div class="text-[8px] font-bold uppercase text-gray-400">BLOCKCHAIN STATUS</div>
+                            <div class="font-bold text-emerald-300 text-[11px]">DEMO / SIMULATED</div>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['user']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">ACTOR ENTITIES</div>
+                        <div class="<?= $metricLbl ?>">HASH REFERENCE</div>
                         <div class="text-lg font-extrabold leading-tight text-white">05</div>
                         <div class="text-[8px] text-gray-400">Buyer, Ops, Partner, Vendor, Verifier</div>
                     </div>
@@ -167,7 +167,7 @@ ob_start();
                     <div>
                         <div class="<?= $metricLbl ?>">INTEGRITY</div>
                         <div class="text-sm font-extrabold leading-tight text-emerald-300">VALID</div>
-                        <div class="text-[8px] text-gray-400">Unbroken Chain</div>
+                        <div class="text-[8px] text-gray-400">Simulated Protocol</div>
                     </div>
                 </div>
 

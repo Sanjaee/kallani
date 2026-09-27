@@ -472,7 +472,7 @@ ob_start();
                             </tr>
                             <tr>
                                 <td class="py-2.5 px-3 font-semibold text-white">Oil Extraction Rate (OER)</td>
-                                <td class="py-2.5 px-3 text-emerald-300 font-bold">20% Assumption</td>
+                                <td class="py-2.5 px-3 text-emerald-300 font-bold">22% Assumption</td>
                                 <td class="py-2.5 px-3 text-amber-300">Pending Processing</td>
                                 <td class="py-2.5 px-3 text-gray-400">Configurable Parameter</td>
                             </tr>

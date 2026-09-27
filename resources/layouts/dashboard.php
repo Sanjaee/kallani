@@ -77,7 +77,7 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
 <body class="bg-[#040804] text-gray-100 font-inter min-h-screen flex flex-col antialiased selection:bg-emerald-500 selection:text-black" x-data="{ mobileMenuOpen: false }">
 
     <!-- FULL WIDTH TOP NAVBAR (SPANS FULL WIDTH ACROSS SCREEN ABOVE SIDEBAR AND MAIN CONTENT) -->
-    <header class="h-16 bg-[#060D07]/95 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-40 shrink-0 w-full" style="border-bottom: none !important;">
+    <header class="h-16 bg-[#060D07]/95 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-20 shrink-0 w-full" style="border-bottom: none !important;">
         <!-- Left: Logo & Subtext -->
         <a href="<?php echo $basePrefix; ?>/" class="flex flex-col group text-left py-1 w-44 sm:w-56 shrink-0">
             <span class="text-sm sm:text-base font-serif font-extrabold tracking-[0.25em] uppercase leading-none transition-colors" style="color: #FFFFFF !important;">KALLANI</span>
@@ -412,7 +412,7 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
     <div class="flex flex-1 overflow-hidden">
 
         <!-- LEFT SIDEBAR NAVIGATION (NO DUPLICATE LOGO) -->
-        <aside class="hidden lg:flex w-64 bg-[#060D07] border-r border-[#152416] flex-col justify-between shrink-0 relative z-30 select-none overflow-y-auto">
+        <aside class="hidden lg:flex w-64 bg-[#060D07] border-r border-[#152416] flex-col justify-between shrink-0 relative z-10 select-none overflow-y-auto">
             
             <!-- Sidebar Top Content -->
             <div class="p-5 space-y-6">

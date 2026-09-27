@@ -189,7 +189,7 @@ ob_start();
                                 <div class="text-xl font-black text-amber-300 mt-0.5 flex items-center justify-end gap-1">
                                     <span class="text-amber-400">★</span> 4.8 <span class="text-xs font-normal text-gray-400">/ 5</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">(37 verified reviews)</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">(37 simulated records)</div>
                             </div>
                         </div>
 
@@ -403,7 +403,7 @@ ob_start();
                                 <div class="h-9 w-9 rounded-full <?= $colorClass ?> border flex items-center justify-center font-bold shrink-0"><?= $initial ?></div>
                                 <div class="truncate">
                                     <div class="text-[11px] font-bold text-white truncate" title="<?= $e($r['name']) ?>"><?= $e($r['name']) ?></div>
-                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?></div>
+                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?> &bull; NK-001 (North Kalimantan)</div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5 mt-3 mb-2">

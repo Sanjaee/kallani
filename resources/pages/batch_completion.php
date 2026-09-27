@@ -433,11 +433,11 @@ ob_start();
                     </div>
 
                     <div class="space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between border-b border-white/5 py-1"><span>Production Verified</span><span class="text-emerald-300 font-bold">✓</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span>Harvest Verified</span><span class="text-emerald-300 font-bold">✓</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span>Weighing Verified</span><span class="text-emerald-300 font-bold">✓</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span>Processing Verified</span><span class="text-emerald-300 font-bold">✓</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span>Delivery Verified</span><span class="text-emerald-300 font-bold">✓</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span>IN DEVELOPMENT</span><span class="text-emerald-300 font-bold">✓</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span>NOT STARTED</span><span class="text-emerald-300 font-bold">✓</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span>PENDING</span><span class="text-emerald-300 font-bold">✓</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span>NOT STARTED</span><span class="text-emerald-300 font-bold">✓</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span>NOT AVAILABLE</span><span class="text-emerald-300 font-bold">✓</span></div>
                         <div class="flex justify-between border-b border-white/5 py-1"><span>Commercial Acceptance</span><span class="text-emerald-300 font-bold">✓</span></div>
                         <div class="flex justify-between border-b border-white/5 py-1"><span>Settlement Documentation</span><span class="text-amber-300 font-bold">Pending</span></div>
                         <div class="flex justify-between py-1"><span>Settlement Approval</span><span class="text-amber-300 font-bold">Pending</span></div>

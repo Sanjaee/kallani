@@ -300,6 +300,12 @@ ob_start();
     selectedParticipant: null,
     drawerOpen: false,
 
+    init() {
+        this.$watch('drawerOpen', value => {
+            const el = document.querySelector('.flex-1.overflow-y-auto');
+            if(el) el.style.overflow = value ? 'hidden' : 'auto';
+        });
+    },
     openDetail(p) {
         this.selectedParticipant = p;
         this.drawerOpen = true;
@@ -599,7 +605,7 @@ ob_start();
                 <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
                     <?= $svg($ic['star'], 'w-5 h-5 text-emerald-400') ?> RECENT PROJECT EXPERIENCE
                 </h2>
-                <p class="text-xs text-emerald-400 font-mono mt-1">Real project execution. Verified outcomes.</p>
+                <p class="text-xs text-emerald-400 font-mono mt-1">ILLUSTRATIVE PROJECT EXPERIENCE<br><span class="text-[10px] text-gray-400">Simulated production experience record for product architecture demonstration.</span></p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -946,7 +952,7 @@ ob_start();
                         <div class="p-4 grid grid-cols-2 gap-4 text-[10px] font-mono uppercase font-bold border-b border-emerald-500/20">
                             <div>
                                 <div class="text-gray-500 tracking-wider">Published Experience Reviews</div>
-                                <div class="text-xl text-white mt-1" x-text="Math.max(1, Math.floor((selectedParticipant?.allocations || 0) * 0.4))">2</div>
+                                <div class="text-xl text-white mt-1" x-text="Math.min(getHistory(selectedParticipant).length, Math.max(1, Math.floor((selectedParticipant?.allocations || 0) * 0.8)))">2</div>
                             </div>
                             <div>
                                 <div class="text-gray-500 tracking-wider">Experience Records</div>
