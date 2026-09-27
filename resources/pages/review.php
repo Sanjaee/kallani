@@ -378,78 +378,63 @@ ob_start();
                     <a href="#" class="text-xs text-emerald-400 hover:underline flex items-center gap-1">View All Reviews &rarr;</a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 font-mono">
+                    <?php 
+                    $dataFilePath = __DIR__ . '/../data/participants.php';
+                    $revs = file_exists($dataFilePath) ? (require $dataFilePath) : [];
+                    if (empty($revs)) {
+                        // Fallback in case data isn't extracted properly
+                        $revs = [
+                            ['name' => 'BANK CENTRAL ASIA', 'id' => 'NINA-R-0001', 'stars' => 4.8, 'review' => 'Excellent land preparation quality and professional team.', 'review_scope' => 'Execution / Documentation', 'tier' => 'INSTITUTIONAL'],
+                            ['name' => 'BLACKROCK', 'id' => 'NINA-R-0003', 'stars' => 4.9, 'review' => 'Good overall performance. Some delays in initial mobilization, but resolved quickly.', 'review_scope' => 'Execution / Delivery', 'tier' => 'INSTITUTIONAL'],
+                            ['name' => 'MAYAPADA GROUP', 'id' => 'NINA-R-0002', 'stars' => 4.7, 'review' => 'The land partner showed good commitment and delivered as planned.', 'review_scope' => 'Execution / Verification', 'tier' => 'SOVEREIGN']
+                        ];
+                    }
                     
-                    <!-- Review Card 1 -->
-                    <div class="<?= $subCard ?> space-y-3">
-                        <div class="flex items-center gap-3">
-                            <div class="h-9 w-9 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center font-bold text-emerald-300">R</div>
-                            <div>
-                                <div class="text-xs font-bold text-white">R*** A***</div>
-                                <div class="text-[10px] text-gray-400">Participant ID: NINA-002713</div>
+                    foreach ($revs as $r): 
+                        $initial = strtoupper(substr($r['name'], 0, 1));
+                        $isGov = ($r['tier'] === 'SOVEREIGN');
+                        $colorClass = $isGov ? 'bg-blue-500/20 border-blue-500/40 text-blue-300' : 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300';
+                    ?>
+                    <!-- Dynamic Review Card -->
+                    <div class="<?= $subCard ?> space-y-3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <div class="h-9 w-9 rounded-full <?= $colorClass ?> border flex items-center justify-center font-bold shrink-0"><?= $initial ?></div>
+                                <div class="truncate">
+                                    <div class="text-[11px] font-bold text-white truncate" title="<?= $e($r['name']) ?>"><?= $e($r['name']) ?></div>
+                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?></div>
+                                </div>
                             </div>
+                            <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5 mt-3 mb-2">
+                                <div class="flex text-amber-300 text-sm">
+                                    <?php 
+                                    $score = $r['stars'] ?? 4.8;
+                                    echo str_repeat('★', floor($score)) . (fmod($score, 1) > 0 ? '☆' : '') . str_repeat('☆', 5 - ceil($score));
+                                    ?> 
+                                    <span class="text-white font-bold ml-1"><?= number_format($score, 1) ?></span>
+                                </div>
+                                <span class="text-[9px] text-gray-500 hidden sm:block">Sep 2026</span>
+                            </div>
+                            <p class="text-xs text-gray-300 leading-relaxed font-sans line-clamp-4" title="<?= $e($r['review']) ?>">
+                                "<?= $e($r['review']) ?>"
+                            </p>
                         </div>
-                        <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5">
-                            <div class="flex text-amber-300 text-sm">★★★★★ <span class="text-white font-bold ml-1">5.0</span></div>
-                            <span class="text-[10px] text-gray-500">12 Mar 2026</span>
-                        </div>
-                        <p class="text-xs text-gray-300 leading-relaxed font-sans">
-                            "Excellent land preparation quality and professional team. Very responsive."
-                        </p>
-                        <div class="flex flex-wrap gap-1 pt-1 text-[9px]">
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Execution</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Documentation</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Communication</span>
+                        <div class="flex flex-wrap gap-1 pt-1 text-[8px] uppercase">
+                            <?php 
+                            $tags = explode('/', $r['review_scope'] ?? 'Execution / Documentation');
+                            foreach (array_slice($tags, 0, 3) as $tag): 
+                                $tag = trim($tag);
+                                if ($tag):
+                            ?>
+                            <span class="rounded bg-white/5 border border-white/5 px-1.5 py-0.5 text-gray-400 truncate max-w-[80px]" title="<?= $e($tag) ?>"><?= $e($tag) ?></span>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
                         </div>
                     </div>
-
-                    <!-- Review Card 2 -->
-                    <div class="<?= $subCard ?> space-y-3">
-                        <div class="flex items-center gap-3">
-                            <div class="h-9 w-9 rounded-full bg-white/10 border border-white/10 flex items-center justify-center font-bold text-gray-300">
-                                <?= $svg($ic['user'], 'w-4 h-4 text-gray-400') ?>
-                            </div>
-                            <div>
-                                <div class="text-xs font-bold text-white">Private Participant</div>
-                                <div class="text-[10px] text-gray-400">Participant ID: NINA-004821</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5">
-                            <div class="flex text-amber-300 text-sm">★★★★☆ <span class="text-white font-bold ml-1">4.5</span></div>
-                            <span class="text-[10px] text-gray-500">5 Mar 2026</span>
-                        </div>
-                        <p class="text-xs text-gray-300 leading-relaxed font-sans">
-                            "Good overall performance. Some delays in initial mobilization, but resolved quickly."
-                        </p>
-                        <div class="flex flex-wrap gap-1 pt-1 text-[9px]">
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Execution</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Delivery</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Communication</span>
-                        </div>
-                    </div>
-
-                    <!-- Review Card 3 -->
-                    <div class="<?= $subCard ?> space-y-3">
-                        <div class="flex items-center gap-3">
-                            <div class="h-9 w-9 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center font-bold text-blue-300">P</div>
-                            <div>
-                                <div class="text-xs font-bold text-white">PT ABC Capital</div>
-                                <div class="text-[10px] text-gray-400">Participant ID: NINA-001882</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5">
-                            <div class="flex text-amber-300 text-sm">★★★★☆ <span class="text-white font-bold ml-1">4.0</span></div>
-                            <span class="text-[10px] text-gray-500">28 Feb 2026</span>
-                        </div>
-                        <p class="text-xs text-gray-300 leading-relaxed font-sans">
-                            "The land partner showed good commitment and delivered as planned."
-                        </p>
-                        <div class="flex flex-wrap gap-1 pt-1 text-[9px]">
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Execution</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Documentation</span>
-                            <span class="rounded bg-white/5 border border-white/5 px-2 py-0.5 text-gray-400">Verification</span>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
 
                 </div>
             </div>
