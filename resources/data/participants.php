@@ -215,4 +215,8 @@ $tierBadgeCls = [
     'NOVA' => 'bg-emerald-950 border-emerald-500/40 text-emerald-300',
     'ORBIT' => 'bg-sky-950 border-sky-500/40 text-sky-300',
     'CONSTELLATION' => 'bg-purple-950 border-purple-500/40 text-purple-300',
+    'SOVEREIGN' => 'bg-blue-950 border-blue-500/40 text-blue-300',
+    'INSTITUTIONAL' => 'bg-emerald-950 border-emerald-500/40 text-emerald-300'
+];
+
 return $participants;
