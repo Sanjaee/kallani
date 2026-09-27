@@ -345,8 +345,8 @@ ob_start();
     <div class="relative z-10 space-y-6">
         <section class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/92 via-[#050D07]/65 to-[#050D07]/25"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/90 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/85 via-[#050D07]/45 to-[#050D07]/10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/80 via-transparent to-transparent"></div>
 
             <div class="relative space-y-4 px-6 pt-6 pb-8 lg:px-8">
 
@@ -356,8 +356,8 @@ ob_start();
                         <span class="font-bold text-emerald-300">22 / PARTICIPANT NETWORK</span>
                     </nav>
 
-                    <span class="rounded-lg bg-amber-950/80 px-3 py-1.5 text-[10px] font-extrabold text-amber-400 border border-amber-500/50 shadow-lg backdrop-blur-md uppercase tracking-wider flex items-center gap-1.5 w-fit">
-                        <?= $svg($ic['info'], 'w-3.5 h-3.5 text-amber-400') ?> DEMO / SIMULATION ENVIRONMENT
+                    <span class="rounded border border-amber-400/40 bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-amber-300 uppercase flex items-center gap-1.5 w-fit">
+                        <?= $svg($ic['info'], 'w-3 h-3 text-amber-400') ?> DEMO / SIMULATION ENVIRONMENT
                     </span>
                 </div>
 
@@ -371,8 +371,8 @@ ob_start();
                                 From private participants and family offices to funds, institutional capital and sovereign-scale organizations, NINA provides a common operating layer for participation in productive production programs.
                             </p>
                         </div>
-                        <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/50 bg-sky-950/80 px-3 py-1.5 text-[9px] font-extrabold text-sky-400 shadow-lg backdrop-blur-md uppercase tracking-wider">
-                            <?= $svg($ic['orbit'], 'w-3.5 h-3.5 text-sky-400') ?> 100% SIMULATED — PRODUCT ARCHITECTURE DEMONSTRATION
+                        <span class="inline-flex items-center gap-1.5 rounded border border-sky-400/40 bg-sky-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-sky-300 uppercase w-fit">
+                            <?= $svg($ic['orbit'], 'w-3 h-3 text-sky-400') ?> 100% SIMULATED — PRODUCT ARCHITECTURE DEMONSTRATION
                         </span>
                     </div>
 
