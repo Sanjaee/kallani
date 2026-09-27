@@ -233,226 +233,227 @@ ob_start();
                     </div>
                 </div>
             </div>
+            <!-- GRID CONTENT -->
+            <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+                <!-- LEFT COLUMN (Capacity & 100 HA Package) -->
+                <div class="xl:col-span-8 space-y-6">
+                    <!-- VERIFIED CAPACITY -->
+                    <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                                <?= $svg($ic['shield'], 'w-4 h-4') ?> VERIFIED <?= ($v['type'] == 'services' ? 'SERVICE' : ($v['type'] == 'equipment' ? 'FLEET' : ($v['type'] == 'seed' ? 'NURSERY' : 'CAPACITY'))) ?>
+                            </div>
+                            <a href="#" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View Details &rarr;</a>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 font-mono text-xs">
+                            <div class="space-y-4">
+                                <?php if($v['type'] == 'fertilizer'): ?>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Product Category</div>
+                                        <div class="text-white font-bold">Fertilizer & Crop Nutrition</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Monthly Capacity</div>
+                                        <div class="text-lg text-emerald-300 font-bold">500 MT / Month</div>
+                                    </div>
+                                <?php elseif($v['type'] == 'equipment'): ?>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Equipment Category</div>
+                                        <div class="text-white font-bold">Heavy Machinery & Fleet</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Verified Fleet Size</div>
+                                        <div class="text-lg text-emerald-300 font-bold">35 Units</div>
+                                    </div>
+                                <?php else: ?>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Service Category</div>
+                                        <div class="text-white font-bold">Land Preparation</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Max Verified Capacity</div>
+                                        <div class="text-lg text-emerald-300 font-bold">250 HA / Project</div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="space-y-4 border-t sm:border-t-0 sm:border-l border-emerald-500/20 pt-4 sm:pt-0 sm:pl-6">
+                                <?php if($v['type'] == 'fertilizer'): ?>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Current Stock</div>
+                                        <div class="text-white font-bold text-sm">420 MT</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Committed Capacity</div>
+                                        <div class="text-white font-bold text-sm">280 MT</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Available Capacity</div>
+                                        <div class="text-white font-bold text-sm">220 MT</div>
+                                    </div>
+                                <?php else: ?>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Currently Deployed</div>
+                                        <div class="text-white font-bold text-sm">27 Units</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Committed</div>
+                                        <div class="text-white font-bold text-sm">6 Units</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Available</div>
+                                        <div class="text-white font-bold text-sm">2 Units</div>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-emerald-500/20 font-mono text-[9px] uppercase tracking-widest font-bold">
+                            <div class="flex h-2.5 w-full bg-emerald-950/40 rounded-full overflow-hidden border border-emerald-500/20">
+                                <div class="h-full bg-emerald-400" style="width: 78%;"></div>
+                            </div>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="text-emerald-300 flex items-center gap-1.5"><?= $svg($ic['shield'], 'w-3 h-3') ?> Committed <span class="text-white ml-1">78%</span></div>
+                                <div class="text-gray-400">Available 22%</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- 2. VERIFIED CAPABILITY -->
-            <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
-                <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
-                        <?= $svg($ic['shield'], 'w-4 h-4') ?> VERIFIED <?= ($v['type'] == 'services' ? 'SERVICE' : ($v['type'] == 'equipment' ? 'FLEET' : ($v['type'] == 'seed' ? 'NURSERY' : 'SUPPLY'))) ?> CAPABILITY
-                    </div>
-                    <a href="#" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View Details &rarr;</a>
-                </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                    <!-- Image -->
-                    <div class="lg:col-span-3">
-                        <div class="rounded-xl overflow-hidden border border-emerald-500/20 h-40 relative">
-                            <img src="<?= $basePrefix ?><?= $v['image'] ?>" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-emerald-900/20 mix-blend-overlay"></div>
+                    <!-- 100 HA PACKAGE -->
+                    <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                                <?= $svg($ic['leaf'], 'w-4 h-4') ?> 100 HA PACKAGE
+                            </div>
+                            <a href="#" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View All Packages &rarr;</a>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-full md:w-36 h-36 rounded-lg border border-emerald-500/30 overflow-hidden shrink-0">
+                                <img src="<?= $basePrefix ?><?= $v['image'] ?>" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1 font-mono">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h4 class="text-white font-extrabold text-base tracking-tight"><?= ($v['type'] == 'fertilizer' ? 'NPK 15-15-15' : ($v['type'] == 'equipment' ? 'Land Prep Fleet Package' : 'Planting Services')) ?></h4>
+                                        <div class="text-[10px] text-gray-400 uppercase tracking-widest mt-1"><?= $v['category'] ?></div>
+                                    </div>
+                                    <span class="rounded border border-emerald-400/40 bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-emerald-300 uppercase flex items-center gap-1 w-fit"><?= $svg($ic['shield'], 'w-3 h-3') ?> VERIFIED</span>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-y-4 gap-x-2 mt-5 text-xs">
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Total Quantity</div>
+                                        <div class="text-white font-bold"><?= ($v['type'] == 'fertilizer' ? '15 MT' : '2 Units') ?></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Package Price</div>
+                                        <div class="text-emerald-300 font-bold">US$ 6,750</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Price / HA</div>
+                                        <div class="text-gray-300 font-bold text-[11px]">Use / HA US$ 67.50</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Commercial Basis</div>
+                                        <div class="text-gray-300 font-bold text-[11px]">Delivered / Ex-Works</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-2 pt-4 border-t border-emerald-500/20 font-mono text-[9px] uppercase tracking-widest font-bold flex items-center gap-3">
+                            <?= $svg($ic['check'], 'w-3.5 h-3.5 text-emerald-400') ?>
+                            <div class="flex-1 h-1.5 bg-emerald-950/40 rounded-full overflow-hidden border border-emerald-500/20">
+                                <div class="h-full bg-emerald-400" style="width: 100%;"></div>
+                            </div>
+                            <div class="text-emerald-400">2 BATCHES</div>
                         </div>
                     </div>
-                    
-                    <!-- Dynamic Details depending on Type -->
-                    <div class="lg:col-span-9 grid grid-cols-2 lg:grid-cols-3 gap-6 font-mono text-xs">
-                        <?php if($v['type'] == 'fertilizer'): ?>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Product Category</div>
-                                    <div class="text-white font-bold">Fertilizer & Crop Nutrition</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Verified Supply Capacity</div>
-                                    <div class="text-lg text-emerald-300 font-bold">500 MT / Month</div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Key Products</div>
-                                    <ul class="text-gray-300 space-y-1">
-                                        <li>&bull; NPK 15-15-15</li>
-                                        <li>&bull; Urea</li>
-                                        <li>&bull; Dolomite</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Minimum Order</div>
-                                    <div class="text-white font-bold">10 MT</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Coverage</div>
-                                    <ul class="text-gray-300 space-y-0.5 text-[10px]">
-                                        <li>&bull; North Kalimantan</li>
-                                        <li>&bull; East Kalimantan</li>
-                                        <li>&bull; Central Kalimantan</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <?php elseif($v['type'] == 'equipment'): ?>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Equipment Category</div>
-                                    <div class="text-white font-bold">Heavy Machinery & Fleet</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Verified Fleet Size</div>
-                                    <div class="text-lg text-emerald-300 font-bold">35 Units</div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Key Equipment</div>
-                                    <ul class="text-gray-300 space-y-1">
-                                        <li>&bull; Excavator 20 Ton</li>
-                                        <li>&bull; Bulldozer D85</li>
-                                        <li>&bull; Motor Grader 120K</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Operator Included</div>
-                                    <div class="text-white font-bold">Yes - Verified</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Coverage</div>
-                                    <ul class="text-gray-300 space-y-0.5 text-[10px]">
-                                        <li>&bull; All Kalimantan Provinces</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <?php elseif($v['type'] == 'services'): ?>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Service Category</div>
-                                    <ul class="text-gray-300 space-y-1.5">
-                                        <li class="flex items-center gap-2"><?= $svg($ic['check'], 'w-3 h-3 text-emerald-400') ?> Land Clearing</li>
-                                        <li class="flex items-center gap-2"><?= $svg($ic['check'], 'w-3 h-3 text-emerald-400') ?> Land Preparation</li>
-                                        <li class="flex items-center gap-2"><?= $svg($ic['check'], 'w-3 h-3 text-emerald-400') ?> Drainage Work</li>
-                                        <li class="flex items-center gap-2"><?= $svg($ic['check'], 'w-3 h-3 text-emerald-400') ?> Field Road</li>
-                                        <li class="flex items-center gap-2"><?= $svg($ic['check'], 'w-3 h-3 text-emerald-400') ?> Planting Support</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Max Verified Capacity</div>
-                                    <div class="text-lg text-emerald-300 font-bold">250 HA / Project</div>
-                                </div>
-                                <div class="pt-2">
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Coverage</div>
-                                    <div class="text-white font-bold">North Kalimantan</div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Crew Capacity</div>
-                                    <div class="text-white font-bold">6 Field Teams</div>
-                                </div>
-                            </div>
-                        <?php elseif($v['type'] == 'seed'): ?>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Planting Material</div>
-                                    <div class="text-emerald-400 font-bold">Certified Superior Seed</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Source</div>
-                                    <div class="text-white font-bold">Verified Nursery</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Certification</div>
-                                    <div class="text-white font-bold">Document Verified</div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Monthly Capacity</div>
-                                    <div class="text-white font-bold">150,000 Seedlings</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Minimum Order</div>
-                                    <div class="text-white font-bold">10,000 Seedlings</div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Replacement Policy</div>
-                                    <div class="text-white font-bold">Documented</div>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Coverage</div>
-                                    <ul class="text-gray-300 space-y-0.5 text-[10px]">
-                                        <li>&bull; North Kalimantan</li>
-                                        <li>&bull; East Kalimantan</li>
-                                        <li>&bull; Sulawesi</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    </div>
                 </div>
-            </div>
 
-            <!-- 3. VERIFIED LISTINGS / PACKAGES (Mocking generic data block based on type) -->
-            <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
-                <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
-                        <?= $svg($ic['leaf'], 'w-4 h-4') ?> <?= ($v['type'] == 'services' ? 'WORK ORDER HISTORY' : 'VERIFIED LISTINGS') ?>
+                <!-- RIGHT COLUMN (Coverage & Listings) -->
+                <div class="xl:col-span-4 space-y-6">
+                    <!-- COVERAGE AREA -->
+                    <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                                <?= $svg($ic['mapPin'], 'w-4 h-4') ?> COVERAGE AREA
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 font-mono text-xs text-gray-300 font-bold">
+                            <?php foreach($v['coverage'] as $cov): ?>
+                            <div class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 border border-emerald-400 bg-transparent transform rotate-45 shrink-0"></span>
+                                <?= $e($cov) ?>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                        
+                        <div class="mt-4 flex items-center justify-center opacity-70 relative">
+                            <!-- Abstract Map Graphic Using CSS/HTML shapes to emulate the design -->
+                            <div class="w-full h-32 flex items-center justify-center border border-white/5 rounded-xl overflow-hidden bg-black/40 relative">
+                                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-400 via-transparent to-transparent"></div>
+                                <div class="w-full h-full text-emerald-500/30 font-mono text-[6px] break-all leading-none overflow-hidden select-none" style="filter: contrast(1.5);">
+                                    <?php echo str_repeat('01010100110010100010010111010', 40); ?>
+                                </div>
+                                <div class="absolute inset-0 shadow-[inset_0_0_20px_#040C0A]"></div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View All <?= ($v['type'] == 'services' ? 'Work Orders' : 'Listings') ?> &rarr;</a>
+
+                    <!-- LISTINGS -->
+                    <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
+                        <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                                <?= $svg($ic['leaf'], 'w-4 h-4') ?> <?= ($v['type'] == 'services' ? 'SERVICES' : 'LISTINGS') ?>
+                            </div>
+                            <a href="#" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View All &rarr;</a>
+                        </div>
+                        
+                        <div class="space-y-3 font-mono">
+                            <?php if ($v['type'] == 'services'): ?>
+                                <?php foreach([['Land Preparation', '25 HA'], ['Drainage', '50 HA'], ['Planting Support', '25 HA']] as $srv): ?>
+                                <div class="flex items-center gap-3 p-2.5 rounded bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
+                                    <div class="w-10 h-10 rounded bg-emerald-950/50 border border-emerald-500/20 flex items-center justify-center shrink-0 text-emerald-400">
+                                        <?= $svg($ic['check'], 'w-4 h-4') ?>
+                                    </div>
+                                    <div class="flex-1 overflow-hidden">
+                                        <div class="text-white text-[11px] font-bold truncate"><?= $srv[0] ?></div>
+                                        <div class="text-gray-400 text-[9px] mt-0.5"><?= $srv[1] ?></div>
+                                    </div>
+                                    <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[8px] font-bold text-emerald-400 border border-emerald-500/40 uppercase flex items-center gap-0.5 shrink-0"><?= $svg($ic['shield'], 'w-2.5 h-2.5') ?> VERIFIED</span>
+                                </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <div class="flex items-center gap-3 p-2.5 rounded bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
+                                    <img src="<?= $basePrefix ?>/1.jpg" class="w-10 h-10 rounded object-cover shrink-0">
+                                    <div class="flex-1 overflow-hidden">
+                                        <div class="text-white text-[11px] font-bold truncate">NPK 15-15-15</div>
+                                        <div class="text-gray-400 text-[9px] mt-0.5">15 MT</div>
+                                    </div>
+                                    <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[8px] font-bold text-emerald-400 border border-emerald-500/40 uppercase flex items-center gap-0.5 shrink-0"><?= $svg($ic['shield'], 'w-2.5 h-2.5') ?> VERIFIED</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2.5 rounded bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
+                                    <img src="<?= $basePrefix ?>/1.jpg" class="w-10 h-10 rounded object-cover grayscale brightness-125 shrink-0">
+                                    <div class="flex-1 overflow-hidden">
+                                        <div class="text-white text-[11px] font-bold truncate">Urea</div>
+                                        <div class="text-gray-400 text-[9px] mt-0.5">10 MT</div>
+                                    </div>
+                                    <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[8px] font-bold text-emerald-400 border border-emerald-500/40 uppercase flex items-center gap-0.5 shrink-0"><?= $svg($ic['shield'], 'w-2.5 h-2.5') ?> VERIFIED</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2.5 rounded bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
+                                    <img src="<?= $basePrefix ?>/1.jpg" class="w-10 h-10 rounded object-cover sepia shrink-0">
+                                    <div class="flex-1 overflow-hidden">
+                                        <div class="text-white text-[11px] font-bold truncate">Dolomite</div>
+                                        <div class="text-gray-400 text-[9px] mt-0.5">30 MT</div>
+                                    </div>
+                                    <span class="rounded bg-emerald-500/20 px-1.5 py-0.5 text-[8px] font-bold text-emerald-400 border border-emerald-500/40 uppercase flex items-center gap-0.5 shrink-0"><?= $svg($ic['shield'], 'w-2.5 h-2.5') ?> VERIFIED</span>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
-                
-                <?php if ($v['type'] == 'services'): ?>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <?php foreach([['Batch 01', 'Land Preparation', '25 HA'], ['Batch 02', 'Land Preparation', '25 HA'], ['Batch 03', 'Drainage & Field Road', '']] as $srv): ?>
-                        <div class="border border-emerald-500/30 bg-emerald-950/20 rounded-xl p-4 font-mono">
-                            <div class="text-white font-bold text-sm uppercase">KALTARA 8 &bull; <?= $srv[0] ?></div>
-                            <div class="text-gray-400 text-xs mt-1"><?= $srv[1] ?><?= $srv[2] ? ' &bull; ' . $srv[2] : '' ?></div>
-                            <div class="flex items-center gap-2 mt-4 pt-4 border-t border-emerald-500/20">
-                                <span class="rounded bg-white/5 px-2 py-0.5 text-[9px] font-bold text-gray-300 border border-white/10 uppercase">COMPLETED</span>
-                                <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-400 border border-emerald-500/40 uppercase flex items-center gap-1">VERIFIED</span>
-                            </div>
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                <?php else: ?>
-                    <div class="border border-emerald-500/30 bg-emerald-950/20 rounded-xl p-4 lg:p-5 flex flex-col lg:flex-row gap-6">
-                        <div class="w-full lg:w-48 h-32 rounded-lg overflow-hidden border border-emerald-500/20 shrink-0">
-                            <img src="<?= $basePrefix ?><?= $v['image'] ?>" class="w-full h-full object-cover" />
-                        </div>
-                        <div class="flex-1 font-mono">
-                            <div class="flex items-center gap-3 mb-4 border-b border-emerald-500/20 pb-3">
-                                <h3 class="text-xl font-extrabold text-white uppercase tracking-tight"><?= ($v['type'] == 'fertilizer' ? 'NPK 15-15-15' : ($v['type'] == 'equipment' ? 'Excavator 20 Ton' : ($v['type'] == 'seed' ? 'Certified Superior Oil Palm Seedling' : 'Land Preparation Package'))) ?></h3>
-                                <span class="rounded bg-emerald-500/20 px-2.5 py-1 text-[9px] font-bold text-emerald-400 border border-emerald-500/40 uppercase tracking-widest flex items-center gap-1.5"><?= $svg($ic['shield'], 'w-3 h-3') ?> VERIFIED</span>
-                            </div>
-                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Unit</div>
-                                    <div class="text-white font-bold text-sm"><?= ($v['type'] == 'fertilizer' ? 'MT' : ($v['type'] == 'equipment' ? 'Machine Unit' : ($v['type'] == 'seed' ? 'Seedling' : 'HA'))) ?></div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold"><?= ($v['type'] == 'equipment' ? 'Available Units' : 'MOQ') ?></div>
-                                    <div class="text-white font-bold text-sm"><?= ($v['type'] == 'fertilizer' ? '10 MT' : ($v['type'] == 'equipment' ? '8 Units' : ($v['type'] == 'seed' ? '10,000' : '25 HA'))) ?></div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Capacity</div>
-                                    <div class="text-white font-bold text-sm"><?= ($v['type'] == 'fertilizer' ? '500 MT / Month' : ($v['type'] == 'equipment' ? 'Available' : ($v['type'] == 'seed' ? '150k / Month' : '250 HA / Project'))) ?></div>
-                                </div>
-                                <div>
-                                    <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Delivery / Lead Time</div>
-                                    <div class="text-white font-bold text-sm"><?= ($v['type'] == 'equipment' ? 'Mobilization 7 Days' : '7 Days') ?></div>
-                                </div>
-                            </div>
-                            <div class="mt-4 pt-3 text-right">
-                                <a href="#" class="inline-flex items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-950/50 px-4 py-2 text-[10px] font-bold text-emerald-400 uppercase tracking-widest hover:bg-emerald-900 transition-colors">
-                                    VIEW SPECIFICATION &rarr;
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <?php endif; ?>
             </div>
             
             <!-- 4. PROJECT EXPERIENCE (HISTORY) -->

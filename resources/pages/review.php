@@ -92,56 +92,67 @@ ob_start();
         </div>
     </div>
 
-    <!-- BACKGROUND GLOW -->
+    <!-- PAGE BACKGROUND -->
     <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <img src="<?= $basePrefix ?>/1.jpg" alt="" class="h-full w-full scale-110 object-cover opacity-20 blur-xl" />
-        <div class="absolute inset-0 bg-gradient-to-b from-[#06120F]/70 via-[#06120F]/90 to-[#04100B]"></div>
+        <img src="<?= $basePrefix ?>/1.jpg" alt="" class="h-full w-full scale-110 object-cover opacity-25 blur-md" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#06120F]/60 via-[#06120F]/85 to-[#04100B]"></div>
     </div>
 
-    <div class="relative z-10 space-y-6 px-4 py-6 sm:px-6 lg:px-8 w-full">
+    <div class="relative z-10">
+        
+        <!-- ================= HERO HEADER ================= -->
+        <section class="relative overflow-hidden shadow-2xl" style="border-bottom: none !important;">
+            <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/85 via-[#050D07]/45 to-[#050D07]/10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/80 via-transparent to-transparent"></div>
 
-        <!-- ================= TOP SWITCHER & BREADCRUMB HEADER ================= -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
-            <div class="space-y-1">
-                <!-- Breadcrumb -->
-                <div class="flex items-center gap-2 text-[10px] font-mono uppercase tracking-wider text-gray-400">
-                    <a href="<?= $basePrefix ?>/allocations" class="hover:text-white transition-colors flex items-center gap-1">
-                        <?= $svg($ic['arrowLeft'], 'w-3 h-3') ?>
-                        <span>Back to Projects / Allocations</span>
-                    </a>
-                    <span>/</span>
-                    <span class="text-emerald-400 font-bold" x-text="activeTab === 'land-partner' ? 'Review Land Partner' : 'Review Vendor'">Review Land Partner</span>
+            <div class="relative flex flex-col xl:flex-row xl:items-end justify-between gap-6 px-6 pt-3 pb-6 lg:px-8 lg:pt-3 lg:pb-8">
+                <div class="space-y-4 max-w-4xl">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <a href="<?= $basePrefix ?>/allocations" class="hover:text-white transition-colors">ALLOCATIONS</a>
+                        <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="font-bold text-white uppercase" x-text="activeTab === 'land-partner' ? 'REVIEW LAND PARTNER' : 'REVIEW VENDOR'">REVIEW LAND PARTNER</span>
+                    </nav>
+
+                    <div class="space-y-2">
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex flex-wrap items-center gap-3">
+                            <span x-text="activeTab === 'land-partner' ? 'Review Land Partner' : 'Review Vendor'">Review Land Partner</span>
+                            
+                            <span x-show="activeTab === 'land-partner'" class="rounded border border-emerald-400/40 bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-emerald-300 uppercase flex items-center gap-1.5 w-fit">
+                                <?= $svg($ic['shield'], 'w-3 h-3') ?> VERIFIED BATCH
+                            </span>
+                            <span x-show="activeTab === 'vendor'" class="rounded border border-emerald-400/40 bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-emerald-300 uppercase flex items-center gap-1.5 w-fit" style="display:none;">
+                                <?= $svg($ic['check'], 'w-3 h-3') ?> WORK ORDER COMPLETED
+                            </span>
+                        </h1>
+                        <p class="text-sm font-medium leading-relaxed text-gray-200 max-w-2xl" x-text="activeTab === 'land-partner' ? 'NINA Participant memberikan review terhadap Land Partner setelah batch selesai dan terverifikasi. Review ini akan mempengaruhi Production Reputation.' : 'Land Partner memberikan review terhadap Vendor setelah work order selesai dan diverifikasi. Review ini akan mempengaruhi Vendor Reputation.'">
+                            NINA Participant memberikan review terhadap Land Partner setelah batch selesai dan terverifikasi.
+                        </p>
+                    </div>
                 </div>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-3">
-                    <span x-text="activeTab === 'land-partner' ? 'Review Land Partner' : 'Review Vendor'">Review Land Partner</span>
-                    <span x-show="activeTab === 'land-partner'" class="rounded-full bg-emerald-500/20 px-3 py-0.5 text-xs font-mono font-bold text-emerald-300 border border-emerald-500/40 inline-flex items-center gap-1">
-                        <?= $svg($ic['shield'], 'w-3.5 h-3.5') ?> Verified Batch
-                    </span>
-                    <span x-show="activeTab === 'vendor'" class="rounded-full bg-emerald-500/20 px-3 py-0.5 text-xs font-mono font-bold text-emerald-300 border border-emerald-500/40 inline-flex items-center gap-1" style="display:none;">
-                        <?= $svg($ic['check'], 'w-3.5 h-3.5') ?> Work Order Completed
-                    </span>
-                </h1>
-                <p class="text-xs text-gray-400 max-w-2xl" x-text="activeTab === 'land-partner' ? 'NINA Participant memberikan review terhadap Land Partner setelah batch selesai dan terverifikasi. Review ini akan mempengaruhi Production Reputation dan badge/tier Land Partner.' : 'Land Partner memberikan review terhadap Vendor setelah work order selesai dan diverifikasi. Review ini akan mempengaruhi Vendor Reputation.'">
-                    NINA Participant memberikan review terhadap Land Partner setelah batch selesai dan terverifikasi.
-                </p>
-            </div>
 
-            <!-- LAYOUT SWITCHER TOGGLE BUTTONS -->
-            <div class="flex items-center bg-black/60 p-1.5 rounded-xl border border-white/10 self-start md:self-auto font-mono text-xs shrink-0">
-                <button @click="activeTab = 'land-partner'" 
-                        :class="activeTab === 'land-partner' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 font-bold shadow-lg' : 'text-gray-400 hover:text-white border-transparent'"
-                        class="px-4 py-2 rounded-lg border transition-all flex items-center gap-2">
-                    <?= $svg($ic['building'], 'w-4 h-4') ?>
-                    <span>LAYOUT 1: Review Land Partner</span>
-                </button>
-                <button @click="activeTab = 'vendor'" 
-                        :class="activeTab === 'vendor' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 font-bold shadow-lg' : 'text-gray-400 hover:text-white border-transparent'"
-                        class="px-4 py-2 rounded-lg border transition-all flex items-center gap-2">
-                    <?= $svg($ic['leaf'], 'w-4 h-4') ?>
-                    <span>LAYOUT 2: Review Vendor</span>
-                </button>
+                <!-- LAYOUT SWITCHER TOGGLE BUTTONS -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center bg-[#0B1815]/80 p-1.5 rounded-xl border border-white/10 font-mono text-xs shrink-0 shadow-2xl backdrop-blur-xl">
+                    <button @click="activeTab = 'land-partner'" 
+                            :class="activeTab === 'land-partner' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 font-bold shadow-lg' : 'text-gray-400 hover:text-white border-transparent'"
+                            class="px-4 py-2 rounded-lg border transition-all flex items-center gap-2">
+                        <?= $svg($ic['building'], 'w-4 h-4') ?>
+                        <span>LAYOUT 1: Review Land Partner</span>
+                    </button>
+                    <button @click="activeTab = 'vendor'" 
+                            :class="activeTab === 'vendor' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 font-bold shadow-lg' : 'text-gray-400 hover:text-white border-transparent'"
+                            class="px-4 py-2 rounded-lg border transition-all flex items-center gap-2">
+                        <?= $svg($ic['leaf'], 'w-4 h-4') ?>
+                        <span>LAYOUT 2: Review Vendor</span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Main Content Wrapper -->
+        <div class="px-4 pb-16 pt-6 sm:px-6 lg:px-8 space-y-6">
 
         <!-- ========================================================================= -->
         <!-- ================= LAYOUT 1: REVIEW LAND PARTNER (Participant) =========== -->

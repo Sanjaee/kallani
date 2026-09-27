@@ -206,10 +206,12 @@ foreach ($participants as $p) {
         $tierCounts[$p['tier']]++;
     }
 }
-foreach ($tiers as &$t) {
-    $t['count'] = $tierCounts[$t['key']] ?? 0;
+if (isset($tiers) && is_array($tiers)) {
+    foreach ($tiers as &$t) {
+        $t['count'] = $tierCounts[$t['key']] ?? 0;
+    }
+    unset($t);
 }
-unset($t);
 
 $tierBadgeCls = [
     'NOVA' => 'bg-emerald-950 border-emerald-500/40 text-emerald-300',
