@@ -211,139 +211,192 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
             <div class="h-px bg-[#152416] my-4"></div>
 
             <!-- CATEGORY 1: PRODUCTION -->
-            <div class="space-y-1.5">
-                <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">PRODUCTION MODULES</div>
-                <a href="<?php echo $basePrefix; ?>/demand" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'demand') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>Demand Requirements</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">02</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/capacity-mapping" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'capacity') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
-                        <span>Capacity Mapping</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">03</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/explore" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'explore') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        <span>Explore Projects</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">04</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/batches" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'batches') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        <span>Production Batches</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">06</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/po-allocation" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'po-allocation') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>PO Allocations</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">07</span>
-                </a>
+                <div class="space-y-1.5">
+                    <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">PRODUCTION</div>
+                    
+                    <!-- 02 Demand -->
+                    <a href="<?php echo $basePrefix; ?>/demand" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'demand') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span>Demand Requirements</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'demand') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">02</span>
+                    </a>
+
+                    <!-- 03 Capacity Mapping -->
+                    <a href="<?php echo $basePrefix; ?>/capacity-mapping" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'capacity') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                            <span>Capacity Mapping</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'capacity') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">03</span>
+                    </a>
+
+                    <!-- 04 Explore Projects -->
+                    <a href="<?php echo $basePrefix; ?>/explore" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'explore') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            <span>Explore Projects</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'explore') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">04</span>
+                    </a>
+
+                    <!-- 06 Production Batches -->
+                    <a href="<?php echo $basePrefix; ?>/batches" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'batches') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            <span>Production Batches</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'batches') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">06</span>
+                    </a>
+
+                    <!-- 07 PO Allocations -->
+                    <a href="<?php echo $basePrefix; ?>/po-allocation" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'po-allocation') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>PO Allocations</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'po-allocation') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">07</span>
+                    </a>
+
+                </div>
+
+                <!-- CATEGORY 2: OPERATIONS -->
+                <div class="space-y-1.5 pt-2">
+                    <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">OPERATIONS</div>
+
+                    <!-- 09 Milestones -->
+                    <a href="<?php echo $basePrefix; ?>/milestones" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'milestones') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Milestones</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'milestones') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">09</span>
+                    </a>
+
+                    <!-- 10 RAB & Budget -->
+                    <a href="<?php echo $basePrefix; ?>/rab-budget" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'rab') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <span>RAB & Budget</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'rab') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">10</span>
+                    </a>
+
+                    <!-- 11 Partners & Vendors -->
+                    <a href="<?php echo $basePrefix; ?>/vendors" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'vendors') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <span>Partners & Vendors</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'vendors') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">11</span>
+                    </a>
+
+                    <!-- 14 Verification -->
+                    <a href="<?php echo $basePrefix; ?>/verification" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'verification') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            <span>Verification</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'verification') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">14</span>
+                    </a>
+
+                    <!-- 15 Commercial Delivery -->
+                    <a href="<?php echo $basePrefix; ?>/commercial-output" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'commercial') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                            <span>Commercial Delivery</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'commercial') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">15</span>
+                    </a>
+
+                    <!-- 16 Batch Completion -->
+                    <a href="<?php echo $basePrefix; ?>/batch-completion" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'completion') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Batch Completion</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'completion') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">16</span>
+                    </a>
+                </div>
+
+                <!-- CATEGORY 3: TRANSPARENCY & NETWORK -->
+                <div class="space-y-1.5 pt-2">
+                    <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">ECOSYSTEM & CONTROL</div>                    <!-- 17 Production Network -->
+                    <a href="<?php echo $basePrefix; ?>/production-network" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'network') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0-3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            <span>Production Network</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'network') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">17</span>
+                    </a>
+
+                    <!-- 22 Participant Network -->
+                    <a href="<?php echo $basePrefix; ?>/participant-network" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'participant-network') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                            <span>Participant Network</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'participant-network') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">22A</span>
+                    </a>
+
+                    <!-- 18 My Production Allocations -->
+                    <a href="<?php echo $basePrefix; ?>/my-allocations" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'allocations') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            <span>Mitra Allocations</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'allocations') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">18</span>
+                    </a>
+
+                    <!-- Review & Reputation -->
+                    <a href="<?php echo $basePrefix; ?>/review" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'review') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            <span>Review & Reputation</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'review') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">NEW</span>
+                    </a>
+
+                    <!-- 21 Production Programs -->
+                    <a href="<?php echo $basePrefix; ?>/production-programs" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'programs') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            <span>Production Programs</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'programs') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">21</span>
+                    </a>
+
+                    <!-- Documents -->
+                    <a href="<?php echo $basePrefix; ?>/documents" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'documents') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <span>Documents</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">DOC</span>
+                    </a>
+
+                    <!-- Audit Trail -->
+                    <a href="<?php echo $basePrefix; ?>/audit-trail" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'audit') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Audit Trail</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'audit') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">20</span>
+                    </a>
+
+                    <!-- 22 Field Guide -->
+                    <a href="<?php echo $basePrefix; ?>/field-guide" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'field-guide') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-emerald-400 hover:text-white hover:bg-white/5'; ?>">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            <span>Field Guide</span>
+                        </div>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'field-guide') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-emerald-950 text-emerald-400 border border-emerald-800/40'; ?>">22</span>
+                    </a>
+                </div>
             </div>
 
-            <!-- CATEGORY 2: OPERATIONS -->
-            <div class="space-y-1.5 pt-2">
-                <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">OPERATIONS</div>
-                <a href="<?php echo $basePrefix; ?>/milestones" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'milestones') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>Milestones</span>
                     </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">09</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/rab-budget" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'rab') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        <span>RAB & Budget</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">10</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/vendors" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'vendors') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        <span>Partners & Vendors</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">11</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/verification" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'verification') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        <span>Verification</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">14</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/commercial-output" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'commercial') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                        <span>Commercial Delivery</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">15</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/batch-completion" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'completion') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>Batch Completion</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">16</span>
-                </a>
-            </div>
-
-            <!-- CATEGORY 3: ECOSYSTEM & CONTROL -->
-            <div class="space-y-1.5 pt-2">
-                <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">ECOSYSTEM & CONTROL</div>
-                <a href="<?php echo $basePrefix; ?>/production-network" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'network') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                        <span>Production Network</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">17</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/my-allocations" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'allocations') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                        <span>Mitra Allocations</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">18</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/production-programs" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'programs') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        <span>Production Programs</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">21</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/documents" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'documents') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        <span>Documents</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">DOC</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/audit-trail" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'audit') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>Audit Trail</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">20</span>
-                </a>
-                <a href="<?php echo $basePrefix; ?>/field-guide" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium <?php echo ($activePage === 'field-guide') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold' : 'text-emerald-400 hover:text-white hover:bg-white/5'; ?>">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        <span>Field Guide</span>
-                    </div>
-                    <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">22</span>
-                </a>
-            </div>
-        </div>
 
         <!-- Drawer Footer -->
         <div class="p-5 border-t border-[#152416] bg-[#040804]/80 space-y-2 text-[11px] text-gray-400">
@@ -573,4 +626,5 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
 
 </body>
 </html>
+
 
