@@ -351,9 +351,9 @@ ob_start();
             <div class="relative space-y-4 px-6 pt-6 pb-8 lg:px-8">
 
                 <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300 bg-black/60 px-3 py-1.5 rounded-lg backdrop-blur-md border border-white/10">
-                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0 shadow-[0_0_8px_#34d399]"></span>
-                        <span class="font-extrabold text-emerald-400">22 / PARTICIPANT NETWORK</span>
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                        <span class="font-bold text-emerald-300">22 / PARTICIPANT NETWORK</span>
                     </nav>
 
                     <span class="rounded-lg bg-amber-950/80 px-3 py-1.5 text-[10px] font-extrabold text-amber-400 border border-amber-500/50 shadow-lg backdrop-blur-md uppercase tracking-wider flex items-center gap-1.5 w-fit">
