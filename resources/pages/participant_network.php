@@ -345,20 +345,18 @@ ob_start();
     <div class="relative z-10 space-y-6">
         <section class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-[#050D07]/50"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-[#050D07]/80 via-transparent to-transparent"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/92 via-[#050D07]/65 to-[#050D07]/25"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/90 via-transparent to-transparent"></div>
 
             <div class="relative space-y-4 px-6 pt-6 pb-8 lg:px-8">
 
                 <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300">
-                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0"></span>
-                        <span class="font-bold text-emerald-300">22 / PARTICIPANT NETWORK</span>
+                    <nav aria-label="Breadcrumb" class="inline-flex flex-wrap items-center gap-2 text-[10px] font-mono font-semibold uppercase tracking-[0.14em] text-gray-300 bg-black/60 px-3 py-1.5 rounded-lg backdrop-blur-md border border-white/10">
+                        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shrink-0 shadow-[0_0_8px_#34d399]"></span>
+                        <span class="font-extrabold text-emerald-400">22 / PARTICIPANT NETWORK</span>
                     </nav>
 
-                    <span class="rounded bg-amber-500/15 px-3 py-1 text-[10px] font-bold text-amber-300 border border-amber-500/40 uppercase tracking-wider flex items-center gap-1.5 w-fit">
+                    <span class="rounded-lg bg-amber-950/80 px-3 py-1.5 text-[10px] font-extrabold text-amber-400 border border-amber-500/50 shadow-lg backdrop-blur-md uppercase tracking-wider flex items-center gap-1.5 w-fit">
                         <?= $svg($ic['info'], 'w-3.5 h-3.5 text-amber-400') ?> DEMO / SIMULATION ENVIRONMENT
                     </span>
                 </div>
@@ -373,7 +371,7 @@ ob_start();
                                 From private participants and family offices to funds, institutional capital and sovereign-scale organizations, NINA provides a common operating layer for participation in productive production programs.
                             </p>
                         </div>
-                        <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-950/40 px-3 py-1.5 text-[9px] font-bold text-sky-300 uppercase tracking-wider">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/50 bg-sky-950/80 px-3 py-1.5 text-[9px] font-extrabold text-sky-400 shadow-lg backdrop-blur-md uppercase tracking-wider">
                             <?= $svg($ic['orbit'], 'w-3.5 h-3.5 text-sky-400') ?> 100% SIMULATED — PRODUCT ARCHITECTURE DEMONSTRATION
                         </span>
                     </div>
