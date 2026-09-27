@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $configPath = __DIR__ . '/../../config/data.php';
 if (!file_exists($configPath)) {
     $configPath = __DIR__ . '/../../data.php';
@@ -34,6 +35,7 @@ $ic = [
     'crown'     => '<path d="M3 18h18l-1.5-9-4.5 4-3-7-3 7-4.5-4L3 18z"/>',
     'bank'      => '<path d="M4 21V7l8-4v18"/><path d="M20 21V11l-8-4"/><path d="M2 21h20"/>',
     'reputation'=> '<path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 13.5L6 21l6-3 6 3-2.5-7.5"/>',
+    'calendar'  => '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
 ];
 
 $card      = 'rounded-xl border border-white/10 bg-[#0B1815]/90 shadow-xl';
@@ -73,172 +75,200 @@ $entityClassDist = [
 /* ---------- 28 PARTICIPANT SIMULATED & ILLUSTRATIVE RECORDS ---------- */
 $participants = [
     [
-        'id' => 'NINA-C-0001', 'name' => 'BANK CENTRAL ASIA', 'class' => 'FINANCIAL INSTITUTION', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0001', 'name' => 'BANK CENTRAL ASIA', 'class' => 'FINANCIAL INSTITUTION', 'role' => 'Banking', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Commercial Agriculture Financing',
-        'context' => 'Indonesian Banking', 'review' => 'Entity verification, land documentation, ESG controls, transaction traceability and operational reporting.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Indonesian Banking', 'review' => 'The combination of entity verification, land documentation and operational reporting provides a clearer view of how production requirements are translated into controlled execution and commercial settlement.',
+        'stars' => 4.8, 'review_scope' => 'Entity Verification / Documentation / Operational Reporting / Commercial Settlement',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0002', 'name' => 'MAYAPADA GROUP', 'class' => 'FAMILY / CORPORATE CAPITAL', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0002', 'name' => 'MAYAPADA GROUP', 'class' => 'FAMILY / CORPORATE CAPITAL', 'role' => 'Family-Corporate Capital', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Sustainable Agro-Forestry Facility',
-        'context' => 'Indonesian Ecosystem', 'review' => 'Governance, documentation, sustainability classification and long-term productive assets.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Indonesian Ecosystem', 'review' => 'The program structure provides a clear view of governance, documentation and operational milestones, making long-term productive assets easier to monitor within a structured production framework.',
+        'stars' => 4.7, 'review_scope' => 'Governance / Documentation / Milestones / Productive Asset Monitoring',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0003', 'name' => 'BLACKROCK', 'class' => 'GLOBAL ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0003', 'name' => 'BLACKROCK', 'class' => 'GLOBAL ASSET MANAGER', 'role' => 'Asset Manager', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$2,800,000', 'allocations' => 10, 'program' => 'Indonesia Palm Production Program',
-        'context' => 'Global Institution', 'review' => 'Institutional-grade traceability, governance, palm-oil ESG risk, verification and long-term value.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Global Institution', 'review' => 'The operating architecture provides a structured view of production capacity, field verification, governance controls and commercial output across multiple production batches.',
+        'stars' => 4.9, 'review_scope' => 'Production Capacity / Verification / Governance / Commercial Output',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0004', 'name' => 'VANGUARD', 'class' => 'ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$2,240,000', 'allocations' => 8, 'program' => 'Indonesia Palm Production Program',
-        'context' => 'Global Institution', 'review' => 'Standardized reporting, stewardship, consistency of operating records and long-duration monitoring.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0004', 'name' => 'CPP INVESTMENTS', 'class' => 'PENSION / INSTITUTIONAL CAPITAL', 'role' => 'Pension Fund', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$2,240,000', 'allocations' => 8, 'program' => 'Long-Duration Productive Asset Program',
+        'context' => 'Global Pension Capital', 'review' => 'The production framework provides a consistent operating view across long-duration assets, execution milestones, verification records and ongoing production monitoring.',
+        'stars' => 4.8, 'review_scope' => 'Long-Duration Monitoring / Reporting / Verification / Operational Continuity',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0005', 'name' => 'BLACKSTONE', 'class' => 'ALTERNATIVE ASSET MANAGER', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0005', 'name' => 'BLACKSTONE', 'class' => 'ALTERNATIVE ASSET MANAGER', 'role' => 'Alternative Asset Manager', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$1,400,000', 'allocations' => 5, 'program' => 'Multi-Region Productive Asset Program',
-        'context' => 'Global Institution', 'review' => 'Real-asset execution, infrastructure, vendor control, production evidence and commercial output.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Global Alternative Capital', 'review' => 'The operating layer creates a clear connection between productive assets, execution partners, operational controls and commercial output across a multi-region production environment.',
+        'stars' => 4.8, 'review_scope' => 'Real Assets / Execution Partners / Controls / Commercial Output',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0006', 'name' => 'STATE STREET', 'class' => 'FINANCIAL INFRASTRUCTURE', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0006', 'name' => 'STATE STREET', 'class' => 'FINANCIAL INFRASTRUCTURE', 'role' => 'Financial Infrastructure', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$1,680,000', 'allocations' => 6, 'program' => 'Agricultural Financing Architecture',
-        'context' => 'Global Institution', 'review' => 'Capital infrastructure, farmer financing, data standardization and operational reporting.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Global Financial Infrastructure', 'review' => 'The architecture provides a structured connection between production records, financing-related controls, standardized data and operational reporting across agricultural activities.',
+        'stars' => 4.8, 'review_scope' => 'Financial Infrastructure / Data Standardization / Reporting / Controls',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0007', 'name' => 'ALPHABET / GOOGLE', 'class' => 'TECHNOLOGY / CORPORATE', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0007', 'name' => 'ALPHABET / GOOGLE', 'class' => 'TECHNOLOGY / CORPORATE', 'role' => 'Technology & Data', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agroforestry & AI Integration',
-        'context' => 'Global Technology', 'review' => 'Data architecture, geospatial intelligence, AI, production monitoring and API readiness.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Global Technology', 'review' => 'The production architecture creates a clear foundation for connecting geospatial information, operational data and intelligent monitoring with field-level production activities.',
+        'stars' => 4.8, 'review_scope' => 'Data Architecture / Geospatial Intelligence / Monitoring / Integration',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0008', 'name' => 'META', 'class' => 'TECHNOLOGY / CORPORATE', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Digital Identity & Supply Chain',
-        'context' => 'Global Technology', 'review' => 'Network effects, digital identity, operational data, AI-assisted field intelligence.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0008', 'name' => 'SIEMENS', 'class' => 'INDUSTRIAL TECHNOLOGY', 'role' => 'Industrial Automation', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Digital Production Infrastructure',
+        'context' => 'Industrial Technology', 'review' => 'The operating model provides a structured foundation for connecting field execution, production data, automation and digital representations of physical production environments.',
+        'stars' => 4.8, 'review_scope' => 'Industrial Automation / Digital Twin / Production Data / Operational Integration',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0009', 'name' => 'NVIDIA', 'class' => 'AI / COMPUTING INFRASTRUCTURE', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0009', 'name' => 'NVIDIA', 'class' => 'AI / COMPUTING INFRASTRUCTURE', 'role' => 'AI Infrastructure', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Precision Farming Intelligence',
-        'context' => 'Global Technology', 'review' => 'Edge AI, drones, satellite data, computer vision, predictive maintenance and plantation intelligence.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'AI / Computing Infrastructure', 'review' => 'The operating model creates a strong framework for integrating field intelligence, production monitoring and data-driven analysis into a standardized agricultural workflow.',
+        'stars' => 4.8, 'review_scope' => 'AI / Computer Vision / Field Intelligence / Predictive Monitoring',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0010', 'name' => 'THE COCA-COLA COMPANY', 'class' => 'STRATEGIC BUYER', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0010', 'name' => 'THE COCA-COLA COMPANY', 'class' => 'STRATEGIC BUYER', 'role' => 'Beverage Strategic Buyer', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Sustainable Agricultural Sourcing',
-        'context' => 'Global Consumer', 'review' => 'Sustainable agricultural sourcing, supply continuity, traceability and quality.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Global Consumer', 'review' => 'The production structure provides greater visibility into sourcing continuity, agricultural quality, field execution and traceable delivery from production through commercial output.',
+        'stars' => 4.8, 'review_scope' => 'Sourcing / Quality / Traceability / Delivery',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0011', 'name' => 'PEPSICO', 'class' => 'STRATEGIC BUYER', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Regenerative Agriculture Program',
-        'context' => 'Global Consumer', 'review' => 'Sustainable sourcing, palm-oil supply chain, farmer capability, traceability and offtake continuity.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0011', 'name' => 'MAERSK', 'class' => 'LOGISTICS / SUPPLY CHAIN', 'role' => 'Integrated Logistics', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Agricultural Export & Supply Chain',
+        'context' => 'Global Logistics', 'review' => 'The production workflow provides a clearer connection between field output, documentation, logistics coordination, shipment visibility and downstream delivery requirements.',
+        'stars' => 4.8, 'review_scope' => 'Logistics / Shipment Visibility / Documentation / Delivery',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0012', 'name' => 'DANANTARA INDONESIA', 'class' => 'STATE INVESTMENT', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0012', 'name' => 'DANANTARA INDONESIA', 'class' => 'STATE INVESTMENT', 'role' => 'State Investment Agency', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$2,800,000', 'allocations' => 10, 'program' => 'National Productive Asset Program',
-        'context' => 'Sovereign / State-Scale', 'review' => 'National-scale asset governance, production capacity, downstream integration, auditability and strategic infrastructure.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Sovereign / State-Scale', 'review' => 'The operating architecture demonstrates how productive assets, production capacity, execution controls and downstream activity can be organized within a transparent and auditable operating framework.',
+        'stars' => 4.9, 'review_scope' => 'Asset Governance / Production Capacity / Auditability / Strategic Infrastructure',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0013', 'name' => 'TEMASEK', 'class' => 'STATE-OWNED INVESTMENT', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$1,680,000', 'allocations' => 6, 'program' => 'Southeast Asia Green Economy',
-        'context' => 'Sovereign / State-Scale', 'review' => 'Smallholder capability, certification, sustainable agriculture and traceable supply chain technology.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0013', 'name' => 'INTERNATIONAL FINANCE CORPORATION (IFC)', 'class' => 'DEVELOPMENT FINANCE INSTITUTION', 'role' => 'Development Finance Institution', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,680,000', 'allocations' => 6, 'program' => 'Inclusive Productive Asset Development',
+        'context' => 'Emerging Markets Development', 'review' => 'The operating framework provides a structured connection between productive assets, private-sector participation, measurable development outcomes and operational verification.',
+        'stars' => 4.8, 'review_scope' => 'Development Finance / Private Sector / Impact / Verification',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0014', 'name' => 'GIC', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agricultural Infrastructure & Marketplace',
-        'context' => 'Sovereign / State-Scale', 'review' => 'Productive asset viability, infrastructure integration, agricultural marketplace and long-term capital deployment.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0014', 'name' => 'MUNICH RE', 'class' => 'INSURANCE / REINSURANCE', 'role' => 'Insurance / Reinsurance', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agricultural Risk & Resilience Program',
+        'context' => 'Global Insurance', 'review' => 'The operating framework creates a clearer view of production exposure, operational controls, verification milestones and the risk-management considerations surrounding long-duration agricultural assets.',
+        'stars' => 4.7, 'review_scope' => 'Risk / Resilience / Verification / Operational Controls',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0015', 'name' => 'KHAZANAH NASIONAL', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Smallholder Aggregation Network',
-        'context' => 'Sovereign / State-Scale', 'review' => 'Smallholder aggregation, data visibility, and sustainable agriculture ecosystem development.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0015', 'name' => 'YALE UNIVERSITY ENDOWMENT', 'class' => 'UNIVERSITY ENDOWMENT', 'role' => 'University Endowment', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Long-Term Productive Asset Allocation',
+        'context' => 'University Endowment', 'review' => 'The production architecture provides a long-duration operating view that connects asset stewardship, documentation, milestone verification and sustainable production records.',
+        'stars' => 4.8, 'review_scope' => 'Long-Term Stewardship / Asset Allocation / Documentation / Sustainability',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0016', 'name' => 'PUBLIC INVESTMENT FUND (PIF)', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0016', 'name' => 'PUBLIC INVESTMENT FUND (PIF)', 'class' => 'SOVEREIGN CAPITAL', 'role' => 'Sovereign Wealth Fund', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Global Food Security Initiative',
-        'context' => 'Sovereign / State-Scale', 'review' => 'Food security, agricultural assets, technology integration and global supply chain resilience.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Sovereign / State-Scale', 'review' => 'The architecture provides a structured view of agricultural assets, production capacity, technology integration and supply-chain execution within a broader food-security framework.',
+        'stars' => 4.8, 'review_scope' => 'Food Security / Productive Assets / Technology / Supply Chain',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0017', 'name' => 'ABU DHABI INVESTMENT AUTHORITY', 'class' => 'SOVEREIGN WEALTH FUND', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Agricultural Productivity Facility',
-        'context' => 'Sovereign / State-Scale', 'review' => 'Agricultural inputs, productivity enhancement, and global food infrastructure investments.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
-    ],
-    [
-        'id' => 'NINA-C-0018', 'name' => 'QUANTEDGE', 'class' => 'QUANTITATIVE MANAGER', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0017', 'name' => 'QUANTEDGE', 'class' => 'QUANTITATIVE MANAGER', 'role' => 'Quantitative Manager', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Sustainable Landscape Program',
-        'context' => 'Singapore Investment', 'review' => 'Measurable impact, MRV, farmer livelihoods, landscape monitoring and scalable financing mechanisms.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Singapore Investment', 'review' => 'The structured production records make landscape-level activity, measurable outcomes, operational evidence and scalable production programs easier to monitor systematically.',
+        'stars' => 4.7, 'review_scope' => 'Quantitative Monitoring / MRV / Data / Scalability',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0019', 'name' => 'DYMON ASIA', 'class' => 'PRIVATE EQUITY', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0018', 'name' => 'DYMON ASIA', 'class' => 'PRIVATE EQUITY', 'role' => 'Private Equity', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Southeast Asian Real Assets',
-        'context' => 'Southeast Asia Alternative', 'review' => 'Operating partner quality, execution, regional expansion, vendor ecosystem and scalable real assets.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Southeast Asia Alternative Capital', 'review' => 'The operating architecture provides visibility into operating partner capability, execution quality, vendor coordination and scalable real-asset production across Southeast Asia.',
+        'stars' => 4.7, 'review_scope' => 'Operating Partners / Execution / Vendors / Regional Scale',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0020', 'name' => 'GRASSHOPPER ASIA', 'class' => 'PROPRIETARY TRADING', 'tier' => 'CONSTELLATION',
+        'id' => 'NINA-R-0019', 'name' => 'GRASSHOPPER ASIA', 'class' => 'PROPRIETARY TRADING', 'role' => 'Proprietary Trading', 'tier' => 'CONSTELLATION',
         'unit' => 'US$28,000', 'cum' => 'US$56,000', 'allocations' => 2, 'program' => 'Technology-Driven Supply Network',
-        'context' => 'Quantitative Technology', 'review' => 'Data infrastructure, systematic decision-making, technology, operational latency and risk controls.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Quantitative Technology', 'review' => 'The system provides a structured operational dataset for monitoring production activity, decision points, execution timing and risk controls across a technology-enabled supply network.',
+        'stars' => 4.7, 'review_scope' => 'Data / Decision Systems / Execution Timing / Risk Controls',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0021', 'name' => 'PUPUK INDONESIA', 'class' => 'STATE-OWNED ENTERPRISE', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0020', 'name' => 'PUPUK INDONESIA', 'class' => 'STATE-OWNED ENTERPRISE', 'role' => 'Agricultural Inputs', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Integrated Farmer Ecosystem',
-        'context' => 'Agricultural Input', 'review' => 'RAB fertilizer tracking, vendor alignment, production yields, farmer productivity and offtake security.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Agricultural Input', 'review' => 'The operating workflow creates a clear connection between agricultural inputs, RAB controls, vendor execution, farmer productivity and production requirements.',
+        'stars' => 4.7, 'review_scope' => 'Inputs / RAB / Vendors / Farmer Productivity',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0022', 'name' => 'PERTAMINA', 'class' => 'STATE-OWNED ENERGY', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0021', 'name' => 'PERTAMINA', 'class' => 'STATE-OWNED ENERGY', 'role' => 'Energy / Industrial', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$176,000', 'allocations' => 2, 'program' => 'Regenerative Community Agriculture',
-        'context' => 'Industrial Group', 'review' => 'Land utilization, community agriculture, waste processing, and technology-driven sustainability.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Industrial Group', 'review' => 'The production framework provides a structured way to coordinate land utilization, community-based agricultural activity, operational execution and resource-management requirements.',
+        'stars' => 4.7, 'review_scope' => 'Land Utilization / Community / Operations / Resource Management',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0023', 'name' => 'PTPN IV PALMCO', 'class' => 'STATE-OWNED PLANTATION', 'tier' => 'SOVEREIGN',
+        'id' => 'NINA-R-0022', 'name' => 'PTPN IV PALMCO', 'class' => 'STATE-OWNED PLANTATION', 'role' => 'Plantation Operator', 'tier' => 'SOVEREIGN',
         'unit' => 'US$88,000', 'cum' => 'US$264,000', 'allocations' => 3, 'program' => 'Smallholder Productivity Program',
-        'context' => 'Palm Oil Operator', 'review' => 'Smallholder integration, mill capacity, production yield, certification standards and commercial offtake.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Palm Oil Operator', 'review' => 'The system provides a clear operating view across smallholder integration, plantation productivity, mill capacity, certification requirements and commercial offtake.',
+        'stars' => 4.8, 'review_scope' => 'Plantation Operations / Smallholders / Mill Capacity / Offtake',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0024', 'name' => 'INDOFOOD / INDOFOOD AGRI', 'class' => 'CORPORATE AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0023', 'name' => 'INDOFOOD / INDOFOOD AGRI', 'class' => 'INTEGRATED AGRIBUSINESS', 'role' => 'Integrated Agribusiness', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Integrated Palm Value Chain',
-        'context' => 'Consumer Agribusiness', 'review' => 'Seed quality, plantation execution, mill operations, refinery integration, and end-to-end traceability.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Consumer Agribusiness', 'review' => 'The production architecture connects plantation execution, input quality, processing capacity and downstream requirements into one traceable operating workflow.',
+        'stars' => 4.8, 'review_scope' => 'Plantation / Processing / Refining / Traceability',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0025', 'name' => 'TRIPUTRA GROUP', 'class' => 'FAMILY AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0024', 'name' => 'TRIPUTRA GROUP', 'class' => 'FAMILY AGRIBUSINESS', 'role' => 'Family Agribusiness', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Strategic Industrial Crop Program',
-        'context' => 'Corporate Ecosystem', 'review' => 'Agricultural operations, sustainable farming, production continuity and industrial ecosystem integration.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Corporate Ecosystem', 'review' => 'The operating model provides a structured view of agricultural operations, production continuity and the coordination between field activities and the wider industrial ecosystem.',
+        'stars' => 4.7, 'review_scope' => 'Operations / Production Continuity / Industrial Integration / Sustainability',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0026', 'name' => 'GOLDEN AGRI-RESOURCES', 'class' => 'CORPORATE AGRIBUSINESS', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Traceable Supply Chain Network',
-        'context' => 'Corporate Agribusiness', 'review' => 'Plot-level traceability, smallholder mapping, climate-resilient seeds, and blockchain-verified supply chains.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0025', 'name' => 'LOUIS DREYFUS COMPANY', 'class' => 'COMMODITY MERCHANT', 'role' => 'Commodity Merchant', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Agricultural Commodity Flow Program',
+        'context' => 'Global Commodity Trade', 'review' => 'The operating architecture provides a clearer connection between agricultural production, commodity aggregation, processing requirements, quality documentation and downstream market delivery.',
+        'stars' => 4.8, 'review_scope' => 'Commodity Flow / Quality / Processing / Delivery',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0027', 'name' => 'ASTRA AGRO LESTARI', 'class' => 'PALM OIL OPERATOR', 'tier' => 'INSTITUTIONAL',
-        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Smallholder Inclusion Program',
-        'context' => 'Corporate Operator', 'review' => 'Farmer partnerships, plantation health analytics, AI/drone monitoring, and production traceability.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'id' => 'NINA-R-0026', 'name' => 'BAYER', 'class' => 'AGRICULTURAL TECHNOLOGY', 'role' => 'Crop Science / AgTech', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$1,120,000', 'allocations' => 4, 'program' => 'Agricultural Productivity Technology',
+        'context' => 'Crop Science', 'review' => 'The operating framework provides a structured connection between field productivity, agricultural technology, crop monitoring and data-supported production practices.',
+        'stars' => 4.8, 'review_scope' => 'Crop Science / Field Productivity / Technology / Monitoring',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
     [
-        'id' => 'NINA-C-0028', 'name' => 'BARITO PACIFIC', 'class' => 'INDUSTRIAL & RESOURCES', 'tier' => 'INSTITUTIONAL',
+        'id' => 'NINA-R-0027', 'name' => 'PROLOGIS', 'class' => 'LOGISTICS REAL ESTATE', 'role' => 'Logistics Real Estate', 'tier' => 'INSTITUTIONAL',
+        'unit' => 'US$280,000', 'cum' => 'US$560,000', 'allocations' => 2, 'program' => 'Agricultural Logistics Infrastructure',
+        'context' => 'Global Logistics Infrastructure', 'review' => 'The production-to-delivery architecture provides a structured view of how physical logistics infrastructure, distribution capacity and supply-chain visibility support productive asset operations.',
+        'stars' => 4.7, 'review_scope' => 'Logistics Infrastructure / Warehousing / Distribution / Supply Chain',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
+    ],
+    [
+        'id' => 'NINA-R-0028', 'name' => 'BARITO PACIFIC', 'class' => 'INDUSTRIAL & RESOURCES', 'role' => 'Industrial / Natural Resources', 'tier' => 'INSTITUTIONAL',
         'unit' => 'US$280,000', 'cum' => 'US$840,000', 'allocations' => 3, 'program' => 'Integrated Natural Resources',
-        'context' => 'Corporate Ecosystem', 'review' => 'Sustainable farming empowerment, productivity enhancement, and integrated industrial operations.',
-        'badge' => 'ILLUSTRATIVE PROFILE — NOT A CUSTOMER', 'is_illustrative' => true
+        'context' => 'Corporate Ecosystem', 'review' => 'The operating architecture provides a common framework for connecting productive resources, field execution, operational productivity and integrated industrial activities.',
+        'stars' => 4.7, 'review_scope' => 'Natural Resources / Industrial Operations / Productivity / Integration',
+        'badge' => 'SIMULATED / ILLUSTRATIVE PROJECT EXPERIENCE', 'is_illustrative' => true
     ],
 ];
 
@@ -303,13 +333,18 @@ ob_start();
                 </div>
 
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 items-center">
-                    <div class="space-y-2 lg:col-span-8">
-                        <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">
-                            Participation Across<br class="hidden sm:block" /> the NINA Network.
-                        </h1>
-                        <p class="max-w-2xl text-sm font-medium leading-relaxed text-gray-200">
-                            From private participants and family offices to funds, institutional capital and sovereign-scale organizations, NINA provides a common operating layer for participation in productive production programs.
-                        </p>
+                    <div class="space-y-4 lg:col-span-8">
+                        <div class="space-y-2">
+                            <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">
+                                Participation Across<br class="hidden sm:block" /> the NINA Network.
+                            </h1>
+                            <p class="max-w-2xl text-sm font-medium leading-relaxed text-gray-200">
+                                From private participants and family offices to funds, institutional capital and sovereign-scale organizations, NINA provides a common operating layer for participation in productive production programs.
+                            </p>
+                        </div>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-950/40 px-3 py-1.5 text-[9px] font-bold text-sky-300 uppercase tracking-wider">
+                            <?= $svg($ic['orbit'], 'w-3.5 h-3.5 text-sky-400') ?> 100% SIMULATED — PRODUCT ARCHITECTURE DEMONSTRATION
+                        </span>
                     </div>
 
                     <div class="lg:col-span-4">
@@ -333,7 +368,10 @@ ob_start();
                 <h2 class="text-sm font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
                     <?= $svg($ic['award'], 'w-4 h-4 text-emerald-400') ?> PARTICIPANT TIER SYSTEM
                 </h2>
-                <p class="text-xs text-gray-400">Cumulative participation history determines your tier.</p>
+                <div class="text-[11px] text-gray-300 mt-2 space-y-1">
+                    <p>Current allocation denomination defines the participant's current tier.</p>
+                    <p>Cumulative participation is maintained separately as historical allocation activity.</p>
+                </div>
             </div>
 
             <div class="flex flex-col sm:flex-row items-stretch gap-2">
@@ -365,46 +403,54 @@ ob_start();
             </div>
         </section>
 
-        <!-- ================= 03. THREE IDENTITIES, ONE ECOSYSTEM ================= -->
-        <section class="space-y-4">
+        <!-- ================= 03. THE NINA PARTICIPANT MODEL ================= -->
+        <section class="<?= $card ?> p-5 space-y-5 mt-8">
             <div class="border-b border-white/10 pb-3">
-                <h2 class="text-sm font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
-                    <?= $svg($ic['layers'], 'w-4 h-4 text-emerald-400') ?> THREE IDENTITIES, ONE ECOSYSTEM
+                <h2 class="text-sm font-mono font-bold uppercase tracking-wider text-white">
+                    THE NINA PARTICIPANT MODEL
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="<?= $card ?> p-4 flex items-start gap-3">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-950 text-emerald-300">
-                        <?= $svg($ic['user'], 'w-5 h-5') ?>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <!-- Participant Tier -->
+                <div class="flex items-start gap-4">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-500/40 bg-gray-900/60 text-gray-300">
+                        <?= $svg($ic['layers'], 'w-5 h-5') ?>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-white uppercase">Participant Tier</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Indicates the size of a single PO Allocation Unit.</p>
+                        <div class="text-xs font-bold text-white uppercase tracking-wider mb-1">Participant Tier</div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Defines the participant's current allocation denomination.</p>
                     </div>
                 </div>
-                <div class="<?= $card ?> p-4 flex items-start gap-3">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-sky-500/40 bg-sky-950 text-sky-300">
+
+                <!-- Entity Class -->
+                <div class="flex items-start gap-4 border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-500/40 bg-gray-900/60 text-gray-300">
                         <?= $svg($ic['building'], 'w-5 h-5') ?>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-white uppercase">Entity Class</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Identifies participant organizational type (Private, Family Office, Asset Manager, etc.).</p>
+                        <div class="text-xs font-bold text-white uppercase tracking-wider mb-1">Entity Class</div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed mb-2">Identifies the participant's organizational or capital type.</p>
+                        <p class="text-[9px] text-sky-400 leading-snug">Private • Family Office • Asset Manager • PE • Hedge Fund • Corporate • Sovereign • Financial Institution</p>
                     </div>
                 </div>
-                <div class="<?= $card ?> p-4 flex items-start gap-3">
-                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-amber-500/40 bg-amber-950 text-amber-300">
-                        <?= $svg($ic['reputation'], 'w-5 h-5') ?>
+
+                <!-- Project Experience -->
+                <div class="flex items-start gap-4 border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gray-500/40 bg-gray-900/60 text-gray-300">
+                        <?= $svg($ic['star'], 'w-5 h-5') ?>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-white uppercase">Reputation</div>
-                        <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Measures verified production participation history.</p>
+                        <div class="text-xs font-bold text-white uppercase tracking-wider mb-1">Project Experience</div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Measures the participant's experience with completed production projects.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="rounded-lg bg-black/40 border border-white/10 p-3 text-[10px] font-mono text-gray-400 text-center">
-                <span class="text-gray-300 font-bold">Tier</span> measures participation history. <span class="text-gray-300 font-bold">Entity Class</span> identifies participant type. <span class="text-gray-300 font-bold">Reputation</span> measures verified performance.
+            <div class="pt-2 border-t border-white/10">
+                <p class="text-[10px] text-gray-400">
+                    Current Tier defines allocation denomination. Entity Class identifies participant type. Cumulative Participation records historical activity. Project Experience reflects completed production experience.
+                </p>
             </div>
         </section>
 
@@ -439,8 +485,8 @@ ob_start();
                         <?= $svg($ic['building'], 'w-5 h-5') ?>
                     </div>
                     <div class="min-w-0">
-                        <strong class="text-lg sm:text-xl font-extrabold text-purple-400 block leading-none truncate">11</strong>
-                        <span class="text-[9px] text-gray-400 block uppercase mt-1 truncate">Entity Classes</span>
+                        <strong class="text-lg sm:text-xl font-extrabold text-purple-400 block leading-none truncate">28</strong>
+                        <span class="text-[9px] text-gray-400 block uppercase mt-1 truncate">Participant Archetypes</span>
                     </div>
                 </div>
                 <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 flex items-center gap-2.5 min-w-0">
@@ -524,81 +570,146 @@ ob_start();
             </div>
         </section>
 
-        <!-- ================= 06. PARTICIPANT RECORDS GRID ================= -->
+        <!-- ================= 06. RECENT PROJECT EXPERIENCE ================= -->
         <section class="space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div class="border-b border-white/10 pb-4">
                 <h2 class="text-lg font-mono font-bold uppercase tracking-wider text-white flex items-center gap-2">
-                    <?= $svg($ic['user'], 'w-5 h-5 text-emerald-400') ?> 28 PARTICIPANT RECORDS
+                    <?= $svg($ic['star'], 'w-5 h-5 text-emerald-400') ?> RECENT PROJECT EXPERIENCE
                 </h2>
-                <div class="text-xs font-mono text-gray-400 flex items-center gap-2">
-                    Sort by:
-                    <span class="rounded bg-white/5 border border-white/10 px-2 py-1 text-gray-200">Recently Updated</span>
-                </div>
+                <p class="text-xs text-emerald-400 font-mono mt-1">Real project execution. Verified outcomes.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <?php foreach ($participants as $p): ?>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <?php 
+                $recentReviews = array_slice($participants, 0, 7);
+                foreach ($recentReviews as $idx => $p): 
+                ?>
                     <div x-show="filterClass === 'ALL' || filterClass === '<?= $p['class'] ?>'"
-                         class="<?= $card ?> p-4 flex flex-col justify-between space-y-3 hover:border-emerald-400/60 transition-all cursor-pointer group"
+                         class="rounded-xl border border-emerald-500/30 bg-[#040C0A] overflow-hidden shadow-2xl font-mono cursor-pointer hover:border-emerald-400/60 transition-all group flex flex-col"
                          @click="openDetail(<?= htmlspecialchars(json_encode($p), ENT_QUOTES, 'UTF-8') ?>)">
-
-                        <div class="space-y-2.5">
-                            <div class="flex items-start justify-between gap-2">
-                                <span class="rounded px-2 py-0.5 text-[9px] font-mono font-bold border <?= $tierBadgeCls[$p['tier']] ?>">
-                                    <?= $e($p['tier']) ?>
-                                </span>
-                                <span class="text-[8px] font-mono text-gray-500"><?= $e($p['id']) ?></span>
+                         
+                         <!-- Header (Institutional + NINA-R-0001) -->
+                         <div class="flex items-center justify-between p-4 pb-0">
+                             <span class="rounded-full px-3 py-1 text-[9px] font-bold border border-sky-500/40 text-sky-300 uppercase tracking-widest bg-sky-950/40">
+                                 <?= $e($p['tier']) ?>
+                             </span>
+                             <span class="text-[10px] text-gray-500 uppercase tracking-widest">NINA-R-<?= str_pad($idx + 1, 4, '0', STR_PAD_LEFT) ?></span>
+                         </div>
+                         
+                         <!-- Entity Info with Project Image -->
+                         <div class="px-4 py-4 flex items-center gap-4 border-b border-emerald-500/20">
+                            <div class="h-14 w-24 shrink-0 rounded-lg overflow-hidden relative border border-emerald-500/20">
+                                <img src="<?= $basePrefix ?>/1.jpg" class="h-full w-full object-cover" />
                             </div>
-
-                            <div class="flex items-center gap-3">
-                                <?php if (!empty($p['logo'])): ?>
-                                    <div class="h-10 w-10 shrink-0 rounded-lg overflow-hidden border border-white/20 bg-black/60 p-1 flex items-center justify-center shadow-lg">
-                                        <img src="<?= $e($p['logo']) ?>" alt="<?= $e($p['name']) ?>" class="max-h-full max-w-full object-contain" />
-                                    </div>
-                                <?php else: ?>
-                                    <div class="h-10 w-10 shrink-0 rounded-lg border border-emerald-500/30 bg-emerald-950/80 text-emerald-300 flex items-center justify-center font-bold font-mono text-xs shadow-inner">
-                                        <?= strtoupper(substr($p['name'], 0, 2)) ?>
-                                    </div>
-                                <?php endif; ?>
-                                <div>
-                                    <h3 class="text-sm font-extrabold text-white group-hover:text-emerald-300 transition-colors leading-snug">
-                                        <?= $e($p['name']) ?>
-                                    </h3>
-                                    <span class="text-[9px] font-mono text-gray-400 uppercase"><?= $e($p['class']) ?></span>
-                                </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-extrabold text-white tracking-tight leading-none group-hover:text-emerald-400 transition-colors uppercase"><?= $e($p['name']) ?></h3>
+                                <p class="text-[11px] text-sky-200 mt-1.5 uppercase tracking-widest font-bold"><?= $e($p['role']) ?></p>
                             </div>
-
-                            <div class="text-[10px] font-mono text-gray-400">
-                                Cumulative Participation<br />
-                                <strong class="text-emerald-400 text-xs">≥ <?= $e($p['cum']) ?></strong>
+                            <div class="text-emerald-500/50">
+                                <?= $svg($ic['arrow'], 'w-5 h-5') ?>
                             </div>
+                         </div>
+                         
+                         <!-- Project Experience -->
+                         <div class="px-4 py-4 space-y-4">
+                             <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
+                                 <?= $svg($ic['layers'], 'w-4 h-4') ?> EXPERIENCE SCOPE
+                             </div>
+                             
+                             <div class="text-emerald-300 text-[11px] uppercase tracking-widest font-bold pb-2 border-b border-emerald-500/20 leading-relaxed">
+                                 <?= $e($p['review_scope'] ?? 'General Review Scope') ?>
+                             </div>
+                             
+                             <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-[9px] uppercase font-bold border-b border-emerald-500/20 pb-4">
+                                 <div>
+                                     <div class="text-gray-400 tracking-wider">Participant Tier</div>
+                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['tier']) ?></div>
+                                 </div>
+                                 <div>
+                                     <div class="text-gray-400 tracking-wider">Allocation Unit</div>
+                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['unit']) ?> / Unit</div>
+                                 </div>
+                                 
+                                 <div>
+                                     <div class="text-gray-400 tracking-wider">Cumulative Alloc</div>
+                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['cum']) ?></div>
+                                 </div>
+                                 <div>
+                                     <div class="text-gray-400 tracking-wider">Current Project Experience</div>
+                                     <div class="text-white mt-1 text-[11px] font-mono"><?= $e($p['allocations']) ?> Verified Projects</div>
+                                 </div>
+                             </div>
 
-                            <div class="grid grid-cols-1 gap-1 text-[9px] font-mono text-gray-300">
-                                <div class="flex items-center justify-between"><span class="text-emerald-400">Cumulative Participation:</span> <span class="truncate ml-2"><?= $e($p['cum']) ?></span></div>
-                                <div class="flex items-center justify-between"><span class="text-emerald-400">Confirmed Allocations:</span> <span class="truncate ml-2"><?= $e($p['allocations']) ?></span></div>
-                                <div class="flex items-center justify-between"><span class="text-emerald-400">Program:</span> <span class="truncate ml-2"><?= $e($p['program']) ?></span></div>
-                                <?php if (!empty($p['context'])): ?>
-                                    <div class="flex items-center justify-between"><span class="text-emerald-400">Capital Context:</span> <span class="truncate ml-2"><?= $e($p['context']) ?></span></div>
-                                <?php endif; ?>
-                            </div>
+                             <div class="p-4 rounded-xl border border-emerald-500/20 bg-emerald-950/10 text-[11px] text-gray-300 italic leading-relaxed">
+                                 "<?= $e($p['review']) ?>"
+                             </div>
+                         </div>
+                         
+                         <!-- Score -->
+                         <div class="px-4 pb-4">
+                             <?php $stars = $p['stars'] ?? 4.8; ?>
+                             <div class="flex items-end justify-between border-b border-emerald-500/20 pb-3 mb-4">
+                                 <div class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 uppercase tracking-widest">
+                                     <?= $svg($ic['star'], 'w-4 h-4 text-amber-400') ?> EXPERIENCE SCORE
+                                 </div>
+                                 <div class="text-lg font-bold text-emerald-400 leading-none">
+                                     <?= number_format($stars, 1) ?> <span class="text-sm text-emerald-400/50">/ 5</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest mb-3">Review Breakdown</div>
+                             
+                             <div class="grid grid-cols-4 gap-2 text-[8px] text-gray-400 uppercase font-bold border-b border-emerald-500/20 pb-3">
+                                 <div>
+                                     <div>Operational<br/>Visibility</div>
+                                     <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format($stars, 1) ?></div>
+                                 </div>
+                                 <div>
+                                     <div>Documentation</div>
+                                     <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format(min(5, $stars + 0.1), 1) ?></div>
+                                 </div>
+                                 <div>
+                                     <div>Milestone<br/>Clarity</div>
+                                     <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format(max(1, $stars - 0.1), 1) ?></div>
+                                 </div>
+                                 <div>
+                                     <div>Field<br/>Evidence</div>
+                                     <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format($stars, 1) ?></div>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                         <!-- Footer -->
+                         <div class="px-4 pb-4 flex items-center justify-between text-[8px] uppercase font-bold tracking-wider">
+                             <div class="flex items-center gap-1.5 text-gray-400">
+                                 <?= $svg($ic['info'], 'w-3 h-3') ?> Reviewed • Sep 2026
+                             </div>
+                             <div class="flex items-center gap-1.5 text-emerald-400">
+                                 <?= $svg($ic['shield'], 'w-3.5 h-3.5 text-emerald-400') ?> 
+                                 <span class="leading-tight text-right">SIMULATED / ILLUSTRATIVE<br/>PROJECT EXPERIENCE</span>
+                             </div>
+                         </div>
+                         
+                         <?php if ($idx % 2 === 0): ?>
+                         <div class="px-4 pb-4">
+                             <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/20 p-3 flex gap-3">
+                                 <div class="h-16 w-24 shrink-0 rounded-lg relative overflow-hidden group/vid">
+                                     <img src="<?= $basePrefix ?>/1.jpg" class="h-full w-full object-cover" />
+                                     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                         <div class="w-6 h-6 rounded-full bg-emerald-500/80 flex items-center justify-center pl-0.5 shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+                                             <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"/></svg>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="flex-1 space-y-1 pt-1">
+                                     <div class="text-[9px] font-bold text-emerald-400 uppercase tracking-widest">Participant Testimonial</div>
+                                     <div class="text-[8px] text-gray-500 uppercase font-bold">Video · 01:24</div>
+                                     <div class="text-[9px] text-gray-300 italic line-clamp-2">"The transparency and traceability throughout the process gave us confidence in the outcome."</div>
+                                 </div>
+                             </div>
+                         </div>
+                         <?php endif; ?>
 
-                            <div class="rounded-lg bg-white/[0.03] border border-white/10 p-2.5 mt-2">
-                                <p class="text-[11px] text-gray-300 italic leading-relaxed">
-                                    "<?= $e($p['review']) ?>"
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between pt-2 border-t border-white/10 text-[8px] font-mono mt-3">
-                            <span class="text-gray-500 uppercase"><?= $p['is_illustrative'] ? '● ILLUSTRATIVE SCENARIO' : '● SIMULATED PARTICIPANT' ?></span>
-                            <span class="<?= $p['is_illustrative'] ? 'text-gray-500' : 'text-amber-400' ?> font-bold flex items-center gap-1">
-                                <?php if (!$p['is_illustrative']): ?>
-                                    <?= $svg($ic['star'], 'w-3 h-3 fill-amber-400 text-amber-400') ?> <?= $e($p['stars']) ?>
-                                <?php else: ?>
-                                    NO ACTUAL REVIEW
-                                <?php endif; ?>
-                            </span>
-                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -650,211 +761,222 @@ ob_start();
 
         </div> <!-- END SIDE PADDING WRAPPER -->
 
-        <!-- ================= PARTICIPANT RECORD DETAIL MODAL (FULL SPLIT VIEW) ================= -->
+        <!-- ================= PARTICIPANT RECORD DETAIL MODAL (CENTERED) ================= -->
         <div x-show="drawerOpen"
-             x-transition:enter="transition ease-out duration-300"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             x-transition:leave="transition ease-in duration-200"
-             x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0"
-             class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-black/80 backdrop-blur-md"
+             class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md"
              x-cloak>
-
+             
             <!-- Modal Backdrop Area (Click to Close) -->
-            <div class="fixed inset-0" @click="drawerOpen = false"></div>
+            <div class="absolute inset-0" @click="drawerOpen = false"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0"
+                 x-transition:enter-end="opacity-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100"
+                 x-transition:leave-end="opacity-0"></div>
 
-            <!-- Modal Content Container -->
-            <div @click.away="drawerOpen = false"
-                 class="relative z-10 w-full max-w-6xl bg-[#06120F] border border-white/15 rounded-2xl max-h-[92vh] md:h-[90vh] overflow-y-auto md:overflow-hidden flex flex-col md:flex-row shadow-2xl font-mono text-white">
-
-                <!-- LEFT PANEL: Visual Banner, Program Field Photo, and Quick Summary -->
-                <div class="md:w-1/3 shrink-0 relative border-b md:border-b-0 md:border-r border-white/10 bg-[#040C0A] flex flex-col justify-between overflow-hidden">
-                    <img :src="'<?= $basePrefix ?>/' + ((parseInt(selectedParticipant?.id.replace(/[^0-9]/g, '')) % 10) + 1) + '.jpg'" alt="" class="absolute inset-0 h-full w-full object-cover opacity-40 blur-xs" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#06120F] via-[#06120F]/70 to-[#06120F]/50"></div>
-
-                    <div class="relative z-10 p-4 sm:p-6 space-y-4">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                            <div class="flex items-center gap-3 min-w-0">
-                                <template x-if="selectedParticipant && selectedParticipant.logo">
-                                    <div class="h-12 w-12 shrink-0 rounded-lg border border-white/20 bg-black/60 p-1 flex items-center justify-center shadow-lg">
-                                        <img :src="selectedParticipant.logo" :alt="selectedParticipant.name" class="max-h-full max-w-full object-contain" />
-                                    </div>
-                                </template>
-                                <template x-if="selectedParticipant && !selectedParticipant.logo">
-                                    <div class="h-12 w-12 shrink-0 rounded-lg border border-emerald-500/30 bg-emerald-950/60 text-emerald-300 flex items-center justify-center font-bold text-sm"
-                                         x-text="selectedParticipant ? selectedParticipant.name.substring(0, 2).toUpperCase() : ''">
-                                    </div>
-                                </template>
-                                <div class="min-w-0">
-                                    <span class="text-[9px] text-emerald-400 font-bold block uppercase tracking-wider truncate">NINA PARTICIPANT</span>
-                                    <h3 class="text-base font-extrabold text-white leading-tight break-words" x-text="selectedParticipant?.name"></h3>
-                                    <span class="text-[10px] text-gray-400 block truncate" x-text="selectedParticipant?.id"></span>
-                                </div>
-                            </div>
-                            <button @click="drawerOpen = false" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 shrink-0">
-                                <?= $svg($ic['close'], 'w-5 h-5') ?>
-                            </button>
-                        </div>
-
-                        <!-- Active Program Field Photo -->
-                        <div class="rounded-xl border border-white/15 overflow-hidden relative group">
-                            <img :src="'<?= $basePrefix ?>/' + ((parseInt(selectedParticipant?.id.replace(/[^0-9]/g, '')) % 10) + 1) + '.jpg'" alt="" class="h-36 sm:h-44 w-full object-cover" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                            <div class="absolute bottom-3 left-3 right-3 text-[10px]">
-                                <span class="text-emerald-400 font-bold block truncate" x-text="selectedParticipant?.program"></span>
-                                <span class="text-gray-300 text-[9px] block">Verified Production Field Unit</span>
-                            </div>
-                        </div>
-
-                        <!-- Left Panel Quick Summary -->
-                        <div class="space-y-2 text-xs pt-2">
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Class:</span>
-                                <strong class="text-emerald-300 truncate" x-text="selectedParticipant?.class"></strong>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Tier:</span>
-                                <strong class="text-amber-300 truncate" x-text="selectedParticipant?.tier"></strong>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">PO Allocation Unit:</span>
-                                <strong class="text-emerald-400 truncate" x-text="selectedParticipant?.unit"></strong>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Cum. PO Participation:</span>
-                                <strong class="text-white truncate" x-text="selectedParticipant?.cum"></strong>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Confirmed Allocations:</span>
-                                <strong class="text-white truncate" x-text="selectedParticipant?.allocations"></strong>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-white/10 pb-1.5 gap-2">
-                                <span class="text-gray-400 shrink-0">Status:</span>
-                                <strong class="text-gray-500 flex items-center gap-1 shrink-0 text-[10px]" x-show="selectedParticipant?.is_illustrative">
-                                    ILLUSTRATIVE
-                                </strong>
-                            </div>
+            <!-- Modal Container -->
+            <div class="relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-4xl bg-[#020A10] border border-emerald-500/30 rounded-xl max-h-[90vh] overflow-y-auto flex flex-col shadow-2xl font-sans text-white [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                 x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                 x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                 x-transition:leave="transition ease-in duration-200"
+                 x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                 @click.stop>
+                 
+                <!-- HEADER -->
+                <div class="flex items-center justify-between px-6 py-5 border-b border-emerald-500/20 shrink-0 bg-[#031018]">
+                    <div class="flex items-center gap-3">
+                        <button @click="drawerOpen = false" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <div>
+                            <span class="text-xs font-extrabold text-white uppercase tracking-wider block">NINA PARTICIPANT</span>
+                            <span class="text-[10px] text-emerald-400 font-bold block" x-show="selectedParticipant?.is_illustrative">Illustrative Entity Profile</span>
                         </div>
                     </div>
-
-                    <div class="relative z-10 p-4 sm:p-6 border-t border-white/10 text-[9px] text-gray-400 leading-relaxed hidden sm:block">
-                        ★ Verified Review Record • All data simulated for architecture demonstration.
-                    </div>
+                    <button @click="drawerOpen = false" class="text-gray-400 hover:text-white p-2 rounded-lg bg-white/5 border border-white/10 transition-colors">
+                        <?= $svg($ic['close'], 'w-4 h-4') ?>
+                    </button>
                 </div>
 
-                <!-- RIGHT PANEL: Full Detailed Record & Audit Breakdown -->
-                <div class="md:w-2/3 flex flex-col md:h-full md:overflow-y-auto p-4 sm:p-6 space-y-6 bg-[#06120F]">
-
-                    <div class="hidden md:flex items-center justify-between border-b border-white/10 pb-4 shrink-0">
-                        <div>
-                            <span class="text-[10px] text-emerald-400 font-bold block uppercase tracking-widest">PARTICIPANT RECORD DETAIL & AUDIT</span>
-                            <h2 class="text-xl font-extrabold text-white break-words" x-text="selectedParticipant ? selectedParticipant.name : ''"></h2>
-                        </div>
-                        <button @click="drawerOpen = false" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 shrink-0">
-                            <?= $svg($ic['close'], 'w-5 h-5') ?>
-                        </button>
-                    </div>
-
-                <div x-show="selectedParticipant" class="space-y-5">
-                    <template x-if="selectedParticipant?.public_ref">
-                        <div class="rounded-lg bg-amber-500/10 border border-amber-500/30 p-2.5 text-[10px] text-amber-300 flex items-center justify-between">
-                            <span class="font-semibold" x-text="selectedParticipant.public_ref"></span>
-                            <span class="font-bold text-[9px] uppercase px-2 py-0.5 rounded bg-amber-950/60 border border-amber-500/40">SIMULATION ONLY</span>
-                        </div>
-                    </template>
-
-                    <div class="grid grid-cols-2 gap-3 text-xs">
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">Entity Class</span>
-                            <strong class="text-emerald-300 text-sm" x-text="selectedParticipant?.class"></strong>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">Participant Tier</span>
-                            <strong class="text-amber-300 text-sm" x-text="selectedParticipant?.tier"></strong>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">PO Allocation Unit</span>
-                            <strong class="text-emerald-400 text-sm" x-text="selectedParticipant?.unit"></strong>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <span class="text-[9px] text-gray-400 block uppercase">Cumulative PO</span>
-                            <strong class="text-white text-sm" x-text="selectedParticipant?.cum"></strong>
-                        </div>
-                    </div>
-
-                    <!-- PARTICIPATION TRACE -->
-                    <div class="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4 space-y-3">
-                        <h3 class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest border-b border-emerald-500/20 pb-2">Participation Trace</h3>
-                        <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[9px] font-mono font-bold text-gray-400 uppercase">
-                            <span class="text-white">Participant</span> <span class="text-emerald-500">→</span>
-                            <span class="text-white">PO Allocation</span> <span class="text-emerald-500">→</span>
-                            <span class="text-white">Production Program</span> <span class="text-emerald-500">→</span>
-                            <span class="text-white">Project</span> <span class="text-emerald-500">→</span>
-                            <span class="text-white">Batch</span> <span class="text-emerald-500">→</span>
-                            <span class="text-gray-400">Execution</span> <span class="text-emerald-500">→</span>
-                            <span class="text-gray-400">Verification</span> <span class="text-emerald-500">→</span>
-                            <span class="text-gray-400">Output</span> <span class="text-emerald-500">→</span>
-                            <span class="text-gray-400">Delivery</span> <span class="text-emerald-500">→</span>
-                            <span class="text-gray-400">Commercial Settlement</span>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl border border-white/10 bg-black/40 p-4 space-y-3 relative overflow-hidden">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                            <h3 class="text-xs font-bold text-emerald-400 uppercase">
-                                PO Allocation Specifications
-                            </h3>
-                            <span class="text-[9px] text-gray-400 font-mono">FIELD VERIFICATION PHOTO</span>
-                        </div>
-                        <div class="h-28 rounded-lg overflow-hidden relative border border-white/10 group">
-                            <img :src="'<?= $basePrefix ?>/' + ((parseInt(selectedParticipant?.id.replace(/[^0-9]/g, '')) % 10) + 1) + '.jpg'" alt="Field Verification" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                            <div class="absolute bottom-2 left-3 right-3 flex justify-between items-end text-[10px]">
-                                <div>
-                                    <span class="text-emerald-400 font-bold block" x-text="selectedParticipant?.program"></span>
-                                    <span class="text-gray-300 text-[9px]">Verified Production Field Unit</span>
+                <div class="p-6 flex-1 bg-[#020A10]">
+                    <!-- Entity Banner -->
+                    <div class="relative rounded-xl overflow-hidden border border-emerald-500/20 mb-6 bg-black">
+                        <img src="<?= $basePrefix ?>/4.jpg" class="w-full h-32 lg:h-48 object-cover opacity-60 grayscale sepia-[.2] hue-rotate-[150deg]" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020A10] to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-black/50 p-2 lg:p-3 rounded-lg border border-emerald-500/30 backdrop-blur-md">
+                                    <svg class="w-5 h-5 lg:w-8 lg:h-8 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2Z"/>
+                                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2Z"/>
+                                        <path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/>
+                                    </svg>
                                 </div>
-                                <span class="bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 px-2 py-0.5 rounded text-[8px] font-bold uppercase">Active Field</span>
+                                <div>
+                                    <div class="text-xl lg:text-3xl font-extrabold text-white tracking-tight leading-none uppercase" x-text="selectedParticipant?.name"></div>
+                                    <div class="text-[10px] lg:text-xs text-emerald-200 mt-1 uppercase font-bold tracking-widest" x-text="selectedParticipant?.role"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-2 text-[10px] text-gray-300 pt-1">
-                            <div>Production Program: <strong class="text-white block" x-text="selectedParticipant?.program"></strong></div>
-                            <div>PO Allocation Unit: <strong class="text-emerald-400 block" x-text="selectedParticipant?.unit"></strong></div>
+                            <span class="rounded-full px-3 py-1.5 text-[9px] lg:text-[10px] font-bold border border-emerald-500/40 text-emerald-300 uppercase tracking-widest bg-emerald-950/40 self-start lg:self-end" x-text="selectedParticipant?.tier"></span>
                         </div>
                     </div>
 
-                    <div class="rounded-xl border border-emerald-500/30 bg-[#0B1815] p-4 space-y-3">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                            <div>
-                                <h3 class="text-xs font-bold text-white uppercase">Verified Review Record</h3>
-                                <span class="text-[9px] text-gray-400 block">NOT AN INVESTMENT RATING — PARTICIPANT EXPERIENCE ONLY</span>
-                            </div>
-                            <span class="text-amber-400 font-bold flex items-center gap-1 text-xs" x-show="!selectedParticipant?.is_illustrative">
-                                <?= $svg($ic['star'], 'w-4 h-4 fill-amber-400 text-amber-400') ?>
-                                <span x-text="selectedParticipant?.stars"></span> / 5.0
-                            </span>
-                            <span class="text-gray-500 font-bold text-[10px] uppercase" x-show="selectedParticipant?.is_illustrative">
-                                Illustrative Experience Scenario
-                            </span>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- LEFT COLUMN -->
+                        <div class="space-y-6">
+
+                            <!-- 01. ENTITY SUMMARY -->
+                            <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
+                        <div class="bg-emerald-950/20 px-4 py-2 border-b border-emerald-500/20 flex items-center gap-2">
+                            <?= $svg($ic['shield'], 'w-4 h-4 text-emerald-400') ?>
+                            <span class="text-[10px] font-bold text-white uppercase tracking-widest">01. Entity Summary</span>
                         </div>
-                        <div class="text-xs text-gray-200 italic p-3 rounded bg-black/40 border border-white/5" x-text="selectedParticipant?.review"></div>
-                        
-                        <div x-show="selectedParticipant?.scope" class="space-y-1 pt-1">
-                            <span class="text-[9px] text-gray-400 uppercase font-bold block">Review Verification Scope:</span>
-                            <div class="flex flex-wrap gap-1.5">
-                                <template x-for="item in (selectedParticipant?.scope || [])" :key="item">
-                                    <span class="rounded bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 text-[9px] text-emerald-300" x-text="'✓ ' + item"></span>
+                        <div class="p-4 grid grid-cols-2 gap-4 text-[10px] uppercase font-bold font-mono">
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Entity Class</div>
+                                <div class="text-white mt-1" x-text="selectedParticipant?.class"></div>
+                            </div>
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Joined NINA</div>
+                                <div class="text-white mt-1">March 2026</div>
+                            </div>
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Current Tier</div>
+                                <div class="text-white mt-1" x-text="selectedParticipant?.tier"></div>
+                            </div>
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Profile Status</div>
+                                <div class="text-emerald-400 mt-1">Illustrative</div>
+                            </div>
+                            <div class="col-span-2 border-t border-emerald-500/20 pt-3">
+                                <div class="text-gray-500 tracking-wider">Current Allocation Unit</div>
+                                <div class="text-emerald-300 mt-1" x-text="'US$' + (parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02. PARTICIPATION SUMMARY -->
+                    <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
+                        <div class="bg-emerald-950/20 px-4 py-2 border-b border-emerald-500/20 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                            <span class="text-[10px] font-bold text-white uppercase tracking-widest">02. Participation Summary</span>
+                        </div>
+                        <div class="p-4 grid grid-cols-4 gap-3 text-[10px] uppercase font-bold font-mono">
+                            <div class="border border-emerald-500/20 rounded-lg p-2 bg-black/20 text-center flex flex-col items-center justify-center">
+                                <div class="text-lg text-white mb-1">5</div>
+                                <div class="text-[8px] text-gray-500 leading-tight">Total<br/>Projects</div>
+                            </div>
+                            <div class="border border-emerald-500/20 rounded-lg p-2 bg-black/20 text-center flex flex-col items-center justify-center">
+                                <div class="text-lg text-white mb-1">10</div>
+                                <div class="text-[8px] text-gray-500 leading-tight">Total<br/>Units</div>
+                            </div>
+                            <div class="col-span-2 border border-emerald-500/20 rounded-lg p-3 bg-emerald-950/20 flex flex-col items-center justify-center">
+                                <div class="text-gray-400 tracking-wider mb-1">Cumulative Participation</div>
+                                <div class="text-lg text-emerald-300" x-text="'US$' + (10 * parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')">US$2,800,000</div>
+                            </div>
+                            <div class="col-span-4 border border-emerald-500/20 rounded-lg p-3 bg-black/20 flex flex-col items-center justify-center">
+                                <div class="text-gray-400 tracking-wider mb-1">Confirmed Allocations</div>
+                                <div class="text-lg text-white">10</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03. PARTICIPATION ACTIVITY -->
+                    <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
+                        <div class="bg-emerald-950/20 px-4 py-2 border-b border-emerald-500/20 flex items-center gap-2">
+                            <?= $svg($ic['calendar'], 'w-4 h-4 text-emerald-400') ?>
+                            <span class="text-[10px] font-bold text-white uppercase tracking-widest">03. Participation Activity</span>
+                        </div>
+                        <div class="p-4 relative">
+                            <!-- Timeline line -->
+                            <div class="absolute left-[21px] top-6 bottom-6 w-px bg-emerald-500/20"></div>
+                            
+                            <div class="space-y-4">
+                                <template x-for="item in [
+                                    {date: 'Sep 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
+                                    {date: 'Aug 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
+                                    {date: 'Jul 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
+                                    {date: 'May 2026', event: 'Allocation Confirmed', units: '2 Units', amount: 'US$560,000'},
+                                    {date: 'Mar 2026', event: 'Joined NINA', units: '2 Units', amount: 'US$560,000'}
+                                ]">
+                                    <div class="flex items-start gap-4 relative z-10">
+                                        <div class="w-3 h-3 rounded-full bg-[#020A10] border-2 border-emerald-500 flex-shrink-0 mt-0.5"></div>
+                                        <div class="flex-1 flex justify-between items-center text-[10px] font-mono uppercase font-bold">
+                                            <div>
+                                                <div class="text-gray-400" x-text="item.date"></div>
+                                                <div class="text-white mt-0.5" x-text="item.event"></div>
+                                            </div>
+                                            <div class="text-right text-emerald-300" x-text="item.units + ' · ' + 'US$' + (2 * parseInt((selectedParticipant?.unit || '0').replace(/[^0-9]/g, ''))).toLocaleString('en-US')"></div>
+                                        </div>
+                                    </div>
                                 </template>
                             </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT COLUMN -->
+                        <div class="space-y-6">
+
+                            <!-- 04. PROJECT EXPERIENCE -->
+                            <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
+                        <div class="bg-emerald-950/20 px-4 py-2 border-b border-emerald-500/20 flex items-center gap-2">
+                            <?= $svg($ic['star'], 'w-4 h-4 text-emerald-400') ?>
+                            <span class="text-[10px] font-bold text-white uppercase tracking-widest">04. Project Experience</span>
+                        </div>
+                        <div class="p-4 grid grid-cols-2 gap-4 text-[10px] font-mono uppercase font-bold border-b border-emerald-500/20">
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Published Experience Reviews</div>
+                                <div class="text-xl text-white mt-1">2</div>
+                            </div>
+                            <div>
+                                <div class="text-gray-500 tracking-wider">Experience Records</div>
+                                <div class="text-xl text-white mt-1">5</div>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-black/20 text-[9px] text-gray-400 flex items-start gap-2 italic">
+                            <?= $svg($ic['info'] ?? $ic['check'], 'w-3 h-3 text-emerald-500/50 mt-0.5 shrink-0') ?>
+                            <div>Review eligibility based on completed production cycles and commercial settlement. Individual project records are maintained confidentially.</div>
                         </div>
                     </div>
-                </div> <!-- END RIGHT PANEL -->
 
+                    <!-- 05. PARTICIPANT VERIFICATION -->
+                    <div class="rounded-xl border border-emerald-500/20 bg-emerald-950/10 overflow-hidden">
+                        <div class="bg-emerald-950/20 px-4 py-2 border-b border-emerald-500/20 flex items-center gap-2">
+                            <?= $svg($ic['check'], 'w-4 h-4 text-emerald-400') ?>
+                            <span class="text-[10px] font-bold text-white uppercase tracking-widest">05. Participant Verification</span>
+                        </div>
+                        <div class="p-4 space-y-2">
+                            <div class="text-[9px] font-bold text-emerald-500/70 uppercase tracking-widest mb-3">Entity Verification Checklist</div>
+                            <template x-for="check in [
+                                'Entity Profile Submitted',
+                                'Entity Classification Confirmed',
+                                'Participant Tier Verified',
+                                'Active Allocation Record',
+                                'Compliance Validation Active'
+                            ]">
+                                <div class="flex items-center gap-2 text-[10px] font-mono uppercase text-gray-300 font-bold">
+                                    <div class="w-3.5 h-3.5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                        <?= $svg($ic['check'], 'w-2.5 h-2.5') ?>
+                                    </div>
+                                    <span x-text="check"></span>
+                                </div>
+                            </template>
+                        </div>
+                            </div>
+                        </div>
+                    </div> <!-- End Grid -->
+                </div>
+                
+                <div class="p-4 border-t border-emerald-500/20 text-center bg-[#031018]">
+                    <div class="text-[9px] font-bold text-emerald-500/50 uppercase tracking-widest flex items-center justify-center gap-2">
+                        <?= $svg($ic['shield'], 'w-3 h-3') ?> SIMULATED / ILLUSTRATIVE ENTITY PROFILE
+                    </div>
+                </div>
             </div>
-        </div> <!-- END MODAL -->
-    </div> <!-- END RELATIVE Z-10 -->
-</div>
 
 <?php
 $content = ob_get_clean();

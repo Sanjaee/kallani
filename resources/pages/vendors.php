@@ -299,104 +299,91 @@ ob_start();
                 <!-- Production Partner Cards (8 cols) -->
                 <div class="lg:col-span-8 space-y-6">
 
-                    <!-- Partner Card 01 -->
+                    <!-- Vendor Card: Fertilizer -->
                     <div class="<?= $card ?> p-5 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PENDING VERIFICATION</span>
-                                    <span class="text-xs font-mono text-gray-400">ENTITY ID: PT-NINA-PARTNER-001</span>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-emerald-950 flex items-center justify-center border border-emerald-500/40 shrink-0">
+                                    <span class="text-emerald-400 font-extrabold text-xs">AGRO</span>
                                 </div>
-                                <h3 class="text-xl font-extrabold text-white mt-1">DEMO PRODUCTION PARTNER</h3>
-                                <p class="text-xs text-gray-300 font-mono">Role: <strong class="text-white">Production Partner</strong> | Region: <strong class="text-white">North Kalimantan</strong></p>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED SUPPLY PARTNER</span>
+                                        <span class="text-xs font-mono text-gray-400">ID: PT-AGRO-001</span>
+                                    </div>
+                                    <h3 class="text-xl font-extrabold text-white mt-1">PT Agro Nusantara Fertilizer</h3>
+                                    <p class="text-xs text-gray-300 font-mono">Category: <strong class="text-white">Fertilizer & Inputs</strong> | Capacity: <strong class="text-white">500 MT / Month</strong></p>
+                                </div>
                             </div>
-                            <button class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs px-4 py-2 uppercase font-mono shadow shrink-0">
+                            <a href="<?= $basePrefix ?>/vendors/pt-agro-nusantara-fertilizer" class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs px-4 py-2 uppercase font-mono shadow shrink-0 text-center">
                                 VIEW PROFILE
-                            </button>
-                        </div>
-
-                        <!-- Partner Details Grid (08) -->
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white/5 p-3 rounded-lg border border-white/5 text-xs font-mono">
-                            <div>
-                                <div class="text-[9px] text-gray-400">MAPPED CAPACITY</div>
-                                <div class="mt-0.5 text-sm font-bold text-emerald-300">200 HA</div>
-                                <div class="text-[9px] text-gray-500">North Kalimantan</div>
-                            </div>
-                            <div>
-                                <div class="text-[9px] text-gray-400">STANDARD BATCH</div>
-                                <div class="mt-0.5 text-sm font-bold text-white">100 HA</div>
-                                <div class="text-[9px] text-gray-500">NK-001 Mapped</div>
-                            </div>
-                            <div>
-                                <div class="text-[9px] text-gray-400">COMPLETED BATCHES</div>
-                                <div class="mt-0.5 text-sm font-bold text-white">00</div>
-                                <div class="text-[9px] text-gray-500">Historical Record Pending</div>
-                            </div>
-                            <div>
-                                <div class="text-[9px] text-gray-400">REPUTATION STATE</div>
-                                <div class="mt-0.5 text-xs font-bold text-white">0.0 / 5.0</div>
-                                <div class="text-[9px] text-gray-400 font-mono">Unrated (0 Reviews)</div>
-                            </div>
-                        </div>
-
-                        <!-- 10. Partner Verification Matrix Snapshot -->
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between text-xs font-mono">
-                                <span class="font-bold text-gray-300 uppercase">PARTNER VERIFICATION CONTROLS</span>
-                                <a href="<?= $basePrefix ?>/verification" class="text-emerald-400 hover:underline text-[10px]">VIEW VERIFICATION CENTER →</a>
-                            </div>
-
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-[10px] font-mono">
-                                <div class="bg-black/40 p-2 rounded border border-white/5 flex items-center justify-between">
-                                    <span class="text-gray-400">Entity Identity</span>
-                                    <span class="text-amber-300 font-bold">Pending</span>
-                                </div>
-                                <div class="bg-black/40 p-2 rounded border border-white/5 flex items-center justify-between">
-                                    <span class="text-gray-400">Company Docs</span>
-                                    <span class="text-amber-300 font-bold">Pending</span>
-                                </div>
-                                <div class="bg-black/40 p-2 rounded border border-white/5 flex items-center justify-between">
-                                    <span class="text-gray-400">Capacity</span>
-                                    <span class="text-amber-300 font-bold">Pending</span>
-                                </div>
-                                <div class="bg-black/40 p-2 rounded border border-white/5 flex items-center justify-between">
-                                    <span class="text-gray-400">Registered Wallet</span>
-                                    <span class="text-amber-300 font-bold">Pending</span>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- 11 & 12. PROJECT & BATCH HISTORY -->
-                    <div class="<?= $card ?> p-5 space-y-3">
-                        <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
-                            <h4 class="text-xs font-mono font-bold uppercase text-white">BATCH PARTICIPATION & WORK ORDERS</h4>
-                            <span class="text-[10px] font-mono text-gray-400">LINKED BATCH: NK-001</span>
+                    <!-- Vendor Card: Heavy Equipment -->
+                    <div class="<?= $card ?> p-5 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-emerald-950 flex items-center justify-center border border-emerald-500/40 shrink-0">
+                                    <span class="text-emerald-400 font-extrabold text-xs">KHE</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED FLEET PARTNER</span>
+                                        <span class="text-xs font-mono text-gray-400">ID: PT-KHE-002</span>
+                                    </div>
+                                    <h3 class="text-xl font-extrabold text-white mt-1">PT Kalimantan Heavy Equipment</h3>
+                                    <p class="text-xs text-gray-300 font-mono">Category: <strong class="text-white">Heavy Equipment & Machinery</strong> | Fleet: <strong class="text-white">35 Units</strong></p>
+                                </div>
+                            </div>
+                            <a href="<?= $basePrefix ?>/vendors/pt-kalimantan-heavy-equipment" class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs px-4 py-2 uppercase font-mono shadow shrink-0 text-center">
+                                VIEW PROFILE
+                            </a>
                         </div>
+                    </div>
 
-                        <div class="overflow-x-auto text-xs font-mono">
-                            <table class="w-full text-left">
-                                <thead class="bg-white/5 text-gray-400 text-[9px] uppercase">
-                                    <tr>
-                                        <th class="p-2">Batch ID</th>
-                                        <th class="p-2">Project</th>
-                                        <th class="p-2">Area</th>
-                                        <th class="p-2">Role</th>
-                                        <th class="p-2">Work Orders</th>
-                                        <th class="p-2">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-white/5 text-gray-200">
-                                    <tr>
-                                        <td class="p-2 font-bold text-emerald-300">NK-001</td>
-                                        <td class="p-2">North Kalimantan Palm</td>
-                                        <td class="p-2">100 HA</td>
-                                        <td class="p-2">Production Partner</td>
-                                        <td class="p-2 font-bold text-white">01 (WO-NK-001-M1-001)</td>
-                                        <td class="p-2"><span class="text-amber-300 bg-amber-950 px-1.5 py-0.5 rounded text-[9px] font-bold">PENDING</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <!-- Vendor Card: Seed -->
+                    <div class="<?= $card ?> p-5 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-emerald-950 flex items-center justify-center border border-emerald-500/40 shrink-0">
+                                    <span class="text-emerald-400 font-extrabold text-xs">SEED</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED NURSERY PARTNER</span>
+                                        <span class="text-xs font-mono text-gray-400">ID: PT-NSS-003</span>
+                                    </div>
+                                    <h3 class="text-xl font-extrabold text-white mt-1">PT Nusantara Superior Seed</h3>
+                                    <p class="text-xs text-gray-300 font-mono">Category: <strong class="text-white">Seed & Planting Material</strong> | Capacity: <strong class="text-white">150,000 / Month</strong></p>
+                                </div>
+                            </div>
+                            <a href="<?= $basePrefix ?>/vendors/pt-nusantara-superior-seed" class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs px-4 py-2 uppercase font-mono shadow shrink-0 text-center">
+                                VIEW PROFILE
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Vendor Card: Services -->
+                    <div class="<?= $card ?> p-5 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-emerald-950 flex items-center justify-center border border-emerald-500/40 shrink-0">
+                                    <span class="text-emerald-400 font-extrabold text-xs">BFO</span>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED EXECUTION PARTNER</span>
+                                        <span class="text-xs font-mono text-gray-400">ID: PT-BFO-004</span>
+                                    </div>
+                                    <h3 class="text-xl font-extrabold text-white mt-1">PT Borneo Field Operations</h3>
+                                    <p class="text-xs text-gray-300 font-mono">Category: <strong class="text-white">Land Preparation & Services</strong> | Capacity: <strong class="text-white">250 HA / Project</strong></p>
+                                </div>
+                            </div>
+                            <a href="<?= $basePrefix ?>/vendors/pt-borneo-field-operations" class="rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs px-4 py-2 uppercase font-mono shadow shrink-0 text-center">
+                                VIEW PROFILE
+                            </a>
                         </div>
                     </div>
 
