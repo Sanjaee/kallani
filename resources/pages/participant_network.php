@@ -345,6 +345,8 @@ ob_start();
     <div class="relative z-10 space-y-6">
         <section class="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <img src="<?= $basePrefix ?>/1.jpg" alt="Natural forest canopy" class="absolute inset-0 h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-[#050D07]/50"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#050D07]/80 via-transparent to-transparent"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-[#050D07]/92 via-[#050D07]/65 to-[#050D07]/25"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-[#06120F]/90 via-transparent to-transparent"></div>
 
