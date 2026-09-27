@@ -143,7 +143,7 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
             </div>
 
             <!-- Mobile/Tablet Hamburger Toggle Button (Positioned on the Far Right) -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="hidden p-2 rounded-lg bg-[#08150D] border border-emerald-500/30 text-emerald-400 hover:text-white focus:outline-none transition-colors" aria-label="Toggle Navigation">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden block p-2 rounded-lg bg-[#08150D] border border-emerald-500/30 text-emerald-400 hover:text-white focus:outline-none transition-colors" aria-label="Toggle Navigation">
                 <svg x-show="!mobileMenuOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 <svg x-show="mobileMenuOpen" x-cloak class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
