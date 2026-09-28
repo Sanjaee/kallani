@@ -25,7 +25,7 @@ $projects = [
     [
         'id' => 1, 
         'name' => 'North Kalimantan Palm Project',   
-        'company' => 'PT. Kaltara 8',
+        'company' => 'PT. Kaltara Agro Mandiri',
         'listing_id' => 'ID-ML-0001',
         'project_code' => 'PO-KAL-0001',
         'batch_id' => 'NK-001-B001',
@@ -42,7 +42,7 @@ $projects = [
         'modeled_budget' => '1.760.000 usdt',
         'land_status' => 'GIS Boundary Surveyed',
         'seed_status' => 'Certified High Yield',
-        'partner' => 'PT. Kaltara 8 (Mitra Pelaksana)',   
+        'partner' => 'PT. Kaltara Agro Mandiri (Mitra Pelaksana)',   
         'verification' => 82, 
         'verif_label' => 'verified',
         'badge' => 'demo',     

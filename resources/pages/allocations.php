@@ -263,7 +263,7 @@ ob_start();
                             
                             <!-- Planting Operator Info -->
                             <div class="mt-2 flex flex-wrap items-center gap-3 border-t border-white/10 pt-2.5 font-mono text-[10px] sm:gap-4">
-                                <div><span class="text-gray-500">OPERATOR: </span><strong class="text-emerald-300">PT. KALTARA 8</strong></div>
+                                <div><span class="text-gray-500">OPERATOR: </span><strong class="text-emerald-300">PT. Kaltara Agro Mandiri</strong></div>
                                 <div><span class="text-gray-500">TIER: </span><span class="rounded border border-slate-500/30 bg-slate-800/50 px-1.5 py-0.5 font-bold text-slate-300">SILVER</span></div>
                                 <div><span class="text-gray-500">REPUTATION: </span><strong class="text-white">0.0</strong> <span class="text-gray-500">/</span> <strong class="text-amber-300">★ 5.0</strong></div>
                                 <div><span class="text-gray-500">JOINED NINA: </span><strong class="text-white">AUG 2024</strong></div>

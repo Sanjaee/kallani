@@ -125,7 +125,7 @@ ob_start();
                                     <div>
                                         <h3 class="text-sm font-extrabold text-white">NORTH KALIMANTAN PALM &bull; BATCH NK-001</h3>
                                         <div class="mt-0.5 flex items-center gap-2 font-mono text-[10px]">
-                                            <span class="font-bold text-emerald-300">PT. Kaltara 8</span>
+                                            <span class="font-bold text-emerald-300">PT. Kaltara Agro Mandiri</span>
                                             <span class="text-gray-400">ID: ID-ML-0001</span>
                                             <span class="text-gray-500">•</span>
                                             <span class="text-gray-400">No Project: PO-KAL-0001</span>

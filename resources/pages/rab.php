@@ -83,7 +83,7 @@ ob_start();
                     <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-300 pt-1">
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Project: <strong class="text-white">North Kalimantan Palm</strong></span>
                         <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Batch: <strong class="text-white">NK-001</strong></span>
-                        <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Operator: <strong class="text-emerald-300">PT. Kaltara 8</strong></span>
+                        <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Operator: <strong class="text-emerald-300">PT. Kaltara Agro Mandiri</strong></span>
                         <span class="flex items-center gap-1.5 font-mono text-[11px] text-gray-400">ID Listing: <strong class="text-gray-200">ID-ML-0001</strong></span>
                         <span class="flex items-center gap-1.5 font-mono text-[11px] text-gray-400">No Project: <strong class="text-gray-200">PO-KAL-0001</strong></span>
                     </div>
@@ -425,13 +425,13 @@ ob_start();
                                 </div>
                             </div>
 
-                            <!-- Vendor 4: Land Partner Maintenance / PT Kaltara 8 -->
+                            <!-- Vendor 4: Land Partner Maintenance / PT. Kaltara Agro Mandiri -->
                             <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
                                 <div class="flex justify-between items-start">
                                     <span class="text-[9px] text-emerald-400 font-bold uppercase">OPERATIONS & LAND PARTNER</span>
                                     <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01-M04 STAGED</span>
                                 </div>
-                                <div class="font-extrabold text-white text-sm">PT Kaltara 8 (Land Partner)</div>
+                                <div class="font-extrabold text-white text-sm">PT. Kaltara Agro Mandiri (Land Partner)</div>
                                 <div class="text-xs font-bold text-emerald-300">193,600 USDT <span class="text-[9px] text-gray-400 font-normal">(22%)</span></div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>

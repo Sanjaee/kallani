@@ -80,7 +80,7 @@ ob_start();
 
                     <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">North Kalimantan Palm</h1>
                     <div class="mt-2 flex flex-wrap items-center gap-2 font-mono text-xs text-emerald-300">
-                        <span class="rounded border border-emerald-400/40 bg-emerald-500/10 px-2 py-0.5 font-bold">PT. Kaltara 8</span>
+                        <span class="rounded border border-emerald-400/40 bg-emerald-500/10 px-2 py-0.5 font-bold">PT. Kaltara Agro Mandiri</span>
                         <span class="text-gray-400">ID Listing: <strong class="text-white">ID-ML-0001</strong></span>
                         <span class="text-gray-500">•</span>
                         <span class="text-gray-400">No Project: <strong class="text-white">PO-KAL-0001</strong></span>
@@ -116,7 +116,7 @@ ob_start();
                         <div class="grid grid-cols-2 gap-2 text-[10px]">
                             <div class="rounded border border-white/10 bg-white/5 p-2">
                                 <div class="text-[8px] font-bold uppercase text-gray-400">OPERATING ENTITY</div>
-                                <div class="mt-0.5 font-mono font-extrabold text-emerald-300 truncate">PT. Kaltara 8</div>
+                                <div class="mt-0.5 font-mono font-extrabold text-emerald-300 truncate">PT. Kaltara Agro Mandiri</div>
                             </div>
                             <div class="rounded border border-white/10 bg-white/5 p-2">
                                 <div class="text-[8px] font-bold uppercase text-gray-400">LISTING / NO PROJECT</div>
@@ -638,7 +638,7 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 text-[8.5px] rounded bg-[#07110E] p-2 border border-white/10">
-                            <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara 8</span></div>
+                            <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara Agro Mandiri</span></div>
                             <div><span class="block text-gray-400">OPERATOR TIER</span><span class="font-bold text-emerald-300">Silver Tier (100 HA / Batch)</span></div>
                             <div><span class="block text-gray-400">REPUTATION STATE</span><span class="font-bold text-white">0.0 / 5.0 (UNRATED)</span></div>
                             <div><span class="block text-gray-400">REVIEWS & BATCHES</span><span class="font-bold text-white">Reviews: 0 • Completed Batches: 0</span></div>

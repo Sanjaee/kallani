@@ -620,7 +620,7 @@ ob_start();
                         }
                     }
                     $logoUrl = "https://logo.clearbit.com/" . $domain;
-                    $projects = ['KALTARA 8', 'KALTARA 9', 'KALTENG 2', 'SUMUT 1'];
+                    $projects = ['PT. Kaltara Agro Mandiri', 'PT. Banua Palm Mandiri', 'PT. Kahayan Lestari', 'PT. Mahakam Tirta Perdana'];
                     $projName = $projects[$idx % count($projects)];
                     $batchId = 'BATCH-' . str_pad(($idx % 12) + 1, 2, '0', STR_PAD_LEFT);
                 ?>
