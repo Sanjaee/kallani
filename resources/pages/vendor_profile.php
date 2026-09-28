@@ -583,7 +583,7 @@ ob_start();
                         <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
                             <img src="<?= $basePrefix ?>/nursery.jpg" class="w-16 h-16 rounded object-cover shrink-0 grayscale brightness-125">
                             <div class="flex-1 overflow-hidden">
-                                <div class="text-white text-[11px] font-bold truncate">KALTARA 8 - Batch 02</div>
+                                <div class="text-white text-[11px] font-bold truncate">PT. Papua Hutan Lestari - Batch 02</div>
                                 <div class="text-gray-400 text-[9px] mt-0.5">Seedling Supply &bull; 25,000</div>
                                 <div class="flex items-center gap-2 mt-2">
                                     <span class="rounded bg-white/5 px-1.5 py-0.5 text-[8px] font-bold text-gray-300 border border-white/10 uppercase">COMPLETED</span>
@@ -691,7 +691,7 @@ ob_start();
                         <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-emerald-500/30 transition-colors">
                             <img src="<?= $basePrefix ?>/excavator.jpg" class="w-16 h-16 rounded object-cover shrink-0">
                             <div class="flex-1 overflow-hidden">
-                                <div class="text-white text-[11px] font-bold truncate">KALTARA 8 - Batch 01</div>
+                                <div class="text-white text-[11px] font-bold truncate">PT. Mahakam Tirta Perdana - Batch 01</div>
                                 <div class="text-gray-400 text-[9px] mt-0.5">Land Preparation &bull; 2 Excavators</div>
                                 <div class="flex items-center gap-2 mt-2">
                                     <span class="rounded bg-white/5 px-1.5 py-0.5 text-[8px] font-bold text-gray-300 border border-white/10 uppercase">COMPLETED</span>
@@ -737,7 +737,7 @@ ob_start();
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="border border-emerald-500/20 bg-black/40 p-4 rounded-xl font-mono space-y-3">
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest border-b border-white/5 pb-2">KALTARA 8 &bull; Batch 03</div>
+                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest border-b border-white/5 pb-2">PT. Papua Hutan Lestari &bull; Batch 03</div>
                         <div class="text-white text-xs font-bold uppercase"><?= $v['category'] ?></div>
                         <div class="text-emerald-300 text-lg font-bold mt-1"><?= ($v['type'] == 'fertilizer' ? '125 MT' : ($v['type'] == 'equipment' ? '2 Excavators' : ($v['type'] == 'seed' ? '25,000 Seedlings' : '25 HA'))) ?></div>
                         <div class="flex items-center gap-2 pt-2">
@@ -747,7 +747,7 @@ ob_start();
                     </div>
 
                     <div class="border border-emerald-500/20 bg-black/40 p-4 rounded-xl font-mono space-y-3">
-                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest border-b border-white/5 pb-2">KALTARA 8 &bull; Batch 04</div>
+                        <div class="text-[10px] text-gray-400 font-bold uppercase tracking-widest border-b border-white/5 pb-2">PT. Mahakam Tirta Perdana &bull; Batch 04</div>
                         <div class="text-white text-xs font-bold uppercase"><?= $v['category'] ?></div>
                         <div class="text-emerald-300 text-lg font-bold mt-1"><?= ($v['type'] == 'fertilizer' ? '140 MT' : ($v['type'] == 'equipment' ? '3 Excavators' : ($v['type'] == 'seed' ? '14,300 Seedlings' : '25 HA'))) ?></div>
                         <div class="flex items-center gap-2 pt-2">
@@ -775,7 +775,7 @@ ob_start();
                     </div>
 
                     <div class="lg:col-span-4 space-y-3">
-                        <h4 class="text-lg lg:text-xl font-extrabold text-white uppercase leading-none">KALTARA 8 <span class="text-gray-500">&bull; BATCH 02/03</span></h4>
+                        <h4 class="text-lg lg:text-xl font-extrabold text-white uppercase leading-none">PT. Papua Hutan Lestari <span class="text-gray-500">&bull; BATCH 02/03</span></h4>
                         <div class="grid grid-cols-2 gap-y-2.5 text-[9px] uppercase font-bold text-gray-400 pt-2">
                             <div>RAB Category</div><div class="text-white truncate"><?= $v['category'] ?></div>
                             <div>Vendor Scope</div><div class="text-white truncate">Execution / Supply</div>
