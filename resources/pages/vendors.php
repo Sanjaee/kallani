@@ -82,7 +82,7 @@ ob_start();
                     <div class="space-y-2 lg:col-span-6">
                         <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
                             <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">SUPPLY-SIDE NETWORK</span>
-                            <span>19 / PARTNERS & VENDORS MARKETPLACE</span>
+                            <span>19 / VERIFIED PRODUCTION VENDOR NETWORK</span>
                         </div>
 
                         <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">Build Production With Verified Capabilities.</h1>
@@ -402,34 +402,34 @@ ob_start();
                         <div class="space-y-2.5 text-xs font-mono">
                             <div class="p-3 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
                                 <div>
-                                    <div class="font-bold text-gray-300">SILVER TIER</div>
-                                    <div class="text-[10px] text-gray-400">100 HA Standard Capacity</div>
+                                    <div class="font-bold text-gray-300">INPUT SUPPLIER</div>
+                                    <div class="text-[10px] text-gray-400">Fertilizer & Agronomic Inputs</div>
                                 </div>
-                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">100 HA</span>
+                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">MT / Month</span>
                             </div>
 
                             <div class="p-3 rounded-lg bg-emerald-950/60 border border-emerald-500/40 flex items-center justify-between">
                                 <div>
-                                    <div class="font-bold text-emerald-300">GOLD TIER</div>
-                                    <div class="text-[10px] text-emerald-400/80">1,000 HA Standard Capacity</div>
+                                    <div class="font-bold text-emerald-300">NURSERY PARTNER</div>
+                                    <div class="text-[10px] text-emerald-400/80">Seed & Planting Material</div>
                                 </div>
-                                <span class="rounded bg-emerald-500/20 text-emerald-300 px-2 py-0.5 text-[9px] font-bold">1,000 HA</span>
+                                <span class="rounded bg-emerald-500/20 text-emerald-300 px-2 py-0.5 text-[9px] font-bold">Seedlings / Month</span>
                             </div>
 
                             <div class="p-3 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
                                 <div>
-                                    <div class="font-bold text-gray-300">PLATINUM TIER</div>
-                                    <div class="text-[10px] text-gray-400">10,000 HA Capacity</div>
+                                    <div class="font-bold text-gray-300">FLEET OPERATOR</div>
+                                    <div class="text-[10px] text-gray-400">Heavy Equipment & Machinery</div>
                                 </div>
-                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">10,000 HA</span>
+                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">Machine Hours</span>
                             </div>
 
                             <div class="p-3 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
                                 <div>
-                                    <div class="font-bold text-gray-300">INSTITUTIONAL</div>
-                                    <div class="text-[10px] text-gray-400">> 10,000 HA Institutional</div>
+                                    <div class="font-bold text-gray-300">FIELD CONTRACTOR</div>
+                                    <div class="text-[10px] text-gray-400">Land Prep & Field Services</div>
                                 </div>
-                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">>10K HA</span>
+                                <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] text-gray-300">HA Capacity</span>
                             </div>
                         </div>
 
@@ -724,7 +724,7 @@ ob_start();
                             </div>
                             <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
                                 <span class="text-[9px] text-gray-400 block">ON-TIME COMPLETION RATE</span>
-                                <span class="text-lg font-bold text-emerald-300">100% <span class="text-xs text-gray-500 font-normal">(Initial)</span></span>
+                                <span class="text-lg font-bold text-gray-500 text-sm mt-1 block">Performance Data: Insufficient</span>
                             </div>
                             <div class="bg-black/30 p-3 rounded-lg border border-white/5 space-y-1">
                                 <span class="text-[9px] text-gray-400 block">CORRECTION REQUESTS</span>

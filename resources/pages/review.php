@@ -366,7 +366,7 @@ ob_start();
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-black/40 p-4 rounded-xl border border-white/10">
                         <label class="flex items-center gap-3 cursor-pointer text-xs text-gray-300">
                             <input type="checkbox" x-model="lpConfirmed" class="h-4 w-4 rounded border-gray-600 bg-gray-900 text-emerald-500 focus:ring-emerald-400" />
-                            <span>I confirm that this review is based on my actual experience with this batch and is truthful and accurate.</span>
+                            <span>I confirm that this review is an illustrative record for architecture demonstration purposes.</span>
                         </label>
 
                         <div class="flex items-center gap-3 shrink-0 self-end sm:self-auto">
@@ -653,7 +653,7 @@ ob_start();
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-black/40 p-4 rounded-xl border border-white/10">
                         <label class="flex items-center gap-3 cursor-pointer text-xs text-gray-300">
                             <input type="checkbox" x-model="vConfirmed" class="h-4 w-4 rounded border-gray-600 bg-gray-900 text-emerald-500 focus:ring-emerald-400" />
-                            <span>I confirm that this review is based on my actual experience with the vendor and is truthful and accurate.</span>
+                            <span>I confirm that this review is an illustrative record for architecture demonstration purposes.</span>
                         </label>
 
                         <div class="flex items-center gap-3 shrink-0 self-end sm:self-auto">

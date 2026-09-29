@@ -267,15 +267,22 @@ ob_start();
                     </div>
                     <?php endforeach; ?>
 
-                    <div class="<?= $metricBox ?>">
-                        <div class="text-2xl lg:text-3xl font-extrabold text-white font-mono leading-none"><?= number_format($v['score'], 1) ?> <span class="text-sm text-gray-500">/ 5</span></div>
-                        <div class="text-[9px] text-gray-400 uppercase tracking-widest font-bold mt-2">Project Experience</div>
-                    </div>
-                    <div class="border border-emerald-500/40 bg-emerald-950/40 p-3 lg:p-4 rounded-xl flex items-center justify-center flex-col text-center gap-2">
-                        <?= $svg($ic['shield'], 'w-8 h-8 text-emerald-400') ?>
-                        <div>
-                            <div class="text-emerald-300 font-extrabold text-xs uppercase tracking-widest">VERIFIED</div>
-                            <div class="text-emerald-400/70 text-[8px] font-mono uppercase tracking-widest mt-0.5">Performance Record</div>
+                    <div class="<?= $card ?> col-span-2 p-4 flex flex-col md:flex-row items-center justify-between gap-4 border border-emerald-500/30 bg-black/40">
+                        <div class="text-center md:text-left shrink-0 border-b md:border-b-0 md:border-r border-white/10 pb-3 md:pb-0 md:pr-6">
+                            <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1 flex items-center justify-center md:justify-start gap-1">
+                                <?= $svg($ic['star'], 'w-3 h-3 text-amber-400') ?> EXPERIENCE SCORE
+                            </div>
+                            <div class="text-3xl lg:text-4xl font-extrabold text-amber-300 font-mono leading-none mt-1">
+                                <?= number_format($v['score'], 1) ?> <span class="text-lg text-gray-500">/ 5</span>
+                            </div>
+                            <div class="text-[9px] font-mono text-emerald-300 mt-2 font-bold uppercase tracking-wider">Verified Record</div>
+                        </div>
+                        <div class="space-y-1.5 text-[9px] font-mono text-gray-300 flex-1 w-full">
+                            <div class="text-emerald-400 font-bold uppercase mb-2 border-b border-white/10 pb-1 text-[10px]">Operational Experience</div>
+                            <div class="flex justify-between"><span>Completed Projects:</span><span class="font-bold text-white"><?= $v['metrics'][0]['val'] ?></span></div>
+                            <div class="flex justify-between"><span>Completed Batches:</span><span class="font-bold text-white"><?= $v['metrics'][1]['val'] ?></span></div>
+                            <div class="flex justify-between"><span>Total Executed:</span><span class="font-bold text-white"><?= $v['metrics'][2]['val'] ?></span></div>
+                            <div class="flex justify-between"><span>Regions Served:</span><span class="font-bold text-white truncate max-w-[120px]">North & East Kalimantan</span></div>
                         </div>
                     </div>
                 </div>
