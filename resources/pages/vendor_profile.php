@@ -782,7 +782,7 @@ ob_start();
                     </div>
 
                     <div class="lg:col-span-4 space-y-3">
-                        <h4 class="text-lg lg:text-xl font-extrabold text-white uppercase leading-none">PT. Papua Hutan Lestari <span class="text-gray-500">&bull; BATCH 02/03</span></h4>
+                        <h4 class="text-lg lg:text-xl font-extrabold text-white uppercase leading-none">PT. Papua Hutan Lestari <span class="text-gray-500">&bull; BATCH 02</span></h4>
                         <div class="grid grid-cols-2 gap-y-2.5 text-[9px] uppercase font-bold text-gray-400 pt-2">
                             <div>RAB Category</div><div class="text-white truncate"><?= $v['category'] ?></div>
                             <div>Vendor Scope</div><div class="text-white truncate">Execution / Supply</div>

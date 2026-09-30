@@ -135,7 +135,7 @@ ob_start();
                     <span class="<?= $iconBox ?>"><?= $svg($ic['grid']) ?></span>
                     <div>
                         <div class="<?= $metricLbl ?>">TARGET</div>
-                        <div class="text-xl font-extrabold leading-tight text-emerald-300">25%</div>
+                        <div class="text-xl font-extrabold leading-tight text-emerald-300">25/100 HA</div>
                     </div>
                 </div>
 

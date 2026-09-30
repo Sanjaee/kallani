@@ -313,7 +313,7 @@ ob_start();
 
                                 <div class="grid grid-cols-4 gap-1.5 text-[9px] text-center">
                                     <div class="rounded border border-white/10 bg-[#07110E] p-1.5 space-y-1">
-                                        <div class="font-bold text-emerald-300">M01 25%</div>
+                                        <div class="font-bold text-emerald-300">Stage01 25/100</div>
                                         <ul class="text-[7px] text-gray-400 space-y-0.5 text-left pl-1">
                                             <li>&bull; Land</li>
                                             <li>&bull; Prep</li>
@@ -322,7 +322,7 @@ ob_start();
                                         </ul>
                                     </div>
                                     <div class="rounded border border-white/10 bg-[#07110E] p-1.5 space-y-1">
-                                        <div class="font-bold text-white">M02 25%</div>
+                                        <div class="font-bold text-white">Stage02 50/100</div>
                                         <ul class="text-[7px] text-gray-400 space-y-0.5 text-left pl-1">
                                             <li>&bull; Maintenance</li>
                                             <li>&bull; Operations</li>
@@ -330,14 +330,14 @@ ob_start();
                                         </ul>
                                     </div>
                                     <div class="rounded border border-white/10 bg-[#07110E] p-1.5 space-y-1">
-                                        <div class="font-bold text-white">M03 25%</div>
+                                        <div class="font-bold text-white">Stage03 75/100</div>
                                         <ul class="text-[7px] text-gray-400 space-y-0.5 text-left pl-1">
                                             <li>&bull; Maintenance</li>
                                             <li>&bull; Operations</li>
                                         </ul>
                                     </div>
                                     <div class="rounded border border-white/10 bg-[#07110E] p-1.5 space-y-1">
-                                        <div class="font-bold text-white">M04 25%</div>
+                                        <div class="font-bold text-white">Stage04 100/100</div>
                                         <ul class="text-[7px] text-gray-400 space-y-0.5 text-left pl-1">
                                             <li>&bull; Harvest</li>
                                             <li>&bull; Processing</li>
