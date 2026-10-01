@@ -169,8 +169,9 @@ ob_start();
                         <div class="absolute top-3 left-3 flex items-center gap-2">
                             <span class="rounded bg-black/70 px-2 py-0.5 text-[9px] font-mono font-bold text-amber-300 border border-amber-500/30 uppercase">NORTH KALIMANTAN</span>
                         </div>
-                        <div class="absolute bottom-3 left-3">
-                            <span class="rounded bg-emerald-950/90 px-2.5 py-1 text-[10px] font-mono font-extrabold text-emerald-300 border border-emerald-500/40 uppercase">Completed Batch</span>
+                        <div class="absolute bottom-3 left-3 flex flex-col gap-1">
+                            <span class="rounded bg-emerald-950/90 px-2.5 py-1 text-[10px] font-mono font-extrabold text-emerald-300 border border-emerald-500/40 uppercase">Illustrative Historical Performance Record</span>
+                            <span class="rounded bg-gray-900/90 w-fit px-2 py-0.5 text-[9px] font-mono text-gray-300 border border-gray-700/50">NOT THE CURRENT DEMO BATCH</span>
                         </div>
                     </div>
 
@@ -196,11 +197,11 @@ ob_start();
 
                             <!-- Current Reputation Display -->
                             <div class="bg-black/50 border border-white/10 rounded-xl p-3.5 text-right font-mono shrink-0">
-                                <div class="text-[9px] text-gray-400 uppercase tracking-wider">Current Production Reputation</div>
+                                <div class="text-[9px] text-gray-400 uppercase tracking-wider">Historical Production Reputation</div>
                                 <div class="text-xl font-black text-amber-300 mt-0.5 flex items-center justify-end gap-1">
                                     <span class="text-amber-400">★</span> 4.8 <span class="text-xs font-normal text-gray-400">/ 5</span>
                                 </div>
-                                <div class="text-[10px] text-gray-400 mt-0.5">(37 simulated records)</div>
+                                <div class="text-[10px] text-gray-400 mt-0.5">(37 historical records)</div>
                             </div>
                         </div>
 
@@ -411,10 +412,18 @@ ob_start();
                     <div class="<?= $subCard ?> space-y-3 flex flex-col justify-between">
                         <div>
                             <div class="flex items-center gap-3">
-                                <div class="h-9 w-9 rounded-full <?= $colorClass ?> border flex items-center justify-center font-bold shrink-0"><?= $initial ?></div>
+                                <?php $logoUrl = isset($r['logo']) ? $basePrefix . '/logo/' . $r['logo'] : $basePrefix . '/1.jpg'; ?>
+                                <div class="h-9 w-16 rounded overflow-hidden relative border border-emerald-500/20 bg-white flex items-center justify-center p-1 shrink-0">
+                                    <img src="<?= $logoUrl ?>" onerror="this.src='<?= $basePrefix ?>/1.jpg'" class="h-full w-full object-contain" />
+                                </div>
                                 <div class="truncate">
                                     <div class="text-[11px] font-bold text-white truncate" title="<?= $e($r['name']) ?>"><?= $e($r['name']) ?></div>
-                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?> &bull; NK-001 (North Kalimantan)</div>
+                                    <?php
+                                        // Compute a sequential batch ID based on loop index to distinguish from current demo batch
+                                        static $batchCounter = 1;
+                                        $batchId = 'BATCH-' . str_pad($batchCounter++, 2, '0', STR_PAD_LEFT);
+                                    ?>
+                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?> &bull; <?= $batchId ?> (North Kalimantan Palm)</div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5 mt-3 mb-2">

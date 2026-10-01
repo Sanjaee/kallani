@@ -378,10 +378,10 @@ ob_start();
                             <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
                                 <div class="flex justify-between items-start">
                                     <span class="text-[9px] text-emerald-400 font-bold uppercase">FERTILIZER & INPUTS</span>
-                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                    <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT ABC Agro</div>
-                                <div class="text-xs font-bold text-emerald-300">176,000 USDT <span class="text-[9px] text-gray-400 font-normal">(20%)</span></div>
+                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x892A83F912C456789012345678901234567811F4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -395,10 +395,10 @@ ob_start();
                             <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
                                 <div class="flex justify-between items-start">
                                     <span class="text-[9px] text-emerald-400 font-bold uppercase">SEEDLINGS & NURSERY</span>
-                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                    <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT XYZ Seedlings</div>
-                                <div class="text-xs font-bold text-emerald-300">140,800 USDT <span class="text-[9px] text-gray-400 font-normal">(16%)</span></div>
+                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x7A3F9C2B88901234567890123456789012349C2B" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -412,10 +412,10 @@ ob_start();
                             <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
                                 <div class="flex justify-between items-start">
                                     <span class="text-[9px] text-emerald-400 font-bold uppercase">HEAVY MACHINERY & PREP</span>
-                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01 DISBURSEMENT</span>
+                                    <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT KLM Machinery</div>
-                                <div class="text-xs font-bold text-emerald-300">158,400 USDT <span class="text-[9px] text-gray-400 font-normal">(18%)</span></div>
+                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x4D1E8A92C45678901234567890123456789092C4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -429,10 +429,10 @@ ob_start();
                             <div class="rounded-xl border border-emerald-500/30 bg-black/40 p-3.5 space-y-2">
                                 <div class="flex justify-between items-start">
                                     <span class="text-[9px] text-emerald-400 font-bold uppercase">OPERATIONS & LAND PARTNER</span>
-                                    <span class="text-[8px] font-bold text-amber-300 bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/30">M01-M04 STAGED</span>
+                                    <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT. Kaltara Agro Mandiri (Land Partner)</div>
-                                <div class="text-xs font-bold text-emerald-300">193,600 USDT <span class="text-[9px] text-gray-400 font-normal">(22%)</span></div>
+                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x3F7A1B88A15678901234567890123456789088A1" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">

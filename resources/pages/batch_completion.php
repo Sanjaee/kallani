@@ -274,55 +274,55 @@ ob_start();
                     <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
                         <div class="text-[8px] text-gray-400">01 STAGE</div>
                         <div class="font-bold text-white text-[11px]">Production</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
+                        <div class="text-[9px] text-emerald-300 font-bold">IN DEVELOPMENT</div>
                     </div>
 
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
                         <div class="text-[8px] text-gray-400">02 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Harvest</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
-                    </div>
-
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">03 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Weighing</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
-                    </div>
-
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">04 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Processing</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
-                    </div>
-
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">05 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Product</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
-                    </div>
-
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">06 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Delivery</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
-                    </div>
-
-                    <div class="rounded-lg border border-emerald-500/40 bg-emerald-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">07 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Acceptance</div>
-                        <div class="text-[9px] text-emerald-300 font-bold">VERIFIED ✓</div>
+                        <div class="font-bold text-gray-300 text-[11px]">Harvest</div>
+                        <div class="text-[9px] text-gray-400 font-bold">NOT STARTED</div>
                     </div>
 
                     <div class="rounded-lg border border-amber-500/40 bg-amber-950/60 p-2 space-y-1">
-                        <div class="text-[8px] text-gray-400">08 STAGE</div>
-                        <div class="font-bold text-white text-[11px]">Settlement</div>
+                        <div class="text-[8px] text-gray-400">03 STAGE</div>
+                        <div class="font-bold text-white text-[11px]">Weighing</div>
                         <div class="text-[9px] text-amber-300 font-bold">PENDING</div>
+                    </div>
+
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
+                        <div class="text-[8px] text-gray-400">04 STAGE</div>
+                        <div class="font-bold text-gray-300 text-[11px]">Processing</div>
+                        <div class="text-[9px] text-gray-400 font-bold">NOT STARTED</div>
+                    </div>
+
+                    <div class="rounded-lg border border-amber-500/40 bg-amber-950/60 p-2 space-y-1">
+                        <div class="text-[8px] text-gray-400">05 STAGE</div>
+                        <div class="font-bold text-white text-[11px]">Product</div>
+                        <div class="text-[9px] text-amber-300 font-bold">PENDING</div>
+                    </div>
+
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
+                        <div class="text-[8px] text-gray-400">06 STAGE</div>
+                        <div class="font-bold text-gray-300 text-[11px]">Delivery</div>
+                        <div class="text-[9px] text-gray-400 font-bold">NOT AVAILABLE</div>
+                    </div>
+
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
+                        <div class="text-[8px] text-gray-400">07 STAGE</div>
+                        <div class="font-bold text-gray-300 text-[11px]">Acceptance</div>
+                        <div class="text-[9px] text-gray-400 font-bold">NOT AVAILABLE / PENDING</div>
+                    </div>
+
+                    <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
+                        <div class="text-[8px] text-gray-400">08 STAGE</div>
+                        <div class="font-bold text-gray-300 text-[11px]">Settlement</div>
+                        <div class="text-[9px] text-gray-400 font-bold">NOT AVAILABLE</div>
                     </div>
 
                     <div class="rounded-lg border border-white/10 bg-white/5 p-2 space-y-1 opacity-75">
                         <div class="text-[8px] text-gray-400">09 STAGE</div>
                         <div class="font-bold text-gray-300 text-[11px]">Closure</div>
-                        <div class="text-[9px] text-gray-400 font-bold">LOCKED 🔒</div>
+                        <div class="text-[9px] text-gray-400 font-bold">LOCKED</div>
                     </div>
 
                 </div>

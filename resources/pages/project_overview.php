@@ -436,7 +436,7 @@ ob_start();
                 <div class="<?= $card ?> p-5 space-y-4 lg:col-span-6 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="border-b border-white/10 pb-2">
-                            <h3 class="text-sm font-bold text-white">Production Program Structure</h3>
+                            <h3 class="text-sm font-bold text-white">Production Program Structure <span class="ml-2 rounded border border-gray-500/30 bg-gray-900 px-2 py-0.5 text-[8px] font-bold text-gray-400">OPTIONAL / FUTURE MODULE</span></h3>
                             <div class="flex items-center justify-between text-[10px]">
                                 <span class="text-gray-400">Contract Horizon</span>
                                 <span class="font-bold text-emerald-300">20 years</span>

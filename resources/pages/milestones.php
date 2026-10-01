@@ -96,7 +96,7 @@ ob_start();
                         </div>
                         
                         <div class="space-y-2 text-xs">
-                            <div class="flex justify-between text-gray-400"><span class="font-medium">Target</span><span class="font-bold text-emerald-300">25%</span></div>
+                            <div class="flex justify-between text-gray-400"><span class="font-medium">Execution Scope</span><span class="font-bold text-emerald-300">25 / 100 HA</span></div>
                             <div class="flex justify-between text-gray-400"><span class="font-medium">Execution Stage</span><span class="font-bold text-white">Stage 01</span></div>
                         </div>
 
@@ -134,8 +134,8 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['grid']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">TARGET</div>
-                        <div class="text-xl font-extrabold leading-tight text-emerald-300">25/100 HA</div>
+                        <div class="<?= $metricLbl ?>">EXECUTION SCOPE</div>
+                        <div class="text-xl font-extrabold leading-tight text-emerald-300">25 / 100 HA</div>
                     </div>
                 </div>
 
@@ -281,13 +281,13 @@ ob_start();
                                         <div class="text-xs font-extrabold text-white mt-0.5">880,000 USDT</div>
                                     </div>
                                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-2">
-                                        <div class="text-[8px] uppercase text-gray-400">PLANNED EXECUTION</div>
-                                        <div class="text-xs font-extrabold text-emerald-300 mt-0.5">25%</div>
+                                        <div class="text-[8px] uppercase text-gray-400">EXECUTION SCOPE</div>
+                                        <div class="text-xs font-extrabold text-emerald-300 mt-0.5">25 / 100 HA</div>
                                         <div class="text-[7px] italic text-gray-500">*Model calculation only</div>
                                     </div>
                                     <div class="rounded-lg border border-white/10 bg-[#07110E] p-2">
-                                        <div class="text-[8px] uppercase text-gray-400">Illustrative Allocation</div>
-                                        <div class="text-xs font-extrabold text-gray-200 mt-0.5">220,000 USDT</div>
+                                        <div class="text-[8px] uppercase text-gray-400">Execution Stage</div>
+                                        <div class="text-xs font-extrabold text-gray-200 mt-0.5">Stage 01</div>
                                     </div>
                                 </div>
 

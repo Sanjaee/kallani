@@ -396,7 +396,7 @@ ob_start();
 
                 <div class="p-3 rounded-xl bg-black/50 border border-emerald-500/30 text-[11px] font-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div>
-                        <strong class="text-emerald-300">EXECUTABLE BATCH STRUCTURE:</strong> <span class="text-white">10 &times; 100 HA (Batches NK-001 to NK-010)</span>
+                        <strong class="text-emerald-300">EXECUTABLE BATCH STRUCTURE:</strong> <span class="text-white">10 &times; 100 HA (Batches NK-001&ndash;NK-002 + SK-001&ndash;SK-008)</span>
                     </div>
                     <span class="text-[10px] text-gray-400 italic">Actual batch assignment executed upon verified capacity</span>
                 </div>
@@ -619,7 +619,7 @@ ob_start();
                             <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
                                 <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-emerald-950/95 border border-emerald-400/80 text-emerald-300 font-bold text-[8px] sm:text-[9px] lg:text-[10px] shadow-lg shadow-emerald-500/20 backdrop-blur-sm whitespace-nowrap">
                                     <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                                    <span>Commercial Settlement &check;</span>
+                                    <span>Commercial Settlement</span>
                                     <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/50" aria-hidden="true">15</span>
                                 </li>
                                 <li class="hidden sm:inline text-emerald-500 text-[10px]" aria-hidden="true">&rarr;</li>

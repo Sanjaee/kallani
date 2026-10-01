@@ -267,7 +267,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-white">V01</td>
                                         <td class="py-2.5 px-3 text-gray-400">2026-06-08</td>
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">0x3f7a1b...88a1</td>
-                                        <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">AVAILABLE</span></td>
+                                        <td class="py-2.5 px-3"><span class="rounded bg-gray-900 px-2 py-0.5 text-[8px] font-bold text-gray-400 border border-gray-700/30">SIMULATED / ILLUSTRATIVE OFFTAKE DOCUMENT</span></td>
                                         <td class="py-2.5 px-3"><a href="#" class="text-emerald-300 font-bold hover:underline">Download &rsaquo;</a></td>
                                     </tr>
 
