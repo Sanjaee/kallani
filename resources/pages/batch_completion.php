@@ -199,7 +199,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Production</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">IN DEVELOPMENT</span>
                         </div>
 
                         <!-- Step 2: Harvest -->
@@ -207,7 +207,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Harvest</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">NOT STARTED</span>
                         </div>
 
                         <!-- Step 3: Weighing -->
@@ -215,7 +215,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Weighing</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">PENDING</span>
                         </div>
 
                         <!-- Step 4: Processing -->
@@ -223,7 +223,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Processing</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">NOT STARTED</span>
                         </div>
 
                         <!-- Step 5: Product -->
@@ -231,7 +231,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Product</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">PENDING</span>
                         </div>
 
                         <!-- Step 6: Delivery -->
@@ -239,7 +239,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-emerald-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Delivery</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">NOT AVAILABLE</span>
                         </div>
 
                         <!-- Step 7: Acceptance -->
@@ -247,7 +247,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-gradient-to-r from-emerald-500 to-amber-500 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-emerald-500 text-black flex items-center justify-center font-bold text-[10px] shadow-md shadow-emerald-950 z-10">✓</div>
                             <span class="font-bold text-white mt-1.5">Acceptance</span>
-                            <span class="text-[8px] text-emerald-300">Verified</span>
+                            <span class="text-[8px] text-emerald-300">NOT AVAILABLE / PENDING</span>
                         </div>
 
                         <!-- Step 8: Settlement -->
@@ -255,7 +255,7 @@ ob_start();
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
                             <div class="h-6 w-6 rounded-full bg-amber-500 text-black flex items-center justify-center font-bold text-[10px] ring-4 ring-amber-500/20 shadow-md z-10">●</div>
                             <span class="font-bold text-amber-300 mt-1.5">Settlement</span>
-                            <span class="text-[8px] text-amber-300">Pending</span>
+                            <span class="text-[8px] text-amber-300">NOT AVAILABLE</span>
                         </div>
 
                         <!-- Step 9: Batch Closure -->
@@ -344,13 +344,13 @@ ob_start();
                     <div class="space-y-1.5 text-xs font-mono">
                         <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Batch ID</span><span class="text-white font-bold">NK-001</span></div>
                         <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Production Area</span><span class="text-white">100 HA</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Harvest Record</span><span class="text-emerald-300">HARV-NK-001-001</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Weighing Record</span><span class="text-emerald-300">WGH-NK-001-001</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Processing Record</span><span class="text-emerald-300">PROC-NK-001-001</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Product Record</span><span class="text-emerald-300">PROD-NK-001-001</span></div>
-                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Delivery Record</span><span class="text-emerald-300">DEL-NK-001-001</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Harvest Record</span><span class="text-[9px] text-emerald-300">SIMULATED RECORD TEMPLATE — NOT GENERATED</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Weighing Record</span><span class="text-[9px] text-emerald-300">SIMULATED RECORD TEMPLATE — NOT GENERATED</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Processing Record</span><span class="text-[9px] text-emerald-300">SIMULATED RECORD TEMPLATE — NOT GENERATED</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Product Record</span><span class="text-[9px] text-emerald-300">SIMULATED RECORD TEMPLATE — NOT GENERATED</span></div>
+                        <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Delivery Record</span><span class="text-[9px] text-emerald-300">SIMULATED RECORD TEMPLATE — NOT GENERATED</span></div>
                         <div class="flex justify-between border-b border-white/5 py-1"><span class="text-gray-400">Buyer Requirement</span><span class="text-white font-bold">DR-2026-001</span></div>
-                        <div class="flex justify-between py-1"><span class="text-gray-400">Commercial Status</span><span class="text-emerald-300 font-bold">ACCEPTED / DEMO</span></div>
+                        <div class="flex justify-between py-1"><span class="text-gray-400">Commercial Status</span><span class="text-[9px] text-emerald-300 font-bold">NOT AVAILABLE</span></div>
                     </div>
 
                     <a href="<?= $basePrefix ?>/commercial-output" class="inline-flex items-center gap-1.5 rounded bg-white/5 border border-white/10 px-3 py-1.5 text-[10px] font-mono font-bold text-gray-300 hover:bg-white/10 transition">

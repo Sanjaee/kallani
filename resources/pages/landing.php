@@ -618,7 +618,7 @@ ob_start();
                             <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 ring-2 sm:ring-4 ring-emerald-400/25 shadow-[0_0_14px_rgba(52,211,153,0.6)]" aria-hidden="true"></span>
                             <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
                                 <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-emerald-950/95 border border-emerald-400/80 text-emerald-300 font-bold text-[8px] sm:text-[9px] lg:text-[10px] shadow-lg shadow-emerald-500/20 backdrop-blur-sm whitespace-nowrap">
-                                    <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+
                                     <span>Commercial Settlement</span>
                                     <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/50" aria-hidden="true">15</span>
                                 </li>

@@ -472,7 +472,7 @@ ob_start();
                                  <div>
                                      <div class="text-gray-400 tracking-wider">Current Project Experience</div>
                                      <div class="text-emerald-300 mt-1 text-[11px] font-extrabold font-sans uppercase tracking-widest"><?= $projName ?></div>
-                                     <div class="text-gray-400 mt-0.5 text-[10px] font-mono"><?= $batchId ?></div>
+                                     <div class="text-gray-400 mt-0.5 text-[10px] font-mono">Illustrative Historical Batch <?= $batchId ?></div>
                                  </div>
                              </div>
 

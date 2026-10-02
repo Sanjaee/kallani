@@ -404,13 +404,6 @@ ob_start();
                     </div>
 
                     <div class="bg-white/5 p-3 rounded-lg border border-emerald-500/30 space-y-1">
-                        <div class="text-[9px] text-emerald-400 font-bold">BATCH NK-003</div>
-                        <div class="font-bold text-white">100 HA</div>
-                        <div class="text-[9px] text-gray-400">North Kalimantan</div>
-                        <span class="inline-block text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1">MAPPED</span>
-                    </div>
-
-                    <div class="bg-white/5 p-3 rounded-lg border border-emerald-500/30 space-y-1">
                         <div class="text-[9px] text-emerald-400 font-bold">BATCH SK-001</div>
                         <div class="font-bold text-white">100 HA</div>
                         <div class="text-[9px] text-gray-400">South Kalimantan</div>
@@ -425,8 +418,8 @@ ob_start();
                     </div>
 
                     <div class="bg-black/40 p-3 rounded-lg border border-white/10 flex flex-col justify-center items-center text-center">
-                        <div class="font-bold text-gray-300 text-sm">+5 Batches</div>
-                        <div class="text-[9px] text-gray-500">SK-003 to SK-007</div>
+                        <div class="font-bold text-gray-300 text-sm">+6 Batches</div>
+                        <div class="text-[9px] text-gray-500">SK-003 to SK-008</div>
                     </div>
                 </div>
 

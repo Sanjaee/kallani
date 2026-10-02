@@ -381,7 +381,10 @@ ob_start();
                                     <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT ABC Agro</div>
-                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
+                                <div class="text-xs font-bold text-emerald-300">
+                                    SIMULATED PLANNED ALLOCATION
+                                    <div class="text-[8px] text-gray-400 mt-0.5">NOT RELEASED — ALLOCATED / COMMITTED / EXECUTED / VERIFIED = 0</div>
+                                </div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x892A83F912C456789012345678901234567811F4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -398,7 +401,10 @@ ob_start();
                                     <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT XYZ Seedlings</div>
-                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
+                                <div class="text-xs font-bold text-emerald-300">
+                                    SIMULATED PLANNED ALLOCATION
+                                    <div class="text-[8px] text-gray-400 mt-0.5">NOT RELEASED — ALLOCATED / COMMITTED / EXECUTED / VERIFIED = 0</div>
+                                </div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x7A3F9C2B88901234567890123456789012349C2B" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -415,7 +421,10 @@ ob_start();
                                     <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT KLM Machinery</div>
-                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
+                                <div class="text-xs font-bold text-emerald-300">
+                                    SIMULATED PLANNED ALLOCATION
+                                    <div class="text-[8px] text-gray-400 mt-0.5">NOT RELEASED — ALLOCATED / COMMITTED / EXECUTED / VERIFIED = 0</div>
+                                </div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x4D1E8A92C45678901234567890123456789092C4" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -432,7 +441,10 @@ ob_start();
                                     <span class="text-[8px] font-bold text-gray-300 bg-gray-800 px-1.5 py-0.5 rounded border border-gray-600">NOT RELEASED</span>
                                 </div>
                                 <div class="font-extrabold text-white text-sm">PT. Kaltara Agro Mandiri (Land Partner)</div>
-                                <div class="text-xs font-bold text-emerald-300">ILLUSTRATIVE PLANNED RAB ALLOCATION</div>
+                                <div class="text-xs font-bold text-emerald-300">
+                                    SIMULATED PLANNED ALLOCATION
+                                    <div class="text-[8px] text-gray-400 mt-0.5">NOT RELEASED — ALLOCATED / COMMITTED / EXECUTED / VERIFIED = 0</div>
+                                </div>
                                 <div class="text-[9px] text-gray-400 truncate pt-1 border-t border-white/5">
                                     <span class="block text-gray-500">REGISTERED WALLET:</span>
                                     <a href="https://testnet.bscscan.com/address/0x3F7A1B88A15678901234567890123456789088A1" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline font-semibold flex items-center gap-1">
@@ -650,12 +662,12 @@ ob_start();
                                                 <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
                                             </span>
                                             <div>
-                                                <div class="font-bold text-white">WORK ORDER CREATED</div>
-                                                <div class="text-[8px] text-gray-500">2026-06-12</div>
+                                                <div class="font-bold text-white">WORK ORDER RECORD PREPARED</div>
+                                                <div class="text-[8px] text-amber-500 font-bold uppercase">NOT AUTHORIZED / NOT EXECUTED</div>
                                             </div>
                                         </div>
                                         <div class="text-right text-[8px] text-gray-400">
-                                            <div>2026-06-12</div>
+                                            <div>PENDING</div>
                                             <div class="text-gray-500">NINA Operations</div>
                                         </div>
                                     </div>

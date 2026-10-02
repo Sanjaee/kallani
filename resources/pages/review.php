@@ -423,7 +423,7 @@ ob_start();
                                         static $batchCounter = 1;
                                         $batchId = 'BATCH-' . str_pad($batchCounter++, 2, '0', STR_PAD_LEFT);
                                     ?>
-                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?> &bull; <?= $batchId ?> (North Kalimantan Palm)</div>
+                                    <div class="text-[9px] text-gray-400">ID: <?= $e($r['id']) ?> &bull; Illustrative Historical Batch <?= $batchId ?></div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between text-xs border-t border-b border-white/5 py-1.5 mt-3 mb-2">

@@ -849,7 +849,7 @@ ob_start();
                     <div>
                         <div class="flex items-center justify-between border-b border-white/10 pb-3">
                             <h3 class="text-xs font-mono font-bold uppercase text-white">20 / END-TO-END SETTLEMENT TRACE</h3>
-                            <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-mono text-emerald-300 border border-emerald-500/30">IMMUTABLE</span>
+                            <span class="rounded bg-emerald-950 px-2 py-0.5 text-[9px] font-mono text-emerald-300 border border-emerald-500/30">TRACEABLE COMMERCIAL EVENT CHAIN</span>
                         </div>
 
                         <div class="flex flex-wrap items-center gap-2 pt-3 text-[10px] font-mono">
