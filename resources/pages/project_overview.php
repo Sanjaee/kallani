@@ -639,7 +639,7 @@ ob_start();
 
                         <div class="space-y-1.5 text-[8.5px] rounded bg-[#07110E] p-2 border border-white/10">
                             <div><span class="text-gray-400 block">ENTITY (PROJECT EXECUTOR)</span><span class="font-bold text-white">PT. Kaltara Agro Mandiri</span></div>
-                            <div><span class="block text-gray-400">OPERATOR TIER</span><span class="font-bold text-emerald-300">Silver Tier (100 HA / Batch)</span></div>
+                            <div><span class="block text-gray-400">LAND / PRODUCTION PARTNER TIER</span><span class="font-bold text-emerald-300">Silver Tier (100 HA / Batch)</span></div>
                             <div><span class="block text-gray-400">REPUTATION STATE</span><span class="font-bold text-white">0.0 / 5.0 (UNRATED)</span></div>
                             <div><span class="block text-gray-400">REVIEWS & BATCHES</span><span class="font-bold text-white">Reviews: 0 • Completed Batches: 0</span></div>
                             <div><span class="text-gray-400 block">JOINED NINA</span><span class="font-bold text-slate-300">August 2024</span></div>

@@ -742,12 +742,12 @@ ob_start();
                                     <span class="h-2 w-2 rounded-full bg-slate-400"></span>
                                     <span>Reputation State: <strong class="text-white">0.0 / 5.0 (UNRATED)</strong></span>
                                 </div>
-                                <span class="font-bold text-emerald-400">Silver Tier (100 HA / Batch)</span>
+                                <span class="text-[9px] text-gray-400 uppercase mr-2">Production Partner Capacity Tier:</span> <span class="font-bold text-emerald-400">Silver Tier (100 HA / Batch)</span>
                             </div>
                             <div class="flex items-center justify-between border-t border-white/10 pt-1.5 text-[9px] text-gray-400">
                                 <span>Reviews: <strong class="text-white">0</strong></span>
                                 <span>Completed Batches: <strong class="text-white">0</strong></span>
-                                <span>Tier Progression: <strong class="text-emerald-300">Silver &rarr; Gold (1,000 HA) &rarr; Platinum (10,000 HA)</strong></span>
+                                <span>Production Partner Capacity Tier Progression: <strong class="text-emerald-300">Silver &rarr; Gold (1,000 HA) &rarr; Platinum (10,000 HA)</strong></span>
                             </div>
                         </div>
                     </div>
