@@ -399,40 +399,66 @@ ob_start();
                         <a href="<?= $basePrefix ?>/batches" class="text-[10px] font-mono text-emerald-400 hover:underline">10 BATCHES →</a>
                     </div>
 
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs font-mono">
-                        <div class="bg-white/5 p-2.5 rounded-lg border border-emerald-500/30">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 text-xs font-mono">
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
                             <div class="text-[9px] text-emerald-400 font-bold">NK-001</div>
-                            <div class="font-bold text-white">100 HA</div>
-                            <div class="text-[9px] text-gray-400">North Kalimantan</div>
-                            <span class="text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">North Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
                         </div>
-                        <div class="bg-white/5 p-2.5 rounded-lg border border-emerald-500/30">
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
                             <div class="text-[9px] text-emerald-400 font-bold">NK-002</div>
-                            <div class="font-bold text-white">100 HA</div>
-                            <div class="text-[9px] text-gray-400">North Kalimantan</div>
-                            <span class="text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">North Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
                         </div>
-                        <div class="bg-white/5 p-2.5 rounded-lg border border-emerald-500/30">
-                            <div class="text-[9px] text-emerald-400 font-bold">NK-003</div>
-                            <div class="font-bold text-white">100 HA</div>
-                            <div class="text-[9px] text-gray-400">North Kalimantan</div>
-                            <span class="text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
-                        </div>
-                        <div class="bg-white/5 p-2.5 rounded-lg border border-emerald-500/30">
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
                             <div class="text-[9px] text-emerald-400 font-bold">SK-001</div>
-                            <div class="font-bold text-white">100 HA</div>
-                            <div class="text-[9px] text-gray-400">South Kalimantan</div>
-                            <span class="text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
                         </div>
-                        <div class="bg-white/5 p-2.5 rounded-lg border border-emerald-500/30">
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
                             <div class="text-[9px] text-emerald-400 font-bold">SK-002</div>
-                            <div class="font-bold text-white">100 HA</div>
-                            <div class="text-[9px] text-gray-400">South Kalimantan</div>
-                            <span class="text-[8px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
                         </div>
-                        <div class="bg-black/40 p-2.5 rounded-lg border border-white/10 flex flex-col items-center justify-center text-center">
-                            <span class="font-bold text-gray-300 text-xs">+5 Batches</span>
-                            <span class="text-[8px] text-gray-500">SK-003 to SK-007</span>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-003</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-004</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-005</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-006</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-007</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-lg border border-emerald-500/30">
+                            <div class="text-[9px] text-emerald-400 font-bold">SK-008</div>
+                            <div class="font-bold text-white text-[11px]">100 HA</div>
+                            <div class="text-[8px] text-gray-400 truncate">South Kalimantan</div>
+                            <span class="text-[7.5px] text-emerald-300 bg-emerald-950 px-1 py-0.2 rounded mt-1 inline-block">MAPPED</span>
                         </div>
                     </div>
                 </div>

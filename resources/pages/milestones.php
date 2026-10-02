@@ -672,9 +672,9 @@ ob_start();
                                         <div class="text-[9px] text-gray-400">2026-04-12 10:30 | System</div>
                                     </div>
                                     <div class="relative">
-                                        <span class="absolute -left-6 top-[2px] h-4 w-4 rounded-full border border-emerald-400/60 bg-[#07110E] flex items-center justify-center text-[9px] text-emerald-300 font-bold">🎯</span>
-                                        <div class="font-extrabold uppercase text-white">WORK ORDER CREATED</div>
-                                        <div class="text-[9px] text-gray-400">2026-04-12 11:00 | System</div>
+                                        <span class="absolute -left-6 top-[2px] h-4 w-4 rounded-full border border-amber-400/60 bg-[#07110E] flex items-center justify-center text-[9px] text-amber-300 font-bold">🎯</span>
+                                        <div class="font-extrabold uppercase text-white">WORK ORDER RECORD PREPARED</div>
+                                        <div class="text-[9px] text-amber-400 font-bold uppercase">NOT AUTHORIZED / NOT EXECUTED</div>
                                     </div>
 
                                     <div class="text-[9px] text-gray-400 italic pt-1">&hellip; and 5 more events</div>
