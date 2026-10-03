@@ -302,7 +302,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">AUD-2026-0010</td>
                                         <td class="py-2.5 px-3 font-semibold text-white">Demo Production Partner</td>
                                         <td class="py-2.5 px-3 text-emerald-300">07 Vendor & Partner</td>
-                                        <td class="py-2.5 px-3 text-gray-200">Partner Entity PT-NINA-PARTNER-001 Linked to RAB Category 02</td>
+                                        <td class="py-2.5 px-3 text-gray-200">Partner Entity PT-NINA-PARTNER-001: DEMO VENDOR REFERENCE LINKED &mdash; NOT ASSIGNED</td>
                                         <td class="py-2.5 px-3 font-mono text-gray-400">PARTNER-001</td>
                                         <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">RECORDED</span></td>
                                     </tr>
@@ -399,7 +399,7 @@ ob_start();
                 <div class="flex items-center gap-4">
                     <span class="<?= $iconBox ?> h-12 w-12 text-emerald-300"><?= $svg($ic['clock'], 'w-6 h-6') ?></span>
                     <div>
-                        <h3 class="text-base font-extrabold text-white">Every Action Creates a Permanent Record.</h3>
+                        <h3 class="text-base font-extrabold text-white">Every Action Creates a Simulated Persistent Audit Record.</h3>
                         <p class="text-xs text-gray-300 mt-0.5">NINA records every allocation, work order, verification, and settlement event into an auditable ledger.</p>
                     </div>
                 </div>

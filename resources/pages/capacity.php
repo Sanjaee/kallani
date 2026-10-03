@@ -162,7 +162,7 @@ ob_start();
                     <div>
                         <div class="<?= $metricLbl ?>">Production Batches</div>
                         <div class="text-2xl font-extrabold leading-tight text-white">10</div>
-                        <div class="text-[10px] text-gray-400">100 ha / batch</div>
+                        <div class="text-[10px] text-gray-400">NK-001/002 + SK-001&ndash;008</div>
                     </div>
                 </div>
 
