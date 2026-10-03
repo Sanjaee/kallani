@@ -744,7 +744,7 @@ ob_start();
                     </div>
                     <div class="p-4 rounded-xl bg-emerald-950 border border-emerald-400 space-y-1.5 flex flex-col justify-center min-h-[90px]">
                         <span class="text-white font-extrabold text-xs sm:text-sm block uppercase">AUDIT TRAIL</span>
-                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Permanent Record</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Simulated Persistent Audit Record</span>
                     </div>
                 </div>
 
