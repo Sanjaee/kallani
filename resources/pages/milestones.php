@@ -429,9 +429,9 @@ ob_start();
                                         <span class="absolute top-1.5 left-1.5 rounded bg-black/80 px-2 py-0.5 text-[8px] text-emerald-300 font-bold border border-white/10">DEMO IMAGE</span>
                                     </div>
                                     <div class="text-[10px] space-y-0.5">
-                                        <div class="font-bold text-white">FIELD UPDATE #001 &bull; Land Preparation</div>
+                                        <div class="font-bold text-white">SIMULATED FIELD EVIDENCE &mdash; NOT CURRENT EXECUTION</div>
                                         <div class="text-gray-400">North Kalimantan &bull; 2026-04-12</div>
-                                        <div class="text-amber-300 font-bold">Status: ● IN PROGRESS</div>
+                                        <div class="text-gray-500 font-bold">Status: ● PENDING</div>
                                     </div>
                                 </div>
                             </div>

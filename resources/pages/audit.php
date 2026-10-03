@@ -147,8 +147,8 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['grid']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">STAGES COVERED</div>
-                        <div class="text-lg font-extrabold leading-tight text-emerald-300">12 / 12</div>
+                        <div class="<?= $metricLbl ?>">LIFECYCLE SCHEMA</div>
+                        <div class="text-lg font-extrabold leading-tight text-emerald-300">12 / 12 STAGES</div>
                         <div class="text-[8px] text-gray-400">Full Lifecycle</div>
                     </div>
                 </div>
@@ -218,7 +218,7 @@ ob_start();
                     <section id="audit-log-table" class="<?= $card ?> p-5 space-y-4">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
                             <div>
-                                <div class="text-[8px] font-bold uppercase tracking-wider text-emerald-300">02 / IMMUTABLE LOG</div>
+                                <div class="text-[8px] font-bold uppercase tracking-wider text-emerald-300">02 / SIMULATED EVENT LEDGER</div>
                                 <h2 class="text-base font-bold text-white">Chronological System Event Ledger</h2>
                                 <p class="text-xs text-gray-300">Every operational action generates a timestamped, actor-attributed event log.</p>
                             </div>

@@ -608,14 +608,14 @@ ob_start();
                         <div class="flex items-center gap-2 text-emerald-300">
                             <span>✓</span> <span>1. Production Requirement Defined</span>
                         </div>
-                        <div class="flex items-center gap-2 text-emerald-300">
-                            <span>✓</span> <span>2. RAB Approved (RAB-NK-001-V01)</span>
-                        </div>
-                        <div class="flex items-center gap-2 text-emerald-300">
-                            <span>✓</span> <span>3. Vendor Capability Match</span>
-                        </div>
                         <div class="flex items-center gap-2 text-amber-300 font-bold">
-                            <span>●</span> <span>4. Assignment Request & WO Authorization</span>
+                            <span>●</span> <span>2. RAB Prepared &mdash; Pending Approval</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 font-normal">
+                            <span>○</span> <span>3. Vendor Capability Match</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 font-normal">
+                            <span>○</span> <span>4. Assignment Request & WO Authorization</span>
                         </div>
                         <div class="flex items-center gap-2 text-gray-500">
                             <span>○</span> <span>5. Field Execution & Evidence Submission</span>

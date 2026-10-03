@@ -908,8 +908,8 @@ ob_start();
                         <div class="p-1 rounded bg-white/5">5. DELIVERY CREATED (PENDING)</div>
                         <div class="p-1 rounded bg-white/5">6. BUYER RECEIVED (PENDING)</div>
                         <div class="p-1 rounded bg-white/5">7. QUALITY ACCEPTED (PENDING)</div>
-                        <div class="p-1 rounded bg-white/5">8. COMMERCIAL SETTLEMENT APPROVED</div>
-                        <div class="p-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/30 font-bold">9. SETTLEMENT EXECUTED & COMPLETED</div>
+                        <div class="p-1 rounded bg-white/5">8. COMMERCIAL SETTLEMENT APPROVAL (PENDING)</div>
+                        <div class="p-1 rounded bg-white/5">9. SETTLEMENT EXECUTION & COMPLETION (NOT AVAILABLE)</div>
                     </div>
                 </div>
 

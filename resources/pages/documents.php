@@ -99,7 +99,7 @@ ob_start();
                             <div>
                                 <div class="flex items-center gap-2">
                                     <h2 class="text-lg font-black text-white">NORTH KALIMANTAN DOCUMENT VAULT</h2>
-                                    <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">100% HASHED</span>
+                                    <span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">SIMULATED HASH INDEX</span>
                                 </div>
                                 <div class="text-[10px] font-mono text-gray-400 mt-0.5">MASTER VAULT ID: <strong class="text-gray-200">DOC-VAULT-NK001-2026</strong></div>
                             </div>
@@ -113,7 +113,7 @@ ob_start();
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
                             <div class="text-[8px] font-bold uppercase text-gray-400">HASH INTEGRITY</div>
-                            <div class="font-bold text-emerald-300 text-[11px]">Cryptographic Proof</div>
+                            <div class="font-bold text-emerald-300 text-[11px]">Simulated Hash Index</div>
                         </div>
                         <div class="rounded-lg border border-white/10 bg-[#07110E] p-2.5 space-y-0.5">
                             <div class="text-[8px] font-bold uppercase text-gray-400">LEGAL PERMITS</div>
