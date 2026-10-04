@@ -46,7 +46,7 @@ $projects = [
         'verification' => 82, 
         'verif_label' => 'verified',
         'badge' => 'demo',     
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true,  'audit' => false], 
         'img' => '/1.jpg', 
         'pos' => '50% 35%', 
@@ -77,7 +77,7 @@ $projects = [
         'verification' => 94, 
         'verif_label' => 'verified',
         'badge' => 'pipeline', 
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true,  'seed' => true,  'gis' => true, 'audit' => true], 
         'img' => '/2.jpg', 
         'pos' => '50% 60%', 
@@ -104,7 +104,7 @@ $projects = [
         'verification' => 78, 
         'verif_label' => 'pipeline',
         'badge' => 'planned',  
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true, 'seed' => false, 'gis' => true, 'audit' => false], 
         'img' => '/3.jpg', 
         'pos' => '80% 40%', 
@@ -131,7 +131,7 @@ $projects = [
         'verification' => 88, 
         'verif_label' => 'verified',
         'badge' => 'demo',  
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
         'img' => '/5.jpg', 
         'pos' => '50% 50%', 
@@ -158,7 +158,7 @@ $projects = [
         'verification' => 91, 
         'verif_label' => 'verified',
         'badge' => 'pipeline',  
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
         'img' => '/6.jpg', 
         'pos' => '40% 40%', 
@@ -185,7 +185,7 @@ $projects = [
         'verification' => 75, 
         'verif_label' => 'pending',
         'badge' => 'planned',  
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true, 'seed' => false, 'gis' => false, 'audit' => false], 
         'img' => '/7.jpg', 
         'pos' => '60% 80%', 
@@ -212,7 +212,7 @@ $projects = [
         'verification' => 96, 
         'verif_label' => 'verified',
         'badge' => 'demo',  
-        'availability' => 'Available', 
+        'availability' => 'Pending Assignment', 
         'checks' => ['land' => true,  'partner' => true, 'seed' => true, 'gis' => true, 'audit' => true], 
         'img' => '/8.jpg', 
         'pos' => '30% 30%', 
@@ -573,7 +573,7 @@ ob_start();
                     <label class="<?= $fieldBox ?>">
                         <span class="<?= $fieldLbl ?>">Availability</span>
                         <select x-model="filters.availability" style="color-scheme: dark" class="<?= $fieldSel ?>">
-                            <option>Available</option>
+                            <option>Pending Assignment</option>
                             <option>Reserved</option>
                             <option>All</option>
                         </select><?= $chev ?>
@@ -779,7 +779,7 @@ ob_start();
                                 <div class="leading-snug">
                                     <div class="text-[10px] font-bold text-white">01</div>
                                     <div class="text-[9px] font-semibold uppercase text-gray-300">Capacity</div>
-                                    <div class="mt-0.5 text-[10px] text-gray-400">Identify available productive capacity.</div>
+                                    <div class="mt-0.5 text-[10px] text-gray-400">Identify mapped productive capacity.</div>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-[#07110E] p-3">
