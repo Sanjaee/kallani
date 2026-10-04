@@ -544,9 +544,9 @@ function batchPage() {
                             <span class="text-emerald-300 font-bold text-[9px]">COMPLETED</span>
                         </div>
                         <div class="flex items-center justify-between py-1 border-b border-white/5">
-                            <span class="text-white font-medium">RAB Created</span>
+                            <span class="text-white font-medium">RAB Model Created</span>
                             <span class="font-mono text-gray-400">RAB-NK-001</span>
-                            <span class="text-emerald-300 font-bold text-[9px]">COMPLETED</span>
+                            <span class="text-amber-300 font-bold text-[9px]">PENDING CONFIGURATION</span>
                         </div>
                         <div class="flex items-center justify-between py-1 border-b border-white/5">
                             <span class="text-white font-medium">Vendor Assigned</span>
