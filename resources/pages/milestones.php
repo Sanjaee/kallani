@@ -663,12 +663,12 @@ ob_start();
                                     </div>
                                     <div class="relative">
                                         <span class="absolute -left-6 top-[2px] h-4 w-4 rounded-full border border-emerald-400/60 bg-[#07110E] flex items-center justify-center text-[9px] text-emerald-300 font-bold">🎯</span>
-                                        <div class="font-extrabold uppercase text-white">RAB LINKED</div>
+                                        <div class="font-extrabold uppercase text-white">RAB REFERENCE LINKED &mdash; PENDING CONFIRMATION</div>
                                         <div class="text-[9px] text-gray-400">2026-04-12 10:15 | System</div>
                                     </div>
                                     <div class="relative">
                                         <span class="absolute -left-6 top-[2px] h-4 w-4 rounded-full border border-emerald-400/60 bg-[#07110E] flex items-center justify-center text-[9px] text-emerald-300 font-bold">🎯</span>
-                                        <div class="font-extrabold uppercase text-white">VENDOR ASSIGNED</div>
+                                        <div class="font-extrabold uppercase text-white">VENDOR REFERENCE IDENTIFIED &mdash; NOT ASSIGNED</div>
                                         <div class="text-[9px] text-gray-400">2026-04-12 10:30 | System</div>
                                     </div>
                                     <div class="relative">
@@ -706,7 +706,7 @@ ob_start();
                                     </div>
                                     <div class="relative">
                                         <span class="absolute -left-6 top-[2px] h-3.5 w-3.5 rounded-full border-2 border-emerald-400 bg-transparent"></span>
-                                        <div class="font-bold text-white">Vendor assignment updated</div>
+                                        <div class="font-bold text-white">DEMO VENDOR REFERENCE UPDATED &mdash; NOT ASSIGNED</div>
                                         <div class="text-[9px] text-gray-400">2026-04-12 11:45 | DEMO</div>
                                     </div>
                                     <div class="relative">
