@@ -730,9 +730,9 @@ ob_start();
                     </div>
 
                     <div class="space-y-1.5 text-xs font-mono">
-                        <div class="flex justify-between text-gray-300"><span>Production Requirement (DR-2026-001)</span><span class="text-emerald-400 font-bold">AVAILABLE</span></div>
-                        <div class="flex justify-between text-gray-300"><span>Capacity Mapping Record</span><span class="text-emerald-400 font-bold">AVAILABLE</span></div>
-                        <div class="flex justify-between text-gray-300"><span>RAB-NK-001-V01</span><span class="text-emerald-400 font-bold">AVAILABLE</span></div>
+                        <div class="flex justify-between text-gray-300"><span>Production Requirement (DR-2026-001)</span><span class="text-amber-300 font-bold uppercase text-[9px]">PENDING VERIFICATION</span></div>
+                        <div class="flex justify-between text-gray-300"><span>Capacity Mapping Record</span><span class="text-amber-300 font-bold uppercase text-[9px]">PENDING VERIFICATION</span></div>
+                        <div class="flex justify-between text-gray-300"><span>RAB-NK-001-V01</span><span class="text-amber-300 font-bold uppercase text-[9px]">PENDING CONFIGURATION</span></div>
                         <div class="flex justify-between text-gray-400"><span>Partner Verification Record</span><span class="text-amber-300">PENDING</span></div>
                         <div class="flex justify-between text-gray-400"><span>Seed Certification</span><span class="text-amber-300">PENDING</span></div>
                     </div>

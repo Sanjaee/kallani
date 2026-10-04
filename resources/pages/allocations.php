@@ -925,15 +925,15 @@ ob_start();
                         <div class="space-y-1.5 text-xs font-mono">
                             <div class="flex justify-between items-center text-gray-300">
                                 <span>Demand Requirement</span>
-                                <span class="text-emerald-400 font-bold">AVAILABLE</span>
+                                <span class="text-amber-300 font-bold uppercase text-[9px]">PENDING VERIFICATION</span>
                             </div>
                             <div class="flex justify-between items-center text-gray-300">
                                 <span>Batch Record (NK-001)</span>
-                                <span class="text-emerald-400 font-bold">AVAILABLE</span>
+                                <span class="text-amber-300 font-bold uppercase text-[9px]">PENDING VERIFICATION</span>
                             </div>
                             <div class="flex justify-between items-center text-gray-300">
                                 <span>RAB-NK-001-V01</span>
-                                <span class="text-emerald-400 font-bold">AVAILABLE</span>
+                                <span class="text-amber-300 font-bold uppercase text-[9px]">PENDING CONFIGURATION</span>
                             </div>
                             <div class="flex justify-between items-center text-gray-400">
                                 <span>Work Order Evidence</span>
