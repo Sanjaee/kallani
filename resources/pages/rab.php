@@ -646,7 +646,7 @@ ob_start();
                                                 <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
                                             </span>
                                             <div>
-                                                <div class="font-bold text-white">VENDOR LINKED</div>
+                                                <div class="font-bold text-white">DEMO VENDOR REFERENCE LINKED &mdash; NOT ASSIGNED</div>
                                                 <div class="text-[8px] text-gray-500">2026-06-12</div>
                                             </div>
                                         </div>
