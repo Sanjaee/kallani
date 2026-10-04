@@ -87,7 +87,7 @@ ob_start();
                         Chronological event log recording every material action across the entire production lifecycle.
                     </p>
                     <p class="text-[11px] italic text-gray-400">
-                        Jejak audit permanen yang mencatat setiap kejadian dari alokasi kebutuhan buyer hingga penyelesaian komersial.
+                        Catatan audit kronologis yang mencatat setiap kejadian dari alokasi kebutuhan buyer hingga penyelesaian komersial.
                     </p>
                 </div>
 
@@ -399,7 +399,7 @@ ob_start();
                 <div class="flex items-center gap-4">
                     <span class="<?= $iconBox ?> h-12 w-12 text-emerald-300"><?= $svg($ic['clock'], 'w-6 h-6') ?></span>
                     <div>
-                        <h3 class="text-base font-extrabold text-white">Every Action Creates a Simulated Persistent Audit Record.</h3>
+                        <h3 class="text-base font-extrabold text-white">Every Action Creates a Chronological Simulated Audit Record.</h3>
                         <p class="text-xs text-gray-300 mt-0.5">NINA records every allocation, work order, verification, and settlement event into an auditable ledger.</p>
                     </div>
                 </div>
