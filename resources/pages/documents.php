@@ -241,7 +241,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-white">V01</td>
                                         <td class="py-2.5 px-3 text-gray-400">2026-06-12</td>
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">0x8a9f2c...41b0</td>
-                                        <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">AVAILABLE</span></td>
+                                        <td class="py-2.5 px-3"><span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED / DRAFT &mdash; PENDING CONFIGURATION</span></td>
                                         <td class="py-2.5 px-3"><a href="#" class="text-emerald-300 font-bold hover:underline">Download &rsaquo;</a></td>
                                     </tr>
 
@@ -254,7 +254,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-white">V01</td>
                                         <td class="py-2.5 px-3 text-gray-400">2026-06-10</td>
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">0x4d1e8a...92c4</td>
-                                        <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">AVAILABLE</span></td>
+                                        <td class="py-2.5 px-3"><span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED / ILLUSTRATIVE &mdash; PENDING VERIFICATION</span></td>
                                         <td class="py-2.5 px-3"><a href="#" class="text-emerald-300 font-bold hover:underline">Download &rsaquo;</a></td>
                                     </tr>
 
@@ -319,7 +319,7 @@ ob_start();
                                         <td class="py-2.5 px-3 font-mono text-white">V01</td>
                                         <td class="py-2.5 px-3 text-gray-400">2026-06-18</td>
                                         <td class="py-2.5 px-3 font-mono text-emerald-300">0x2c4e6f...77a8</td>
-                                        <td class="py-2.5 px-3"><span class="rounded bg-emerald-950 px-2 py-0.5 text-[8px] font-bold text-emerald-300 border border-emerald-500/30">AVAILABLE</span></td>
+                                        <td class="py-2.5 px-3"><span class="rounded bg-amber-500/20 px-2 py-0.5 text-[8px] font-bold text-amber-300 border border-amber-400/30 uppercase">SIMULATED &mdash; PENDING VERIFICATION</span></td>
                                         <td class="py-2.5 px-3"><a href="#" class="text-emerald-300 font-bold hover:underline">Download &rsaquo;</a></td>
                                     </tr>
                                 </tbody>
