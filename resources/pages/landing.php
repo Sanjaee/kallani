@@ -686,8 +686,12 @@ ob_start();
 
                     <div class="space-y-2 text-[10px] font-mono">
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
-                            <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> PO Collection (Simulated State)</span>
+                            <span class="text-emerald-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Capacity Mapping</span>
                             <span class="text-gray-400 font-bold">100% Mapped</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
+                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> PO Collection (Simulated State)</span>
+                            <span class="text-amber-300">Pending</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
                             <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Milestone 01 (Land Prep)</span>
@@ -744,7 +748,7 @@ ob_start();
                     </div>
                     <div class="p-4 rounded-xl bg-emerald-950 border border-emerald-400 space-y-1.5 flex flex-col justify-center min-h-[90px]">
                         <span class="text-white font-extrabold text-xs sm:text-sm block uppercase">AUDIT TRAIL</span>
-                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Simulated Persistent Audit Record</span>
+                        <span class="text-emerald-300 text-xs sm:text-sm block font-semibold">Chronological Audit Record</span>
                     </div>
                 </div>
 
