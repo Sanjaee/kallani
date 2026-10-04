@@ -344,7 +344,7 @@ ob_start();
                                         <div class="text-white font-bold text-sm">280 MT</div>
                                     </div>
                                     <div>
-                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Available Capacity</div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Uncommitted Capacity</div>
                                         <div class="text-white font-bold text-sm">220 MT</div>
                                     </div>
                                 <?php else: ?>
@@ -357,7 +357,7 @@ ob_start();
                                         <div class="text-white font-bold text-sm">6 Units</div>
                                     </div>
                                     <div>
-                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Available</div>
+                                        <div class="text-[9px] text-gray-500 uppercase tracking-widest mb-1 font-bold">Uncommitted</div>
                                         <div class="text-white font-bold text-sm">2 Units</div>
                                     </div>
                                 <?php endif; ?>
@@ -370,7 +370,7 @@ ob_start();
                             </div>
                             <div class="flex items-center justify-between mt-2">
                                 <div class="text-emerald-300 flex items-center gap-1.5"><?= $svg($ic['shield'], 'w-3 h-3') ?> Committed <span class="text-white ml-1">78%</span></div>
-                                <div class="text-gray-400">Available 22%</div>
+                                <div class="text-gray-400">Uncommitted 22%</div>
                             </div>
                         </div>
                     </div>
@@ -627,7 +627,7 @@ ob_start();
                                 <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Mobilization Point</div><div class="text-emerald-300 font-bold">East Kalimantan</div></div>
                             </div>
                             <div class="space-y-4">
-                                <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Available Units</div><div class="text-white font-bold">8</div></div>
+                                <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Uncommitted Units</div><div class="text-white font-bold">8</div></div>
                                 <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Operating Units</div><div class="text-white font-bold">7 Units</div></div>
                                 <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Fleet Utilization</div><div class="text-white font-bold">87.5%</div></div>
                                 <div><div class="text-[9px] text-gray-500 uppercase font-bold mb-1">Coverage Area</div><div class="text-white font-bold border border-white/20 bg-white/5 rounded px-2 py-1 inline-block mt-1">Kalimantan</div></div>
