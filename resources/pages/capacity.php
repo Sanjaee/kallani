@@ -351,16 +351,19 @@ ob_start();
                 </div>
 
                 <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-5 xl:grid-cols-10">
-                    <?php for ($i = 1; $i <= 10; $i++): ?>
+                    <?php 
+                    for ($i = 1; $i <= 10; $i++) {
+                        $batchId = ($i <= 2) ? 'NK-' . sprintf('%03d', $i) : 'SK-' . sprintf('%03d', $i - 2);
+                    ?>
                         <a href="<?= $basePrefix ?>/batches" class="group rounded-lg border border-white/10 bg-[#07110E] p-3 transition hover:border-emerald-400/50 hover:bg-[#0E1F1A]">
                             <div class="text-[10px] font-medium text-gray-400"><?= sprintf('%02d', $i) ?></div>
-                            <div class="mt-1 text-[11px] font-bold uppercase text-white">Batch <?= sprintf('%03d', $i) ?></div>
+                            <div class="mt-1 text-[11px] font-bold uppercase text-white"><?= $batchId ?></div>
                             <div class="mt-2 flex items-center justify-between text-xs font-bold text-white">
                                 <span>100 HA</span>
                                 <span class="text-gray-500 transition group-hover:text-emerald-300">&rsaquo;</span>
                             </div>
                         </a>
-                    <?php endfor; ?>
+                    <?php } ?>
                 </div>
             </section>
 
