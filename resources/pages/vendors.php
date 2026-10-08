@@ -6,7 +6,7 @@ if (!file_exists($configPath)) {
 $config = require $configPath;
 $constants = $config['system_constants'] ?? [];
 $demoDemand = $config['demo_demands'][0] ?? [];
-$title = '19 / Partners & Vendors Marketplace — NINA Operating System';
+$title = '19 / Verified Production Vendor Network — NINA Operating System';
 $basePrefix = (strpos($_SERVER['REQUEST_URI'] ?? '', '/kallani/public') === 0) ? '/kallani/public' : '';
 $activePage = 'vendors';
 
@@ -68,7 +68,7 @@ ob_start();
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <a href="<?= $basePrefix ?>/batches" class="hover:text-white transition-colors">PRODUCTION</a>
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                        <span class="font-bold text-white uppercase">PARTNERS & VENDORS</span>
+                        <span class="font-bold text-white uppercase">VERIFIED VENDOR NETWORK</span>
                     </nav>
 
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold">

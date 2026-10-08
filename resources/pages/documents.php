@@ -194,7 +194,7 @@ ob_start();
                             <div>
                                 <div class="text-[8px] font-bold uppercase tracking-wider text-emerald-300">01 / DOCUMENT LEDGER</div>
                                 <h2 class="text-base font-bold text-white">Master Document Ledger & Cryptographic Hashes</h2>
-                                <p class="text-xs text-gray-300">All uploaded files are permanently indexed with cryptographic hash references.</p>
+                                <p class="text-xs text-gray-300">All uploaded files are recorded in the simulated document index with cryptographic hash references.</p>
                             </div>
                             <span class="rounded bg-emerald-950 px-2.5 py-1 text-[9px] font-bold text-emerald-300 border border-emerald-500/30">HASHED INDEX</span>
                         </div>
@@ -410,8 +410,8 @@ ob_start();
                 <div class="flex items-center gap-4">
                     <span class="<?= $iconBox ?> h-12 w-12 text-emerald-300"><?= $svg($ic['doc'], 'w-6 h-6') ?></span>
                     <div>
-                        <h3 class="text-base font-extrabold text-white">Immutable Document Infrastructure.</h3>
-                        <p class="text-xs text-gray-300 mt-0.5">Every legal contract, operational work order, and verification file is permanently hashed and recorded.</p>
+                        <h3 class="text-base font-extrabold text-white">Simulated Document Infrastructure.</h3>
+                        <p class="text-xs text-gray-300 mt-0.5">Every legal contract, operational work order, and verification file is indexed with cryptographic hash references.</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">

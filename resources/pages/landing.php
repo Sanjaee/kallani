@@ -690,8 +690,8 @@ ob_start();
                             <span class="text-gray-400 font-bold">100% Mapped</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
-                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> PO Collection (Simulated State)</span>
-                            <span class="text-amber-300">Pending</span>
+                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> PO Collection</span>
+                            <span class="text-amber-300">0% Collected</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
                             <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Milestone 01 (Land Prep)</span>

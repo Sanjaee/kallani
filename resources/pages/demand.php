@@ -694,7 +694,7 @@ ob_start();
             <section class="<?= $card ?> p-5 space-y-3">
                 <div class="border-b border-white/10 pb-2.5 flex justify-between items-center">
                     <div>
-                        <div class="text-[9px] font-mono text-emerald-400 font-bold uppercase tracking-wider">IMMUTABLE LOG</div>
+                        <div class="text-[9px] font-mono text-emerald-400 font-bold uppercase tracking-wider">SIMULATED AUDIT LOG</div>
                         <h4 class="text-xs font-mono font-bold text-white uppercase">Requirement Audit Trail</h4>
                     </div>
                     <span class="text-[10px] font-mono text-gray-400">RECORD ID: DR-2026-001</span>

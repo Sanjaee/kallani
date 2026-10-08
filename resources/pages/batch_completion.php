@@ -517,7 +517,7 @@ ob_start();
                     <div class="flex items-center justify-between border-b border-white/10 pb-3">
                         <div>
                             <h3 class="text-xs font-mono font-bold uppercase text-white">11 / BATCH COMPLETION REPORT</h3>
-                            <p class="text-[10px] text-gray-400">Permanent operational record combining production, execution, verification & settlement</p>
+                            <p class="text-[10px] text-gray-400">Simulated Operational Completion Record combining production, execution, verification & settlement</p>
                         </div>
                         <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30">SIMULATED REPORT TEMPLATE</span>
                     </div>
@@ -641,7 +641,7 @@ ob_start();
                         <div class="flex items-center justify-between border-b border-white/10 pb-3">
                             <div>
                                 <h3 class="text-xs font-mono font-bold uppercase text-white">15 / BATCH CLOSURE GATE</h3>
-                                <p class="text-[10px] text-gray-400">Controls required before permanent batch closure</p>
+                                <p class="text-[10px] text-gray-400">Controls required before simulated batch closure</p>
                             </div>
                             <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30">1 / 10 CONTROLS IN PROGRESS</span>
                         </div>
