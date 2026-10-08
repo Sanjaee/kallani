@@ -104,7 +104,7 @@ ob_start();
                                     <div class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">ACTIVE ALLOCATION OBJECT</div>
                                     <div class="text-sm font-extrabold text-white font-mono">ALC-2026-NK001-0001</div>
                                 </div>
-                                <span class="rounded bg-amber-950/80 px-2.5 py-1 text-[10px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO CONFIRMATION</span>
+                                <span class="rounded bg-amber-950/80 px-2.5 py-1 text-[10px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO ALLOCATION CONFIRMED</span>
                             </div>
 
                             <div class="grid grid-cols-2 gap-2 text-xs">
@@ -248,7 +248,7 @@ ob_start();
                         <img src="<?= $basePrefix ?>/1.jpg" alt="North Kalimantan Palm" class="w-full sm:w-32 h-24 object-cover rounded-lg border border-white/10 shrink-0" />
                         <div class="space-y-1.5">
                             <div class="flex items-center gap-2 flex-wrap">
-                                <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO CONFIRMATION</span>
+                                <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO ALLOCATION CONFIRMED</span>
                                 <span class="text-xs font-mono text-gray-400">ID: ALC-2026-NK001-0001</span>
                             </div>
                             <h3 class="text-xl font-extrabold text-white">North Kalimantan Palm</h3>
@@ -996,7 +996,7 @@ ob_start();
                                 <td class="p-3 text-emerald-300">NK-001</td>
                                 <td class="p-3 font-bold text-white">8,000 USDT</td>
                                 <td class="p-3">1 / 110</td>
-                                <td class="p-3"><span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO CONFIRMATION</span></td>
+                                <td class="p-3"><span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">PO ALLOCATION CONFIRMED</span></td>
                                 <td class="p-3 text-right"><a href="<?= $basePrefix ?>/po-allocation" class="text-emerald-400 hover:underline">MANAGE &rarr;</a></td>
                             </tr>
                             <tr class="hover:bg-white/5 opacity-60">

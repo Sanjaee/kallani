@@ -535,32 +535,32 @@ ob_start();
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">SEED & PLANTING</span>
                             <span class="text-white text-[11px] block">Certified Seeds</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">FERTILIZER & INPUTS</span>
                             <span class="text-white text-[11px] block">Agronomic Inputs</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">HEAVY EQUIPMENT</span>
                             <span class="text-white text-[11px] block">Land Preparation</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">INFRASTRUCTURE</span>
                             <span class="text-white text-[11px] block">Roads & Drainage</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">LOGISTICS</span>
                             <span class="text-white text-[11px] block">Transport & Delivery</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                         <div class="p-2.5 rounded bg-white/5 border border-white/10 space-y-1">
                             <span class="text-[9px] text-emerald-300 font-bold block">PROCESSING</span>
                             <span class="text-white text-[11px] block">Milling Partner</span>
-                            <span class="text-[8px] text-gray-400 block">Status: Verified</span>
+                            <span class="text-[8px] text-amber-400 block">Status: Pending Verification</span>
                         </div>
                     </div>
                 </div>

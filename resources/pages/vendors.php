@@ -308,7 +308,7 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="flex items-center gap-2">
-                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED SUPPLY PARTNER</span>
+                                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">ILLUSTRATIVE CAPABILITY PROFILE — DEMO</span>
                                         <span class="text-xs font-mono text-gray-400">ID: PT-AGRO-001</span>
                                     </div>
                                     <h3 class="text-xl font-extrabold text-white mt-1">PT Agro Nusantara Fertilizer</h3>
@@ -330,7 +330,7 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="flex items-center gap-2">
-                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED FLEET PARTNER</span>
+                                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">ILLUSTRATIVE CAPABILITY PROFILE — DEMO</span>
                                         <span class="text-xs font-mono text-gray-400">ID: PT-KHE-002</span>
                                     </div>
                                     <h3 class="text-xl font-extrabold text-white mt-1">PT Kalimantan Heavy Equipment</h3>
@@ -352,7 +352,7 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="flex items-center gap-2">
-                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED NURSERY PARTNER</span>
+                                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">ILLUSTRATIVE CAPABILITY PROFILE — DEMO</span>
                                         <span class="text-xs font-mono text-gray-400">ID: PT-NSS-003</span>
                                     </div>
                                     <h3 class="text-xl font-extrabold text-white mt-1">PT Nusantara Superior Seed</h3>
@@ -374,7 +374,7 @@ ob_start();
                                 </div>
                                 <div>
                                     <div class="flex items-center gap-2">
-                                        <span class="rounded bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 uppercase">VERIFIED EXECUTION PARTNER</span>
+                                        <span class="rounded bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30 uppercase">ILLUSTRATIVE CAPABILITY PROFILE — DEMO</span>
                                         <span class="text-xs font-mono text-gray-400">ID: PT-BFO-004</span>
                                     </div>
                                     <h3 class="text-xl font-extrabold text-white mt-1">PT Borneo Field Operations</h3>

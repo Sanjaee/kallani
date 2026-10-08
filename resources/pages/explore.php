@@ -771,7 +771,7 @@ ob_start();
 
                     <div class="p-5 lg:col-span-9">
                         <h2 class="text-base font-bold text-white">From Requirement to Production Project.</h2>
-                        <p class="mt-0.5 text-[11px] text-gray-400">NINA matches your demand with verified capacity, partners and executable batches.</p>
+                        <p class="mt-0.5 text-[11px] text-gray-400">NINA matches your demand with mapped / eligible capacity, partners and executable batches.</p>
 
                         <div class="mt-4 grid grid-cols-1 items-stretch gap-3 md:grid-cols-[1fr_1fr_1fr_auto]">
                             <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-[#07110E] p-3">
