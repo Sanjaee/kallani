@@ -606,7 +606,7 @@ ob_start();
                                         </thead>
                                         <tbody class="divide-y divide-white/5">
                                             <tr>
-                                                <td class="py-1.5 px-1 font-bold text-white flex items-center gap-1"><?= $svg($ic['shield'], 'w-3 h-3 text-emerald-300') ?> Vendor Assigned</td>
+                                                <td class="py-1.5 px-1 font-bold text-white flex items-center gap-1"><?= $svg($ic['shield'], 'w-3 h-3 text-amber-300') ?> Vendor Reference — Pending Assignment</td>
                                                 <td class="py-1.5 px-1 text-gray-300">Vendor</td>
                                                 <td class="py-1.5 px-1"><span class="rounded bg-amber-500/20 px-1 py-0.5 text-[7px] font-bold text-amber-300">PENDING</span></td>
                                                 <td class="py-1.5 px-1 font-mono text-gray-400">VEN-001</td>

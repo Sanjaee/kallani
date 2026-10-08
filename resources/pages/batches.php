@@ -346,7 +346,7 @@ function batchPage() {
                             <?php for ($i = 1; $i <= 15; $i++): ?>
                                 <div class="rounded border border-white/10 bg-[#050D0A] py-1.5 px-1 flex flex-col items-center justify-center">
                                     <div class="font-extrabold text-white text-[10px]"><?= sprintf('%02d', $i) ?></div>
-                                    <div class="text-[7px] text-emerald-400 font-semibold uppercase">Available</div>
+                                    <div class="text-[7px] text-amber-400 font-semibold uppercase">Open Slot</div>
                                 </div>
                             <?php endfor; ?>
                         </div>
