@@ -296,8 +296,8 @@ ob_start();
                     <!-- VERIFIED CAPACITY -->
                     <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
                         <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
-                                <?= $svg($ic['shield'], 'w-4 h-4') ?> VERIFIED <?= ($v['type'] == 'services' ? 'SERVICE' : ($v['type'] == 'equipment' ? 'FLEET' : ($v['type'] == 'seed' ? 'NURSERY' : 'CAPACITY'))) ?>
+                            <div class="flex items-center gap-2 text-amber-400 font-bold text-[10px] uppercase tracking-widest">
+                                <?= $svg($ic['shield'], 'w-4 h-4') ?> ILLUSTRATIVE <?= ($v['type'] == 'services' ? 'SERVICE' : ($v['type'] == 'equipment' ? 'FLEET' : ($v['type'] == 'seed' ? 'NURSERY' : 'CAPACITY'))) ?> CAPABILITY — DEMO
                             </div>
                             <a href="#" @click.prevent="activeTab = 'listings'" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View Details &rarr;</a>
                         </div>
@@ -511,8 +511,8 @@ ob_start();
                 <!-- VERIFIED NURSERY CAPABILITY -->
                 <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
                     <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-                        <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
-                            <?= $svg($ic['shield'], 'w-4 h-4') ?> VERIFIED NURSERY CAPABILITY
+                        <div class="flex items-center gap-2 text-amber-400 font-bold text-[10px] uppercase tracking-widest">
+                            <?= $svg($ic['shield'], 'w-4 h-4') ?> ILLUSTRATIVE NURSERY CAPABILITY — DEMO
                         </div>
                         <a href="#" @click.prevent="activeTab = 'nursery'" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View Details &rarr;</a>
                     </div>
@@ -608,8 +608,8 @@ ob_start();
                 <!-- VERIFIED FLEET CAPABILITY -->
                 <div class="<?= $card ?> p-5 lg:p-6 space-y-5">
                     <div class="flex items-center justify-between border-b border-emerald-500/20 pb-3">
-                        <div class="flex items-center gap-2 text-emerald-400 font-bold text-[10px] uppercase tracking-widest">
-                            <?= $svg($ic['shield'], 'w-4 h-4') ?> VERIFIED FLEET CAPABILITY
+                        <div class="flex items-center gap-2 text-amber-400 font-bold text-[10px] uppercase tracking-widest">
+                            <?= $svg($ic['shield'], 'w-4 h-4') ?> ILLUSTRATIVE FLEET CAPABILITY — DEMO
                         </div>
                         <a href="#" @click.prevent="activeTab = 'fleet'" class="text-[9px] font-mono text-gray-400 hover:text-emerald-400 transition-colors uppercase tracking-widest">View Details &rarr;</a>
                     </div>
