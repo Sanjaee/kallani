@@ -67,7 +67,7 @@ ob_start();
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <a href="<?= $basePrefix ?>/batches" class="hover:text-white transition-colors">BATCH NK-001</a>
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                        <a href="<?= $basePrefix ?>/milestones" class="hover:text-white transition-colors">MILESTONE 01</a>
+                        <a href="<?= $basePrefix ?>/gates" class="hover:text-white transition-colors">GATE 01</a>
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <span class="font-bold text-white uppercase">RAB</span>
                     </nav>
@@ -266,7 +266,7 @@ ob_start();
                         </div>
                     </section>
 
-                    <!-- 10. VENDOR ASSIGNMENT & 26. RAB BY MILESTONE -->
+                    <!-- 10. VENDOR ASSIGNMENT & 26. RAB BY GATE -->
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
                         <!-- Vendor Assignment -->
@@ -303,12 +303,12 @@ ob_start();
                             </div>
                         </div>
 
-                        <!-- RAB by Milestone -->
+                        <!-- RAB by Gate -->
                         <div class="<?= $card ?> p-4 space-y-3 flex flex-col justify-between">
                             <div class="space-y-3">
                                 <div class="border-b border-white/10 pb-2">
-                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">RAB by Milestone</h3>
-                                    <p class="text-[9px] text-gray-400">Category allocation per milestone (model view).</p>
+                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">RAB by Gate</h3>
+                                    <p class="text-[9px] text-gray-400">Category allocation per gate (model view).</p>
                                 </div>
 
                                 <div class="grid grid-cols-4 gap-1.5 text-[9px] text-center">
@@ -347,8 +347,8 @@ ob_start();
                                 </div>
                             </div>
 
-                            <a href="<?= $basePrefix ?>/milestones" class="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1 text-[9px] font-bold uppercase text-gray-300 hover:bg-white/10 w-fit">
-                                <span>VIEW MILESTONE ALLOCATION</span><?= $arrow ?>
+                            <a href="<?= $basePrefix ?>/gates" class="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1 text-[9px] font-bold uppercase text-gray-300 hover:bg-white/10 w-fit">
+                                <span>VIEW GATE ALLOCATION</span><?= $arrow ?>
                             </a>
                         </div>
 
@@ -489,7 +489,7 @@ ob_start();
                                 <select class="w-full rounded-lg border border-white/10 bg-[#07110E] px-2 py-1.5 text-xs text-gray-300"><option>Category: All</option></select>
                             </div>
                             <div>
-                                <select class="w-full rounded-lg border border-white/10 bg-[#07110E] px-2 py-1.5 text-xs text-gray-300"><option>Milestone: All</option></select>
+                                <select class="w-full rounded-lg border border-white/10 bg-[#07110E] px-2 py-1.5 text-xs text-gray-300"><option>Gate: All</option></select>
                             </div>
                             <div>
                                 <select class="w-full rounded-lg border border-white/10 bg-[#07110E] px-2 py-1.5 text-xs text-gray-300"><option>Status: All</option></select>
@@ -701,7 +701,7 @@ ob_start();
                         </div>
 
                         <div class="space-y-1.5 pt-1">
-                            <a href="<?= $basePrefix ?>/milestones" class="w-full flex items-center justify-between rounded border border-white/10 bg-white/5 p-2 text-[10px] font-bold text-gray-300 hover:bg-white/10"><span>VIEW MILESTONE</span><span>&rsaquo;</span></a>
+                            <a href="<?= $basePrefix ?>/gates" class="w-full flex items-center justify-between rounded border border-white/10 bg-white/5 p-2 text-[10px] font-bold text-gray-300 hover:bg-white/10"><span>VIEW GATE</span><span>&rsaquo;</span></a>
                             <a href="<?= $basePrefix ?>/vendors" class="w-full flex items-center justify-between rounded border border-white/10 bg-white/5 p-2 text-[10px] font-bold text-gray-300 hover:bg-white/10"><span>VIEW VENDORS</span><span>&rsaquo;</span></a>
                             <a href="<?= $basePrefix ?>/audit-trail" class="w-full flex items-center justify-between rounded border border-white/10 bg-white/5 p-2 text-[10px] font-bold text-gray-300 hover:bg-white/10"><span>VIEW AUDIT TRAIL</span><span>&rsaquo;</span></a>
                         </div>

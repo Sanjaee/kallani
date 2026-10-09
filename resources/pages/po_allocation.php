@@ -77,10 +77,10 @@ ob_start();
                     <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">Take a Production Allocation</h1>
                     
                     <p class="max-w-3xl text-base font-medium leading-relaxed text-gray-200">
-                        Join a defined production batch through a documented PO allocation connected to production capacity, RAB, milestones and commercial delivery.
+                        Join a defined production batch through a documented PO allocation connected to production capacity, RAB, gates and commercial delivery.
                     </p>
                     <p class="text-[10px] italic text-gray-400">
-                        Ambil alokasi produksi dalam batch yang terdefinisi dan terhubung dengan kapasitas produksi, RAB, milestone, serta proses delivery komersial.
+                        Ambil alokasi produksi dalam batch yang terdefinisi dan terhubung dengan kapasitas produksi, RAB, gate, serta proses delivery komersial.
                     </p>
                 </div>
 
@@ -245,7 +245,7 @@ ob_start();
                                 </div>
                                 <div class="text-[9px] font-mono text-emerald-300 space-y-0.5">
                                     <div>RAB &rsaquo; Vendors</div>
-                                    <div>Milestones &rsaquo; Verification</div>
+                                    <div>Gates &rsaquo; Verification</div>
                                 </div>
                             </div>
 
@@ -342,11 +342,11 @@ ob_start();
                         <div class="space-y-1.5 border-t border-white/10 pt-3 text-[10px]">
                             <div class="flex justify-between font-bold">
                                 <span class="text-gray-300">PO COLLECTION</span>
-                                <span class="text-emerald-300">0.91%</span>
+                                <span class="text-emerald-300">0%</span>
                             </div>
-                            <div class="text-xs font-black text-white">8,000 USDT / 880,000 USDT</div>
+                            <div class="text-xs font-black text-white">0 USDT / 880,000 USDT</div>
                             <div class="h-2 w-full rounded-full bg-white/10 overflow-hidden">
-                                <div class="h-full bg-emerald-400 w-[0.91%]"></div>
+                                <div class="h-full bg-emerald-400 w-[0%]"></div>
                             </div>
                         </div>
 

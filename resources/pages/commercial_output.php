@@ -74,7 +74,7 @@ ob_start();
                     </nav>
 
                     <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold">
-                        <a href="<?= $basePrefix ?>/milestones" class="rounded-lg bg-emerald-950/80 border border-emerald-400/40 px-3 py-1.5 text-emerald-300 hover:bg-emerald-900/80 uppercase tracking-wide flex items-center gap-1.5">
+                        <a href="<?= $basePrefix ?>/gates" class="rounded-lg bg-emerald-950/80 border border-emerald-400/40 px-3 py-1.5 text-emerald-300 hover:bg-emerald-900/80 uppercase tracking-wide flex items-center gap-1.5">
                             <span>VIEW PRODUCTION EXECUTION</span>
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
@@ -392,7 +392,7 @@ ob_start();
 
                     <div class="flex items-center justify-between pt-2 border-t border-white/10">
                         <span class="text-[10px] text-gray-400">Production Evidence: <strong class="text-amber-300">Pending Field Upload</strong></span>
-                        <a href="<?= $basePrefix ?>/milestones" class="inline-flex items-center gap-1.5 rounded bg-emerald-950 px-3 py-1.5 text-[10px] font-bold text-emerald-300 border border-emerald-400/40 hover:bg-emerald-900 transition">
+                        <a href="<?= $basePrefix ?>/gates" class="inline-flex items-center gap-1.5 rounded bg-emerald-950 px-3 py-1.5 text-[10px] font-bold text-emerald-300 border border-emerald-400/40 hover:bg-emerald-900 transition">
                             <span>VIEW PRODUCTION EXECUTION</span><?= $svg($ic['arrow'], 'w-3 h-3') ?>
                         </a>
                     </div>
@@ -672,7 +672,7 @@ ob_start();
                     </div>
 
                     <div class="text-[10px] text-gray-400 leading-relaxed border-t border-white/10 pt-3">
-                        Physical product maintains an unbroken audit lineage from verified 100 HA land parcel through processing and commercial buyer delivery.
+                        Physical product maintains an unbroken audit lineage from Mapped 100 HA land parcel &mdash; verification pending through processing and commercial buyer delivery.
                     </div>
                 </div>
 

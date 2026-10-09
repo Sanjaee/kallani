@@ -148,11 +148,11 @@ ob_start();
             whyItMatters: 'Maintains field quality consistency across dispersed regional partner clusters.',
             example: 'Standardized NPK application schedule, circle weeding, and ripe bunch harvesting criteria.',
             ninaUse: 'Work Order Specifications & Evidence Validation',
-            warning: 'Failure to comply with agronomic protocols halts milestone verification approval.',
+            warning: 'Failure to comply with agronomic protocols halts gate verification approval.',
             related: ['Work Order', 'Field Evidence', 'Harvest'],
             image: '<?= $basePrefix ?>/1.jpg',
             whereAppears: [
-                { title: 'Milestones Execution', url: '<?= $basePrefix ?>/milestones' }
+                { title: 'Gates Execution', url: '<?= $basePrefix ?>/gates' }
             ]
         },
         'harvest': {
@@ -324,11 +324,11 @@ ob_start();
             category: 'prod',
             categoryName: 'Production',
             simple: 'The modular operational unit used by NINA to structure large programs into auditable packages.',
-            whyItMatters: 'Enables precise RAB budget ring-fencing, milestone gate tracking, and transparent allocation units.',
+            whyItMatters: 'Enables precise RAB budget ring-fencing, gate gate tracking, and transparent allocation units.',
             example: 'Batch NK-001 (100 HA, 880,000 USDT budget, 20-year operational horizon).',
             ninaUse: '#04 Production Batches & Lifecycle Control',
             warning: 'A batch is an operational production package, not a fractional land deed.',
-            related: ['RAB', 'Work Order', 'Milestone'],
+            related: ['RAB', 'Work Order', 'Gate'],
             image: '<?= $basePrefix ?>/3.jpg',
             whereAppears: [
                 { title: 'Production Batches / #04', url: '<?= $basePrefix ?>/batches' }
@@ -358,7 +358,7 @@ ob_start();
             simple: 'The detailed 9-category cost breakdown required to execute a specific production batch.',
             whyItMatters: 'Funds are only disbursed against matching work orders with verified field photographic evidence.',
             example: 'Modeled Batch NK-001 Budget: 880,000 USDT (8,800 USDT/HA) across land, seed, inputs, and infra.',
-            ninaUse: '#08 RAB & Milestone Cost Control',
+            ninaUse: '#08 RAB & Gate Cost Control',
             warning: 'The modeled budget represents the total requirement, not an immediate cash reserve.',
             related: ['CAPEX', 'OPEX', 'Work Order'],
             image: '<?= $basePrefix ?>/5.jpg',

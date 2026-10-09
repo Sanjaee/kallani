@@ -4,9 +4,9 @@ if (!file_exists($configPath)) {
     $configPath = __DIR__ . '/../../data.php';
 }
 $config = require $configPath;
-$title = '09 / Milestone 01 & Execution Detail — NINA Operating System';
+$title = '09 / Gate 01 & Execution Detail — NINA Operating System';
 $basePrefix = (strpos($_SERVER['REQUEST_URI'] ?? '', '/kallani/public') === 0) ? '/kallani/public' : '';
-$activePage = 'milestones';
+$activePage = 'gates';
 
 /* ---------- Helpers & Icons ---------- */
 $e = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');
@@ -67,15 +67,15 @@ ob_start();
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         <a href="<?= $basePrefix ?>/batches" class="hover:text-white transition-colors">BATCH NK-001</a>
                         <svg class="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                        <span class="font-bold text-white uppercase">MILESTONE 01</span>
+                        <span class="font-bold text-white uppercase">GATE 01</span>
                     </nav>
 
                     <div class="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-200">
-                        <span>09 / MILESTONE & EXECUTION</span>
+                        <span>09 / GATE & EXECUTION</span>
                         <span class="rounded border border-amber-400/40 bg-amber-500/20 px-2 py-0.5 text-[9px] font-bold tracking-wider text-amber-300">PENDING VERIFICATION</span>
                     </div>
 
-                    <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">Milestone 01</h1>
+                    <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">Gate 01</h1>
                     <div class="text-lg font-bold text-emerald-300">Production Preparation & Initial Execution</div>
 
                     <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-300 pt-1">
@@ -87,11 +87,11 @@ ob_start();
                     </div>
                 </div>
 
-                <!-- Right: HERO MILESTONE STATUS CARD (MATCHING BATCHES.PHP) -->
+                <!-- Right: HERO GATE STATUS CARD (MATCHING BATCHES.PHP) -->
                 <div class="lg:col-span-4 lg:col-start-9">
                     <div class="space-y-4 rounded-xl border border-white/15 bg-[#08130F]/70 p-5 shadow-2xl backdrop-blur-xl">
                         <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-white">MILESTONE STATUS</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-white">GATE STATUS</span>
                             <span class="rounded border border-amber-400/40 bg-amber-950/80 px-2 py-0.5 text-[9px] font-bold text-amber-300">● PENDING</span>
                         </div>
                         
@@ -126,7 +126,7 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['target']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">MILESTONE</div>
+                        <div class="<?= $metricLbl ?>">GATE</div>
                         <div class="text-xl font-extrabold leading-tight text-white">01</div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['clock']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">MILESTONE STATUS</div>
+                        <div class="<?= $metricLbl ?>">GATE STATUS</div>
                         <div class="text-xl font-extrabold leading-tight text-amber-300 flex items-center gap-1.5">
                             <span class="h-2 w-2 rounded-full bg-amber-400"></span> PENDING
                         </div>
@@ -173,20 +173,20 @@ ob_start();
                 <!-- LEFT MAIN CONTENT (8 COLS) -->
                 <div class="space-y-5 lg:col-span-8">
 
-                    <!-- ROW 1: MILESTONE OBJECTIVE + REQUIRED CONDITIONS & MILESTONE STATE -->
+                    <!-- ROW 1: GATE OBJECTIVE + REQUIRED CONDITIONS & GATE STATE -->
                     <div class="space-y-4">
-                        <!-- Milestone Objective -->
+                        <!-- Gate Objective -->
                         <div class="<?= $card ?> p-5 space-y-2">
                             <div class="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
                                 <?= $svg($ic['doc'], 'w-4 h-4 text-emerald-300') ?>
-                                <span>Milestone Objective</span>
+                                <span>Gate Objective</span>
                             </div>
                             <p class="text-xs text-gray-300 leading-relaxed">
-                                Milestone 01 represents the first defined execution stage of Batch NK-001. It connects the approved production requirement with the operational activities required before the next execution stage can begin.
+                                Gate 01 represents the first defined execution stage of Batch NK-001. It connects the approved production requirement with the operational activities required before the next execution stage can begin.
                             </p>
                         </div>
 
-                        <!-- Required Conditions & Milestone State Side by Side -->
+                        <!-- Required Conditions & Gate State Side by Side -->
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
                             <!-- Required Conditions Card -->
@@ -219,10 +219,10 @@ ob_start();
                                 </div>
                             </div>
 
-                            <!-- Milestone State Card (Vertical List) -->
+                            <!-- Gate State Card (Vertical List) -->
                             <div class="<?= $card ?> p-4 space-y-3">
                                 <div class="flex items-center justify-between border-b border-white/10 pb-2">
-                                    <div class="text-xs font-bold text-white uppercase tracking-wider">Milestone State</div>
+                                    <div class="text-xs font-bold text-white uppercase tracking-wider">Gate State</div>
                                     <span class="text-[9px] font-bold text-amber-300">Active State: Pending</span>
                                 </div>
 
@@ -271,7 +271,7 @@ ob_start();
                             <div class="space-y-3">
                                 <div class="border-b border-white/10 pb-2">
                                     <h3 class="text-xs font-bold uppercase tracking-wider text-white">RAB Allocation</h3>
-                                    <p class="text-[10px] text-gray-400">Every milestone must be connected to defined production requirements and budget categories.</p>
+                                    <p class="text-[10px] text-gray-400">Every gate must be connected to defined production requirements and budget categories.</p>
                                 </div>
 
                                 <!-- 3 Sub-KPI Cards -->
@@ -486,7 +486,7 @@ ob_start();
                             <div class="space-y-2">
                                 <div class="border-b border-white/10 pb-2">
                                     <h3 class="text-xs font-bold uppercase tracking-wider text-white">Required Documents</h3>
-                                    <p class="text-[9px] text-gray-400">Key documents required for milestone completion.</p>
+                                    <p class="text-[9px] text-gray-400">Key documents required for gate completion.</p>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-2 text-[10px]">
@@ -552,12 +552,12 @@ ob_start();
                             </a>
                         </div>
 
-                        <!-- Milestone Approval Gate -->
+                        <!-- Gate Approval Gate -->
                         <div class="<?= $card ?> p-4 space-y-3 flex flex-col justify-between">
                             <div class="space-y-2">
                                 <div class="border-b border-white/10 pb-2">
-                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">Milestone Approval Gate</h3>
-                                    <p class="text-[9px] text-gray-400">Milestone completion requires defined evidence and verification conditions.</p>
+                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">Gate Approval Gate</h3>
+                                    <p class="text-[9px] text-gray-400">Gate completion requires defined evidence and verification conditions.</p>
                                 </div>
 
                                 <div class="relative w-full py-2">
@@ -590,7 +590,7 @@ ob_start();
                             <div class="space-y-2">
                                 <div class="border-b border-white/10 pb-2">
                                     <h3 class="text-xs font-bold uppercase tracking-wider text-white">Execution Transaction Record</h3>
-                                    <p class="text-[9px] text-gray-400">Track all related transactions and events for this milestone.</p>
+                                    <p class="text-[9px] text-gray-400">Track all related transactions and events for this gate.</p>
                                 </div>
 
                                 <div class="overflow-x-auto">
@@ -643,12 +643,12 @@ ob_start();
                             </div>
                         </div>
 
-                        <!-- 2. Milestone Audit Trail (Vertical Step Timeline with Block Button) -->
+                        <!-- 2. Gate Audit Trail (Vertical Step Timeline with Block Button) -->
                         <div class="<?= $card ?> p-4 space-y-3 flex flex-col justify-between">
                             <div class="space-y-3">
                                 <div class="border-b border-white/10 pb-2">
-                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">Milestone Audit Trail</h3>
-                                    <p class="text-[9px] text-gray-400">Complete record of all milestone activities.</p>
+                                    <h3 class="text-xs font-bold uppercase tracking-wider text-white">Gate Audit Trail</h3>
+                                    <p class="text-[9px] text-gray-400">Complete record of all gate activities.</p>
                                 </div>
 
                                 <!-- Vertical Step Timeline -->
@@ -658,7 +658,7 @@ ob_start();
 
                                     <div class="relative">
                                         <span class="absolute -left-6 top-[2px] h-4 w-4 rounded-full border border-emerald-400/60 bg-[#07110E] flex items-center justify-center text-[9px] text-emerald-300 font-bold">🎯</span>
-                                        <div class="font-extrabold uppercase text-white">MILESTONE CREATED</div>
+                                        <div class="font-extrabold uppercase text-white">GATE CREATED</div>
                                         <div class="text-[9px] text-gray-400">2026-04-12 10:00 | System</div>
                                     </div>
                                     <div class="relative">
@@ -691,7 +691,7 @@ ob_start();
                             <div class="space-y-3">
                                 <div class="border-b border-white/10 pb-2">
                                     <h3 class="text-xs font-bold uppercase tracking-wider text-white">Recent Activity</h3>
-                                    <p class="text-[9px] text-gray-400">Latest updates for this milestone.</p>
+                                    <p class="text-[9px] text-gray-400">Latest updates for this gate.</p>
                                 </div>
 
                                 <!-- Timeline with Hollow Ring Circles -->
@@ -716,7 +716,7 @@ ob_start();
                                     </div>
                                     <div class="relative">
                                         <span class="absolute -left-6 top-[2px] h-3.5 w-3.5 rounded-full border-2 border-emerald-400 bg-transparent"></span>
-                                        <div class="font-bold text-white">Milestone 01 created</div>
+                                        <div class="font-bold text-white">Gate 01 created</div>
                                         <div class="text-[9px] text-gray-400">2026-04-12 09:15 | DEMO</div>
                                     </div>
                                 </div>
@@ -749,7 +749,7 @@ ob_start();
                         </div>
                     </div>
 
-                    <!-- Card 1: MILESTONE 01 OVERVIEW -->
+                    <!-- Card 1: GATE 01 OVERVIEW -->
                     <div class="<?= $card ?> p-4 space-y-3">
                         <div class="relative h-28 rounded-lg overflow-hidden">
                             <img src="<?= $basePrefix ?>/1.jpg" class="h-full w-full object-cover" />
@@ -757,7 +757,7 @@ ob_start();
                         </div>
 
                         <div class="space-y-1 text-xs">
-                            <div class="font-extrabold text-white text-sm">MILESTONE 01</div>
+                            <div class="font-extrabold text-white text-sm">GATE 01</div>
                             <div class="text-[10px] font-bold text-gray-300">BATCH NK-001 &bull; 100 HA</div>
                         </div>
 
@@ -766,7 +766,7 @@ ob_start();
                             <div><div class="text-[8px] text-gray-400 uppercase">Allocation</div><div class="font-bold text-white">8,000 USDT</div></div>
                         </div>
 
-                        <div class="text-[9px] text-gray-400">Next Milestone: <strong class="text-gray-300">M02 &mdash; Locked</strong></div>
+                        <div class="text-[9px] text-gray-400">Next Gate: <strong class="text-gray-300">G02 &mdash; Locked</strong></div>
 
                         <button type="button"
                                 class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#6EE7B7] to-[#A7F3D0] px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-[#04100B] shadow-lg shadow-emerald-950/40 transition hover:brightness-110">
@@ -784,12 +784,12 @@ ob_start();
                         <div class="space-y-1 text-xs">
                             <div class="flex justify-between"><span class="text-gray-400">Project</span><span class="font-bold text-white">North Kalimantan Palm</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Batch</span><span class="font-bold text-white">NK-001</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400">Milestone</span><span class="font-bold text-emerald-300">M01</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Gate</span><span class="font-bold text-emerald-300">G01</span></div>
                             <div class="flex justify-between"><span class="text-gray-400">Status</span><span class="font-bold text-amber-300">● PENDING</span></div>
                         </div>
 
                         <div class="text-[9px] text-gray-400 border-t border-white/5 pt-1.5">
-                            Progress: <strong class="text-white">0 / 4 MILESTONES COMPLETED</strong>
+                            Progress: <strong class="text-white">0 / 4 GATES COMPLETED</strong>
                         </div>
                     </div>
 
@@ -804,15 +804,15 @@ ob_start();
                         </div>
                     </div>
 
-                    <!-- Card 4: NEXT MILESTONE -->
+                    <!-- Card 4: NEXT GATE -->
                     <div class="<?= $card ?> p-4 space-y-2.5">
                         <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-white">MILESTONE 02 (25%)</span>
+                            <span class="text-xs font-bold text-white">GATE 02 (25%)</span>
                             <span class="rounded bg-gray-800 px-2 py-0.5 text-[8px] font-bold text-gray-300">LOCKED</span>
                         </div>
-                        <p class="text-[10px] text-gray-400">Complete Milestone 01 to unlock this milestone stage.</p>
+                        <p class="text-[10px] text-gray-400">Complete Gate 01 to unlock this gate stage.</p>
                         <button type="button" disabled class="w-full rounded-lg border border-white/10 bg-white/5 py-1.5 text-[10px] font-bold uppercase text-gray-500 opacity-60 cursor-not-allowed">
-                            VIEW MILESTONE 02 &rsaquo;
+                            VIEW GATE 02 &rsaquo;
                         </button>
                     </div>
 
@@ -824,7 +824,7 @@ ob_start();
             <section class="rounded-xl border border-white/10 bg-[#07110E] p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div class="flex items-center gap-2 text-xs">
                     <span class="h-2 w-2 rounded-full bg-amber-400"></span>
-                    <span class="text-gray-300">Milestone 01 is not yet ready for approval. Complete the required conditions and submit for verification to continue.</span>
+                    <span class="text-gray-300">Gate 01 is not yet ready for approval. Complete the required conditions and submit for verification to continue.</span>
                 </div>
                 <button type="button" class="shrink-0 rounded-full bg-gradient-to-r from-[#6EE7B7] to-[#A7F3D0] px-6 py-2.5 text-xs font-extrabold uppercase tracking-wider text-[#04100B] shadow-lg shadow-emerald-950/40 hover:brightness-110">
                     VIEW REQUIRED ACTIONS &rsaquo;

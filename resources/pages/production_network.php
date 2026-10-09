@@ -715,7 +715,7 @@ ob_start();
                 <div class="pt-4 border-t border-white/10 text-[11px] font-mono text-gray-300">
                     NINA is the operating layer between demand and productive execution.
                     <div class="text-[9px] text-gray-400 mt-1 uppercase tracking-widest">
-                        Demand → Capacity → Batch → PO Allocation → Milestone → RAB → Vendor → Execution → Verification → Processing → Delivery → Settlement → Completion.
+                        Demand → Capacity → Batch → PO Allocation → Gate → RAB → Vendor → Execution → Verification → Processing → Delivery → Settlement → Completion.
                     </div>
                 </div>
             </section>

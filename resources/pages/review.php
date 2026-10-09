@@ -68,27 +68,24 @@ ob_start();
     showNotification: false,
 
     submitReview() {
-        this.showNotification = true;
-        setTimeout(() => this.showNotification = false, 4000);
+        this.submitted = true;
     }
 }">
 
-    <!-- Notification Toast -->
-    <div x-show="showNotification" 
-         x-transition:enter="transition ease-out duration-300 transform"
-         x-transition:enter-start="opacity-0 translate-y-[-20px]"
-         x-transition:enter-end="opacity-100 translate-y-0"
-         x-transition:leave="transition ease-in duration-200"
-         x-transition:leave-start="opacity-100"
-         x-transition:leave-end="opacity-0"
-         class="fixed top-20 right-6 z-50 flex items-center gap-3 rounded-xl border border-emerald-500/50 bg-[#061A14] px-5 py-3.5 shadow-2xl text-white font-mono text-xs"
-         style="display: none;">
-        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+    <!-- Status Banner (Top) -->
+    <div class="w-full flex items-center justify-center py-2.5 px-4 font-mono text-xs font-bold transition-colors z-50 relative border-b"
+         :class="submitted ? 'bg-emerald-950/90 border-emerald-500/40 text-emerald-300' : 'bg-amber-950/40 border-amber-500/20 text-amber-300'">
+        
+        <!-- Default / Draft State -->
+        <div x-show="!submitted" class="flex items-center gap-2">
+            <span class="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>STATUS: READY FOR SUBMISSION (DRAFT)</span>
+        </div>
+
+        <!-- Success State -->
+        <div x-show="submitted" class="flex items-center gap-2" style="display: none;">
             <?= $svg($ic['check'], 'w-4 h-4') ?>
-        </span>
-        <div>
-            <div class="font-bold text-emerald-300 uppercase">Review Successfully Submitted!</div>
-            <div class="text-[10px] text-gray-300">Your review will be verified and aggregated to the Production Reputation ledger.</div>
+            <span>REVIEW SUCCESSFULLY SUBMITTED!</span>
         </div>
     </div>
 

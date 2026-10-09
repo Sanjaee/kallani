@@ -275,17 +275,17 @@ ob_start();
                     <div class="lg:col-span-5 bg-black/40 border border-emerald-500/30 rounded-xl p-4 space-y-2.5">
                         <div class="flex items-center justify-between text-xs font-mono">
                             <span class="text-gray-300 font-bold uppercase">PO COLLECTION</span>
-                            <span class="text-emerald-400 font-extrabold">8,000 USDT / 880,000 USDT</span>
+                            <span class="text-emerald-400 font-extrabold">0 USDT / 880,000 USDT</span>
                         </div>
 
                         <!-- Progress bar -->
                         <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
-                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 0.91%"></div>
+                            <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full" style="width: 0%"></div>
                         </div>
 
                         <div class="flex items-center justify-between text-[10px] font-mono text-gray-400">
-                            <span>0.91% Collected</span>
-                            <span>872,000 USDT Remaining</span>
+                            <span>0% Collected</span>
+                            <span>880,000 USDT Remaining</span>
                         </div>
 
                         <div class="pt-1 flex items-center justify-between">
@@ -383,35 +383,35 @@ ob_start();
                             <span class="text-[8px] text-gray-500">Pending</span>
                         </div>
 
-                        <!-- Step 5: Milestone 01 -->
+                        <!-- Step 5: Gate 01 -->
                         <div class="flex flex-col items-center text-center relative group">
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
-                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">M01</div>
-                            <span class="text-gray-400 mt-1.5">Milestone 01</span>
+                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">G01</div>
+                            <span class="text-gray-400 mt-1.5">Gate 01</span>
                             <span class="text-[8px] text-gray-500">Locked</span>
                         </div>
 
-                        <!-- Step 6: Milestone 02 -->
+                        <!-- Step 6: Gate 02 -->
                         <div class="flex flex-col items-center text-center relative group">
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
-                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">M02</div>
-                            <span class="text-gray-400 mt-1.5">Milestone 02</span>
+                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">G02</div>
+                            <span class="text-gray-400 mt-1.5">Gate 02</span>
                             <span class="text-[8px] text-gray-500">Locked</span>
                         </div>
 
-                        <!-- Step 7: Milestone 03 -->
+                        <!-- Step 7: Gate 03 -->
                         <div class="flex flex-col items-center text-center relative group">
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
-                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">M03</div>
-                            <span class="text-gray-400 mt-1.5">Milestone 03</span>
+                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">G03</div>
+                            <span class="text-gray-400 mt-1.5">Gate 03</span>
                             <span class="text-[8px] text-gray-500">Locked</span>
                         </div>
 
-                        <!-- Step 8: Milestone 04 -->
+                        <!-- Step 8: Gate 04 -->
                         <div class="flex flex-col items-center text-center relative group">
                             <div class="absolute top-[11px] left-1/2 w-full h-[2px] bg-white/10 z-0"></div>
-                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">M04</div>
-                            <span class="text-gray-400 mt-1.5">Milestone 04</span>
+                            <div class="h-6 w-6 rounded-full bg-white/10 text-gray-400 border border-white/20 flex items-center justify-center text-[8px] font-bold z-10">G04</div>
+                            <span class="text-gray-400 mt-1.5">Gate 04</span>
                             <span class="text-[8px] text-gray-500">Locked</span>
                         </div>
 
@@ -490,7 +490,7 @@ ob_start();
                     </div>
                     <div class="flex items-center gap-2 text-gray-400">
                         <span>○</span>
-                        <span>Milestone 01 release</span>
+                        <span>Gate 01 release</span>
                     </div>
                 </div>
             </section>
@@ -586,22 +586,22 @@ ob_start();
                         </div>
                     </div>
 
-                    <!-- 11 & 12. MILESTONE TRACKER -->
+                    <!-- 11 & 12. GATE TRACKER -->
                     <div class="<?= $card ?> p-5 space-y-4">
                         <div class="flex items-center justify-between border-b border-white/10 pb-3">
                             <div>
-                                <h3 class="text-sm font-mono font-bold uppercase text-white">PRODUCTION MILESTONES</h3>
-                                <p class="text-[11px] text-gray-400">Four 25% protocol milestone releases subject to verification.</p>
+                                <h3 class="text-sm font-mono font-bold uppercase text-white">PRODUCTION GATES</h3>
+                                <p class="text-[11px] text-gray-400">Four 25% protocol gate releases subject to verification.</p>
                             </div>
-                            <a href="<?= $basePrefix ?>/milestones" class="text-xs font-mono text-emerald-400 hover:underline">VIEW MILESTONES →</a>
+                            <a href="<?= $basePrefix ?>/gates" class="text-xs font-mono text-emerald-400 hover:underline">VIEW GATES →</a>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
                             
-                            <!-- M01 -->
+                            <!-- G01 -->
                             <div class="rounded-xl bg-white/5 p-3.5 border border-white/10 space-y-2">
                                 <div class="flex items-center justify-between">
-                                    <span class="font-bold text-white">M01 — Production Preparation</span>
+                                    <span class="font-bold text-white">G01 — Production Preparation</span>
                                     <span class="rounded bg-amber-950 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-500/30">25% • LOCKED</span>
                                 </div>
                                 <div class="text-[10px] text-gray-400 space-y-1">
@@ -611,10 +611,10 @@ ob_start();
                                 </div>
                             </div>
 
-                            <!-- M02 -->
+                            <!-- G02 -->
                             <div class="rounded-xl bg-white/5 p-3.5 border border-white/10 space-y-2 opacity-75">
                                 <div class="flex items-center justify-between">
-                                    <span class="font-bold text-gray-300">M02 — Development Execution</span>
+                                    <span class="font-bold text-gray-300">G02 — Development Execution</span>
                                     <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-bold text-gray-400">25% • LOCKED</span>
                                 </div>
                                 <div class="text-[10px] text-gray-500 space-y-1">
@@ -624,10 +624,10 @@ ob_start();
                                 </div>
                             </div>
 
-                            <!-- M03 -->
+                            <!-- G03 -->
                             <div class="rounded-xl bg-white/5 p-3.5 border border-white/10 space-y-2 opacity-75">
                                 <div class="flex items-center justify-between">
-                                    <span class="font-bold text-gray-300">M03 — Production Progress</span>
+                                    <span class="font-bold text-gray-300">G03 — Production Progress</span>
                                     <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-bold text-gray-400">25% • LOCKED</span>
                                 </div>
                                 <div class="text-[10px] text-gray-500 space-y-1">
@@ -637,10 +637,10 @@ ob_start();
                                 </div>
                             </div>
 
-                            <!-- M04 -->
+                            <!-- G04 -->
                             <div class="rounded-xl bg-white/5 p-3.5 border border-white/10 space-y-2 opacity-75">
                                 <div class="flex items-center justify-between">
-                                    <span class="font-bold text-gray-300">M04 — Completion Preparation</span>
+                                    <span class="font-bold text-gray-300">G04 — Completion Preparation</span>
                                     <span class="rounded bg-white/10 px-2 py-0.5 text-[9px] font-bold text-gray-400">25% • LOCKED</span>
                                 </div>
                                 <div class="text-[10px] text-gray-500 space-y-1">
@@ -718,7 +718,7 @@ ob_start();
                         <div class="<?= $card ?> p-5 space-y-3">
                             <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
                                 <h4 class="text-xs font-mono font-bold uppercase text-white">WORK ORDER TRACKING</h4>
-                                <a href="<?= $basePrefix ?>/milestones" class="text-[10px] font-mono text-emerald-400 hover:underline">VIEW WORK ORDER →</a>
+                                <a href="<?= $basePrefix ?>/gates" class="text-[10px] font-mono text-emerald-400 hover:underline">VIEW WORK ORDER →</a>
                             </div>
 
                             <div class="space-y-2 text-xs font-mono">
@@ -732,7 +732,7 @@ ob_start();
                                 </div>
                                 <div class="flex justify-between text-[10px] text-gray-400 pt-1">
                                     <span>RAB: RAB-NK-001-V01</span>
-                                    <span>Milestone: M01</span>
+                                    <span>Gate: G01</span>
                                 </div>
                             </div>
                         </div>
@@ -741,7 +741,7 @@ ob_start();
                         <div class="<?= $card ?> p-5 space-y-3">
                             <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
                                 <h4 class="text-xs font-mono font-bold uppercase text-white">FIELD EXECUTION</h4>
-                                <a href="<?= $basePrefix ?>/milestones" class="text-[10px] font-mono text-emerald-400 hover:underline">VIEW FIELD OPS →</a>
+                                <a href="<?= $basePrefix ?>/gates" class="text-[10px] font-mono text-emerald-400 hover:underline">VIEW FIELD OPS →</a>
                             </div>
 
                             <div class="space-y-2 text-xs font-mono">

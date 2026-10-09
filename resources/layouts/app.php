@@ -1013,10 +1013,10 @@ if (strpos($reqPath, '/explore') === 0 || strpos($reqPath, '/projects') === 0 ||
             <!-- CATEGORY 2: OPERATIONS -->
             <div class="space-y-1.5 pt-2">
                 <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">OPERATIONS</div>
-                <a href="<?php echo $basePrefix; ?>/milestones" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-gray-400 hover:text-white hover:bg-white/5">
+                <a href="<?php echo $basePrefix; ?>/gates" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-gray-400 hover:text-white hover:bg-white/5">
                     <div class="flex items-center gap-2.5">
                         <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>Milestones</span>
+                        <span>Gates</span>
                     </div>
                     <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 text-gray-400">09</span>
                 </a>

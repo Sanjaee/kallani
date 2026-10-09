@@ -542,19 +542,19 @@ ob_start();
 
             </section>
 
-            <!-- ---------- 15. PROGRAM MILESTONES STEPPER ---------- -->
+            <!-- ---------- 15. PROGRAM GATES STEPPER ---------- -->
             <section class="<?= $card ?> p-5 space-y-4">
                 <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
                     <div>
-                        <h3 class="text-sm font-mono font-bold uppercase text-white">PROGRAM OPERATIONAL MILESTONES</h3>
-                        <p class="text-[11px] text-gray-400">High-level program milestone progression from demand definition to fulfillment.</p>
+                        <h3 class="text-sm font-mono font-bold uppercase text-white">PROGRAM OPERATIONAL GATES</h3>
+                        <p class="text-[11px] text-gray-400">High-level program gate progression from demand definition to fulfillment.</p>
                     </div>
                     <span class="rounded bg-emerald-950 px-3 py-1 text-emerald-300 font-mono text-xs font-bold border border-emerald-500/40">
-                        MILESTONE 03 READY
+                        GATE 03 READY
                     </span>
                 </div>
 
-                <!-- Milestone Stepper Horizontal Grid -->
+                <!-- Gate Stepper Horizontal Grid -->
                 <div class="overflow-x-auto pb-4 pt-2 scrollbar-none">
                     <div class="min-w-[850px] grid grid-cols-7 font-mono text-[10px] relative px-2 py-2">
                         

@@ -656,7 +656,7 @@ ob_start();
                     <div class="space-y-2">
                         <h4 class="text-sm font-extrabold text-white">Ready to inspect the production batch?</h4>
                         <p class="text-[9px] text-gray-300 leading-relaxed">
-                            Review the batch configuration, PO allocation structure, RAB, milestone schedule and verification records before proceeding.
+                            Review the batch configuration, PO allocation structure, RAB, gate schedule and verification records before proceeding.
                         </p>
                     </div>
 

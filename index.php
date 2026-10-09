@@ -40,8 +40,8 @@ if ($uri === '' || $uri === '/') {
     include $baseDir . '/resources/pages/batches.php';
 } elseif ($uri === '/project-overview' || preg_match('/^\/explore\/projects\/([a-z0-9-]+)$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)$/i', $uri)) {
     include $baseDir . '/resources/pages/project_overview.php';
-} elseif ($uri === '/milestones' || preg_match('/^\/projects\/([a-z0-9-]+)\/milestones$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/i', $uri)) {
-    include $baseDir . '/resources/pages/milestones.php';
+} elseif ($uri === '/gates' || preg_match('/^\/projects\/([a-z0-9-]+)\/gates$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/operations$/i', $uri)) {
+    include $baseDir . '/resources/pages/gates.php';
 } elseif ($uri === '/rab' || $uri === '/rab-budget' || preg_match('/^\/projects\/([a-z0-9-]+)\/rab$/i', $uri) || preg_match('/^\/projects\/([a-z0-9-]+)\/capital$/i', $uri)) {
     include $baseDir . '/resources/pages/rab.php';
 } elseif (preg_match('/^\/vendors\/([a-z0-9-]+)$/i', $uri, $matches) || preg_match('/^\/projects\/([a-z0-9-]+)\/vendors$/i', $uri, $matches)) {

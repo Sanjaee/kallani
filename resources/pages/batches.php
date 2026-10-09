@@ -112,7 +112,7 @@ function batchPage() {
                     <div class="text-lg font-bold text-emerald-300">100 HA Standard Production Batch</div>
 
                     <p class="max-w-md text-sm leading-relaxed text-gray-200">
-                        A standardized 100 HA production unit within the North Kalimantan Palm project, structured for measurable PO allocation, milestone execution, vendor coordination and production traceability.
+                        A standardized 100 HA production unit within the North Kalimantan Palm project, structured for measurable PO allocation, gate execution, vendor coordination and production traceability.
                     </p>
                 </div>
 
@@ -346,7 +346,7 @@ function batchPage() {
                             <?php for ($i = 1; $i <= 15; $i++): ?>
                                 <div class="rounded border border-white/10 bg-[#050D0A] py-1.5 px-1 flex flex-col items-center justify-center">
                                     <div class="font-extrabold text-white text-[10px]"><?= sprintf('%02d', $i) ?></div>
-                                    <div class="text-[7px] text-amber-400 font-semibold uppercase">Open Slot</div>
+                                    <div class="text-[7px] text-amber-400 font-semibold uppercase">PO Unit</div>
                                 </div>
                             <?php endfor; ?>
                         </div>
@@ -354,11 +354,11 @@ function batchPage() {
                 </div>
             </section>
 
-            <!-- ---------- PRODUCTION EXECUTION MILESTONES ---------- -->
+            <!-- ---------- PRODUCTION EXECUTION GATES ---------- -->
             <section class="<?= $card ?> p-5 lg:p-6 space-y-6">
                 <div>
-                    <h2 class="text-base font-bold text-white">Production Execution Milestones</h2>
-                    <p class="text-xs text-gray-300">From PO collection to commercial delivery, each milestone is verified and tracked.</p>
+                    <h2 class="text-base font-bold text-white">Production Execution Gates</h2>
+                    <p class="text-xs text-gray-300">From PO collection to commercial delivery, each gate is verified and tracked.</p>
                 </div>
 
                 <!-- Unbroken Continuous Pipeline Line -->
@@ -370,7 +370,7 @@ function batchPage() {
                         <!-- Step Nodes -->
                         <div class="relative z-10 flex items-start justify-between text-center text-[10px]">
                             <?php
-                            $milestonesPipeline = [
+                            $gatesPipeline = [
                                 ['step' => '01', 'name' => 'GATE 01', 'desc' => '25 / 100 HA', 'active' => true],
                                 ['step' => '02', 'name' => 'GATE 02', 'desc' => '50 / 100 HA', 'active' => false],
                                 ['step' => '03', 'name' => 'GATE 03', 'desc' => '75 / 100 HA', 'active' => false],
@@ -381,7 +381,7 @@ function batchPage() {
                                 ['step' => '08', 'name' => 'DELIVERY', 'desc' => '', 'active' => false],
                                 ['step' => '09', 'name' => 'SETTLEMENT', 'desc' => '', 'active' => false],
                             ];
-                            foreach ($milestonesPipeline as $m):
+                            foreach ($gatesPipeline as $m):
                             ?>
                                 <div class="flex flex-col items-center gap-1.5 min-w-[75px] group">
                                     <div class="h-9 w-9 rounded-full border flex items-center justify-center text-xs font-extrabold transition z-10
@@ -404,7 +404,7 @@ function batchPage() {
                 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 
                     <!-- GATE 01 Details -->
-                    <div id="milestones-section" class="rounded-xl border border-white/10 bg-[#07110E] p-4 space-y-3">
+                    <div id="gates-section" class="rounded-xl border border-white/10 bg-[#07110E] p-4 space-y-3">
                         <div class="flex items-center justify-between border-b border-white/10 pb-2">
                             <div class="flex items-center gap-2">
                                 <span class="h-6 w-6 rounded-full bg-emerald-400 text-[#04100B] text-xs font-bold flex items-center justify-center">01</span>
@@ -430,7 +430,7 @@ function batchPage() {
                             </ul>
                         </div>
 
-                        <a href="<?= $basePrefix ?>/milestones" class="inline-flex w-full items-center justify-center gap-1.5 rounded-lg border border-white/20 py-2 text-[10px] font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
+                        <a href="<?= $basePrefix ?>/gates" class="inline-flex w-full items-center justify-center gap-1.5 rounded-lg border border-white/20 py-2 text-[10px] font-bold uppercase tracking-wider text-white transition hover:bg-white/10">
                             <span>View Gate Requirements</span><?= $arrow ?>
                         </a>
                     </div>
@@ -703,7 +703,7 @@ function batchPage() {
                         <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-emerald-400/30 bg-emerald-950/60 text-emerald-300"><?= $svg($ic['leaf']) ?></span>
                         <div>
                             <div class="text-sm font-bold text-white">Enter the Production Batch</div>
-                            <div class="text-[11px] text-gray-300">Review the PO allocation, RAB, milestones and verification records before proceeding with the production allocation.</div>
+                            <div class="text-[11px] text-gray-300">Review the PO allocation, RAB, gates and verification records before proceeding with the production allocation.</div>
                         </div>
                     </div>
                     <div class="flex items-center gap-3">

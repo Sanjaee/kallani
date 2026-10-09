@@ -203,7 +203,7 @@ ob_start();
                             <span class="text-emerald-300 font-bold">02 CAPACITY</span> &rsaquo;
                             <span class="text-emerald-300 font-bold">03 BATCH</span> &rsaquo;
                             <span class="text-emerald-300 font-bold">04 PO ALLOCATION</span> &rsaquo;
-                            <span class="text-emerald-300 font-bold">05 MILESTONE</span> &rsaquo;
+                            <span class="text-emerald-300 font-bold">05 GATE</span> &rsaquo;
                             <span class="text-emerald-300 font-bold">06 RAB</span> &rsaquo;
                             <span class="text-emerald-300 font-bold">07 VENDOR</span> &rsaquo;
                             <span class="text-amber-300 font-bold">08 EXECUTION</span> &rsaquo;

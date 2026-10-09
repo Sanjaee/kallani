@@ -683,7 +683,7 @@ ob_start();
                                 <div class="font-bold text-white text-[11px]">Work Order Execution Pending</div>
                                 <div class="text-[9px] text-gray-400">WO-NK-001-M1-001 awaiting authorization</div>
                             </div>
-                            <a href="<?= $basePrefix ?>/milestones" class="text-[10px] text-emerald-400 font-bold hover:underline">VIEW WORK ORDER →</a>
+                            <a href="<?= $basePrefix ?>/gates" class="text-[10px] text-emerald-400 font-bold hover:underline">VIEW WORK ORDER →</a>
                         </div>
                     </div>
                 </div>

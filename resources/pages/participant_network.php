@@ -505,7 +505,7 @@ ob_start();
                                      <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format(min(5, $stars + 0.1), 1) ?></div>
                                  </div>
                                  <div>
-                                     <div>Milestone<br/>Clarity</div>
+                                     <div>Gate<br/>Clarity</div>
                                      <div class="text-sm font-bold text-emerald-300 mt-1"><?= number_format(max(1, $stars - 0.1), 1) ?></div>
                                  </div>
                                  <div>

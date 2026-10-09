@@ -15,7 +15,7 @@ ob_start();
     activeDiagramStage: 'Demand', 
     activeParcel: 'A', 
     verTab: 'land',
-    projMilestone: 4,
+    projGate: 4,
     activeOSLayer: 'all',
     stageImages: { 
         'Demand': '<?php echo $basePrefix; ?>/1.jpg', 
@@ -553,7 +553,7 @@ ob_start();
                             </ol>
                         </li>
 
-                        <!-- Row 3: PO Allocation -> Milestones -> RAB -> Vendors -->
+                        <!-- Row 3: PO Allocation -> Gates -> RAB -> Vendors -->
                         <li class="relative">
                             <span class="absolute -left-[13px] sm:-left-[20px] top-2 sm:top-[11px] w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#06120F] border-2 border-emerald-400 ring-2 sm:ring-4 ring-emerald-500/10" aria-hidden="true"></span>
                             <ol class="flex flex-wrap items-center gap-1 sm:gap-2">
@@ -565,7 +565,7 @@ ob_start();
                                 <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
                                 <li class="flex items-center gap-1 shrink-0 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#122620]/90 border border-emerald-500/40 text-emerald-200 text-[8px] sm:text-[9px] lg:text-[10px] shadow-sm backdrop-blur-sm hover:border-emerald-400/80 transition-colors whitespace-nowrap">
                                     <svg class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 shrink-0 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
-                                    <span>Milestones</span>
+                                    <span>Gates</span>
                                     <span class="ml-0.5 text-[7px] sm:text-[8px] text-emerald-300/40" aria-hidden="true">08</span>
                                 </li>
                                 <li class="hidden sm:inline text-gray-500 text-[10px]" aria-hidden="true">&rarr;</li>
@@ -694,11 +694,11 @@ ob_start();
                             <span class="text-amber-300">0% Collected</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5">
-                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Milestone 01 (Land Prep)</span>
+                            <span class="text-amber-300 font-bold flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-amber-400"></span> Gate 01 (Land Prep)</span>
                             <span class="text-amber-300">Simulated Execution</span>
                         </div>
                         <div class="flex justify-between items-center p-2 rounded bg-black/30 border border-white/5 text-gray-500">
-                            <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gray-600"></span> Milestone 02 &ndash; 04</span>
+                            <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gray-600"></span> Gate 02 &ndash; 04</span>
                             <span>Pending</span>
                         </div>
                     </div>

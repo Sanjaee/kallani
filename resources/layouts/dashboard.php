@@ -265,13 +265,13 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                 <div class="space-y-1.5 pt-2">
                     <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">OPERATIONS</div>
 
-                    <!-- 09 Milestones -->
-                    <a href="<?php echo $basePrefix; ?>/milestones" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'milestones') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                    <!-- 09 Gates -->
+                    <a href="<?php echo $basePrefix; ?>/gates" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'gates') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
                         <div class="flex items-center gap-2.5">
                             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Milestones</span>
+                            <span>Gates</span>
                         </div>
-                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'milestones') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">09</span>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'gates') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">09</span>
                     </a>
 
                     <!-- 10 RAB & Budget -->
@@ -472,13 +472,13 @@ if (strpos($reqPath, '/demand') === 0 || strpos($reqPath, '/production-requireme
                 <div class="space-y-1.5 pt-2">
                     <div class="text-[10px] font-mono font-semibold tracking-wider text-gray-400 uppercase px-2 mb-2">OPERATIONS</div>
 
-                    <!-- 09 Milestones -->
-                    <a href="<?php echo $basePrefix; ?>/milestones" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'milestones') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
+                    <!-- 09 Gates -->
+                    <a href="<?php echo $basePrefix; ?>/gates" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all group <?php echo ($activePage === 'gates') ? 'bg-[#0E1F11] border border-emerald-500/40 text-emerald-300 font-semibold shadow-lg shadow-emerald-950' : 'text-gray-400 hover:text-white hover:bg-white/5'; ?>">
                         <div class="flex items-center gap-2.5">
                             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Milestones</span>
+                            <span>Gates</span>
                         </div>
-                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'milestones') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">09</span>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded <?php echo ($activePage === 'gates') ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-white/5 text-gray-400'; ?>">09</span>
                     </a>
 
                     <!-- 10 RAB & Budget -->
