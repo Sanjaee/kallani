@@ -911,7 +911,7 @@ ob_start();
                         </div>
 
                         <p class="text-[9px] text-gray-500 italic">
-                            Registered wallet linked to verified entity record for approved settlement flows.
+                            Wallet reference recorded — entity identity and wallet ownership pending verification.
                         </p>
                     </div>
 

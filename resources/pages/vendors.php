@@ -684,7 +684,7 @@ ob_start();
                             </div>
 
                             <p class="text-[10px] text-gray-400 leading-relaxed italic">
-                                Wallet identity is cryptographically linked to verified entity record for operating settlements upon work order completion & verified field execution.
+                                Wallet reference recorded — entity identity and wallet ownership pending verification.
                             </p>
                         </div>
 

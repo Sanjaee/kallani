@@ -84,7 +84,7 @@ ob_start();
                     <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl">Document Center & Legal Vault</h1>
                     
                     <p class="max-w-3xl text-sm font-medium leading-relaxed text-gray-200">
-                        Cryptographically hashed legal, operational, RAB, and technical documentation with verifiable proof of authenticity.
+                        Simulated hash references; document authenticity has not been independently verified.
                     </p>
                     <p class="text-[11px] italic text-gray-400">
                         Penyimpanan terpusat untuk dokumen hukum, peta GIS, RAB, work order, dan bukti verifikasi dengan referensi hash yang dapat diverifikasi.
@@ -147,7 +147,7 @@ ob_start();
                 <div class="<?= $card ?> flex items-center gap-3 px-4 py-3.5">
                     <span class="<?= $iconBox ?>"><?= $svg($ic['shield']) ?></span>
                     <div>
-                        <div class="<?= $metricLbl ?>">HASH VERIFIED</div>
+                        <div class="<?= $metricLbl ?>">FILE HASH MATCH</div>
                         <div class="text-lg font-extrabold leading-tight text-emerald-300">100%</div>
                         <div class="text-[8px] text-gray-400">SHA-256 Proof</div>
                     </div>
