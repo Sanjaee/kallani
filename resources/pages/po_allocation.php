@@ -192,9 +192,8 @@ ob_start();
 
                         <!-- Allocation Units Dot Progress Tracker -->
                         <div class="space-y-2 border-t border-white/10 pt-3">
-                            <div class="flex justify-between text-xs font-bold">
-                                <span class="text-gray-300">1 / 110 PO allocation units</span>
-                                <span class="text-emerald-300">0.91%</span>
+                            <div class="flex justify-center text-xs font-bold">
+                                <span class="text-gray-300">Allocation Confirmed &mdash; 1/110 Units (0.91% of modeled batch requirement)</span>
                             </div>
 
                             <div class="flex items-center gap-1.5 flex-wrap">

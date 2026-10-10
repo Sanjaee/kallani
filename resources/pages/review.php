@@ -77,16 +77,20 @@ ob_start();
          :class="submitted ? 'bg-emerald-950/90 border-emerald-500/40 text-emerald-300' : 'bg-amber-950/40 border-amber-500/20 text-amber-300'">
         
         <!-- Default / Draft State -->
-        <div x-show="!submitted" class="flex items-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
-            <span>STATUS: READY FOR SUBMISSION (DRAFT)</span>
-        </div>
+        <template x-if="!submitted">
+            <div class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span>STATUS: READY FOR SUBMISSION (DRAFT)</span>
+            </div>
+        </template>
 
         <!-- Success State -->
-        <div x-show="submitted" class="flex items-center gap-2" style="display: none;">
-            <?= $svg($ic['check'], 'w-4 h-4') ?>
-            <span>REVIEW SUCCESSFULLY SUBMITTED!</span>
-        </div>
+        <template x-if="submitted">
+            <div class="flex items-center gap-2">
+                <?= $svg($ic['check'], 'w-4 h-4') ?>
+                <span>REVIEW SUCCESSFULLY SUBMITTED!</span>
+            </div>
+        </template>
     </div>
 
     <!-- PAGE BACKGROUND -->

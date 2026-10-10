@@ -482,7 +482,7 @@ ob_start();
                     </div>
                     <div class="flex items-center gap-2 text-amber-300 font-semibold">
                         <span class="text-amber-400">○</span>
-                        <span>Required batch collection complete (0.91%)</span>
+                        <span>Batch Collection Complete — 0%</span>
                     </div>
                     <div class="flex items-center gap-2 text-gray-400">
                         <span>○</span>
